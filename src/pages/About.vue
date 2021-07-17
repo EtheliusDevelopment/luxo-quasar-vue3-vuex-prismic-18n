@@ -1,6 +1,8 @@
 <template>
   <q-page class="flex flex-center">
     <h1>ABOUT</h1>
+
+
   </q-page>
 </template>
 
