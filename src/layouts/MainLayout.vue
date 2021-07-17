@@ -89,12 +89,13 @@ export default {
 .conta {
   background-image: url("~assets/bg-top.jpg");
   background-repeat: no-repeat;
-  height: 400vh;
+
 }
 
 .footer {
   background-color: #4c4571;
   height: 65vh;
+  position: unset;
 
   // position: relative;
   // top:400vh;
@@ -130,6 +131,10 @@ export default {
 
 .inner-logo{
   width: 20vw;
+}
+
+.q-page-container{
+  padding-bottom: unset !important;
 }
 
 
