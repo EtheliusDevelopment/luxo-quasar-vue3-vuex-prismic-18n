@@ -1,6 +1,6 @@
 <template>
   <q-layout class="conta" view="lHh lpR lFf">
-    <q-header class="bg-transparent text-white" height-hint="98">
+    <q-header class="bg-transparent text-white" height-hint="98" reveal >
       <q-toolbar>
         <q-btn
           class="mobile-only"
@@ -45,7 +45,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="footer text-white">
+    <q-footer elevated class="footer text-white desktop-only">
       <q-card class="my-card">
         <q-img class="footer-dialog" src="https://cdn.quasar.dev/img/parallax2.jpg">
 
