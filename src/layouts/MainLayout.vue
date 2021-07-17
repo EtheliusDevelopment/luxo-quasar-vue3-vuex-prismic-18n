@@ -3,17 +3,18 @@
 
     <q-header class="bg-transparent text-white" height-hint="98">
       <q-toolbar>
-        <q-btn color="black" dense flat round icon="menu" @click="toggleLeftDrawer" />
+        <q-btn class="mobile-only" dense flat round icon="menu" @click="toggleLeftDrawer" />
 
-        <q-toolbar-title class="text-black">
-          <q-avatar color="black">
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+        <q-toolbar-title >
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg ">
           </q-avatar>
           Title
         </q-toolbar-title>
       </q-toolbar>
 
-      <q-tabs class="text-black">
+      <q-tabs v-if="$q.platform.is.desktop">
+         <q-route-tab to="/" label="Home" />
         <q-route-tab to="/about" label="About Us" />
         <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
         <q-route-tab to="/wine-club" label="Wine Club" />
@@ -65,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .conta{
-  background-image: url('https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/hp/villa-pliniana-029-High-Res-1920-1080.jpg');
+  background-image: url('~assets/bg-top.jpg');
   background-repeat: no-repeat;
   height: 400vh ;
 }
