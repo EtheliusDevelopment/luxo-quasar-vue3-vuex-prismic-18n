@@ -5,8 +5,6 @@
       src="~assets/quasar-logo-vertical.svg"
       style="width: 200px; height: 200px"
     >
-
-<q-btn color="primary" icon="check" label="About" to="/wine-club" />
   </q-page>
 </template>
 
