@@ -11,15 +11,16 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title class="navbar-title">
-          <q-img
-            @click="toHome"
-            class="navbar-logo"
-            src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
-          />
+        <q-toolbar-title class="navbar-title desktop-only">
+          <router-link to="/">
+            <q-img
+              class="navbar-logo"
+              src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+            />
+          </router-link>
 
-          <q-tabs class="desktop-only">
-            <q-route-tab to="/" label="Home" />
+          <q-tabs>
+            <!-- <q-route-tab to="/" label="Home" /> -->
             <q-route-tab to="/about" label="About Us" />
             <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
             <q-route-tab to="/wine-club" label="Wine Club" />
@@ -37,7 +38,7 @@
           />
         </q-toolbar-title>
       </q-toolbar>
-<!--
+      <!--
       <q-tabs class="desktop-only">
         <q-route-tab to="/" label="Home" />
         <q-route-tab to="/about" label="About Us" />
@@ -100,9 +101,6 @@ export default {
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
-      toHome() {
-        alert("ciao");
-      },
     };
   },
 };
@@ -157,12 +155,13 @@ export default {
 .navbar-title {
   display: flex;
   align-items: center;
-  // justify-content: space-between;
-  // padding: 0 4rem;
+  border-bottom: 1px solid;
+  padding-bottom: 3rem;
 }
 
 .navbar-logo {
-  width: 15vw;
+  // width: 15vw;
+  width: 12vw;
   // margin-top: 2vh;
 }
 
@@ -180,24 +179,24 @@ export default {
 
 .q-tab {
   padding: unset;
-   min-width: unset !important;
+  min-width: unset !important;
 }
 
 .q-page {
   margin-bottom: 30vh;
 }
 
-.q-tabs__content{
-    // padding: 0 8rem;
-    width: 70vw;
-    justify-content: space-evenly;
+.q-tabs__content {
+  // padding: 0 8rem;
+  width: 68vw;
+  justify-content: space-evenly;
 }
 
 .q-header .q-tab__content {
   min-width: unset;
 }
 
-.q-tabs__content{
+.q-tabs__content {
   flex-grow: 1;
 }
 
@@ -213,9 +212,7 @@ export default {
 // .q-tabs.row.no-wrap.items-center.q-tabs--not-scrollable.q-tabs--horizontal.q-tabs__arrows--inside.desktop-only {
 //     border: 3px solid fuchsia;
 
-
 // }
-
 
 // .q-tabs__content.row.no-wrap.items-center.self-stretch.hide-scrollbar.q-tabs__content--align-center {
 //     border: 3px solid greenyellow;
@@ -224,5 +221,4 @@ export default {
 // .q-tab__content.self-stretch.flex-center.relative-position.q-anchor--skip.non-selectable.column {
 //     min-width: unset !important;
 // }
-
 </style>
