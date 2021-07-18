@@ -21,3 +21,9 @@ body {
 .q-page {
   margin-bottom: 30vh;
 }
+
+.q-tabs__content.row.no-wrap.items-center.self-stretch.hide-scrollbar.q-tabs__content--align-center {
+    justify-content: space-around;
+    padding: 0 8rem;
+
+}
