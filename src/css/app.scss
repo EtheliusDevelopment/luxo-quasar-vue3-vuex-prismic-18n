@@ -22,8 +22,14 @@ body {
   margin-bottom: 30vh;
 }
 
-.q-tabs__content.row.no-wrap.items-center.self-stretch.hide-scrollbar.q-tabs__content--align-center {
-    justify-content: space-around;
-    padding: 0 8rem;
-
+.q-tabs__content{
+    // padding: 0 8rem;
+    width: 70vw;
+    justify-content: space-evenly;
 }
+
+.q-header .q-tab__content {
+  min-width: unset;
+}
+
+

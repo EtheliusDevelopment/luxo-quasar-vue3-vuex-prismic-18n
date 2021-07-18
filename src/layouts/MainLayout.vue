@@ -1,7 +1,7 @@
 <template>
   <q-layout class="conta" view="lHh lpR lFf">
-    <q-header class="bg-transparent text-white" height-hint="98" reveal >
-      <q-toolbar>
+    <q-header class="bg-transparent text-white" height-hint="98" reveal>
+      <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
           dense
@@ -11,14 +11,33 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg " />
-          </q-avatar>
-          Title
+        <q-toolbar-title class="navbar-title">
+          <q-img
+            @click="toHome"
+            class="navbar-logo"
+            src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+          />
+
+          <q-tabs class="desktop-only">
+            <q-route-tab to="/" label="Home" />
+            <q-route-tab to="/about" label="About Us" />
+            <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
+            <q-route-tab to="/wine-club" label="Wine Club" />
+            <q-route-tab to="/testimonials" label="Testimonials" />
+            <q-route-tab to="/quiz" label="Quiz" />
+            <q-route-tab to="/blog" label="Blog" />
+            <q-route-tab to="/contact-us" label="Contact" />
+          </q-tabs>
+
+          <q-btn
+            size="1rem"
+            class="q-px-lg q-py-xs btn-toolbar"
+            color="white"
+            label="Start a planning"
+          />
         </q-toolbar-title>
       </q-toolbar>
-
+<!--
       <q-tabs class="desktop-only">
         <q-route-tab to="/" label="Home" />
         <q-route-tab to="/about" label="About Us" />
@@ -28,7 +47,7 @@
         <q-route-tab to="/quiz" label="Quiz" />
         <q-route-tab to="/blog" label="Blog" />
         <q-route-tab to="/contact-us" label="Contact" />
-      </q-tabs>
+      </q-tabs> -->
     </q-header>
 
     <q-drawer
@@ -47,22 +66,23 @@
 
     <q-footer elevated class="footer text-white desktop-only">
       <q-card class="my-card">
-        <q-img class="footer-dialog" src="https://cdn.quasar.dev/img/parallax2.jpg">
-
+        <q-img
+          class="footer-dialog"
+          src="https://cdn.quasar.dev/img/parallax2.jpg"
+        >
         </q-img>
       </q-card>
       <q-toolbar>
         <q-toolbar-title>
-            <div class="absolute-bottom text-subtitle2 text-center inner-txt">
-          <q-img
-            class="inner-logo"
-            src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
-          />
-            <h2>Contact Us: </h2>
+          <div class="absolute-bottom text-subtitle2 text-center inner-txt">
+            <q-img
+              class="inner-logo"
+              src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+            />
+            <h2>Contact Us:</h2>
             <h3>INFO@LUXOITALIA.COM</h3>
-
           </div>
-          </q-toolbar-title>
+        </q-toolbar-title>
       </q-toolbar>
     </q-footer>
   </q-layout>
@@ -80,6 +100,9 @@ export default {
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
+      toHome() {
+        alert("ciao");
+      },
     };
   },
 };
@@ -89,7 +112,6 @@ export default {
 .conta {
   background-image: url("~assets/bg-top.jpg");
   background-repeat: no-repeat;
-
 }
 
 .footer {
@@ -115,10 +137,10 @@ export default {
 }
 
 .drawer {
-  background: #ffffffdb;
+  background: #ffffffdb !important;
 }
 
-.inner-txt{
+.inner-txt {
   height: 60vh;
   background: transparent;
   display: flex;
@@ -126,16 +148,81 @@ export default {
   justify-content: center;
   align-items: center;
   z-index: 99;
-
 }
 
-.inner-logo{
+.inner-logo {
   width: 20vw;
 }
 
-.q-page-container{
+.navbar-title {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  // padding: 0 4rem;
+}
+
+.navbar-logo {
+  width: 15vw;
+  // margin-top: 2vh;
+}
+
+.q-page-container {
   padding-bottom: unset !important;
 }
 
+.toolbar {
+  padding: 2rem 2rem;
+}
+
+.btn-toolbar {
+  color: #4c4571 !important;
+}
+
+.q-tab {
+  padding: unset;
+   min-width: unset !important;
+}
+
+.q-page {
+  margin-bottom: 30vh;
+}
+
+.q-tabs__content{
+    // padding: 0 8rem;
+    width: 70vw;
+    justify-content: space-evenly;
+}
+
+.q-header .q-tab__content {
+  min-width: unset;
+}
+
+.q-tabs__content{
+  flex-grow: 1;
+}
+
+// ******SANDBOX
+// .q-toolbar.row.no-wrap.items-center.toolbar {
+//     border: 3px solid;
+// }
+
+// .q-toolbar__title.ellipsis.navbar-title {
+//     border: 3px solid yellow;
+// }
+
+// .q-tabs.row.no-wrap.items-center.q-tabs--not-scrollable.q-tabs--horizontal.q-tabs__arrows--inside.desktop-only {
+//     border: 3px solid fuchsia;
+
+
+// }
+
+
+// .q-tabs__content.row.no-wrap.items-center.self-stretch.hide-scrollbar.q-tabs__content--align-center {
+//     border: 3px solid greenyellow;
+// }
+
+// .q-tab__content.self-stretch.flex-center.relative-position.q-anchor--skip.non-selectable.column {
+//     min-width: unset !important;
+// }
 
 </style>
