@@ -18,18 +18,14 @@ body {
   // font-family: 'Hatton-Medium';
 }
 
-.q-page {
-  margin-bottom: 30vh;
+
+
+// <tipografia NavBar>
+.q-tab__label {
+  font-size: .9vw !important;
+  // line-height: 1.715em;
+  // font-weight: 500;
 }
 
-.q-tabs__content{
-    // padding: 0 8rem;
-    width: 70vw;
-    justify-content: space-evenly;
-}
-
-.q-header .q-tab__content {
-  min-width: unset;
-}
 
 

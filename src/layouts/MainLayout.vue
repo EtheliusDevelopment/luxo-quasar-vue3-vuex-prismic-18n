@@ -1,6 +1,6 @@
 <template>
   <q-layout class="conta" view="lHh lpR lFf">
-    <q-header class="bg-transparent text-white" height-hint="98" reveal>
+    <q-header class="bg-teal text-white" height-hint="98" reveal>
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title class="navbar-title desktop-only">
-          <router-link to="/">
+          <router-link to="/" class="wrapper-logo">
             <q-img
               class="navbar-logo"
               src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
@@ -31,7 +31,7 @@
           </q-tabs>
 
           <q-btn
-            size="1rem"
+            size="1.1vw"
             class="q-px-lg q-py-xs btn-toolbar"
             color="white"
             label="Start a planning"
@@ -73,26 +73,40 @@
         >
         </q-img>
       </q-card>
-      <q-toolbar>
-        <q-toolbar-title>
-          <div class="absolute-bottom text-subtitle2 text-center inner-txt">
-            <q-img
-              class="inner-logo"
-              src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
-            />
-            <h2>Contact Us:</h2>
-            <h3>INFO@LUXOITALIA.COM</h3>
-          </div>
-        </q-toolbar-title>
-      </q-toolbar>
+
+      <div class="wrapper-footer-items">
+        <q-img
+          class="inner-logo"
+          src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+        />
+        <br />
+
+        <q-img src="~assets\contact-us.svg" class="contact-footer" />
+        <br />
+
+        <q-img src="~assets\mail-footer.svg" class="mail-footer" />
+
+        <br />
+
+        <q-img src="~assets\follow-us.svg" class="follow-footer" />
+        <br />
+
+        <SocialComponent class="social-component" />
+      </div>
+
+      <!-- </div> -->
     </q-footer>
   </q-layout>
 </template>
 
 <script>
 import { ref } from "vue";
+import SocialComponent from "../components/SocialComponent.vue";
 
 export default {
+  components: {
+    SocialComponent,
+  },
   setup() {
     const leftDrawerOpen = ref(false);
 
@@ -114,7 +128,7 @@ export default {
 
 .footer {
   background-color: #4c4571;
-  height: 65vh;
+  height: 120vh;
   position: unset;
 
   // position: relative;
@@ -148,10 +162,6 @@ export default {
   z-index: 99;
 }
 
-.inner-logo {
-  width: 20vw;
-}
-
 .navbar-title {
   display: flex;
   align-items: center;
@@ -165,6 +175,10 @@ export default {
   // margin-top: 2vh;
 }
 
+.wrapper-logo {
+  flex-grow: 1;
+}
+
 .q-page-container {
   padding-bottom: unset !important;
 }
@@ -175,6 +189,7 @@ export default {
 
 .btn-toolbar {
   color: #4c4571 !important;
+  flex-grow: 1;
 }
 
 .q-tab {
@@ -188,8 +203,8 @@ export default {
 
 .q-tabs__content {
   // padding: 0 8rem;
-  width: 68vw;
-  justify-content: space-evenly;
+  // width: 68vw;
+  justify-content: space-around;
 }
 
 .q-header .q-tab__content {
@@ -198,6 +213,38 @@ export default {
 
 .q-tabs__content {
   flex-grow: 1;
+}
+
+.q-tabs {
+  flex-grow: 6;
+}
+
+.wrapper-footer-items {
+  text-align: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 6vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.inner-logo {
+  width: 20vw;
+  margin-bottom: 3vh;
+}
+
+.mail-footer {
+  width: 22vw;
+  margin-bottom: 2rem;
+}
+
+.contact-footer {
+  width: 13vw;
+  margin-bottom: 1vh;
+}
+
+.follow-footer {
+  width: 12vw;
+  margin-bottom: 1vh;
 }
 
 // ******SANDBOX
