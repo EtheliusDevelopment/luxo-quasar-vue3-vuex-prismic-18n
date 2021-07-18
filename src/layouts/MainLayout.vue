@@ -57,8 +57,71 @@
       behavior="mobile"
       bordered
       class="drawer"
+
     >
       <!-- drawer content -->
+
+
+        <!-- <q-route-tab to="/" label="Home" />
+        <q-route-tab to="/about" label="About Us" />
+        <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
+        <q-route-tab to="/wine-club" label="Wine Club" />
+        <q-route-tab to="/testimonials" label="Testimonials" />
+        <q-route-tab to="/quiz" label="Quiz" />
+        <q-route-tab to="/blog" label="Blog" />
+        <q-route-tab to="/contact-us" label="Contact" /> -->
+  <q-list padding class="menu-list q-list-drawer">
+
+           <q-item clickable v-ripple to="/about">
+              <q-img
+                class="q-mb-md"
+                src="~assets\luxoitalia_logo_white_2020.svg"
+                spinner-color="primary"
+                spinner-size="82px"
+              />
+            </q-item>
+
+            <q-item clickable v-ripple to="/about">
+              <q-item-section avatar>
+                <q-icon name="flight_takeoff" color="white"/>
+              </q-item-section>
+
+              <q-item-section class="text-white">
+                About
+              </q-item-section>
+            </q-item>
+
+            <q-item active clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="quiz" />
+              </q-item-section>
+
+              <q-item-section>
+                Quiz
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="send" />
+              </q-item-section>
+
+              <q-item-section>
+                Send
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="drafts" />
+              </q-item-section>
+
+              <q-item-section>
+                Drafts
+              </q-item-section>
+            </q-item>
+          </q-list>
+
     </q-drawer>
 
     <q-page-container>
@@ -152,7 +215,7 @@ export default {
 
 .footer {
   background-color: #4c4571;
-  height: 120vh;
+  height: 100vh;
   position: unset;
 
   // position: relative;
@@ -172,9 +235,7 @@ export default {
   height: 60vh !important;
 }
 
-.drawer {
-  background: #ffffffdb !important;
-}
+
 
 .inner-txt {
   height: 60vh;
@@ -256,6 +317,12 @@ export default {
   padding-bottom: 6vh;
   margin-left: 10vw;
   margin-right: 10vw;
+  position: relative;
+  bottom: 48vh;
+}
+.privacy-footer{
+  position: relative;
+  bottom: 48vh;
 }
 
 .inner-logo {
@@ -319,6 +386,19 @@ export default {
 
 .claim-footer-box {
 }
+
+.q-tabs-drawer{
+  display: flex;
+  flex-direction: column;
+}
+
+.q-list-drawer{
+  margin-top: 2vh;
+}
+
+
+
+
 // ******SANDBOX
 // .q-toolbar.row.no-wrap.items-center.toolbar {
 //     border: 3px solid;
