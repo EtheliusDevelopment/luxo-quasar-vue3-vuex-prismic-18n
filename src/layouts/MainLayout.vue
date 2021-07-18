@@ -67,11 +67,20 @@
 
     <q-footer elevated class="footer text-white desktop-only">
       <q-card class="my-card">
-        <q-img
-          class="footer-dialog"
-          src="https://cdn.quasar.dev/img/parallax2.jpg"
-        >
+        <q-img class="footer-dialog" src="~assets\venice-footer-box.png">
         </q-img>
+
+        <div class="footer-dialog-inner">
+          <h2 class="dialog-inner-h2">Design your luxury tour.</h2>
+          <q-img src="~assets\claim-footer-box.svg" class="claim-footer-box" />
+
+          <q-btn
+            size="1.1vw"
+            class="q-px-lg q-py-xs btn-footer-box"
+            color="white"
+            label="Start the quiz"
+          />
+        </div>
       </q-card>
 
       <div class="wrapper-footer-items">
@@ -93,6 +102,21 @@
 
         <SocialComponent class="social-component" />
       </div>
+
+      <h6 class="privacy-footer text-center">
+        © LUXO ITALIA SNC - P.IVA 08637280960. ALL RIGHTS RESERVED. |
+        <router-link to="/privacy"
+          ><span class="privacy-link">PRIVACY POLICY</span></router-link
+        >
+        |
+        <router-link to="/terms-and-conditions"
+          ><span class="terms-link">TERMS AND CONDITION</span></router-link
+        >
+        |
+        <router-link to="/brochure"
+          ><span class="brochure-link">BROCHURE</span></router-link
+        >
+      </h6>
 
       <!-- </div> -->
     </q-footer>
@@ -192,6 +216,13 @@ export default {
   flex-grow: 1;
 }
 
+.btn-footer-box {
+  color: #4c4571 !important;
+  font-size: 0.8vw !important;
+  font-weight: 900;
+  padding: 2vh 3.5vw;
+}
+
 .q-tab {
   padding: unset;
   min-width: unset !important;
@@ -246,7 +277,48 @@ export default {
   width: 12vw;
   margin-bottom: 1vh;
 }
+.privacy-footer {
+  font-size: 0.7vw;
+  font-weight: 400;
+}
 
+.privacy-link {
+  text-decoration: none;
+  color: white;
+}
+
+.terms-link {
+  text-decoration: none;
+  color: white;
+}
+
+.brochure-link {
+  text-decoration: none;
+  color: white;
+}
+
+.q-card {
+  background: transparent;
+  box-shadow: unset;
+}
+
+.dialog-inner-h2 {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+  font-family: "Hatton";
+  font-size: 2.8vw;
+}
+.footer-dialog-inner {
+    position: relative;
+    bottom: 50vh;
+    left: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.claim-footer-box {
+}
 // ******SANDBOX
 // .q-toolbar.row.no-wrap.items-center.toolbar {
 //     border: 3px solid;
