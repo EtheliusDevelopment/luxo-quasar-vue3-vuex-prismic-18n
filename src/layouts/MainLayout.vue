@@ -52,11 +52,11 @@
     </q-header>
 
     <q-drawer
+      class="drawer"
       v-model="leftDrawerOpen"
       side="left"
       behavior="mobile"
       bordered
-      class="drawer"
 
     >
       <!-- drawer content -->
@@ -71,7 +71,7 @@
         <q-route-tab to="/blog" label="Blog" />
         <q-route-tab to="/contact-us" label="Contact" /> -->
   <q-list padding class="menu-list q-list-drawer">
-
+<!--
            <q-item clickable v-ripple to="/about">
               <q-img
                 class="q-mb-md"
@@ -79,47 +79,97 @@
                 spinner-color="primary"
                 spinner-size="82px"
               />
+            </q-item> -->
+
+            <q-item clickable v-ripple to="/" class="q-ml-md">
+
+              <q-item-section avatar q-ml-md>
+                <q-icon name="home" color="white"/>
+              </q-item-section>
+
+              <q-item-section class="text-white q-ml-md" >
+                Home
+              </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple to="/about">
-              <q-item-section avatar>
+            <q-item clickable v-ripple to="/about" class="q-ml-md">
+
+              <q-item-section avatar q-ml-md>
                 <q-icon name="flight_takeoff" color="white"/>
               </q-item-section>
 
-              <q-item-section class="text-white">
-                About
+              <q-item-section class="text-white q-ml-md">
+                About Us
               </q-item-section>
             </q-item>
 
-            <q-item active clickable v-ripple>
-              <q-item-section avatar>
-                <q-icon name="quiz" />
+            <q-item clickable v-ripple to="/luxury-travel" class="q-ml-md">
+
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white"/>
               </q-item-section>
 
-              <q-item-section>
+              <q-item-section class="text-white q-ml-md">
+                Italy Luxury Travel
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple to="/wine-club" class="q-ml-md">
+
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white"/>
+              </q-item-section>
+
+              <q-item-section class="text-white q-ml-md">
+                Wine Club
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple to="/testimonials" class="q-ml-md">
+
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white"/>
+              </q-item-section>
+
+              <q-item-section class="text-white q-ml-md">
+                Testimonials
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple to="/quiz" class="q-ml-md">
+
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white"/>
+              </q-item-section>
+
+              <q-item-section class="text-white q-ml-md">
                 Quiz
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
-              <q-item-section avatar>
-                <q-icon name="send" />
+            <q-item clickable v-ripple to="/blog" class="q-ml-md">
+
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white"/>
               </q-item-section>
 
-              <q-item-section>
-                Send
+              <q-item-section class="text-white q-ml-md">
+                Blog
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
-              <q-item-section avatar>
-                <q-icon name="drafts" />
+            <q-item clickable v-ripple to="/contact-us" class="q-ml-md">
+
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white"/>
               </q-item-section>
 
-              <q-item-section>
-                Drafts
+              <q-item-section class="text-white q-ml-md">
+                Contact
               </q-item-section>
             </q-item>
+
+
           </q-list>
 
     </q-drawer>
@@ -139,7 +189,7 @@
 
           <q-btn
             size="1.1vw"
-            class="q-px-lg q-py-xs btn-footer-box"
+            class="q-px-lg q-py-xs q-mt-md btn-footer-box"
             color="white"
             label="Start the quiz"
           />
