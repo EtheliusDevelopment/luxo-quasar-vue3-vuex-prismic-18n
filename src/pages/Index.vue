@@ -14,7 +14,7 @@
 
 <script>
 import { defineComponent } from 'vue';
-import testComponentPrismic from '../components/testComponentPrismic.vue'
+import testComponentPrismic from '../components/Prismic/testComponentPrismic.vue'
 
 export default defineComponent({
   name: 'PageIndex',
