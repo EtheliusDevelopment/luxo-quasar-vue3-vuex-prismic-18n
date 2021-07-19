@@ -4,7 +4,7 @@ import linkResolver from '../prismic/link-resolver';
 
 
 const prismic = createPrismic({
-  endpoint: "https://luxoback.cdn.prismic.io/api/v2",
+  endpoint: "https://luxotour-back.cdn.prismic.io/api/v2",
   linkResolver,
 });
 

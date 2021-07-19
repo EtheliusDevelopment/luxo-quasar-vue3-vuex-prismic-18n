@@ -17,8 +17,8 @@ export default {
   methods: {
     async getContent() {
       // Query the API and assign the response to "response"
-      const response = await this.$prismic.client.getSingle('singleton-test-')
-      this.response = response.data.image_gallery;
+      const response = await this.$prismic.client.query('')
+      this.response = response.results;
     }
   },
   created() {
