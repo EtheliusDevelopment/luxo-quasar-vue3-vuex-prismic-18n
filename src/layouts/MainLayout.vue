@@ -1,7 +1,7 @@
 <template>
   <q-layout  view="lHh lpR lFf">
 
-    <q-header class="text-white" height-hint="98" reveal>
+    <q-header class="text-white" height-hint="98" >
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -313,7 +313,7 @@ export default {
 }
 
 .q-page-container {
-  margin-top: 67vh;
+  // margin-top: 67vh;
   border: 4px solid sandybrown;
   padding-bottom: unset !important;
   padding-top: unset !important;
@@ -356,6 +356,9 @@ export default {
 
 .q-header .q-tab__content {
   min-width: unset;
+}
+.q-header{
+  position: unset !important;
 }
 
 .q-tabs__content {
