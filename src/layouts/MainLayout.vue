@@ -1,6 +1,7 @@
 <template>
-  <q-layout class="conta" view="lHh lpR lFf">
-    <q-header class="bg-teal text-white" height-hint="98" reveal>
+  <q-layout  view="lHh lpR lFf">
+
+    <q-header class="text-white" height-hint="98" reveal>
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -174,7 +175,7 @@
 
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container class="testCONTAINER">
       <router-view />
     </q-page-container>
 
@@ -258,10 +259,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.conta {
-  background-image: url("~assets/bg-top.jpg");
-  background-repeat: no-repeat;
-}
+
 
 .footer {
   background-color: #4c4571;
@@ -301,7 +299,7 @@ export default {
   display: flex;
   align-items: center;
   border-bottom: 1px solid;
-  padding-bottom: 3rem;
+  padding-bottom: 6vh;
 }
 
 .navbar-logo {
@@ -315,11 +313,17 @@ export default {
 }
 
 .q-page-container {
+  margin-top: 67vh;
+  border: 4px solid sandybrown;
   padding-bottom: unset !important;
 }
 
 .toolbar {
-  padding: 2rem 2rem;
+  background-image: url("~assets/bg-header-1.png");
+  // background-repeat: no-repeat;
+  background-color: black;
+  padding: 2rem 4rem;
+  padding-bottom: 50vh;
 }
 
 .btn-toolbar {
