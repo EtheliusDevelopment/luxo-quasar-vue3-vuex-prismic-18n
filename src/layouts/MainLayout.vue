@@ -316,6 +316,7 @@ export default {
   margin-top: 67vh;
   border: 4px solid sandybrown;
   padding-bottom: unset !important;
+  padding-top: unset !important;
 }
 
 .toolbar {
