@@ -380,7 +380,7 @@ export default {
 }
 .privacy-footer{
   position: relative;
-  bottom: 48vh;
+  bottom: 52vh;
 }
 
 .inner-logo {

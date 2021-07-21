@@ -6,7 +6,7 @@
       style="width: 200px; height: 200px"
     >
 
-    <testComponentPrismic />
+
 
 <q-btn color="primary" icon="check" label="About" to="/wine-club" />
   </q-page>
@@ -14,17 +14,16 @@
 
 <script>
 import { defineComponent } from 'vue';
-import testComponentPrismic from '../components/Prismic/testComponentPrismic.vue'
 
 export default defineComponent({
   name: 'PageIndex',
   components: {
-    testComponentPrismic
+
   },
   setup () {
 
     return {
-    testComponentPrismic
+
 
   }
   },
