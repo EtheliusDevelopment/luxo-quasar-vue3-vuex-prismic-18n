@@ -5,6 +5,7 @@
       <q-spinner-cube color="white" size="5.5em" />
       <h1 class="text-white">{{spinner}}</h1>
     </div>
+
     <div class="content" v-if="!spinner">
       <h1>TERMS AND CONDITIONS</h1>
       <q-btn color="primary" icon="check" label="OK" @click="spinner=true" />
