@@ -7,6 +7,9 @@
   <h5 class="text-orange text-center" style="width:100%">
     {{price}}
   </h5>
+  <h4 class="text-pink" v-for="(item, index) in bullet_points" :key="index">
+       {{item.bullet_point[0].text}}
+  </h4>
   <img :src="img_gallery" alt="">
 </template>
 
@@ -28,6 +31,7 @@ export default {
       location: null,
       price: null,
       img_gallery: null,
+      bullet_points: null,
       // mainImage: null,
       postId: this.$route.params.slug
     }
@@ -45,6 +49,8 @@ export default {
       this.location = response.data.location_title[0].text
       this.price = response.data.price
       this.img_gallery = response.data.other_imgs[0].other_img.url
+      this.bullet_points = response.data.at_glance_bullet_point
+
 
       // this.response.forEach((el)=>{
       //     console.log(el.data);
