@@ -3,23 +3,86 @@ const routes = [
     path: "/",
     component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/Index.vue") },
-      { path: "about", component: () => import("pages/About.vue") },
+      {
+        path: "",
+        name: "Home",
+        component: () => import("pages/Index.vue")
+      },
+      {
+        path: "about",
+        name: "About Us",
+        component: () => import("pages/About.vue"),
+      },
       {
         path: "luxury-travel",
-        component: () => import("pages/LuxuryTravel.vue"),
+        name: "Luxury Travel",
+        component: () => import("pages/LuxuryTravel"),
       },
-      { path: "wine-club", component: () => import("pages/WineClub.vue") },
+      {
+        path: "luxury-travel/italy",
+        name: "Luxury Travel Italy",
+        component: () => import("pages/LuxuryTravel/Italy/italy.vue"),
+
+        children: [
+
+          {
+            path: ":slug",
+            name: "Luxury Travel Italy",
+            component: () => import("pages/LuxuryTravel/Italy/italy.vue")
+          }
+        ]
+      },
+
+      {
+        path: "wine-club",
+        name: "Wine Club",
+        component: () => import("pages/WineClub.vue"),
+      },
+      {
+        path: "post/:id",
+        name: "Post",
+        component: () => import("pages/WineClub.vue"),
+      },
       {
         path: "testimonials",
+        name: "Testimonials",
         component: () => import("pages/Testimonials.vue"),
       },
-      { path: "quiz", component: () => import("pages/Quiz.vue") },
-      { path: "blog", component: () => import("pages/Blog.vue") },
-      { path: "contact-us", component: () => import("pages/Contacts.vue") },
-      { path: "brochure", component: () => import("pages/Brochure.vue") },
-      { path: "privacy", component: () => import("pages/Privacy.vue") },
-      { path: "terms-and-conditions", component: () => import("pages/Terms.vue") }
+      {
+        path: "blog/:id",
+        name: "Blog Luxo Italia",
+        component: () => import("pages/Blog.vue"),
+      },
+      {
+        path: "quiz",
+        name: "Quiz",
+        component: () => import("pages/Quiz.vue"),
+      },
+      {
+        path: "blog",
+        name: "Blog",
+        component: () => import("pages/Blog.vue"),
+      },
+      {
+        path: "contact-us",
+        name: "Contact Us",
+        component: () => import("pages/Contacts.vue"),
+      },
+      {
+        path: "brochure",
+        name: "Brochure",
+        component: () => import("pages/Brochure.vue"),
+      },
+      {
+        path: "privacy",
+        name: "Privacy",
+        component: () => import("pages/Privacy.vue"),
+      },
+      {
+        path: "terms-and-conditions",
+        name: "Terms and Conditions",
+        component: () => import("pages/Terms.vue"),
+      },
     ],
   },
 

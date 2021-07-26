@@ -16,7 +16,8 @@ export default route(function (/* { store, ssrContext } */) {
     ? createMemoryHistory
     : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory)
 
-  const Router = createRouter({
+
+   const Router = createRouter({
     scrollBehavior: () => ({ left: 0, top: 0 }),
     routes,
 
@@ -25,6 +26,11 @@ export default route(function (/* { store, ssrContext } */) {
     // quasar.conf.js -> build -> publicPath
     history: createHistory(process.env.MODE === 'ssr' ? void 0 : process.env.VUE_ROUTER_BASE)
   })
+
+    // RIVEDERE QUESTA FUNZIONE PERCHE MANDA IN TILT TUTTO
+    //  Router.beforeEach((to, from, next)=>{
+    //   document.title  = to.name
+    // });
 
   return Router
 })

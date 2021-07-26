@@ -1,22 +1,17 @@
 <template>
   <q-page class="flex flex-center" padding>
-    <Blog />
+    <LuxuryTravel />
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import Blog from '../components/Blog'
+import LuxuryTravel from '../../components/LuxuryTravel'
 
 export default defineComponent({
   name: 'PageIndex',
-   components: {
-    Blog,
-
-  },
+  components : {
+    LuxuryTravel
+  }
 })
 </script>
-
-<style lang="scss" scoped>
-
-</style>

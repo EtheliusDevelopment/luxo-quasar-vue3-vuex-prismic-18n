@@ -4,7 +4,7 @@
      <div class="row" >
         <q-card   class="my-card col-6 q-mr-sm q-mb-md shadow-9" style="width:40vw;" v-for="(item, index) in dataArray" :key="index" >
 
-          <q-item clickable :to="'/testimonials/'+ item.id">
+          <q-item clickable :to="'/blog/'+ item.id">
           <img :src="item.data.main_image.url" width="150" height="150" />
 
         <q-card-section>
