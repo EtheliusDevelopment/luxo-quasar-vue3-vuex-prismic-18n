@@ -48,12 +48,7 @@ const routes = [
         name: "Testimonials",
         component: () => import("pages/Testimonials.vue"),
       },
-      {
-        path: "blog/:id",
-        name: "Blog Luxo Italia",
-        component: () => import("pages/Blog.vue"),
-      },
-      {
+            {
         path: "quiz",
         name: "Quiz",
         component: () => import("pages/Quiz.vue"),
@@ -62,6 +57,11 @@ const routes = [
         path: "blog",
         name: "Blog",
         component: () => import("pages/Blog.vue"),
+      },
+      {
+        path: "blog/:slug",
+        name: "Blog Luxo Italia",
+        component: () => import("pages/BlogSingle.vue"),
       },
       {
         path: "contact-us",
