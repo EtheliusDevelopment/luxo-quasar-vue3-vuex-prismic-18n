@@ -1,56 +1,80 @@
 <template>
-  <q-page class="main-content">
+  <q-page class="main-content-index">
     <q-img
       src="~assets/img_main_index.jpg"
       spinner-color="primary"
       spinner-size="82px"
     >
-      <div class="absolute-top figcaption text-pink-12" style="height: 100%">
-        <h1 class="text-white">
-          Lorem ipsum dolor etur adipisicing eltatis fac
+      <div class="absolute-top figcaption" style="height: 100%">
+        <h1 class="text-white text-center">
+          ITALY'S FINEST <br />
+          LUXURY EXPERIENCES
         </h1>
-        <h6 class="text-white">
-          Lorem ipsum dolor etur adipisicing eltatis fac
-        </h6>
+        <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
         <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
       </div>
     </q-img>
 
     <div class="first-block">
-      <h2 class="text-primary">
-        Lorem ipsum di nove parole parole parole parole
-      </h2>
-      <p class="text-primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        eaque earum laborum possimus, corporis dolor sit blanditiis iusto
-        recusandae enim fugit porro ratione voluptate omnis quod, fugiat
-        praesentium minus voluptatum!
-      </p>
-      <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
-
       <q-img
-        img-class="col-md-2 test22"
-        src="~assets/venice-bg.jpg"
+        class="img1"
+        img-class="img1-index"
+        src="~assets/luxo_img_1_index.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
 
-      <q-img
-        img-class="col-md-2 test22"
-        src="~assets/venice-bg.jpg"
-        spinner-color="primary"
-        spinner-size="82px"
-      />
-      <h2 class="text-primary">Lorem ipsum di cienque parole</h2>
-      <p class="text-primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        eaque earum laborum possimus, corporis dolor sit blanditiis iusto
-        recusandae enim fugit porro ratione voluptate omnis quod, fugiat
-        praesentium minus voluptatum!
-      </p>
+      <div class="sub-section-first">
+        <h2 class="text-primary">
+          Lorem ipsum di nove parole parole parole parole
+        </h2>
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem eaque earum laborum possimus, corporis dolor sit
+          blanditiis iusto recusandae enim fugit porro ratione voluptate omnis
+          quod, fugiat praesentium minus voluptatum!
+        </p>
+        <q-btn
+          color="primary"
+          icon="check"
+          outline
+          label="LEARN WHAT WE DO"
+          class="btn-1"
+        />
+      </div>
     </div>
 
     <div class="second-block">
+      <q-img
+        class="img2"
+        img-class="img2-index"
+        src="~assets/venice-bg.jpg"
+        spinner-color="primary"
+        spinner-size="82px"
+      />
+
+      <q-img
+        class="img3"
+        img-class="img3-index"
+        src="~assets/venice-bg.jpg"
+        spinner-color="primary"
+        spinner-size="82px"
+      />
+
+      <div class="sub-section-first-2">
+        <h2 class="text-primary">
+          Lorem ipsum di nove parole parole parole parole
+        </h2>
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem eaque earum laborum possimus, corporis dolor sit
+          blanditiis iusto recusandae enim fugit porro ratione voluptate omnis
+          quod, fugiat praesentium minus voluptatum!
+        </p>
+      </div>
+    </div>
+
+    <div class="third-block">
       <div class="q-pa-md">
         <q-carousel
           animated
@@ -84,7 +108,7 @@
       </div>
     </div>
 
-    <div class="third-block">
+    <div class="fourth-block">
       <q-img
         img-class="col-md-2 test22"
         src="~assets/venice-bg.jpg"
@@ -92,43 +116,45 @@
         spinner-size="82px"
       />
 
-    <div class="sub-section-first">
-            <h3 class="text-primary">PAUL and ANDREA</h3>
-      <h2 class="text-primary">
-        Lorem ipsum di nove parole parole parole parole
-      </h2>
-      <p class="text-primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        eaque earum laborum possimus, corporis dolor sit blanditiis iusto
-        recusandae enim fugit porro ratione voluptate omnis quod, fugiat
-        praesentium minus voluptatum!
-      </p>
-      <p class="text-primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        eaque earum laborum possimus
-      </p>
-      <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+      <div class="sub-section-first">
+        <h3 class="text-primary">PAUL and ANDREA</h3>
+        <h2 class="text-primary">
+          Lorem ipsum di nove parole parole parole parole
+        </h2>
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem eaque earum laborum possimus, corporis dolor sit
+          blanditiis iusto recusandae enim fugit porro ratione voluptate omnis
+          quod, fugiat praesentium minus voluptatum!
+        </p>
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem eaque earum laborum possimus
+        </p>
+        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+      </div>
     </div>
 
+    <div class="fifth-block">
+      <div class="sub-section-first">
+        <h3 class="text-primary">PAUL and ANDREA</h3>
+        <h2 class="text-primary">
+          Lorem ipsum di nove parole parole parole parole
+        </h2>
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem eaque earum laborum possimus, corporis dolor sit
+          blanditiis iusto recusandae enim fugit porro ratione voluptate omnis
+          quod, fugiat praesentium minus voluptatum!
+        </p>
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem eaque earum laborum possimus
+        </p>
+        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+      </div>
 
-    <div class="sub-section-second">
-            <h3 class="text-primary">PAUL and ANDREA ED ALTRE CINQUE PAROLE A CASO</h3>
-      <h2 class="text-primary">
-        Lorem ipsum di nove parole parole parole parole
-      </h2>
-      <p class="text-primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        eaque earum laborum possimus, corporis dolor sit blanditiis iusto
-        recusandae enim fugit porro ratione voluptate omnis quod, fugiat
-        praesentium minus voluptatum!
-      </p>
-      <p class="text-primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        eaque earum laborum possimus
-      </p>
-      <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
-    </div>
-          <q-img
+      <q-img
         img-class="col-md-2 test22"
         src="~assets/venice-bg.jpg"
         spinner-color="primary"
@@ -136,9 +162,8 @@
       />
     </div>
 
-    <div class="fourth-block">
-
-         <q-img
+    <div class="six-block">
+      <q-img
         img-class="col-md-2 test22"
         src="~assets/main_sponsors_index.png"
         spinner-color="primary"
@@ -161,20 +186,76 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 990px) {
+}
+
 .figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  z-index: 9;
+  background: transparent !important;
 }
 
 .first-block {
-  padding: 25vw;
   display: grid;
+  grid-template-columns: 40vw 60vw;
+  grid-template-rows: 100vh auto;
   border-bottom: 2px solid blue;
+  /* grid-template-columns: auto; */
+}
+
+.img1-index {
+  grid-column: 1;
+  grid-row: 1;
+}
+.img1 {
+  position: relative;
+  bottom: 12rem;
+}
+.sub-section-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  grid-column: 2;
+  grid-row: 1;
+  position: absolute;
+  padding: 10rem;
+}
+.btn-1 {
+  grid-column: 1/3;
+  grid-row: 2;
 }
 .second-block {
   border-bottom: 2px solid blue;
+  display: grid;
+  grid-template-columns: 60vw 10vw 30vw;
+  grid-template-rows: 110vh 20vh 50vh;
+}
+.img2 {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+.img3 {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+.img3-index {
+  position: relative;
+  top: 15rem;
+}
+
+.sub-section-first-2 {
+  grid-column: 1/4;
+  grid-row: 3;
 }
 .third-block {
   border-bottom: 2px solid blue;
