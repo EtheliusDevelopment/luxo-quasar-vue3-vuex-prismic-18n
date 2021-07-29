@@ -22,7 +22,7 @@ export default defineComponent({
 }
 
 main.q-page.q-layout-padding.qpage {
-  padding: unset;
+  padding: 5vw;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5vw;
 }
@@ -30,7 +30,7 @@ main.q-page.q-layout-padding.qpage {
 @media screen and (max-width: 680px) {
   main.q-page.q-layout-padding.qpage {
     padding: 5vw;
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
     grid-gap: 5vw;
   }
 }
