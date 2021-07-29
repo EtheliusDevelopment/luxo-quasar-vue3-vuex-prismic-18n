@@ -17,16 +17,21 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-
 .qpage {
   display: grid;
-
 }
 
 main.q-page.q-layout-padding.qpage {
-  grid-template-columns: 20vw 20vw;
-  grid-gap: 11vw;
+  padding: unset;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5vw;
 }
 
-
+@media screen and (max-width: 680px) {
+  main.q-page.q-layout-padding.qpage {
+    padding: 5vw;
+    grid-template-columns: 100%;
+    grid-gap: 5vw;
+  }
+}
 </style>

@@ -1,8 +1,9 @@
 <template>
   <div  v-for="(item, index) in response" :key="index" :class="`loop-div loop-div-${index}`">
-     <q-item clickable :to="'/luxury-travel/italy/'+ (item.uid).toString()">
-        <p class="q-py-xl q-px-xl">{{item.data.package_title[0].text}}</p>
+     <q-item class="qitem" clickable :to="'/luxury-travel/italy/'+ (item.uid).toString()">
+        <!-- <p class="q-py-xl q-px-xl">{{item.data.package_title[0].text}}</p> -->
         <img :src="item.data.main_img.url" alt="" width="200">
+        <h6>{{item.data.package_title[0].text}}</h6>
      </q-item>
   </div>
 </template>
@@ -60,6 +61,13 @@ export default {
 
 
 
-<style>
+<style lang="scss" scoped>
+.qitem{
+  flex-direction: column;
+  outline: dashed;
+}
+</style>>
 
-</style>
+
+
+
