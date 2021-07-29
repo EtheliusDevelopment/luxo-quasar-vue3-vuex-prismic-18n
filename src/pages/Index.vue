@@ -26,13 +26,14 @@
 
       <div class="sub-section-first">
         <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
+          Luxury private tour of Italy
+          and custom experiences
         </h2>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem eaque earum laborum possimus, corporis dolor sit
-          blanditiis iusto recusandae enim fugit porro ratione voluptate omnis
-          quod, fugiat praesentium minus voluptatum!
+          A special and unique time to create wonderful memories with the people you love the most. So don’t limit your expectations and dreams! An exclusive visit to the secret rooms of the Vatican. A private vineyard experience in Tuscany led by the owners. We will design your perfect italian luxury travel together.
+        </p>
+        <p class="text-primary">
+          your travel interests and special needs, then we will plan a detailed itinerary togheter and take care of all the pre-trip arrangements. You’ll save time on planning complex itineraries, all kinds of bookings, and being frustrated.
         </p>
         <q-btn
           color="primary"
@@ -113,7 +114,7 @@
       />
 
       <div class="sub-section-first-3">
-        <h3 class="text-primary">PAUL and ANDREA</h3>
+        <h3 class="text-primary">PAUL &amp; ANDREA</h3>
         <h2 class="text-primary">
           Lorem ipsum di nove parole parole parole parole
         </h2>
@@ -132,7 +133,7 @@
     </div>
 
     <div class="fifth-block">
-      <div class="sub-section-first">
+      <div class="sub-section-first-4">
         <h6 class="text-primary">PAUL &amp; ANDREA</h6>
         <h2 class="text-primary">
           Lorem ipsum di nove parole parole parole parole
@@ -151,14 +152,15 @@
       </div>
 
       <q-img
-        img-class="col-md-2 test22"
+        class="img5"
+        img-class="img5-index"
         src="~assets/venice-bg.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
     </div>
 
-    <div class="six-block">
+    <div class="sixth-block">
       <q-img
         img-class="col-md-2 test22"
         src="~assets/main_sponsors_index.png"
@@ -290,7 +292,29 @@ export default {
     padding: 18vw;
 }
 
+.fifth-block {
+  border-bottom: 2px solid blue;
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-template-rows: 70vh;
+  padding: 10vw 5vw;
+}
 
+.sub-section-first-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+}
+
+.img5 {
+  grid-column: 2;
+}
+
+.sixth-block {
+  padding: 0 5vw 5vw 5vw;
+}
 
 
 </style>
