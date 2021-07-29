@@ -1,7 +1,7 @@
 <template>
   <q-layout  view="lHh lpR lFf">
 
-    <q-header class="text-white" height-hint="98" >
+    <q-header class="text-white bg-secondary" height-hint="98" >
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -314,17 +314,14 @@ export default {
 
 .q-page-container {
   // margin-top: 67vh;
-  border: 4px solid sandybrown;
   padding-bottom: unset !important;
   padding-top: unset !important;
 }
 
 .toolbar {
-  background-image: url("~assets/bg-header-1.png");
-  // background-repeat: no-repeat;
-  background-color: black;
-  padding: 2rem 4rem;
-  padding-bottom: 50vh;
+  // background-image: url("~assets/bg-header-1.png");
+  // // background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .btn-toolbar {
