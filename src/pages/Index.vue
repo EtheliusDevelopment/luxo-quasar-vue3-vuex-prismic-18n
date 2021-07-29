@@ -62,14 +62,9 @@
       />
 
       <div class="sub-section-first-2">
-        <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
-        </h2>
-        <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem eaque earum laborum possimus, corporis dolor sit
-          blanditiis iusto recusandae enim fugit porro ratione voluptate omnis
-          quod, fugiat praesentium minus voluptatum!
+        <h2 class="text-primary">Need some inspiration?</h2>
+        <p class="text-primary p-long-text">
+          At Luxo Italia, we pride ourselves in offering our clients luxury private tours of Italy that are exclusive, authentic and that treat each guest as an individual. Our founders, Andrea and Paul, are dedicated to delivering a top quality, guest-centred experience that showcases the beauty of Italy in a way that suits your unique travel style. With a network of the best in Italian hospitality, Andrea and Paul’s vast industry knowledge makes them experts in understanding what it is that each guest needs and how they can best be of service. From new ways to discover much-loved monuments to exploring a side of world famous cities that not everyone is lucky enough to see, we offer guests a real taste of Italy at your own pace.
         </p>
       </div>
     </div>
@@ -110,13 +105,14 @@
 
     <div class="fourth-block">
       <q-img
-        img-class="col-md-2 test22"
+        class="img4"
+        img-class="img4-index"
         src="~assets/venice-bg.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
 
-      <div class="sub-section-first">
+      <div class="sub-section-first-3">
         <h3 class="text-primary">PAUL and ANDREA</h3>
         <h2 class="text-primary">
           Lorem ipsum di nove parole parole parole parole
@@ -137,7 +133,7 @@
 
     <div class="fifth-block">
       <div class="sub-section-first">
-        <h3 class="text-primary">PAUL and ANDREA</h3>
+        <h6 class="text-primary">PAUL &amp; ANDREA</h6>
         <h2 class="text-primary">
           Lorem ipsum di nove parole parole parole parole
         </h2>
@@ -238,29 +234,63 @@ export default {
   border-bottom: 2px solid blue;
   display: grid;
   grid-template-columns: 60vw 10vw 30vw;
-  grid-template-rows: 110vh 20vh 50vh;
+  grid-template-rows: 10vh 110vh 30vh 50vh;
 }
 .img2 {
   grid-column: 1/3;
-  grid-row: 1;
-}
-.img3 {
-  grid-column: 2/4;
   grid-row: 1/3;
 }
+
+.img3 {
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
 .img3-index {
   position: relative;
-  top: 15rem;
+  top: 25vh;
 }
 
 .sub-section-first-2 {
   grid-column: 1/4;
-  grid-row: 3;
+  grid-row: 4;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10vw;
+}
+
+.p-long-text{
+  padding: 0 10vw
 }
 .third-block {
   border-bottom: 2px solid blue;
 }
 .fourth-block {
   border-bottom: 2px solid blue;
+  display: grid;
+  grid-template-columns: 25vw 15vw 75vw;
+  grid-template-rows: 10vh 55vh 20vh;
 }
+
+
+.img4 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.sub-section-first-3{
+  background-color: $info;
+  grid-column: 2/4;
+  grid-row: 2/4;
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18vw;
+}
+
+
+
+
 </style>
