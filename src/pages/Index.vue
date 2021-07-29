@@ -1,5 +1,10 @@
 <template>
   <q-page class="main-content-index">
+    <transition name="fade">
+    <h1 v-if="togl">TRANSITION TEST</h1>
+    </transition>
+    <q-btn color="primary" icon="check" label="OK" @click="togl = !togl" />
+
     <q-img
       src="~assets/img_main_index.jpg"
       spinner-color="primary"
@@ -26,14 +31,20 @@
 
       <div class="sub-section-first">
         <h2 class="text-primary">
-          Luxury private tour of Italy
-          and custom experiences
+          Luxury private tour of Italy and custom experiences
         </h2>
         <p class="text-primary">
-          A special and unique time to create wonderful memories with the people you love the most. So don’t limit your expectations and dreams! An exclusive visit to the secret rooms of the Vatican. A private vineyard experience in Tuscany led by the owners. We will design your perfect italian luxury travel together.
+          A special and unique time to create wonderful memories with the people
+          you love the most. So don’t limit your expectations and dreams! An
+          exclusive visit to the secret rooms of the Vatican. A private vineyard
+          experience in Tuscany led by the owners. We will design your perfect
+          italian luxury travel together.
         </p>
         <p class="text-primary">
-          your travel interests and special needs, then we will plan a detailed itinerary togheter and take care of all the pre-trip arrangements. You’ll save time on planning complex itineraries, all kinds of bookings, and being frustrated.
+          your travel interests and special needs, then we will plan a detailed
+          itinerary togheter and take care of all the pre-trip arrangements.
+          You’ll save time on planning complex itineraries, all kinds of
+          bookings, and being frustrated.
         </p>
         <q-btn
           color="primary"
@@ -65,12 +76,24 @@
       <div class="sub-section-first-2">
         <h2 class="text-primary">Need some inspiration?</h2>
         <p class="text-primary p-long-text">
-          At Luxo Italia, we pride ourselves in offering our clients luxury private tours of Italy that are exclusive, authentic and that treat each guest as an individual. Our founders, Andrea and Paul, are dedicated to delivering a top quality, guest-centred experience that showcases the beauty of Italy in a way that suits your unique travel style. With a network of the best in Italian hospitality, Andrea and Paul’s vast industry knowledge makes them experts in understanding what it is that each guest needs and how they can best be of service. From new ways to discover much-loved monuments to exploring a side of world famous cities that not everyone is lucky enough to see, we offer guests a real taste of Italy at your own pace.
+          At Luxo Italia, we pride ourselves in offering our clients luxury
+          private tours of Italy that are exclusive, authentic and that treat
+          each guest as an individual. Our founders, Andrea and Paul, are
+          dedicated to delivering a top quality, guest-centred experience that
+          showcases the beauty of Italy in a way that suits your unique travel
+          style. With a network of the best in Italian hospitality, Andrea and
+          Paul’s vast industry knowledge makes them experts in understanding
+          what it is that each guest needs and how they can best be of service.
+          From new ways to discover much-loved monuments to exploring a side of
+          world famous cities that not everyone is lucky enough to see, we offer
+          guests a real taste of Italy at your own pace.
         </p>
       </div>
     </div>
 
     <div class="third-block">
+
+
       <div class="q-pa-md">
         <q-carousel
           animated
@@ -114,41 +137,40 @@
       />
 
       <div class="sub-section-first-3">
-        <h3 class="text-primary">PAUL &amp; ANDREA</h3>
-        <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
-        </h2>
+        <h6 class="text-primary">PAUL &amp; ANDREA</h6>
+        <h2 class="text-primary">Your Personal Luxury Travel Designers</h2>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem eaque earum laborum possimus, corporis dolor sit
-          blanditiis iusto recusandae enim fugit porro ratione voluptate omnis
-          quod, fugiat praesentium minus voluptatum!
+          We do not just create luxury vacations in Italy, but rather
+          extraordinary and unique life experiences. Each of our luxury tours is
+          different simply because our travelers arranged it with us. For this
+          reason, our objective is to provide you with a friendly, unique and
+          warm personal approach to discussing, creating, and planning every
+          detail of your travel.
         </p>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem eaque earum laborum possimus
+          During your entire luxury tour, you will travel with local experts,
+          who have a deep love for their country and are proud to share the
+          hidden luxury gems of Italy with you. Are you ready to experience the
+          most beautiful and captivating trip of your life?
         </p>
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+        <q-btn color="primary" icon="check" outline label="START PLANNING" />
       </div>
     </div>
 
     <div class="fifth-block">
       <div class="sub-section-first-4">
-        <h6 class="text-primary">PAUL &amp; ANDREA</h6>
-        <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
-        </h2>
+        <h6 class="text-primary">
+          HELP US CREATE THE MOST BEAUTIFUL SCRIPT FOR YOUR HOLIDAY
+        </h6>
+        <h2 class="text-primary">What kind of luxury traveler are you?</h2>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem eaque earum laborum possimus, corporis dolor sit
-          blanditiis iusto recusandae enim fugit porro ratione voluptate omnis
-          quod, fugiat praesentium minus voluptatum!
+          We do not just create luxury vacations in Italy, but rather extraordinary and unique life experiences. Each of our luxury tours is different simply because our travelers arranged it with us. For this reason, our objective is to provide you with a friendly, unique and warm personal approach to discussing, creating, and planning every detail of your travel.
+
         </p>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem eaque earum laborum possimus
+          During your entire luxury tour, you will travel with local experts, who have a deep love for their country and are proud to share the hidden luxury gems of Italy with you. Are you ready to experience the most beautiful and captivating trip of your life?
         </p>
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+        <q-btn color="primary" icon="check" outline label="START THE QUIZ" />
       </div>
 
       <q-img
@@ -175,10 +197,17 @@
 import { ref } from "vue";
 
 export default {
+
+
   setup() {
+    alert('hola')
+    const togl = ref(false)
+
     return {
+
       slide: ref(1),
       autoplay: ref(true),
+      togl
     };
   },
 };
@@ -262,8 +291,8 @@ export default {
   padding: 0 10vw;
 }
 
-.p-long-text{
-  padding: 0 10vw
+.p-long-text {
+  padding: 0 10vw;
 }
 .third-block {
   border-bottom: 2px solid blue;
@@ -275,37 +304,36 @@ export default {
   grid-template-rows: 10vh 55vh 20vh;
 }
 
-
 .img4 {
   grid-column: 1/3;
   grid-row: 1/3;
 }
 
-.sub-section-first-3{
+.sub-section-first-3 {
   background-color: $info;
   grid-column: 2/4;
   grid-row: 2/4;
-      display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 18vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18vw;
 }
 
 .fifth-block {
   border-bottom: 2px solid blue;
   display: grid;
-  grid-template-columns:50% 50%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 70vh;
   padding: 10vw 5vw;
 }
 
-.sub-section-first-4{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-column: 1;
+.sub-section-first-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1;
 }
 
 .img5 {
@@ -316,5 +344,23 @@ export default {
   padding: 0 5vw 5vw 5vw;
 }
 
+.fade-enter-from{
+  opacity: 0;
+}
+.fade-enter-to{
+  opacity: 1;
+}
+.fade-enter-active{
+  transition: opacity 2s ease;
+}
 
+.fade-leave-from{
+  opacity: 1;
+}
+.fade-leave-to{
+  opacity: 0;
+}
+.fade-leave-active{
+  transition: opacity 4s ease;
+}
 </style>

@@ -1,4 +1,5 @@
 <template>
+<transition>
   <q-page class="flex flex-center">
 
     <!-- Header Quiz -->
@@ -40,6 +41,7 @@
 
 
   </q-page>
+  </transition>
 </template>
 
 <script>

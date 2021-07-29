@@ -1,7 +1,10 @@
 <template>
-  <q-layout  view="lHh lpR lFf">
+  <PreLoader />
 
-    <q-header class="text-white bg-secondary" height-hint="98" >
+ <q-layout view="lHh lpR lFf">
+    <transition name="fade">
+  <div v-if="showNow">
+     <q-header class="text-white bg-secondary" height-hint="98">
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -58,12 +61,10 @@
       side="left"
       behavior="mobile"
       bordered
-
     >
       <!-- drawer content -->
 
-
-        <!-- <q-route-tab to="/" label="Home" />
+      <!-- <q-route-tab to="/" label="Home" />
         <q-route-tab to="/about" label="About Us" />
         <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
         <q-route-tab to="/wine-club" label="Wine Club" />
@@ -71,8 +72,8 @@
         <q-route-tab to="/quiz" label="Quiz" />
         <q-route-tab to="/blog" label="Blog" />
         <q-route-tab to="/contact-us" label="Contact" /> -->
-  <q-list padding class="menu-list q-list-drawer">
-<!--
+      <q-list padding class="menu-list q-list-drawer">
+        <!--
            <q-item clickable v-ripple to="/about">
               <q-img
                 class="q-mb-md"
@@ -82,97 +83,76 @@
               />
             </q-item> -->
 
-            <q-item clickable v-ripple to="/" class="q-ml-md">
+        <q-item clickable v-ripple to="/" class="q-ml-md">
+          <q-item-section avatar q-ml-md>
+            <q-icon name="home" color="white" />
+          </q-item-section>
 
-              <q-item-section avatar q-ml-md>
-                <q-icon name="home" color="white"/>
-              </q-item-section>
+          <q-item-section class="text-white q-ml-md"> Home </q-item-section>
+        </q-item>
 
-              <q-item-section class="text-white q-ml-md" >
-                Home
-              </q-item-section>
-            </q-item>
+        <q-item clickable v-ripple to="/about" class="q-ml-md">
+          <q-item-section avatar q-ml-md>
+            <q-icon name="flight_takeoff" color="white" />
+          </q-item-section>
 
-            <q-item clickable v-ripple to="/about" class="q-ml-md">
+          <q-item-section class="text-white q-ml-md"> About Us </q-item-section>
+        </q-item>
 
-              <q-item-section avatar q-ml-md>
-                <q-icon name="flight_takeoff" color="white"/>
-              </q-item-section>
+        <q-item clickable v-ripple to="/luxury-travel" class="q-ml-md">
+          <q-item-section avatar q-ml-md>
+            <q-icon name="flight_takeoff" color="white" />
+          </q-item-section>
 
-              <q-item-section class="text-white q-ml-md">
-                About Us
-              </q-item-section>
-            </q-item>
+          <q-item-section class="text-white q-ml-md">
+            Italy Luxury Travel
+          </q-item-section>
+        </q-item>
 
-            <q-item clickable v-ripple to="/luxury-travel" class="q-ml-md">
+        <q-item clickable v-ripple to="/wine-club" class="q-ml-md">
+          <q-item-section avatar q-ml-md>
+            <q-icon name="flight_takeoff" color="white" />
+          </q-item-section>
 
-              <q-item-section avatar q-ml-md>
-                <q-icon name="flight_takeoff" color="white"/>
-              </q-item-section>
+          <q-item-section class="text-white q-ml-md">
+            Wine Club
+          </q-item-section>
+        </q-item>
 
-              <q-item-section class="text-white q-ml-md">
-                Italy Luxury Travel
-              </q-item-section>
-            </q-item>
+        <q-item clickable v-ripple to="/testimonials" class="q-ml-md">
+          <q-item-section avatar q-ml-md>
+            <q-icon name="flight_takeoff" color="white" />
+          </q-item-section>
 
-            <q-item clickable v-ripple to="/wine-club" class="q-ml-md">
+          <q-item-section class="text-white q-ml-md">
+            Testimonials
+          </q-item-section>
+        </q-item>
 
-              <q-item-section avatar q-ml-md>
-                <q-icon name="flight_takeoff" color="white"/>
-              </q-item-section>
+        <q-item clickable v-ripple to="/quiz" class="q-ml-md">
+          <q-item-section avatar q-ml-md>
+            <q-icon name="flight_takeoff" color="white" />
+          </q-item-section>
 
-              <q-item-section class="text-white q-ml-md">
-                Wine Club
-              </q-item-section>
-            </q-item>
+          <q-item-section class="text-white q-ml-md"> Quiz </q-item-section>
+        </q-item>
 
-            <q-item clickable v-ripple to="/testimonials" class="q-ml-md">
+        <q-item clickable v-ripple to="/blog" class="q-ml-md">
+          <q-item-section avatar q-ml-md>
+            <q-icon name="flight_takeoff" color="white" />
+          </q-item-section>
 
-              <q-item-section avatar q-ml-md>
-                <q-icon name="flight_takeoff" color="white"/>
-              </q-item-section>
+          <q-item-section class="text-white q-ml-md"> Blog </q-item-section>
+        </q-item>
 
-              <q-item-section class="text-white q-ml-md">
-                Testimonials
-              </q-item-section>
-            </q-item>
+        <q-item clickable v-ripple to="/contact-us" class="q-ml-md">
+          <q-item-section avatar q-ml-md>
+            <q-icon name="flight_takeoff" color="white" />
+          </q-item-section>
 
-            <q-item clickable v-ripple to="/quiz" class="q-ml-md">
-
-              <q-item-section avatar q-ml-md>
-                <q-icon name="flight_takeoff" color="white"/>
-              </q-item-section>
-
-              <q-item-section class="text-white q-ml-md">
-                Quiz
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple to="/blog" class="q-ml-md">
-
-              <q-item-section avatar q-ml-md>
-                <q-icon name="flight_takeoff" color="white"/>
-              </q-item-section>
-
-              <q-item-section class="text-white q-ml-md">
-                Blog
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple to="/contact-us" class="q-ml-md">
-
-              <q-item-section avatar q-ml-md>
-                <q-icon name="flight_takeoff" color="white"/>
-              </q-item-section>
-
-              <q-item-section class="text-white q-ml-md">
-                Contact
-              </q-item-section>
-            </q-item>
-
-
-          </q-list>
-
+          <q-item-section class="text-white q-ml-md"> Contact </q-item-section>
+        </q-item>
+      </q-list>
     </q-drawer>
 
     <q-page-container class="testCONTAINER">
@@ -234,22 +214,37 @@
 
       <!-- </div> -->
     </q-footer>
-  </q-layout>
+  </div>
+  </transition>
+ </q-layout>
 </template>
 
 <script>
 import { ref } from "vue";
 import SocialComponent from "../components/SocialComponent.vue";
+import PreLoader from "../components/PreLoader.vue";
+import { onMounted } from "vue";
 
 export default {
   components: {
     SocialComponent,
+    PreLoader,
   },
   setup() {
     const leftDrawerOpen = ref(false);
+    let showNow = ref(false);
+
+    onMounted(() => {
+      // setTimeout(()=>{showNow = true},1500)
+      setTimeout(() => {
+        showNow.value = true;
+      }, 1500);
+      // alert(showNow)
+    });
 
     return {
       leftDrawerOpen,
+      showNow,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
@@ -259,8 +254,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 .footer {
   background-color: #4c4571;
   height: 100vh;
@@ -282,8 +275,6 @@ export default {
   width: 70vw;
   height: 60vh !important;
 }
-
-
 
 .inner-txt {
   height: 60vh;
@@ -354,7 +345,7 @@ export default {
 .q-header .q-tab__content {
   min-width: unset;
 }
-.q-header{
+.q-header {
   position: unset !important;
 }
 
@@ -375,7 +366,7 @@ export default {
   position: relative;
   bottom: 48vh;
 }
-.privacy-footer{
+.privacy-footer {
   position: relative;
   bottom: 52vh;
 }
@@ -431,28 +422,25 @@ export default {
   font-size: 2.8vw;
 }
 .footer-dialog-inner {
-    position: relative;
-    bottom: 50vh;
-    left: 10vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  bottom: 50vh;
+  left: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .claim-footer-box {
 }
 
-.q-tabs-drawer{
+.q-tabs-drawer {
   display: flex;
   flex-direction: column;
 }
 
-.q-list-drawer{
+.q-list-drawer {
   margin-top: 2vh;
 }
-
-
-
 
 // ******SANDBOX
 // .q-toolbar.row.no-wrap.items-center.toolbar {
@@ -475,4 +463,15 @@ export default {
 // .q-tab__content.self-stretch.flex-center.relative-position.q-anchor--skip.non-selectable.column {
 //     min-width: unset !important;
 // }
+
+.fade-enter-from{
+  opacity: 0;
+}
+.fade-enter-to{
+  opacity: 1;
+}
+.fade-enter-active{
+  transition: opacity 2s ease;
+}
+
 </style>

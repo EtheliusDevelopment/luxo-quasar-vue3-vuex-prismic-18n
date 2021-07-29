@@ -1,7 +1,9 @@
 <template>
+
   <q-page class="qpage" padding>
     <LuxuryTravel />
   </q-page>
+
 </template>
 
 <script>
