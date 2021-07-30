@@ -1,4 +1,5 @@
 <template>
+
   <q-page class="main-content-index">
     <transition name="fade">
     <h1 v-if="togl">TRANSITION TEST</h1>
@@ -200,7 +201,7 @@ export default {
 
 
   setup() {
-    alert('hola')
+
     const togl = ref(false)
 
     return {

@@ -1,48 +1,50 @@
 <template>
-  <PreLoader />
-
- <q-layout view="lHh lpR lFf">
+  <PreLoader :loaderOn="loaderOn"/>
+  <h1>{{ tipico }}</h1>
+  <q-btn color="primary" icon="check" label="STATE COMMIT" @click="changeLoadAct" />
+  <h1>tipo</h1>
+  <q-layout view="lHh lpR lFf">
     <transition name="fade">
-  <div v-if="showNow">
-     <q-header class="text-white bg-secondary" height-hint="98">
-      <q-toolbar class="toolbar">
-        <q-btn
-          class="mobile-only"
-          dense
-          flat
-          round
-          icon="menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title class="navbar-title desktop-only">
-          <router-link to="/" class="wrapper-logo">
-            <q-img
-              class="navbar-logo"
-              src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+      <div v-if="showNow">
+        <q-header class="text-white bg-secondary" height-hint="98">
+          <q-toolbar class="toolbar">
+            <q-btn
+              class="mobile-only"
+              dense
+              flat
+              round
+              icon="menu"
+              @click="toggleLeftDrawer"
             />
-          </router-link>
 
-          <q-tabs>
-            <!-- <q-route-tab to="/" label="Home" /> -->
-            <q-route-tab to="/about" label="About Us" />
-            <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
-            <q-route-tab to="/wine-club" label="Wine Club" />
-            <q-route-tab to="/testimonials" label="Testimonials" />
-            <q-route-tab to="/quiz" label="Quiz" />
-            <q-route-tab to="/blog" label="Blog" />
-            <q-route-tab to="/contact-us" label="Contact" />
-          </q-tabs>
+            <q-toolbar-title class="navbar-title desktop-only">
+              <router-link to="/" class="wrapper-logo">
+                <q-img
+                  class="navbar-logo"
+                  src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+                />
+              </router-link>
 
-          <q-btn
-            size="1.1vw"
-            class="q-px-lg q-py-xs btn-toolbar"
-            color="white"
-            label="Start a planning"
-          />
-        </q-toolbar-title>
-      </q-toolbar>
-      <!--
+              <q-tabs>
+                <!-- <q-route-tab to="/" label="Home" /> -->
+                <q-route-tab to="/about" label="About Us" />
+                <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
+                <q-route-tab to="/wine-club" label="Wine Club" />
+                <q-route-tab to="/testimonials" label="Testimonials" />
+                <q-route-tab to="/quiz" label="Quiz" />
+                <q-route-tab to="/blog" label="Blog" />
+                <q-route-tab to="/contact-us" label="Contact" />
+              </q-tabs>
+
+              <q-btn
+                size="1.1vw"
+                class="q-px-lg q-py-xs btn-toolbar"
+                color="white"
+                label="Start a planning"
+              />
+            </q-toolbar-title>
+          </q-toolbar>
+          <!--
       <q-tabs class="desktop-only">
         <q-route-tab to="/" label="Home" />
         <q-route-tab to="/about" label="About Us" />
@@ -53,18 +55,18 @@
         <q-route-tab to="/blog" label="Blog" />
         <q-route-tab to="/contact-us" label="Contact" />
       </q-tabs> -->
-    </q-header>
+        </q-header>
 
-    <q-drawer
-      class="drawer"
-      v-model="leftDrawerOpen"
-      side="left"
-      behavior="mobile"
-      bordered
-    >
-      <!-- drawer content -->
+        <q-drawer
+          class="drawer"
+          v-model="leftDrawerOpen"
+          side="left"
+          behavior="mobile"
+          bordered
+        >
+          <!-- drawer content -->
 
-      <!-- <q-route-tab to="/" label="Home" />
+          <!-- <q-route-tab to="/" label="Home" />
         <q-route-tab to="/about" label="About Us" />
         <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
         <q-route-tab to="/wine-club" label="Wine Club" />
@@ -72,8 +74,8 @@
         <q-route-tab to="/quiz" label="Quiz" />
         <q-route-tab to="/blog" label="Blog" />
         <q-route-tab to="/contact-us" label="Contact" /> -->
-      <q-list padding class="menu-list q-list-drawer">
-        <!--
+          <q-list padding class="menu-list q-list-drawer">
+            <!--
            <q-item clickable v-ripple to="/about">
               <q-img
                 class="q-mb-md"
@@ -83,168 +85,219 @@
               />
             </q-item> -->
 
-        <q-item clickable v-ripple to="/" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="home" color="white" />
-          </q-item-section>
+            <q-item clickable v-ripple to="/" class="q-ml-md">
+              <q-item-section avatar q-ml-md>
+                <q-icon name="home" color="white" />
+              </q-item-section>
 
-          <q-item-section class="text-white q-ml-md"> Home </q-item-section>
-        </q-item>
+              <q-item-section class="text-white q-ml-md"> Home </q-item-section>
+            </q-item>
 
-        <q-item clickable v-ripple to="/about" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
+            <q-item clickable v-ripple to="/about" class="q-ml-md">
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white" />
+              </q-item-section>
 
-          <q-item-section class="text-white q-ml-md"> About Us </q-item-section>
-        </q-item>
+              <q-item-section class="text-white q-ml-md">
+                About Us
+              </q-item-section>
+            </q-item>
 
-        <q-item clickable v-ripple to="/luxury-travel" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
+            <q-item clickable v-ripple to="/luxury-travel" class="q-ml-md">
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white" />
+              </q-item-section>
 
-          <q-item-section class="text-white q-ml-md">
-            Italy Luxury Travel
-          </q-item-section>
-        </q-item>
+              <q-item-section class="text-white q-ml-md">
+                Italy Luxury Travel
+              </q-item-section>
+            </q-item>
 
-        <q-item clickable v-ripple to="/wine-club" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
+            <q-item clickable v-ripple to="/wine-club" class="q-ml-md">
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white" />
+              </q-item-section>
 
-          <q-item-section class="text-white q-ml-md">
-            Wine Club
-          </q-item-section>
-        </q-item>
+              <q-item-section class="text-white q-ml-md">
+                Wine Club
+              </q-item-section>
+            </q-item>
 
-        <q-item clickable v-ripple to="/testimonials" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
+            <q-item clickable v-ripple to="/testimonials" class="q-ml-md">
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white" />
+              </q-item-section>
 
-          <q-item-section class="text-white q-ml-md">
-            Testimonials
-          </q-item-section>
-        </q-item>
+              <q-item-section class="text-white q-ml-md">
+                Testimonials
+              </q-item-section>
+            </q-item>
 
-        <q-item clickable v-ripple to="/quiz" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
+            <q-item clickable v-ripple to="/quiz" class="q-ml-md">
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white" />
+              </q-item-section>
 
-          <q-item-section class="text-white q-ml-md"> Quiz </q-item-section>
-        </q-item>
+              <q-item-section class="text-white q-ml-md"> Quiz </q-item-section>
+            </q-item>
 
-        <q-item clickable v-ripple to="/blog" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
+            <q-item clickable v-ripple to="/blog" class="q-ml-md">
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white" />
+              </q-item-section>
 
-          <q-item-section class="text-white q-ml-md"> Blog </q-item-section>
-        </q-item>
+              <q-item-section class="text-white q-ml-md"> Blog </q-item-section>
+            </q-item>
 
-        <q-item clickable v-ripple to="/contact-us" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
+            <q-item clickable v-ripple to="/contact-us" class="q-ml-md">
+              <q-item-section avatar q-ml-md>
+                <q-icon name="flight_takeoff" color="white" />
+              </q-item-section>
 
-          <q-item-section class="text-white q-ml-md"> Contact </q-item-section>
-        </q-item>
-      </q-list>
-    </q-drawer>
+              <q-item-section class="text-white q-ml-md">
+                Contact
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-drawer>
 
-    <q-page-container class="testCONTAINER">
-      <router-view />
-    </q-page-container>
+        <q-page-container class="testCONTAINER">
+          <router-view />
+        </q-page-container>
 
-    <q-footer elevated class="footer text-white desktop-only">
-      <q-card class="my-card">
-        <q-img class="footer-dialog" src="~assets\venice-footer-box.png">
-        </q-img>
+        <q-footer elevated class="footer text-white desktop-only">
+          <q-card class="my-card">
+            <q-img class="footer-dialog" src="~assets\venice-footer-box.png">
+            </q-img>
 
-        <div class="footer-dialog-inner">
-          <h2 class="dialog-inner-h2">Design your luxury tour.</h2>
-          <q-img src="~assets\claim-footer-box.svg" class="claim-footer-box" />
+            <div class="footer-dialog-inner">
+              <h2 class="dialog-inner-h2">Design your luxury tour.</h2>
+              <q-img
+                src="~assets\claim-footer-box.svg"
+                class="claim-footer-box"
+              />
 
-          <q-btn
-            size="1.1vw"
-            class="q-px-lg q-py-xs q-mt-md btn-footer-box"
-            color="white"
-            label="Start the quiz"
-          />
-        </div>
-      </q-card>
+              <q-btn
+                size="1.1vw"
+                class="q-px-lg q-py-xs q-mt-md btn-footer-box"
+                color="white"
+                label="Start the quiz"
+              />
+            </div>
+          </q-card>
 
-      <div class="wrapper-footer-items">
-        <q-img
-          class="inner-logo"
-          src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
-        />
-        <br />
+          <div class="wrapper-footer-items">
+            <q-img
+              class="inner-logo"
+              src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+            />
+            <br />
 
-        <q-img src="~assets\contact-us.svg" class="contact-footer" />
-        <br />
+            <q-img src="~assets\contact-us.svg" class="contact-footer" />
+            <br />
 
-        <q-img src="~assets\mail-footer.svg" class="mail-footer" />
+            <q-img src="~assets\mail-footer.svg" class="mail-footer" />
 
-        <br />
+            <br />
 
-        <q-img src="~assets\follow-us.svg" class="follow-footer" />
-        <br />
+            <q-img src="~assets\follow-us.svg" class="follow-footer" />
+            <br />
 
-        <SocialComponent class="social-component" />
+            <SocialComponent class="social-component" />
+          </div>
+
+          <h6 class="privacy-footer text-center">
+            © LUXO ITALIA SNC - P.IVA 08637280960. ALL RIGHTS RESERVED. |
+            <router-link to="/privacy"
+              ><span class="privacy-link">PRIVACY POLICY</span></router-link
+            >
+            |
+            <router-link to="/terms-and-conditions"
+              ><span class="terms-link">TERMS AND CONDITION</span></router-link
+            >
+            |
+            <router-link to="/brochure"
+              ><span class="brochure-link">BROCHURE</span></router-link
+            >
+          </h6>
+
+          <!-- </div> -->
+        </q-footer>
       </div>
-
-      <h6 class="privacy-footer text-center">
-        © LUXO ITALIA SNC - P.IVA 08637280960. ALL RIGHTS RESERVED. |
-        <router-link to="/privacy"
-          ><span class="privacy-link">PRIVACY POLICY</span></router-link
-        >
-        |
-        <router-link to="/terms-and-conditions"
-          ><span class="terms-link">TERMS AND CONDITION</span></router-link
-        >
-        |
-        <router-link to="/brochure"
-          ><span class="brochure-link">BROCHURE</span></router-link
-        >
-      </h6>
-
-      <!-- </div> -->
-    </q-footer>
-  </div>
-  </transition>
- </q-layout>
+    </transition>
+  </q-layout>
 </template>
 
 <script>
 import { ref } from "vue";
 import SocialComponent from "../components/SocialComponent.vue";
 import PreLoader from "../components/PreLoader.vue";
-import { onMounted } from "vue";
+import { onMounted, onBeforeUpdate, onUpdated, watchEffect } from "vue";
+import { useStore, mapMutations, mapActions, mapState  } from 'vuex'
+import { changeLoad } from 'src/store/showload/mutations';
+
+
 
 export default {
   components: {
     SocialComponent,
     PreLoader,
   },
-  setup() {
-    const leftDrawerOpen = ref(false);
-    let showNow = ref(false);
+     computed: {
+       ...mapState(['load']),
+      tipico () {
+      return this.$store.state.showload.load
+    }
+    },
 
+    methods: {
+      ...mapActions({
+          changeLoadAct: "showload/changeLoadAct"
+      })
+
+    },
+
+  setup() {
+    const $store = useStore()
+    const leftDrawerOpen = ref(false);
+    let showNow = ref(true);
+    const tipo = $store.state.showload.load
+    const  loaderOn = ref(false);
+    const fnT= $store.commit('showload/changeLoad')
+
+
+
+
+
+
+   onBeforeUpdate(() => {
+
+    });
+
+    onUpdated(() => {
+
+
+    });
     onMounted(() => {
-      // setTimeout(()=>{showNow = true},1500)
-      setTimeout(() => {
-        showNow.value = true;
-      }, 1500);
+      // loaderOn.value = false;
+      // alert(loaderOn.value);
+
+      // setTimeout(() => {
+      //   showNow.value = true;
+      // }, 1000);
       // alert(showNow)
     });
+
 
     return {
       leftDrawerOpen,
       showNow,
+      loaderOn,
+      tipo,
+      fnT,
+      clickBtn(){
+        changeLoad()
+      },
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
@@ -464,14 +517,13 @@ export default {
 //     min-width: unset !important;
 // }
 
-.fade-enter-from{
+.fade-enter-from {
   opacity: 0;
 }
-.fade-enter-to{
+.fade-enter-to {
   opacity: 1;
 }
-.fade-enter-active{
+.fade-enter-active {
   transition: opacity 2s ease;
 }
-
 </style>

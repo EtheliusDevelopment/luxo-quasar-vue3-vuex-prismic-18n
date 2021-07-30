@@ -1,7 +1,8 @@
 <template>
   <div class="vld-parent">
     <loading
-      v-model:active="isLoading"
+      @addProductToCompare="ChangeT($event)"
+      v-model:active="loaderOn"
       :can-cancel="true"
       :on-cancel="onCancel"
       :is-full-page="fullPage"
@@ -19,6 +20,10 @@
   import 'vue-loading-overlay/dist/vue-loading.css';
 
   export default {
+    props: {
+      loaderOn: Boolean,
+      loaderNo: Boolean,
+    },
       data() {
           return {
               isLoading: false,
@@ -28,6 +33,9 @@
       components: {
           Loading
       },
+
+
+
       methods: {
           // doAjax() {
           //     this.isLoading = true;
@@ -44,6 +52,10 @@
                     this.isLoading = false
                 }, 1500)
           },
+            ChangeT(data) {
+          alert(data)
+
+    },
       },
        created() {
          this.isLoading = true
@@ -53,6 +65,13 @@
            this.loaderOff();
         //  setTimeout(function(){alert(this.isLoading)}, 1000);
       },
+      // beforeUpdate() {
+      //   this.isLoading = true
+      // },
+
+      // updated() {
+      //   this.loaderOff();
+      // }
 
   }
 </script>
