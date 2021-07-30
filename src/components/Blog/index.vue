@@ -67,7 +67,7 @@ export default {
 
 
 <style>
-img {
+.img {
   width: 100%;
   padding: 0 15vw;
 }
