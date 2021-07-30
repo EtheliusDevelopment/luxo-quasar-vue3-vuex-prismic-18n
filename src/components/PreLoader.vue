@@ -8,6 +8,7 @@
       background-color="#4c4571"
       opacity= 0.99
       transition="fade"
+      loader="bars"
     />
 
     <!-- <label><input type="checkbox" v-model="fullPage" />Full page?</label>

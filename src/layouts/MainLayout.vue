@@ -218,32 +218,15 @@
 import { ref } from "vue";
 import SocialComponent from "../components/SocialComponent.vue";
 import PreLoader from "../components/PreLoader.vue";
-import { onMounted, onBeforeUpdate, onUpdated, watchEffect } from "vue";
-import { useStore, mapMutations, mapActions, mapState } from "vuex";
 
 export default {
   components: {
     SocialComponent,
     PreLoader,
   },
-  computed: {
-    ...mapState(["load"]),
-    loaderHandler() {
-      return this.$store.state.showload.load;
-    },
-  },
-
-  methods: {
-    ...mapActions({
-      changeLoadAct: "showload/changeLoadAct",
-    }),
-    ...mapMutations({
-      changeLoad: "showload/changeLoad",
-    }),
-  },
 
   setup() {
-    const $store = useStore();
+
     const leftDrawerOpen = ref(false);
 
     return {
