@@ -1,4 +1,5 @@
 <template>
+    <PreLoader />
   <q-page class="flex flex-center">
     <div class="row">
       <div class="col-md-6 col-sm-12">
@@ -6,19 +7,19 @@
       </div>
     </div>
 
-    <div class="row ">
+    <div class="row">
       <div class="divTest col-md-4 col-sm-8 col-xs-12">
         <img class="imgTest" src="~assets/venice-bg.jpg" alt="" />
       </div>
     </div>
 
     <div class="row mydiv">
-        <q-img
-      img-class="col-md-2 test22"
-      src="~assets/venice-bg.jpg"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
+      <q-img
+        img-class="col-md-2 test22"
+        src="~assets/venice-bg.jpg"
+        spinner-color="primary"
+        spinner-size="82px"
+      />
     </div>
 
     <q-img
@@ -33,51 +34,53 @@
       spinner-color="primary"
       spinner-size="82px"
     />
-       <q-img
+    <q-img
       src="~assets/venice-bg.jpg"
       loading="lazy"
       spinner-color="primary"
       spinner-size="82px"
     />
-       <q-img
+    <q-img
       src="~assets/venice-bg.jpg"
       loading="lazy"
       spinner-color="primary"
       spinner-size="82px"
     />
-       <q-img
+    <q-img
       src="~assets/venice-bg.jpg"
       loading="lazy"
       spinner-color="primary"
       spinner-size="82px"
     />
-       <q-img
+    <q-img
       src="~assets/venice-bg.jpg"
       loading="lazy"
       spinner-color="primary"
       spinner-size="82px"
     />
-       <q-img
+    <q-img
       src="~assets/venice-bg.jpg"
       loading="lazy"
       spinner-color="primary"
       spinner-size="82px"
     />
-       <q-img
+    <q-img
       src="~assets/venice-bg.jpg"
       loading="lazy"
       spinner-color="primary"
       spinner-size="82px"
     />
-
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-
+import PreLoader from '../components/PreLoader.vue'
 export default defineComponent({
   name: "PageIndex",
+  components: {
+    PreLoader,
+  },
 
   created() {
     let showPosition = (position) => {
@@ -104,7 +107,7 @@ export default defineComponent({
 }
 .divTest {
 }
-.test22{
+.test22 {
   width: 80%;
 }
 </style>

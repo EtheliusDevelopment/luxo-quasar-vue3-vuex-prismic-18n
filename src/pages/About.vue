@@ -2,10 +2,6 @@
 <q-page padding>
   <PreLoader />
 
-<transition name="fade">
-
-    <div v-if="showNow">
-
       <q-img
       src="~assets/img_main_index.jpg"
       spinner-color="primary"
@@ -141,8 +137,7 @@
      </div>
 
     </div>
-    </div>
-  </transition>
+
 </q-page>
 
 </template>
@@ -150,22 +145,14 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from 'vue'
-import { onMounted } from 'vue'
+
 export default {
   components: { PreLoader },
   setup () {
 
-      let showNow = ref(false)
-      onMounted(() => {
-      // setTimeout(()=>{showNow = true},1500)
-      setTimeout(() => {
-                    showNow.value = true
-                }, 1500)
-          // alert(showNow)
-    })
-    return {
-      showNow,
-    }
+      return {
+
+}
   },
 };
 </script>

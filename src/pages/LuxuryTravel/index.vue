@@ -1,19 +1,36 @@
 <template>
-
   <q-page class="qpage" padding>
-    <LuxuryTravel />
-  </q-page>
+    <PreLoader />
+     <LuxuryTravel />
 
+  </q-page>
 </template>
 
 <script>
+import PreLoader from "src/components/PreLoader.vue";
 import { defineComponent } from "vue";
 import LuxuryTravel from "../../components/LuxuryTravel";
+import { ref } from "vue";
+import { onMounted } from "vue";
 
 export default defineComponent({
   name: "PageIndex",
   components: {
     LuxuryTravel,
+    PreLoader,
+  },
+  setup() {
+    const showNow = ref(false);
+    onMounted(() => {
+      setTimeout(() => {
+        showNow.value = true;
+      }, 1500);
+      // alert(showNow)
+    });
+
+    return {
+      showNow,
+    };
   },
 });
 </script>

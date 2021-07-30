@@ -8,3 +8,9 @@ export function loadOff (state) {
   state.load = false;
   console.log(state)
 }
+
+export function loadStop (state) {
+
+  state.checkLoad = true;
+  console.log(state)
+}

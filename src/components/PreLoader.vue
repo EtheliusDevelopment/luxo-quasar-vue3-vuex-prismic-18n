@@ -1,13 +1,13 @@
 <template>
   <div class="vld-parent">
     <loading
-      @addProductToCompare="ChangeT($event)"
-      v-model:active="loaderOn"
+      v-model:active="isLoading"
       :can-cancel="true"
       :on-cancel="onCancel"
       :is-full-page="fullPage"
       background-color="#4c4571"
-      opacity="0.9"
+      opacity= 0.99
+      transition="fade"
     />
 
     <!-- <label><input type="checkbox" v-model="fullPage" />Full page?</label>
@@ -16,28 +16,33 @@
 </template>
 
 <script>
-  import Loading from 'vue-loading-overlay';
-  import 'vue-loading-overlay/dist/vue-loading.css';
+import Loading from "vue-loading-overlay";
+import "vue-loading-overlay/dist/vue-loading.css";
 
-  export default {
-    props: {
-      loaderOn: Boolean,
-      loaderNo: Boolean,
+export default {
+  props: {
+    loaderOn: Boolean,
+    loaderNo: Boolean,
+  },
+  data() {
+    return {
+      isLoading: true,
+      fullPage: true,
+    };
+  },
+  components: {
+    Loading,
+  },
+
+  methods: {
+
+
+    loaderOff() {
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1500);
     },
-      data() {
-          return {
-              isLoading: false,
-              fullPage: true
-          }
-      },
-      components: {
-          Loading
-      },
-
-
-
-      methods: {
-          // doAjax() {
+        // doAjax() {
           //     this.isLoading = true;
           //     // simulate AJAX
           //     setTimeout(() => {
@@ -47,31 +52,21 @@
           // onCancel() {
           //     console.log('User cancelled the loader.')
           // },
-          loaderOff() {
-              setTimeout(() => {
-                    this.isLoading = false
-                }, 1500)
-          },
-            ChangeT(data) {
-          alert(data)
+  },
+  // created() {
+  //   this.isLoading = true;
+  //   // alert(this.isLoading)
+  // },
+  mounted() {
+    this.loaderOff();
+    //  setTimeout(function(){alert(this.isLoading)}, 1000);
+  },
+  // beforeUpdate() {
+  //   this.isLoading = true
+  // },
 
-    },
-      },
-       created() {
-         this.isLoading = true
-        // alert(this.isLoading)
-      },
-         mounted() {
-           this.loaderOff();
-        //  setTimeout(function(){alert(this.isLoading)}, 1000);
-      },
-      // beforeUpdate() {
-      //   this.isLoading = true
-      // },
-
-      // updated() {
-      //   this.loaderOff();
-      // }
-
-  }
+  // updated() {
+  //   this.loaderOff();
+  // }
+};
 </script>
