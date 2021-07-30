@@ -1,6 +1,7 @@
 <template>
 
   <q-page class="main-content-index">
+    <pre-loader />
     <transition name="fade">
     <h1 v-if="togl">TRANSITION TEST</h1>
     </transition>
@@ -196,19 +197,22 @@
 
 <script>
 import { ref } from "vue";
+import PreLoader from 'src/components/PreLoader.vue';
 
 export default {
 
+  components: {
+    PreLoader
+  },
 
   setup() {
 
-    const togl = ref(false)
+
+
 
     return {
 
-      slide: ref(1),
-      autoplay: ref(true),
-      togl
+
     };
   },
 };
