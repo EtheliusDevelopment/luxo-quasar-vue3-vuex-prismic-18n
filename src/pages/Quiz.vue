@@ -1,7 +1,7 @@
 <template>
   <transition>
-    <q-page >
-      <PreLoader/>
+    <q-page>
+      <PreLoader />
 
       <div class="header-block">
         <q-img
@@ -13,12 +13,10 @@
           spinner-size="82px"
           height="450px"
         >
-          <div class="absolute-top figcaption" style="height: 100%">
-            <h1 class="text-white text-center">
-              ITALY'S FINEST <br />
-              LUXURY EXPERIENCES
-            </h1>
-            <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
+          <div class="figcaption">
+            <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
+            <q-separator color="white" inset />
+            <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
             <q-btn
               color="white"
               icon="check"
@@ -27,52 +25,63 @@
             />
           </div>
         </q-img>
+
+        <div class="breadcrumbs">
+          <q-breadcrumbs
+            separator="---"
+            class="text-orange"
+            active-color="primary"
+          >
+            <q-breadcrumbs-el icon="home" />
+            <q-breadcrumbs-el label="Components" icon="widgets" to="/" />
+            <q-breadcrumbs-el label="Breadcrumbs" icon="navigation" />
+          </q-breadcrumbs>
+        </div>
       </div>
 
-      <div class="first-block" style="outline: dashed;">
-      <div class="sub-section-first">
-         <!-- Header Quiz -->
-      <div class="form-header text-center" style="width: 80vw">
-        <h3>TITOLO QUIZ</h3>
-        <q-linear-progress
-          rounded
-          size="20px"
-          :value="value"
-          color="primary"
-          class="q-mt-sm linear-progress"
-        />
-        <h6>Descrizione Step</h6>
-      </div>
-
-      <!-- Form -->
-      <div class="form-body" style="width: 480vw">
-        <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
-          <Step1 v-if="count == 0" />
-          <Step2 v-if="count == 1" />
-          <Step3 v-if="count == 2" />
-          <Step4 v-if="count == 3" />
-
-          <div>
-            <q-btn
-              @click="count--"
-              v-if="count > 0"
-              label="Back"
-              type="button"
+      <div class="first-block" style="outline: dashed">
+        <div class="sub-section-first">
+          <!-- Header Quiz -->
+          <div class="form-header text-center" style="width: 80vw">
+            <h3>TITOLO QUIZ</h3>
+            <q-linear-progress
+              rounded
+              size="20px"
+              :value="value"
               color="primary"
+              class="q-mt-sm linear-progress"
             />
-            <q-btn
-              @click="count++"
-              label="Forward"
-              type="button"
-              color="primary"
-              class="q-ml-sm"
-            />
+            <h6>Descrizione Step</h6>
           </div>
-        </q-form>
-      </div>
-      </div>
-    </div>
 
+          <!-- Form -->
+          <div class="form-body" style="width: 480vw">
+            <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+              <Step1 v-if="count == 0" />
+              <Step2 v-if="count == 1" />
+              <Step3 v-if="count == 2" />
+              <Step4 v-if="count == 3" />
+
+              <div>
+                <q-btn
+                  @click="count--"
+                  v-if="count > 0"
+                  label="Back"
+                  type="button"
+                  color="primary"
+                />
+                <q-btn
+                  @click="count++"
+                  label="Forward"
+                  type="button"
+                  color="primary"
+                  class="q-ml-sm"
+                />
+              </div>
+            </q-form>
+          </div>
+        </div>
+      </div>
 
     </q-page>
   </transition>
@@ -116,6 +125,30 @@ export default {
 }
 
 @media screen and (max-width: 990px) {
+}
+
+.figcaption {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.figcaption h6.text-white {
+  margin-bottom: 0;
+}
+
+.figcaption h1.text-white.text-center {
+  margin-top: 0;
+  margin-bottom: 7vh;
+}
+
+hr {
+  height: 3px;
+  width: 12vw;
+  margin-bottom: 2vh;
 }
 // **********FIRST BLOCK**********
 @media screen and (max-width: 990px) {

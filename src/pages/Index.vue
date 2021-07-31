@@ -16,6 +16,21 @@
           <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
         </div>
       </q-img>
+
+        <div class="breadcrumbs">
+        <q-breadcrumbs
+          separator="---"
+          class="text-orange"
+          active-color="primary"
+        >
+          <q-breadcrumbs-el icon="home" />
+          <q-breadcrumbs-el label="Components" icon="widgets" to="/"/>
+          <q-breadcrumbs-el label="Breadcrumbs" icon="navigation" />
+          <q-breadcrumbs-el label="Breadcrumbs" icon="navigation" />
+          <q-breadcrumbs-el label="Breadcrumbs" icon="navigation" />
+        </q-breadcrumbs>
+      </div>
+
     </div>
 
     <div class="first-block">
@@ -211,7 +226,32 @@ export default {
 };
 </script>
 
+
 <style lang="scss" scoped>
+// **********HEADER BLOCK**********
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 990px) {
+}
+
+.breadcrumbs {
+    position: absolute;
+    z-index: 99;
+    outline: dashed;
+    top: 73rem;
+    left: 42vw;
+}
+
+// **********FIRST BLOCK**********
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 990px) {
+}
+
+
+// **********SECOND BLOCK**********
 @media screen and (max-width: 990px) {
 }
 
