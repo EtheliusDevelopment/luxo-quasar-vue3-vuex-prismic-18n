@@ -3,6 +3,8 @@
     <PreLoader />
     <div class="header-block">
       <q-img
+        class="imgMain"
+        img-class="imgMain-index"
         src="~assets/img_main_index.jpg"
         spinner-color="primary"
         spinner-size="82px"
@@ -17,20 +19,19 @@
         </div>
       </q-img>
 
-        <div class="breadcrumbs">
+      <div class="breadcrumbs">
         <q-breadcrumbs
           separator="---"
           class="text-orange"
           active-color="primary"
         >
           <q-breadcrumbs-el icon="home" />
-          <q-breadcrumbs-el label="Components" icon="widgets" to="/"/>
+          <q-breadcrumbs-el label="Components" icon="widgets" to="/" />
           <q-breadcrumbs-el label="Breadcrumbs" icon="navigation" />
           <q-breadcrumbs-el label="Breadcrumbs" icon="navigation" />
           <q-breadcrumbs-el label="Breadcrumbs" icon="navigation" />
         </q-breadcrumbs>
       </div>
-
     </div>
 
     <div class="first-block">
@@ -226,36 +227,188 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-@media screen and (max-width: 990px) {
+// **********HEADER BLOCK**********
+@media screen and (max-width: 680px) {
+  figcaption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9;
+    background: transparent !important;
+  }
+
+  .imgMain-index {
+    height: 85%;
+  }
+
+  .first-block {
+    display: grid;
+    grid-template-columns: 56vw 40vw !important;
+    grid-template-rows: 30vh 35vw !important;
+    border-bottom: 2px solid blue;
+    /* grid-template-columns: auto; */
+  }
+
+  .img1-index {
+    grid-column: 1/3;
+    grid-row: 1;
+    object-fit: contain;
+    position: 50% 50%;
+  }
+  .img1 {
+    bottom: 5rem !important;
+    display: none;
+  }
+  .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    grid-column: 1/3 !important;
+    grid-row: 1 !important;
+    position: unset !important;
+    padding: unset !important;
+    margin: 30% 0.75rem 0 0.75rem;
+  }
+
+
+  .btn-1 {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+  .second-block {
+    border-bottom: 2px solid blue;
+    display: grid;
+    grid-template-columns: 60vw 10vw 29.2vw;
+    grid-template-rows: 10vh 110vh 30vh 50vh;
+  }
+  .img2 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .img3 {
+    grid-column: 2/4;
+    grid-row: 2/4;
+  }
+
+  .img3-index {
+    position: relative;
+    top: 25vh;
+  }
+
+  .sub-section-first-2 {
+    grid-column: 1/4;
+    grid-row: 4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10vw;
+  }
+
+  .p-long-text {
+    padding: 0 10vw;
+  }
+  .third-block {
+    border-bottom: 2px solid blue;
+  }
+  .fourth-block {
+    border-bottom: 2px solid blue;
+    display: grid;
+    grid-template-columns: 20vw 10vw 60vw;
+    grid-template-rows: 10vh 55vh 20vh;
+  }
+
+  .img4 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .sub-section-first-3 {
+    background-color: $info;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18vw;
+  }
+
+  .fifth-block {
+    border-bottom: 2px solid blue;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70vh;
+    padding: 10vw 5vw;
+  }
+
+  .sub-section-first-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+  }
+
+  .img5 {
+    grid-column: 2;
+  }
+
+  .sixth-block {
+    padding: 0 5vw 5vw 5vw;
+  }
+
+  .fade-enter-from {
+    opacity: 0;
+  }
+  .fade-enter-to {
+    opacity: 1;
+  }
+  .fade-enter-active {
+    transition: opacity 2s ease;
+  }
+
+  .fade-leave-from {
+    opacity: 1;
+  }
+  .fade-leave-to {
+    opacity: 0;
+  }
+  .fade-leave-active {
+    transition: opacity 4s ease;
+  }
 }
 
-@media screen and (max-width: 990px) {
-}
+@media screen and (max-width: 1100px) {
+  .first-block {
+    grid-template-columns: 56vw 40vw !important;
+    grid-template-rows: 30vh 35vw !important;
+  }
 
-.breadcrumbs {
-    position: absolute;
-    z-index: 99;
-    outline: dashed;
-    top: 73rem;
-    left: 42vw;
-}
+  .img1-index {
+    grid-column: 1;
+    grid-row: 1;
+    object-fit: contain;
+    position: 50% 50%;
+  }
 
-// **********FIRST BLOCK**********
-@media screen and (max-width: 990px) {
-}
+    .img1 {
+    bottom: 6rem !important;
+    display: none;
+  }
 
-@media screen and (max-width: 990px) {
-}
-
-
-// **********SECOND BLOCK**********
-@media screen and (max-width: 990px) {
-}
-
-@media screen and (max-width: 990px) {
+  .sub-section-first {
+    position: unset !important;
+    padding: unset !important;
+    grid-column: 1/3 !important;
+    grid-row: 1 !important;
+    margin: 30% 0.75rem 0 0.75rem;
+  }
 }
 
 .figcaption {
@@ -289,7 +442,6 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 16px;
   grid-column: 2;
   grid-row: 1;
   position: absolute;

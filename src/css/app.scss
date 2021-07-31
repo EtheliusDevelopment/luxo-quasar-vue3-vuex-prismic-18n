@@ -16,10 +16,11 @@
 // declare a class which applies it
 body {
   // font-family: 'Hatton-Medium';
+      font-family: system-ui;
 }
 
 h1 {
-  font-family: Hatton-Semibold;
+  // font-family: Hatton-Semibold;
   font-size: 3rem;
   line-height: 4rem;
 }
@@ -30,8 +31,8 @@ h2 {
 }
 
 p {
-  font-size: 0.9rem;
-  line-height: 1rem;
+  font-size:  1.2rem;
+  line-height: 1.2rem;
 }
 
 @media screen and (max-width: 990px) {
@@ -50,8 +51,8 @@ p {
   }
 
   p {
-    font-size: 0.7rem;
-    line-height: 0.7rem;
+    font-size: 1rem;
+    line-height: 1rem;
   }
 
   .q-btn {
@@ -71,17 +72,17 @@ p {
   }
 
   h2 {
+    font-size: 1.55rem;
+    line-height: 1.55rem;
+  }
+
+  p {
     font-size: 0.9rem;
     line-height: 0.9rem;
   }
 
-  p {
-    font-size: 0.6rem;
-    line-height: 0.6rem;
-  }
-
   .q-btn {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 }
 
