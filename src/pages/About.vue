@@ -1,7 +1,7 @@
 <template>
-<q-page padding>
+<q-page >
   <PreLoader />
-
+<div class="header-block">
       <q-img
       src="~assets/img_main_index.jpg"
       spinner-color="primary"
@@ -18,7 +18,7 @@
 
       </div>
     </q-img>
-
+</div>
 
     <div class="first-block">
 
@@ -158,6 +158,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 990px) {
+}
+
 .fade-enter-from{
   opacity: 0;
 }

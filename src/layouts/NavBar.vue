@@ -1,7 +1,7 @@
 <template>
-  <PreLoader />
+
   <q-layout view="lHh lpR lFf">
-    <q-header class="text-white" height-hint="98" reveal>
+    <q-header class="text-white bg-secondary" height-hint="98">
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -51,178 +51,19 @@
         <q-route-tab to="/contact-us" label="Contact" />
       </q-tabs> -->
     </q-header>
-
-    <q-drawer
-      class="drawer"
-      v-model="leftDrawerOpen"
-      side="left"
-      behavior="mobile"
-      bordered
-    >
-      <!-- drawer content -->
-
-      <!-- <q-route-tab to="/" label="Home" />
-        <q-route-tab to="/about" label="About Us" />
-        <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
-        <q-route-tab to="/wine-club" label="Wine Club" />
-        <q-route-tab to="/testimonials" label="Testimonials" />
-        <q-route-tab to="/quiz" label="Quiz" />
-        <q-route-tab to="/blog" label="Blog" />
-        <q-route-tab to="/contact-us" label="Contact" /> -->
-      <q-list padding class="menu-list q-list-drawer">
-        <!--
-           <q-item clickable v-ripple to="/about">
-              <q-img
-                class="q-mb-md"
-                src="~assets\luxoitalia_logo_white_2020.svg"
-                spinner-color="primary"
-                spinner-size="82px"
-              />
-            </q-item> -->
-
-        <q-item clickable v-ripple to="/" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="home" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> Home </q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple to="/about" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> About Us </q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple to="/luxury-travel" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md">
-            Italy Luxury Travel
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple to="/wine-club" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md">
-            Wine Club
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple to="/testimonials" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md">
-            Testimonials
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple to="/quiz" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> Quiz </q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple to="/blog" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> Blog </q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple to="/contact-us" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> Contact </q-item-section>
-        </q-item>
-      </q-list>
-    </q-drawer>
-
-    <q-page-container class="testCONTAINER">
-      <router-view />
-    </q-page-container>
-
-    <q-footer elevated class="footer text-white desktop-only">
-      <q-card class="my-card">
-        <q-img class="footer-dialog" src="~assets\venice-footer-box.png">
-        </q-img>
-
-        <div class="footer-dialog-inner">
-          <h2 class="dialog-inner-h2">Design your luxury tour.</h2>
-          <q-img src="~assets\claim-footer-box.svg" class="claim-footer-box" />
-
-          <q-btn
-            size="1.1vw"
-            class="q-px-lg q-py-xs q-mt-md btn-footer-box"
-            color="white"
-            label="Start the quiz"
-          />
-        </div>
-      </q-card>
-
-      <div class="wrapper-footer-items">
-        <q-img
-          class="inner-logo"
-          src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
-        />
-        <br />
-
-        <q-img src="~assets\contact-us.svg" class="contact-footer" />
-        <br />
-
-        <q-img src="~assets\mail-footer.svg" class="mail-footer" />
-
-        <br />
-
-        <q-img src="~assets\follow-us.svg" class="follow-footer" />
-        <br />
-
-        <SocialComponent class="social-component" />
-      </div>
-
-      <h6 class="privacy-footer text-center">
-        © LUXO ITALIA SNC - P.IVA 08637280960. ALL RIGHTS RESERVED. |
-        <router-link to="/privacy"
-          ><span class="privacy-link">PRIVACY POLICY</span></router-link
-        >
-        |
-        <router-link to="/terms-and-conditions"
-          ><span class="terms-link">TERMS AND CONDITION</span></router-link
-        >
-        |
-        <router-link to="/brochure"
-          ><span class="brochure-link">BROCHURE</span></router-link
-        >
-      </h6>
-
-      <!-- </div> -->
-    </q-footer>
   </q-layout>
+
 </template>
 
 <script>
 import { ref } from "vue";
 import SocialComponent from "../components/SocialComponent.vue";
-import PreLoader from "../components/PreLoader.vue";
+
 
 export default {
   components: {
     SocialComponent,
-    PreLoader,
+
   },
 
   setup() {
@@ -334,7 +175,7 @@ export default {
   min-width: unset;
 }
 .q-header {
-      background: transparent;
+  position: unset !important;
 }
 
 .q-tabs__content {

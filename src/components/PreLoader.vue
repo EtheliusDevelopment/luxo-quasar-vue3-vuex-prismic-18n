@@ -2,17 +2,14 @@
   <div class="vld-parent">
     <loading
       v-model:active="isLoading"
-      :can-cancel="true"
       :on-cancel="onCancel"
       :is-full-page="fullPage"
       background-color="#4c4571"
-      opacity= 1
+      opacity="1"
       transition="fade"
       loader="bars"
+      lock-scroll="true"
     />
-
-    <!-- <label><input type="checkbox" v-model="fullPage" />Full page?</label>
-    <button @click.prevent="doAjax">fetch Data</button> -->
   </div>
 </template>
 
@@ -36,38 +33,20 @@ export default {
   },
 
   methods: {
-
-
     loaderOff() {
       setTimeout(() => {
         this.isLoading = false;
       }, 1500);
     },
-        // doAjax() {
-          //     this.isLoading = true;
-          //     // simulate AJAX
-          //     setTimeout(() => {
-          //         this.isLoading = false
-          //     }, 5000)
-          // },
-          // onCancel() {
-          //     console.log('User cancelled the loader.')
-          // },
   },
-  // created() {
-  //   this.isLoading = true;
-  //   // alert(this.isLoading)
-  // },
+
   mounted() {
     this.loaderOff();
-    //  setTimeout(function(){alert(this.isLoading)}, 1000);
   },
-  // beforeUpdate() {
-  //   this.isLoading = true
-  // },
-
-  // updated() {
-  //   this.loaderOff();
-  // }
 };
 </script>
+
+<style lang="scss" scoped>
+
+
+</style>

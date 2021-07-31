@@ -1,26 +1,22 @@
 <template>
-
   <q-page class="main-content-index">
-    <pre-loader />
-    <transition name="fade">
-    <h1 v-if="togl">TRANSITION TEST</h1>
-    </transition>
-    <q-btn color="primary" icon="check" label="OK" @click="togl = !togl" />
-
-    <q-img
-      src="~assets/img_main_index.jpg"
-      spinner-color="primary"
-      spinner-size="82px"
-    >
-      <div class="absolute-top figcaption" style="height: 100%">
-        <h1 class="text-white text-center">
-          ITALY'S FINEST <br />
-          LUXURY EXPERIENCES
-        </h1>
-        <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
-        <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
-      </div>
-    </q-img>
+    <PreLoader />
+    <div class="header-block">
+      <q-img
+        src="~assets/img_main_index.jpg"
+        spinner-color="primary"
+        spinner-size="82px"
+      >
+        <div class="absolute-top figcaption" style="height: 100%">
+          <h1 class="text-white text-center">
+            ITALY'S FINEST <br />
+            LUXURY EXPERIENCES
+          </h1>
+          <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
+          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+        </div>
+      </q-img>
+    </div>
 
     <div class="first-block">
       <q-img
@@ -94,8 +90,6 @@
     </div>
 
     <div class="third-block">
-
-
       <div class="q-pa-md">
         <q-carousel
           animated
@@ -166,11 +160,18 @@
         </h6>
         <h2 class="text-primary">What kind of luxury traveler are you?</h2>
         <p class="text-primary">
-          We do not just create luxury vacations in Italy, but rather extraordinary and unique life experiences. Each of our luxury tours is different simply because our travelers arranged it with us. For this reason, our objective is to provide you with a friendly, unique and warm personal approach to discussing, creating, and planning every detail of your travel.
-
+          We do not just create luxury vacations in Italy, but rather
+          extraordinary and unique life experiences. Each of our luxury tours is
+          different simply because our travelers arranged it with us. For this
+          reason, our objective is to provide you with a friendly, unique and
+          warm personal approach to discussing, creating, and planning every
+          detail of your travel.
         </p>
         <p class="text-primary">
-          During your entire luxury tour, you will travel with local experts, who have a deep love for their country and are proud to share the hidden luxury gems of Italy with you. Are you ready to experience the most beautiful and captivating trip of your life?
+          During your entire luxury tour, you will travel with local experts,
+          who have a deep love for their country and are proud to share the
+          hidden luxury gems of Italy with you. Are you ready to experience the
+          most beautiful and captivating trip of your life?
         </p>
         <q-btn color="primary" icon="check" outline label="START THE QUIZ" />
       </div>
@@ -197,23 +198,15 @@
 
 <script>
 import { ref } from "vue";
-import PreLoader from 'src/components/PreLoader.vue';
+import PreLoader from "src/components/PreLoader.vue";
 
 export default {
-
   components: {
-    PreLoader
+    PreLoader,
   },
 
   setup() {
-
-
-
-
-    return {
-
-
-    };
+    return {};
   },
 };
 </script>
@@ -269,7 +262,7 @@ export default {
 .second-block {
   border-bottom: 2px solid blue;
   display: grid;
-  grid-template-columns: 60vw 10vw 30vw;
+  grid-template-columns: 60vw 10vw 29.2vw;
   grid-template-rows: 10vh 110vh 30vh 50vh;
 }
 .img2 {
@@ -305,7 +298,7 @@ export default {
 .fourth-block {
   border-bottom: 2px solid blue;
   display: grid;
-  grid-template-columns: 25vw 15vw 75vw;
+  grid-template-columns: 20vw 10vw 60vw;
   grid-template-rows: 10vh 55vh 20vh;
 }
 
@@ -349,23 +342,23 @@ export default {
   padding: 0 5vw 5vw 5vw;
 }
 
-.fade-enter-from{
+.fade-enter-from {
   opacity: 0;
 }
-.fade-enter-to{
+.fade-enter-to {
   opacity: 1;
 }
-.fade-enter-active{
+.fade-enter-active {
   transition: opacity 2s ease;
 }
 
-.fade-leave-from{
+.fade-leave-from {
   opacity: 1;
 }
-.fade-leave-to{
+.fade-leave-to {
   opacity: 0;
 }
-.fade-leave-active{
+.fade-leave-active {
   transition: opacity 4s ease;
 }
 </style>
