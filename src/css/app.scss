@@ -98,22 +98,26 @@ p {
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: #8f54a0 #ffffff;
-}
+// * {
+//   scrollbar-width: auto;
+//   scrollbar-color: #8f54a0 #ffffff;
+// }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 12px;
-}
+// /* Chrome, Edge, and Safari */
+// *::-webkit-scrollbar {
+//   width: 12px;
+// }
 
-*::-webkit-scrollbar-track {
-  background: #4c4571;
-}
+// *::-webkit-scrollbar-track {
+//   background: #4c4571;
+// }
 
-*::-webkit-scrollbar-thumb {
-  background-color: rgba(158, 143, 230, 0.801);
-  border-radius: 7px;
-  border: 3px solid #525252;
+// *::-webkit-scrollbar-thumb {
+//   background-color: rgba(158, 143, 230, 0.801);
+//   border-radius: 7px;
+//   border: 3px solid #525252;
+// }
+
+.q-img__content.absolute-full.q-anchor--skip {
+  grid-column: 2;
 }

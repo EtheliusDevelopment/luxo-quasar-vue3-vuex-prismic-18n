@@ -1,113 +1,89 @@
 <template>
+  <q-page>
     <PreLoader />
-  <q-page class="flex flex-center">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <div id="demo"></div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="divTest col-md-4 col-sm-8 col-xs-12">
-        <img class="imgTest" src="~assets/venice-bg.jpg" alt="" />
-      </div>
-    </div>
-
-    <div class="row mydiv">
+    <div class="header-block">
       <q-img
-        img-class="col-md-2 test22"
-        src="~assets/venice-bg.jpg"
+        class="img1"
+        img-class="img1-luxury"
+        src="~assets/umbria_luxo.jpg"
+        :ratio="16 / 9"
         spinner-color="primary"
         spinner-size="82px"
-      />
+        height="450px"
+      >
+        <div class="absolute-top figcaption" style="height: 100%">
+          <h1 class="text-white text-center">
+            ITALY'S FINEST <br />
+            LUXURY EXPERIENCES
+          </h1>
+          <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
+          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+        </div>
+      </q-img>
     </div>
 
-    <q-img
-      src="~assets/venice-bg.jpg"
-      draggable
-      spinner-color="primary"
-      spinner-size="82px"
-    />
-    <q-img
-      src="~assets/venice-bg.jpg"
-      loading="lazy"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
-    <q-img
-      src="~assets/venice-bg.jpg"
-      loading="lazy"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
-    <q-img
-      src="~assets/venice-bg.jpg"
-      loading="lazy"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
-    <q-img
-      src="~assets/venice-bg.jpg"
-      loading="lazy"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
-    <q-img
-      src="~assets/venice-bg.jpg"
-      loading="lazy"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
-    <q-img
-      src="~assets/venice-bg.jpg"
-      loading="lazy"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
-    <q-img
-      src="~assets/venice-bg.jpg"
-      loading="lazy"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
+    <div class="first-block" style="outline: dashed">
+      <div class="sub-section-first">
+
+        <div class="info-component">
+         <h3>INFO COMOPNENT</h3>
+        </div>
+
+        <div class="form-component">
+         <h3>FORM COMOPNENT</h3>
+        </div>
+
+        <div class="contact-card-component">
+          <h3>CONTACT CARD COMPONENT</h3>
+        </div>
+
+      </div>
+    </div>
+
+
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import PreLoader from '../components/PreLoader.vue'
-export default defineComponent({
-  name: "PageIndex",
+import PreLoader from "src/components/PreLoader.vue";
+import { ref } from "vue";
+
+export default {
   components: {
     PreLoader,
   },
-
-  created() {
-    let showPosition = (position) => {
-      const x = document.getElementById("demo");
-      x.innerHTML =
-        "Latitude: " +
-        position.coords.latitude +
-        "<br>Longitude: " +
-        position.coords.longitude;
+  setup() {
+    return {
+      slide: ref(1),
+      autoplay: ref(true),
     };
-    const x = document.getElementById("demo");
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      x.innerHTML = "Geolocation is not supported by this browser.";
-    }
   },
-});
+};
 </script>
 
 <style lang="scss" scoped>
-.imgTest {
-  width: 100%;
+
+
+// **********HEADER BLOCK**********
+
+@media screen and (max-width: 990px) {
 }
-.divTest {
+
+@media screen and (max-width: 990px) {
 }
-.test22 {
-  width: 80%;
+
+
+
+// **********FIRST BLOCK**********
+@media screen and (max-width: 990px) {
 }
+
+@media screen and (max-width: 990px) {
+}
+
+.first-block {
+}
+
+
 </style>

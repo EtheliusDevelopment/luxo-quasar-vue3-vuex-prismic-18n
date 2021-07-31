@@ -10,7 +10,7 @@
       :ratio="16 / 9"
       spinner-color="primary"
       spinner-size="82px"
-      height="350px"
+      height="450px"
     >
       <div class="absolute-top figcaption" style="height: 100%">
         <h1 class="text-white text-center">
@@ -102,6 +102,9 @@ export default {
 
 
 <style lang="scss" scoped>
+// **********HEADER BLOCK**********
+// **********FIRST BLOCK**********
+// **********SECOND BLOCK**********
 @media screen and (max-width: 990px) {
 }
 

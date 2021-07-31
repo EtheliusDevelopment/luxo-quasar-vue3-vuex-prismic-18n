@@ -1,9 +1,37 @@
 <template>
   <transition>
-    <q-page class="flex flex-center">
-      <pre-loader />
+    <q-page >
+      <PreLoader/>
 
-      <!-- Header Quiz -->
+      <div class="header-block">
+        <q-img
+          class="img1"
+          img-class="img1-luxury"
+          src="~assets/umbria_luxo.jpg"
+          :ratio="16 / 9"
+          spinner-color="primary"
+          spinner-size="82px"
+          height="450px"
+        >
+          <div class="absolute-top figcaption" style="height: 100%">
+            <h1 class="text-white text-center">
+              ITALY'S FINEST <br />
+              LUXURY EXPERIENCES
+            </h1>
+            <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
+            <q-btn
+              color="white"
+              icon="check"
+              outline
+              label="LEARN WHAT WE DO"
+            />
+          </div>
+        </q-img>
+      </div>
+
+      <div class="first-block" style="outline: dashed;">
+      <div class="sub-section-first">
+         <!-- Header Quiz -->
       <div class="form-header text-center" style="width: 80vw">
         <h3>TITOLO QUIZ</h3>
         <q-linear-progress
@@ -42,6 +70,10 @@
           </div>
         </q-form>
       </div>
+      </div>
+    </div>
+
+
     </q-page>
   </transition>
 </template>
@@ -77,3 +109,19 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+// **********HEADER BLOCK**********
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 990px) {
+}
+// **********FIRST BLOCK**********
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 990px) {
+}
+// **********SECOND BLOCK**********
+</style>
