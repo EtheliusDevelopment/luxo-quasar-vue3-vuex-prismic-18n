@@ -81,7 +81,12 @@ export default {
 
 
 // **********HEADER BLOCK**********
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 680px) {
+
+  .img1{
+    height: 15% !important;
+  }
+
 }
 
 @media screen and (max-width: 990px) {

@@ -1,9 +1,8 @@
 <template>
   <q-page class="qpage-testimonials">
-
     <PreLoader />
 
-        <div class="header-block">
+    <div class="header-block">
       <q-img
         class="img1"
         img-class="img1-luxury"
@@ -52,7 +51,6 @@
           Exercitationem eaque voluptate omnis quod, fugiat praesentium minus
           voluptatum!
         </p>
-
       </div>
     </div>
 
@@ -89,35 +87,42 @@
         </q-carousel>
       </div>
     </div>
-
-
   </q-page>
 </template>
 
 <script>
 import PreLoader from "src/components/PreLoader.vue";
-import { ref } from 'vue'
+import { ref } from "vue";
 
 export default {
   components: {
     PreLoader,
   },
-    setup () {
+  setup() {
     return {
       slide: ref(1),
-      autoplay: ref(true)
-    }
-  }
+      autoplay: ref(true),
+    };
+  },
 };
 </script>
 
-
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 680px) {
+
+  .img1{
+    height: 15% !important;
+  }
+
 }
 
 @media screen and (max-width: 990px) {
+
+  .img1{
+    height: 20% !important;
+  }
+
 }
 
 .figcaption {
