@@ -34,126 +34,146 @@
 
     <div class="first-block">
       <div class="sub-section-first">
-        <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
-        </h2>
+        <h2 class="text-primary">Your Luxury Travel Designers</h2>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+          We know and love every small village, corner, and place in our
+          country, and we want to help you get to know it in the way that best
+          reflects your tastes and preferences.
         </p>
         <p class="text-primary">
-          earum laborum possimus, corporis dolor sit blanditiis iusto recusandae
-          enim
+          But before luxury travel designers we are above all travelers.
         </p>
-        <p class="text-primary">fugit porro ratione</p>
         <p class="text-primary">
-          Exercitationem eaque voluptate omnis quod, fugiat praesentium minus
-          voluptatum!
+          We love discovering new places, new foods, new cultures, learning how
+          to get to know those who accompany us and enjoying the beauty of Italy
+          together.
+        </p>
+        <p class="text-primary">
+          Precisely, this aspect defines the difference between what we offer
+          you and what the classic luxury travel agencies offer.
+        </p>
+        <p class="text-primary">
+          We do not limit ourselves to organizing and booking a pre-established
+          and undistinguished itinerary. Our objective is different; we want to
+          offer you an exclusive, unique and inimitable luxury experience that
+          is completely customized. What travel experience do you seek?
         </p>
         <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
       </div>
     </div>
+
+    <hr class="hr" />
 
     <div class="second-block">
-      <div class="sub-section-first">
+      <div class="sub-section-first bg-info">
         <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
+          Why Luxo Italia? A passion that has become a job
         </h2>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+          Luxo Italia originated from the passion and will to make your luxury
+          holidays in Italy unforgettable. Every itinerary we design for your
+          trip is extremely accurate and customized as if we were the clients:
+          this is perhaps the best guarantee to ensure a unique and inimitable
+          service. We are friends, we love to travel and we have both had work
+          experiences in tourism. Meeting and discovering that we had an
+          identical dream for work triggered our decision, leading us to
+          conceive and then found Luxo Italia.
         </p>
-        <p class="text-primary">
-          earum laborum possimus, corporis dolor sit blanditiis iusto recusandae
-          enim
-        </p>
-        <p class="text-primary">fugit porro ratione</p>
-        <p class="text-primary">
-          Exercitationem eaque voluptate omnis quod, fugiat praesentium minus
-          voluptatum!
-        </p>
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
       </div>
 
       <q-img
-        img-class="col-md-2 test22"
+        class="img1"
+        img-class="img1-luxury"
         src="~assets/venice-bg.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
     </div>
 
+    <hr class="hr" />
+
     <div class="third-block">
-      <h2 class="text-primary">Who We Are</h2>
+      <h2 class="text-primary heading-third-block text-center">Who We Are</h2>
 
       <q-img
-        img-class="col-md-2 test22"
+        class="img3"
+        img-class="img3-index"
         src="~assets/venice-bg.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
       <div class="sub-section-first">
-        <h4 class="text-primary">PAUL LEWIS</h4>
+        <h6 class="text-primary">PAUL LEWIS</h6>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+          My name is Paul and in spite of the name, I’m Italian, on my mother’s
+          side. My mother passed on her passion and love for great gastronomy to
+          me, while my father (of British nationality) passed on a strong sense
+          of practicality and precision.
         </p>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          quos exercitationem, distinctio aut molestiae optio, iure placeat
-          commodi aperiam, in provident. Consectetur cumque earum unde expedita
-          aperiam vitae, eveniet delectus!
+          This multicultural mix perfectly matched my eclectic spirit, leading
+          me to an “exploratory” life. Even after my first trip to the USA
+          (during my childhood), I realized I was destined to travel far and
+          wide without interruption. Currently, I can consider myself a sort of
+          global nomad, always looking for the beauty and exclusivity the world
+          can offer.
         </p>
         <p class="text-primary">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad officia
-          porro rem suscipit, modi at sit totam beatae nemo, laboriosam
-          consectetur nostrum aliquam accusantium voluptates, doloribus deleniti
-          maxime sint blanditiis?
+          In addition, I became a restaurant expert and a fine wine connoisseur,
+          two passions that I love to cultivate in my free time, as well as
+          making the most use of them for my work. I like to design (and try)
+          itineraries for the most refined tastes as well as for the most
+          adventurous, in accordance with my own passions. The same ones that
+          led me to found Luxo Italia with my great friend Andrea.
         </p>
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
       </div>
 
       <div class="sub-section-second">
-        <h4 class="text-primary">PAUL LEWIS</h4>
+        <h6 class="text-primary">ANDREA DEGASPERI</h6>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+          I love traveling the world, it is my greatest passion. I take great
+          pride in my authentic Italic roots, which have made me, and could not
+          be otherwise, a fan of the multi-faceted Italian cuisine and its
+          high-quality wines.
         </p>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          quos exercitationem, distinctio aut molestiae optio, iure placeat
-          commodi aperiam, in provident. Consectetur cumque earum unde expedita
-          aperiam vitae, eveniet delectus!
+          Before becoming a co-founder of Luxo Italia, I experienced several
+          work experiences in the hospitality industry that, combined with my
+          passion for travel, proved to be fundamental in leading me to start
+          this adventure with Paul.
         </p>
         <p class="text-primary">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad officia
-          porro rem suscipit, modi at sit totam beatae nemo, laboriosam
-          consectetur nostrum aliquam accusantium voluptates, doloribus deleniti
-          maxime sint blanditiis?
+          Factors reinforced by my desire to work with and for people. The
+          radical knowledge of the territory and the great empathy that I share
+          with my partner and friend Paul allows us to design trips and
+          itineraries capable of responding to the needs of every client in whom
+          we instill our passion and experience—100% Italian.
         </p>
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+        <q-btn color="primary" icon="check" outline label="TALK WITH US" />
       </div>
 
       <q-img
-        img-class="col-md-2 test22"
+        class="img4"
+        img-class="img4-index"
         src="~assets/venice-bg.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
-
-      <q-btn color="primary" icon="check" outline label="TALK WITH US" />
     </div>
+
+    <hr class="hr" />
 
     <div class="fourth-block">
       <q-img
-        img-class="col-md-2 test22"
+        class="img1"
+        img-class="img1-index"
         src="~assets/venice-bg.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
 
-      <div class="sub-section-first">
-        <h2 class="text-primary">
+      <div class="sub-section-first bg-info">
+        <h2 class="text-primary heading-fourth-block text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing
         </h2>
         <p class="text-primary">
@@ -170,6 +190,8 @@
         <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
       </div>
     </div>
+
+    <hr class="hr" />
   </q-page>
 </template>
 
@@ -188,21 +210,16 @@ export default {
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
 @media screen and (max-width: 680px) {
-
-  .img1{
+  .img1 {
     height: 15% !important;
   }
-
 }
 
 @media screen and (max-width: 990px) {
-
-  .img1{
+  .img1 {
     height: 20% !important;
   }
-
 }
-
 
 .figcaption {
   width: 100%;
@@ -226,6 +243,95 @@ hr {
   height: 3px;
   width: 12vw;
   margin-bottom: 2vh;
+}
+
+.hr {
+  height: 3px;
+  width: 100%;
+  background-color: $primary;
+}
+
+// **********FIRST BLOCK**********
+.first-block .sub-section-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first-block {
+  margin-bottom: 5%;
+}
+
+// **********SECOND BLOCK**********
+
+.second-block {
+  display: grid;
+  grid-template-columns: 1.8fr 0.6fr 1fr;
+  grid-template-rows: 10vh 80vh 30vh;
+}
+
+.second-block .sub-section-first {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  outline: dashed;
+}
+
+.second-block .img1 {
+  grid-column: 2/4;
+  grid-row: 2/4;
+  outline: dashed;
+}
+
+// **********THIRD BLOCK**********
+
+.third-block {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-template-rows: 10vh 80vh 15vh 80vh;
+  grid-gap: 2%;
+  margin-bottom: 8%;
+}
+
+.heading-third-block {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+
+.third-block .img3 {
+  grid-column: 1;
+  grid-row: 2/4;
+}
+.third-block .sub-section-first {
+  grid-column: 2;
+  grid-row: 2;
+}
+.third-block .sub-section-second {
+  grid-column: 1;
+  grid-row: 4;
+}
+.third-block .img4 {
+  grid-column: 2;
+  grid-row: 3/5;
+}
+
+// **********FOURTH BLOCK**********
+
+.fourth-block {
+  display: grid;
+  grid-template-columns: 50% 15% 35%;
+  grid-template-rows: 10vh 80vh 15vh;
+  // grid-gap: 2%;
+  // margin-bottom: 8%;
+}
+.fourth-block .img1{
+  grid-column: 1/3;
+  grid-row: 1/3 ;
+}
+.fourth-block .sub-section-first{
+  grid-column: 2/4;
+  grid-row: 2/4 ;
+
 }
 
 // .fade-enter-from {
