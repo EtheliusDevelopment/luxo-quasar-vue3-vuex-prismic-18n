@@ -35,6 +35,48 @@ p {
   line-height: 1.2rem;
 }
 
+// STYLES CAROUSEL INDEX
+.third-block button.carousel__prev,  button.carousel__next{
+  background-color: white;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 12%;
+}
+
+.third-block .carousel__slide--active .figcaption {
+  background-color: transparent;
+}
+
+.third-block .carousel__slide--active .q-img.q-img--menu.img1 {
+  height: 500px !important;
+  /* z-index: 9999; */
+}
+
+.third-block li.carousel__slide.carousel__slide--active.carousel__slide--visible {
+  z-index: 9;
+}
+
+.third-block svg.carousel__icon {
+  display: none;
+}
+
+.third-block button.carousel__prev:after{
+  transform: rotate(180deg);
+}
+
+.third-block button.carousel__prev:after, button.carousel__next:after {
+  content: "";
+  background-image: url("src/assets/freccia.svg");
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  position: relative;
+  bottom: 1%;
+}
+
+// END STYLES CAROUSEL INDEX
+
 @media screen and (max-width: 990px) {
   h1 {
     font-size: 2rem;

@@ -1,6 +1,7 @@
 <template>
   <q-page class="main-content-index">
     <PreLoader />
+
     <div class="header-block">
       <q-img
         class="imgMain"
@@ -106,37 +107,7 @@
     </div>
 
     <div class="third-block">
-      <div class="q-pa-md">
-        <q-carousel
-          animated
-          v-model="slide"
-          navigation
-          infinite
-          :autoplay="autoplay"
-          arrows
-          transition-prev="slide-right"
-          transition-next="slide-left"
-          @mouseenter="autoplay = false"
-          @mouseleave="autoplay = true"
-        >
-          <q-carousel-slide
-            :name="1"
-            img-src="https://cdn.quasar.dev/img/mountains.jpg"
-          />
-          <q-carousel-slide
-            :name="2"
-            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-          />
-          <q-carousel-slide
-            :name="3"
-            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-          />
-          <q-carousel-slide
-            :name="4"
-            img-src="https://cdn.quasar.dev/img/quasar.jpg"
-          />
-        </q-carousel>
-      </div>
+      <Carouselindex />
     </div>
 
     <div class="fourth-block">
@@ -215,10 +186,12 @@
 <script>
 import { ref } from "vue";
 import PreLoader from "src/components/PreLoader.vue";
+import Carouselindex from "src/components/Utils/CarouselIndex.vue";
 
 export default {
   components: {
     PreLoader,
+    Carouselindex,
   },
 
   setup() {
@@ -274,7 +247,6 @@ export default {
     padding: unset !important;
     margin: 30% 0.75rem 0 0.75rem;
   }
-
 
   .btn-1 {
     grid-column: 1/3;
@@ -397,7 +369,7 @@ export default {
     position: 50% 50%;
   }
 
-    .img1 {
+  .img1 {
     bottom: 6rem !important;
     display: none;
   }
@@ -486,6 +458,7 @@ export default {
 }
 .third-block {
   border-bottom: 2px solid blue;
+  padding: 0 5rem;
 }
 .fourth-block {
   border-bottom: 2px solid blue;
