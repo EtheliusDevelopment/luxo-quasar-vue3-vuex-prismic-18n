@@ -221,7 +221,7 @@ export default {
     display: grid;
     grid-template-columns: 56vw 40vw !important;
     grid-template-rows: 30vh 35vw !important;
-    border-bottom: 2px solid blue;
+
     /* grid-template-columns: auto; */
   }
 
@@ -253,7 +253,6 @@ export default {
     grid-row: 2;
   }
   .second-block {
-    border-bottom: 2px solid blue;
     display: grid;
     grid-template-columns: 60vw 10vw 29.2vw;
     grid-template-rows: 10vh 110vh 30vh 50vh;
@@ -286,10 +285,8 @@ export default {
     padding: 0 10vw;
   }
   .third-block {
-    border-bottom: 2px solid blue;
   }
   .fourth-block {
-    border-bottom: 2px solid blue;
     display: grid;
     grid-template-columns: 20vw 10vw 60vw;
     grid-template-rows: 10vh 55vh 20vh;
@@ -312,7 +309,6 @@ export default {
   }
 
   .fifth-block {
-    border-bottom: 2px solid blue;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 70vh;
@@ -396,7 +392,7 @@ export default {
   display: grid;
   grid-template-columns: 40vw 60vw;
   grid-template-rows: 100vh auto;
-  border-bottom: 2px solid blue;
+
   /* grid-template-columns: auto; */
 }
 
@@ -424,7 +420,6 @@ export default {
   grid-row: 2;
 }
 .second-block {
-  border-bottom: 2px solid blue;
   display: grid;
   grid-template-columns: 60vw 10vw 29.2vw;
   grid-template-rows: 10vh 110vh 30vh 50vh;
@@ -457,11 +452,9 @@ export default {
   padding: 0 10vw;
 }
 .third-block {
-  border-bottom: 2px solid blue;
   padding: 0 5rem;
 }
 .fourth-block {
-  border-bottom: 2px solid blue;
   display: grid;
   grid-template-columns: 20vw 10vw 60vw;
   grid-template-rows: 10vh 55vh 20vh;
@@ -484,7 +477,6 @@ export default {
 }
 
 .fifth-block {
-  border-bottom: 2px solid blue;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 70vh;
