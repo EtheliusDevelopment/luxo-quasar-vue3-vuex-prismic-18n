@@ -5,7 +5,7 @@
     <div class="header-block">
       <q-img
         class="img1"
-        img-class="img1-luxury"
+        img-class="img1-wine"
         src="~assets/wine_club_luxo.jpg"
         :ratio="16 / 9"
         spinner-color="primary"
@@ -13,10 +13,9 @@
         height="450px"
       >
         <div class="figcaption">
-          <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
+          <h6 class="text-white">WINE CLUB</h6>
           <q-separator color="white" inset />
-          <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+          <h1 class="text-white text-center">Uncork. Taste. Enjoy.</h1>
         </div>
       </q-img>
 
@@ -35,28 +34,93 @@
 
     <div class="first-block">
       <div class="sub-section-first">
-        <h2 class="text-primary">
-          LoremWINE ipsum di nove parole parole parole parole
-        </h2>
-        <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+        <h2 class="text-primary">Exclusive Italian Experience</h2>
+        <p>
+          Luxo Italia Wine Club brings to your attention exclusive, hand-picked
+          wines from the best Italian wineries. The bottles that you won’t find
+          at your local store, delivered directly to your doorstep.
         </p>
-        <p class="text-primary">
-          earum laborum possimus, corporis dolor sit blanditiis iusto recusandae
-          enim
-        </p>
-        <p class="text-primary">fugit porro ratione</p>
-        <p class="text-primary">
-          Exercitationem eaque voluptate omnis quod, fugiat praesentium minus
-          voluptatum!
-        </p>
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+
+        <q-btn
+          class="btn-first-block"
+          color="primary"
+          icon="check"
+          outline
+          label="JOIN THE WINE CLUB NOW !
+"
+        />
       </div>
     </div>
 
-    <!-- <h1>Wine Club</h1>
-   <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorum quidem cupiditate! Atque officiis deserunt necessitatibus. Consectetur ipsam voluptas modi nihil, ullam iusto, sunt iste perferendis doloremque facere, nesciunt ad?</h5> -->
+    <div class="second-block">
+      <q-img
+        class="img2"
+        img-class="img2-wine"
+        src="~assets/vineyard.jpg"
+        :ratio="16 / 9"
+      />
+    </div>
+
+    <div class="third-block">
+      <h2 class="text-primary text-center title-third-block">
+        What do you need to know about Luxo Italia Wine Club
+      </h2>
+
+      <div class="sub-section-first">
+        <div class="step-one">
+          <div class="card-step">img sep</div>
+          <h5 class="descrition-step">
+            SPECIALIZING IN VALUE-ORIENTED WINES, LUXO WINE CLUB IS OPEN TO
+            ANYONE WHO HAS AN APPRECIATION OF FINE WINE. QUALITY WINES DELIVERED
+            TO YOUR DOORSTEP, GUARANTEED !
+          </h5>
+          <q-img
+            class="img-step"
+            img-class="img1-step-wine"
+            src="~assets/wine_club_luxo.jpg"
+            :ratio="16 / 9"
+            spinner-color="primary"
+            spinner-size="82px"
+          />
+        </div>
+
+         <div class="step-two">
+          <div class="card-step">img sep h3</div>
+          <h5 class="descrition-step">
+            SPECIALIZING IN VALUE-ORIENTED WINES, LUXO WINE CLUB IS OPEN TO
+            ANYONE WHO HAS AN APPRECIATION OF FINE WINE. QUALITY WINES DELIVERED
+            TO YOUR DOORSTEP, GUARANTEED !
+          </h5>
+          <q-img
+            class="img-step"
+            img-class="img1-step-wine"
+            src="~assets/wine_club_luxo.jpg"
+            :ratio="16 / 9"
+            spinner-color="primary"
+            spinner-size="82px"
+          />
+        </div>
+
+         <div class="step-three">
+          <div class="card-step">img sep</div>
+          <h5 class="descrition-step">
+            SPECIALIZING IN VALUE-ORIENTED WINES, LUXO WINE CLUB IS OPEN TO
+            ANYONE WHO HAS AN APPRECIATION OF FINE WINE. QUALITY WINES DELIVERED
+            TO YOUR DOORSTEP, GUARANTEED !
+          </h5>
+          <q-img
+            class="img-step"
+            img-class="img1-step-wine"
+            src="~assets/wine_club_luxo.jpg"
+            :ratio="16 / 9"
+            spinner-color="primary"
+            spinner-size="82px"
+          />
+        </div>
+
+
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -75,21 +139,16 @@ export default defineComponent({
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
 @media screen and (max-width: 680px) {
-
-  .img1{
+  .img1 {
     height: 15% !important;
   }
-
 }
 
 @media screen and (max-width: 990px) {
-
-  .img1{
+  .img1 {
     height: 20% !important;
   }
-
 }
-
 
 .figcaption {
   width: 100%;
@@ -115,5 +174,31 @@ hr {
   margin-bottom: 2vh;
 }
 // **********FIRST BLOCK**********
+
+.first-block {
+  margin-bottom: 8%;
+}
+
+.first-block .sub-section-first {
+  display: flex;
+  width: 100%;
+  padding: 0 10%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-first-block {
+  margin-top: 5% !important;
+}
 // **********SECOND BLOCK**********
+.img2-wine {
+  height: 50%;
+}
+
+// **********THIRD BLOCK**********
+
+.title-third-block {
+  padding: 0px 20%;
+}
 </style>

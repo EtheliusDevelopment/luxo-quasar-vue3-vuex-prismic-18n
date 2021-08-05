@@ -1,6 +1,5 @@
 <template>
   <q-page class="qpage-luxury">
-
     <PreLoader />
 
     <div class="header-block">
@@ -37,20 +36,26 @@
     <div class="first-block">
       <div class="sub-section-first">
         <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
+          Meticulusly curated itineraries by Luxoitalia
         </h2>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+          Choosing Luxo Italia, and relying on our experience, means embarking
+          on the trip to Italy that you’ve always dreamed of, experiencing the
+          true meaning of luxury in the Bel Paese.
         </p>
         <p class="text-primary">
-          earum laborum possimus, corporis dolor sit blanditiis iusto recusandae
-          enim
+          Get ready to explore enchanting places, historical landscapes, and
+          breathtaking experiences off the beaten path in signature style – not
+          to mention staying in Italy’s most luxurious boutique hotels
         </p>
-        <p class="text-primary">fugit porro ratione</p>
         <p class="text-primary">
-          Exercitationem eaque voluptate omnis quod, fugiat praesentium minus
-          voluptatum!
+          For us, luxury travel means curating exclusive and unforgettable
+          experiences that invigorates your heart and mind. We love and savour
+          Italy, what it offers, its history. We are passionate about this
+          country, and we want to help you share in our passion.
+        </p>
+        <p class="text-primary">
+          Stimulate all your senses. Get some inspiration below:
         </p>
         <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
       </div>
@@ -58,35 +63,7 @@
 
     <div class="second-block" style="border: 2px solid red">
       <div class="q-pa-md">
-        <q-carousel
-          animated
-          v-model="slide"
-          navigation
-          infinite
-          :autoplay="autoplay"
-          arrows
-          transition-prev="slide-right"
-          transition-next="slide-left"
-          @mouseenter="autoplay = false"
-          @mouseleave="autoplay = true"
-        >
-          <q-carousel-slide
-            :name="1"
-            img-src="https://cdn.quasar.dev/img/mountains.jpg"
-          />
-          <q-carousel-slide
-            :name="2"
-            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-          />
-          <q-carousel-slide
-            :name="3"
-            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-          />
-          <q-carousel-slide
-            :name="4"
-            img-src="https://cdn.quasar.dev/img/quasar.jpg"
-          />
-        </q-carousel>
+        <TestComponent />
       </div>
     </div>
 
@@ -98,49 +75,48 @@
         spinner-size="82px"
       />
     </div>
-
   </q-page>
 </template>
 
 <script>
 import PreLoader from "src/components/PreLoader.vue";
-import { ref } from 'vue'
+import { ref } from "vue";
+import TestComponent from '../../components/utils/TestComponent.vue';
+import db from '../../db_test'
+
 
 export default {
   components: {
     PreLoader,
+    TestComponent,
   },
-    setup () {
+  setup() {
+    const data = db;
+    console.log(db);
     return {
+      db,
       slide: ref(1),
-      autoplay: ref(true)
-    }
-  }
+      autoplay: ref(true),
+    };
+  },
 };
 </script>
-
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
 @media screen and (max-width: 680px) {
-
   .img1 {
-
     height: 15% !important;
   }
-
 }
 
 @media screen and (max-width: 990px) {
-
-  .img1{
+  .img1 {
     height: 20% !important;
   }
-
 }
 
-
-.figcaption {
+.header-block .figcaption {
   width: 100%;
   height: 100%;
   display: flex;
@@ -149,11 +125,11 @@ export default {
   flex-direction: column;
 }
 
-.figcaption h6.text-white {
+.header-block .figcaption h6.text-white {
   margin-bottom: 0;
 }
 
-.figcaption h1.text-white.text-center {
+.header-block .figcaption h1.text-white.text-center {
   margin-top: 0;
   margin-bottom: 7vh;
 }
@@ -163,7 +139,6 @@ hr {
   width: 12vw;
   margin-bottom: 2vh;
 }
-
 
 // **********FIRST BLOCK**********
 @media screen and (max-width: 990px) {

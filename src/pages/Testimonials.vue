@@ -35,21 +35,22 @@
 
     <div class="first-block">
       <div class="sub-section-first">
-        <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
-        </h2>
+        <h2 class="text-primary">Read about our clients’ travel stories</h2>
         <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+          Every travel experience that our clients have with us inevitably
+          becomes a story, and it is because it remains indelible and
+          unforgettable in their eyes and especially in their hearts.
         </p>
         <p class="text-primary">
-          earum laborum possimus, corporis dolor sit blanditiis iusto recusandae
-          enim
+          Many have wanted to share with us how beautiful their luxury holiday
+          experience was and tell us why it was so special for them.
         </p>
-        <p class="text-primary">fugit porro ratione</p>
         <p class="text-primary">
-          Exercitationem eaque voluptate omnis quod, fugiat praesentium minus
-          voluptatum!
+          There are several and varied experiences, from art to those dedicated
+          to outdoor activities or immersing yourself in the most beautiful
+          Italian cities, without forgetting the well-being and comfort of the
+          luxury hotels and resorts that we choose and that characterize every
+          story.
         </p>
       </div>
     </div>
@@ -87,6 +88,50 @@
         </q-carousel>
       </div>
     </div>
+
+    <div class="third-block" style="border: 2px solid red">
+      <q-carousel
+        v-model="slide_second"
+        transition-prev="jump-right"
+        transition-next="jump-left"
+        swipeable
+        animated
+        control-color="white"
+        prev-icon="arrow_left"
+        next-icon="arrow_right"
+        navigation-icon="radio_button_unchecked"
+        navigation
+        padding
+        arrows
+        height="300px"
+        class="bg-purple text-white shadow-1 rounded-borders"
+      >
+        <q-carousel-slide name="style" class="column no-wrap flex-center">
+          <q-icon name="style" size="56px" />
+          <div class="q-mt-md text-center">
+            {{ lorem }}
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide name="tv" class="column no-wrap flex-center">
+          <q-icon name="live_tv" size="56px" />
+          <div class="q-mt-md text-center">
+            {{ lorem }}
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide name="layers" class="column no-wrap flex-center">
+          <q-icon name="layers" size="56px" />
+          <div class="q-mt-md text-center">
+            {{ lorem }}
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide name="map" class="column no-wrap flex-center">
+          <q-icon name="terrain" size="56px" />
+          <div class="q-mt-md text-center">
+            {{ lorem }}
+          </div>
+        </q-carousel-slide>
+      </q-carousel>
+    </div>
   </q-page>
 </template>
 
@@ -102,6 +147,8 @@ export default {
     return {
       slide: ref(1),
       autoplay: ref(true),
+      slide_second: ref("style"),
+      lorem:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.",
     };
   },
 };
@@ -110,20 +157,33 @@ export default {
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
 @media screen and (max-width: 680px) {
-
-  .img1{
+  .img1 {
     height: 15% !important;
   }
-
 }
 
 @media screen and (max-width: 990px) {
-
-  .img1{
+  .img1 {
     height: 20% !important;
   }
-
 }
+
+// **********FIRST BLOCK**********
+.first-block .sub-section-first {
+  display: flex;
+  width: 100%;
+  min-height: 60vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// **********THIRD BLOCK**********
+.third-block {
+    padding: 6%;
+}
+
+
 
 .figcaption {
   width: 100%;
