@@ -1,32 +1,53 @@
 <template>
- <div class="carousel-index">
-    <Carousel :itemsToShow="3.95" :wrapAround="true">
-    <Slide v-for="slide in db" :key="slide">
-      <div class="carousel__item">
+  <div class="carousel-index">
+    <Carousel :itemsToShow="3.95" :wrapAround="true" class="carousel-desktop">
+      <Slide v-for="slide in db" :key="slide">
+        <div class="carousel__item">
+          <q-img
+            class="img1"
+            img-class="img1-carousel"
+            src="~assets/venice-footer-box.png"
+            :ratio="16 / 9"
+            height="450px"
+            no-spinner
+          >
+            <div class="figcaption">
+              <h4 class="title-carousel">{{ slide.title }}</h4>
+            </div>
+          </q-img>
+        </div>
+      </Slide>
 
+      <template #addons>
+        <Navigation />
+        <!-- <Pagination /> -->
+      </template>
+    </Carousel>
 
-        <q-img
-          class="img1"
-          img-class="img1-carousel"
-          src="~assets/venice-footer-box.png"
-          :ratio="16 / 9"
-           height="450px"
-           no-spinner
+    <Carousel :itemsToShow="1" :wrapAround="true" class="carousel-mobile">
+      <Slide v-for="slide in db" :key="slide">
+        <div class="carousel__item">
+          <q-img
+            class="img1"
+            img-class="img1-carousel"
+            src="~assets/venice-footer-box.png"
+            :ratio="16 / 9"
+            height="450px"
+            no-spinner
+          >
+            <div class="figcaption">
+              <h4 class="title-carousel">{{ slide.title }}</h4>
+            </div>
+          </q-img>
+        </div>
+      </Slide>
 
-        >
-          <div class="figcaption">
-            <h4 class="title-carousel">{{ slide.title }}</h4>
-          </div>
-        </q-img>
-      </div>
-    </Slide>
-
-    <template #addons>
-      <Navigation />
-      <!-- <Pagination /> -->
-    </template>
-  </Carousel>
- </div>
+      <template #addons>
+        <Navigation />
+        <!-- <Pagination /> -->
+      </template>
+    </Carousel>
+  </div>
 </template>
 
 <script>
@@ -46,7 +67,18 @@ export default defineComponent({
   },
   setup() {
     const db = dbIndex;
-
+    // const breakpoints = {
+    //   // 700px and up
+    //   700: {
+    //     itemsToShow: 2,
+    //     snapAlign: 'center',
+    //   },
+    //   // 1024 and up
+    //   1024: {
+    //     itemsToShow: 3.5,
+    //     snapAlign: 'start',
+    //   },
+    // }
     return {
       db,
     };
@@ -119,5 +151,23 @@ export default defineComponent({
 .title-carousel {
   text-transform: uppercase;
   font-size: 1.3rem;
+}
+
+.carousel-desktop{
+display: block !important;
+}
+
+.carousel-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+.carousel-desktop{
+display: none !important;
+}
+
+.carousel-mobile{
+  display: block !important;
+}
 }
 </style>

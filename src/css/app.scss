@@ -78,6 +78,7 @@ p {
 // END STYLES CAROUSEL INDEX
 
 @media screen and (max-width: 990px) {
+
   h1 {
     font-size: 2rem;
     line-height: 2rem;
@@ -100,6 +101,21 @@ p {
   .q-btn {
     font-size: 0.8rem;
   }
+
+  .third-block button.carousel__prev,  button.carousel__next{
+    // background-color: white;
+    // border-radius: 50%;
+    // width: 4rem;
+    // height: 4rem;
+    margin: 0px -9%;
+  }
+
+  .third-block .carousel__slide--active .q-img.q-img--menu.img1 {
+    height: 250px !important;
+    /* z-index: 9999; */
+  }
+
+
 }
 
 @media screen and (max-width: 680px) {
