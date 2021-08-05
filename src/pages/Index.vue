@@ -1,7 +1,7 @@
 <template>
   <q-page class="main-content-index">
     <PreLoader />
-  <h1>ciao</h1>
+
     <div class="header-block">
       <q-img
         class="imgMain"

@@ -81,7 +81,7 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
-import TestComponent from '../../components/utils/TestComponent.vue';
+import TestComponent from '../../components/Utils/TestComponent.vue';
 import db from '../../db_test'
 
 
