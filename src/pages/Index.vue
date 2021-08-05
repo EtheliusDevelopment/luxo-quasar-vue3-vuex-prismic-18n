@@ -1,7 +1,7 @@
 <template>
   <q-page class="main-content-index">
     <PreLoader />
-
+  <h1>ciao</h1>
     <div class="header-block">
       <q-img
         class="imgMain"
@@ -202,7 +202,7 @@ export default {
 
 <style lang="scss" scoped>
 
-// **********HEADER BLOCK**********
+// **********HEADER BLOCK***********
 @media screen and (max-width: 680px) {
   figcaption {
     display: flex;
