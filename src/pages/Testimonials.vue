@@ -55,82 +55,12 @@
       </div>
     </div>
 
-    <div class="second-block" style="border: 2px solid red">
-      <div class="q-pa-md">
-        <q-carousel
-          animated
-          v-model="slide"
-          navigation
-          infinite
-          :autoplay="autoplay"
-          arrows
-          transition-prev="slide-right"
-          transition-next="slide-left"
-          @mouseenter="autoplay = false"
-          @mouseleave="autoplay = true"
-        >
-          <q-carousel-slide
-            :name="1"
-            img-src="https://cdn.quasar.dev/img/mountains.jpg"
-          />
-          <q-carousel-slide
-            :name="2"
-            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-          />
-          <q-carousel-slide
-            :name="3"
-            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-          />
-          <q-carousel-slide
-            :name="4"
-            img-src="https://cdn.quasar.dev/img/quasar.jpg"
-          />
-        </q-carousel>
-      </div>
+    <div class="second-block-carousel">
+     <CarouselTestimonials />
     </div>
 
-    <div class="third-block" style="border: 2px solid red">
-      <q-carousel
-        v-model="slide_second"
-        transition-prev="jump-right"
-        transition-next="jump-left"
-        swipeable
-        animated
-        control-color="white"
-        prev-icon="arrow_left"
-        next-icon="arrow_right"
-        navigation-icon="radio_button_unchecked"
-        navigation
-        padding
-        arrows
-        height="300px"
-        class="bg-purple text-white shadow-1 rounded-borders"
-      >
-        <q-carousel-slide name="style" class="column no-wrap flex-center">
-          <q-icon name="style" size="56px" />
-          <div class="q-mt-md text-center">
-            {{ lorem }}
-          </div>
-        </q-carousel-slide>
-        <q-carousel-slide name="tv" class="column no-wrap flex-center">
-          <q-icon name="live_tv" size="56px" />
-          <div class="q-mt-md text-center">
-            {{ lorem }}
-          </div>
-        </q-carousel-slide>
-        <q-carousel-slide name="layers" class="column no-wrap flex-center">
-          <q-icon name="layers" size="56px" />
-          <div class="q-mt-md text-center">
-            {{ lorem }}
-          </div>
-        </q-carousel-slide>
-        <q-carousel-slide name="map" class="column no-wrap flex-center">
-          <q-icon name="terrain" size="56px" />
-          <div class="q-mt-md text-center">
-            {{ lorem }}
-          </div>
-        </q-carousel-slide>
-      </q-carousel>
+    <div class="third-block-carousel" >
+      <CarouselTestimonialsFb />
     </div>
   </q-page>
 </template>
@@ -138,10 +68,14 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
+import CarouselTestimonials from "../components/Utils/CarouselTestimonials.vue"
+import CarouselTestimonialsFb from "../components/Utils/CarouselTestimonialsFb.vue"
 
 export default {
   components: {
     PreLoader,
+    CarouselTestimonials,
+    CarouselTestimonialsFb
   },
   setup() {
     return {
@@ -178,9 +112,17 @@ export default {
   flex-direction: column;
 }
 
+
+// **********SECOND BLOCK**********
+.second-block-carousel {
+    padding: 0 1rem;
+}
+
 // **********THIRD BLOCK**********
-.third-block {
-    padding: 6%;
+
+.third-block-carousel{
+  margin: 6%;
+  border: 2px solid $info
 }
 
 

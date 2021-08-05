@@ -36,7 +36,7 @@ p {
 }
 
 // STYLES CAROUSEL INDEX
-.third-block button.carousel__prev,  button.carousel__next{
+.third-block button.carousel__prev, .third-block button.carousel__next{
   background-color: white;
   border-radius: 50%;
   width: 4rem;
@@ -65,7 +65,7 @@ p {
   transform: rotate(180deg);
 }
 
-.third-block button.carousel__prev:after, button.carousel__next:after {
+.third-block button.carousel__prev:after,.third-block button.carousel__next:after {
   content: "";
   background-image: url("src/assets/freccia.svg");
   height: 90%;
