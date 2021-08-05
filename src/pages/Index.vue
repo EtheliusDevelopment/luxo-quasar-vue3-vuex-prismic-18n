@@ -201,7 +201,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// **********HEADER BLOCK**********
+
 // **********HEADER BLOCK**********
 @media screen and (max-width: 680px) {
   figcaption {
