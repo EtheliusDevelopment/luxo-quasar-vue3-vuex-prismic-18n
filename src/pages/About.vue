@@ -58,7 +58,13 @@
           offer you an exclusive, unique and inimitable luxury experience that
           is completely customized. What travel experience do you seek?
         </p>
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+        <q-btn
+          class="q-px-lg q-py-xs"
+          size="1.1vw"
+          color="primary"
+          outline
+          label="LET’S FIND OUT TOGHETER"
+        />
       </div>
     </div>
 
@@ -149,7 +155,13 @@
           itineraries capable of responding to the needs of every client in whom
           we instill our passion and experience—100% Italian.
         </p>
-        <q-btn color="primary" icon="check" outline label="TALK WITH US" />
+        <q-btn
+          class="q-px-lg q-py-xs"
+          size="1.1vw"
+          color="primary"
+          outline
+          label="TALK WITH US"
+        />
       </div>
 
       <q-img
@@ -174,20 +186,30 @@
 
       <div class="sub-section-first bg-info">
         <h2 class="text-primary heading-fourth-block text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing
+          A luxury trip that comes from getting to know each other
         </h2>
-        <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+        <p>
+          To make sure that your luxury itinerary in Italy is perfect, it is
+          necessary for us to meet and get to know you, establishing a
+          confidential relationship that allows us to personalize it and make it
+          as congenial as possible to you. Our work starts with this initial and
+          fundamental approach.
         </p>
-        <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          quos exercitationem, distinctio aut molestiae optio, iure placeat
-          commodi aperiam, in provident. Consectetur cumque earum unde expedita
-          aperiam vitae, eveniet delectus!
+        <p>
+          It is no accident that our clients-travelers end up building a real
+          friendship with us, often deciding to come back to us for new travels
+          and new luxury experiences in Italy. An occurrence that we love to
+          reciprocate with dinners or gifts because we consider you more than a
+          regular client.
         </p>
 
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+        <q-btn
+          class="q-px-lg q-py-xs"
+          size="1.1vw"
+          color="primary"
+          outline
+          label="TREAD ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES"
+        />
       </div>
     </div>
 
@@ -324,14 +346,13 @@ hr {
   // grid-gap: 2%;
   // margin-bottom: 8%;
 }
-.fourth-block .img1{
+.fourth-block .img1 {
   grid-column: 1/3;
-  grid-row: 1/3 ;
+  grid-row: 1/3;
 }
-.fourth-block .sub-section-first{
+.fourth-block .sub-section-first {
   grid-column: 2/4;
-  grid-row: 2/4 ;
-
+  grid-row: 2/4;
 }
 
 // .fade-enter-from {

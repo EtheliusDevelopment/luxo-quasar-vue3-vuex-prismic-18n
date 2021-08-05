@@ -306,6 +306,7 @@ export default {
 .btn-toolbar {
   color: #4c4571 !important;
   flex-grow: 1;
+
 }
 
 .btn-footer-box {

@@ -16,7 +16,13 @@
           <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+          <q-btn
+            class="q-px-lg q-py-xs"
+            size="1.1vw"
+            color="white"
+            outline
+            label="LEARN WHAT WE DO"
+          />
         </div>
       </q-img>
 
@@ -57,7 +63,13 @@
         <p class="text-primary">
           Stimulate all your senses. Get some inspiration below:
         </p>
-        <q-btn color="primary" icon="check" outline label="LEARN WHAT WE DO" />
+        <q-btn
+          class="q-px-lg q-py-xs"
+          size="1.1vw"
+          color="primary"
+          outline
+          label="LEARN WHAT WE DO"
+        />
       </div>
     </div>
 
@@ -81,9 +93,8 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
-import TestComponent from '../../components/Utils/TestComponent.vue';
-import db from '../../db_test'
-
+import TestComponent from "../../components/Utils/TestComponent.vue";
+import db from "../../db_test";
 
 export default {
   components: {
