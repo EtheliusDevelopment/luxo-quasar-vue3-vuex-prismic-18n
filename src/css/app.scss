@@ -16,17 +16,16 @@
 @font-face {
   font-family: Commuters-Sans-Light;
   src: url(./fonts/CommutersSans-Light.ttf);
-  }
+}
 @font-face {
   font-family: Commuters-Sans-Bold;
   src: url(./fonts/CommutersSans-Bold.ttf);
 }
 
-
 // declare a class which applies it
 body {
   // font-family: 'Hatton-Medium';
-      font-family: Hatton-Semibold;
+  font-family: Hatton-Semibold;
 }
 
 h1 {
@@ -45,29 +44,35 @@ h6 {
   font-family: Commuters-Sans-Bold;
   font-size: 24px;
   line-height: 24px;
+  letter-spacing: 4px;
 }
 
 .q-toolbar .q-tab__label {
-  font-family: 'Commuters-Sans-Bold';
+  font-family: "Commuters-Sans-Bold";
   font-size: 12px;
   line-height: 12px;
 }
 
 span.block {
-  font-family: 'Commuters-Sans-Bold';
+  font-family: "Commuters-Sans-Bold";
   font-size: 13px;
   line-height: 13px;
 }
 
-
 p {
-  font-family: 'Commuters-Sans-Light';
-  font-size:  16px;
-  line-height: 16px;
+  font-family: "Commuters-Sans-Light";
+  font-size: 16px;
+  line-height: 25px;
 }
 
+.q-breadcrumbs__el {
+  font-family: 'Commuters-Sans-Light';
+}
+
+
 // STYLES CAROUSEL INDEX
-.third-block button.carousel__prev, .third-block button.carousel__next{
+.third-block button.carousel__prev,
+.third-block button.carousel__next {
   background-color: white;
   border-radius: 50%;
   width: 4rem;
@@ -84,7 +89,8 @@ p {
   /* z-index: 9999; */
 }
 
-.third-block li.carousel__slide.carousel__slide--active.carousel__slide--visible {
+.third-block
+  li.carousel__slide.carousel__slide--active.carousel__slide--visible {
   z-index: 9;
 }
 
@@ -92,11 +98,12 @@ p {
   display: none;
 }
 
-.third-block button.carousel__prev:after{
+.third-block button.carousel__prev:after {
   transform: rotate(180deg);
 }
 
-.third-block button.carousel__prev:after,.third-block button.carousel__next:after {
+.third-block button.carousel__prev:after,
+.third-block button.carousel__next:after {
   content: "";
   background-image: url("src/assets/freccia.svg");
   height: 90%;
@@ -109,31 +116,33 @@ p {
 // END STYLES CAROUSEL INDEX
 
 @media screen and (max-width: 990px) {
-
   h1 {
     font-size: 2rem;
     line-height: 2rem;
   }
   h6 {
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 4px
   }
 
   h2 {
-    font-size: 1.75rem;
-    line-height: 1.75rem;
+    font-size: 40px;
+    line-height: 50px;
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 16px;
+    line-height: 25px;
   }
 
   .q-btn {
-    font-size: 0.8rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
-  .third-block button.carousel__prev,  button.carousel__next{
+  .third-block button.carousel__prev,
+  button.carousel__next {
     // background-color: white;
     // border-radius: 50%;
     // width: 4rem;
@@ -145,8 +154,6 @@ p {
     height: 250px !important;
     /* z-index: 9999; */
   }
-
-
 }
 
 @media screen and (max-width: 680px) {
@@ -156,22 +163,23 @@ p {
   }
 
   h6 {
-    font-size: 0.8rem;
-    line-height: 0.8rem;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 4px
   }
 
   h2 {
-    font-size: 1.55rem;
-    line-height: 1.55rem;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   p {
-    font-size: 0.9rem;
-    line-height: 0.9rem;
+    font-size: 16px;
+    line-height: 25px;
   }
 
   .q-btn {
-    font-size: 0.8rem;
+
   }
 }
 

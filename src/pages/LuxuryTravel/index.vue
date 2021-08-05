@@ -146,9 +146,9 @@ export default {
 }
 
 hr {
-  height: 3px;
-  width: 12vw;
-  margin-bottom: 2vh;
+  height: 2px;
+  width: 20%;
+  margin: 2%;
 }
 
 // **********FIRST BLOCK**********

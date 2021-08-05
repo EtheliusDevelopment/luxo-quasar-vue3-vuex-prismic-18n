@@ -16,7 +16,13 @@
           <h6 class="text-white">AMAZING STORIES</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">Blog</h1>
-          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+          <q-btn
+            class="q-px-lg q-py-xs"
+            size="1.1vw"
+            color="white"
+            outline
+            label="LEARN WHAT WE DO"
+          />
         </div>
       </q-img>
 
@@ -79,7 +85,7 @@
           class="separator-block"
         />
         <div class="body-component">
-          <TestComponent/>
+          <TestComponent />
         </div>
       </div>
     </div>
@@ -89,13 +95,12 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
-import TestComponent from "../components/Utils/TestComponent.vue"
-
+import TestComponent from "../components/Utils/TestComponent.vue";
 
 export default {
   components: {
     PreLoader,
-    TestComponent
+    TestComponent,
   },
   setup() {
     return {
@@ -139,9 +144,9 @@ export default {
 }
 
 hr {
-  height: 3px;
-  width: 12vw;
-  margin-bottom: 2vh;
+  height: 2px;
+  width: 20%;
+  margin: 2%;
 }
 // **********FIRST BLOCK**********
 @media screen and (max-width: 990px) {
@@ -169,7 +174,7 @@ hr {
   width: 90%;
 }
 
-.head-navigation{
+.head-navigation {
   list-style: none;
   display: flex;
   width: 100%;

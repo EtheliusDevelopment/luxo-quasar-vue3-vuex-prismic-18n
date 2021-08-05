@@ -16,7 +16,13 @@
           <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+          <q-btn
+            class="q-px-lg q-py-xs"
+            size="1.1vw"
+            color="white"
+            outline
+            label="LEARN WHAT WE DO"
+          />
         </div>
       </q-img>
 
@@ -56,10 +62,10 @@
     </div>
 
     <div class="second-block-carousel">
-     <CarouselTestimonials />
+      <CarouselTestimonials />
     </div>
 
-    <div class="third-block-carousel" >
+    <div class="third-block-carousel">
       <CarouselTestimonialsFb />
     </div>
   </q-page>
@@ -68,21 +74,22 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
-import CarouselTestimonials from "../components/Utils/CarouselTestimonials.vue"
-import CarouselTestimonialsFb from "../components/Utils/CarouselTestimonialsFb.vue"
+import CarouselTestimonials from "../components/Utils/CarouselTestimonials.vue";
+import CarouselTestimonialsFb from "../components/Utils/CarouselTestimonialsFb.vue";
 
 export default {
   components: {
     PreLoader,
     CarouselTestimonials,
-    CarouselTestimonialsFb
+    CarouselTestimonialsFb,
   },
   setup() {
     return {
       slide: ref(1),
       autoplay: ref(true),
       slide_second: ref("style"),
-      lorem:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.",
+      lorem:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.",
     };
   },
 };
@@ -112,20 +119,17 @@ export default {
   flex-direction: column;
 }
 
-
 // **********SECOND BLOCK**********
 .second-block-carousel {
-    padding: 0 1rem;
+  padding: 0 1rem;
 }
 
 // **********THIRD BLOCK**********
 
-.third-block-carousel{
+.third-block-carousel {
   margin: 6%;
-  border: 2px solid $info
+  border: 2px solid $info;
 }
-
-
 
 .figcaption {
   width: 100%;
@@ -146,9 +150,9 @@ export default {
 }
 
 hr {
-  height: 3px;
-  width: 12vw;
-  margin-bottom: 2vh;
+  height: 2px;
+  width: 20%;
+  margin: 2%;
 }
 // **********FIRST BLOCK**********
 // **********SECOND BLOCK**********

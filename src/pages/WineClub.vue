@@ -42,7 +42,8 @@
         </p>
 
         <q-btn
-          class="btn-first-block"
+          class="q-px-lg q-py-xs btn-first-block"
+          size="1.1vw"
           color="primary"
           icon="check"
           outline
@@ -150,7 +151,8 @@
           />
 
           <q-btn
-            class="btn-step"
+            class="q-px-lg q-py-xs btn-step"
+            size="1.1vw"
             color="primary"
             outline
             label="JOIN THE WINE CLUB NOW !"
@@ -236,16 +238,20 @@
           in your wine box.
         </p>
 
-        <q-btn color="primary" outline label="DISCOVER THE PLANS" />
+        <q-btn
+          class="q-px-lg q-py-xs"
+          size="1.1vw"
+          color="primary"
+          outline
+          label="DISCOVER THE PLANS"
+        />
       </div>
     </div>
 
     <div class="sixth-block">
-
       <h2 class="text-primary text-center">Discover Our Plans</h2>
 
       <div class="sub-section-first">
-
         <div class="members-review">
           <p>
             I just wanted to share my experience with my friends and family, to
@@ -263,7 +269,14 @@
           <p class="payoff-echo">Maureen, Florida</p>
         </div>
 
-        <q-separator class="separator-sixth-block" spaced  inset vertical dark color="info" />
+        <q-separator
+          class="separator-sixth-block"
+          spaced
+          inset
+          vertical
+          dark
+          color="info"
+        />
 
         <div class="members-review">
           <p>
@@ -282,7 +295,14 @@
           <p class="payoff-echo">George, New York</p>
         </div>
 
-        <q-separator class="separator-sixth-block" spaced  inset vertical dark color="info" />
+        <q-separator
+          class="separator-sixth-block"
+          spaced
+          inset
+          vertical
+          dark
+          color="info"
+        />
 
         <div class="members-review">
           <p>
@@ -300,9 +320,7 @@
 
           <p class="payoff-echo">Patti, San Francisco</p>
         </div>
-
       </div>
-
     </div>
 
     <div class="seventh-block" style="outline: dashed">
@@ -360,9 +378,9 @@ export default defineComponent({
 }
 
 .header-block hr {
-  height: 3px;
-  width: 12vw;
-  margin-bottom: 2vh;
+  height: 2px;
+  width: 20%;
+  margin: 2%;
 }
 // **********FIRST BLOCK**********
 
@@ -482,16 +500,14 @@ export default defineComponent({
 
 // **********SIXTH BLOCK**********
 
-.sixth-block{
+.sixth-block {
   border: 2px solid $info;
   margin: 0 1%;
 }
 .sixth-block .sub-section-first {
   display: flex;
-
 }
 
-.separator-sixth-block{
-
+.separator-sixth-block {
 }
 </style>

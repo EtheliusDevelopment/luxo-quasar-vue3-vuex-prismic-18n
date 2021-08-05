@@ -18,8 +18,9 @@
             <q-separator color="white" inset />
             <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
             <q-btn
+              class="q-px-lg q-py-xs btn-1"
+              size="1.1vw"
               color="white"
-              icon="check"
               outline
               label="LEARN WHAT WE DO"
             />
@@ -66,6 +67,8 @@
                 <q-btn
                   @click="count--"
                   v-if="count > 0"
+                  class="q-px-lg q-py-xs btn-1"
+                  size="1.1vw"
                   label="Back"
                   type="button"
                   color="primary"
@@ -73,16 +76,16 @@
                 <q-btn
                   @click="count++"
                   label="Forward"
+                  class="q-px-lg q-py-xs q-ml-sm"
+                  size="1.1vw"
                   type="button"
                   color="primary"
-                  class="q-ml-sm"
                 />
               </div>
             </q-form>
           </div>
         </div>
       </div>
-
     </q-page>
   </transition>
 </template>
@@ -122,21 +125,16 @@ export default {
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
 @media screen and (max-width: 680px) {
-
-  .img1{
+  .img1 {
     height: 15% !important;
   }
-
 }
 
 @media screen and (max-width: 990px) {
-
-  .img1{
+  .img1 {
     height: 20% !important;
   }
-
 }
-
 
 .figcaption {
   width: 100%;
@@ -157,9 +155,9 @@ export default {
 }
 
 hr {
-  height: 3px;
-  width: 12vw;
-  margin-bottom: 2vh;
+  height: 2px;
+  width: 20%;
+  margin: 2%;
 }
 // **********FIRST BLOCK**********
 @media screen and (max-width: 990px) {

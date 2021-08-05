@@ -16,7 +16,13 @@
             LUXURY EXPERIENCES
           </h1>
           <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
-          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+          <q-btn
+            class="q-px-lg q-py-xs"
+            size="1.1vw"
+            color="white"
+            outline
+            label="LEARN WHAT WE DO"
+          />
         </div>
       </q-img>
 
@@ -62,11 +68,11 @@
           bookings, and being frustrated.
         </p>
         <q-btn
+          class="q-px-lg q-py-xs btn-1"
+          size="1.1vw"
           color="primary"
-          icon="check"
           outline
           label="LEARN WHAT WE DO"
-          class="btn-1"
         />
       </div>
     </div>
@@ -136,7 +142,13 @@
           hidden luxury gems of Italy with you. Are you ready to experience the
           most beautiful and captivating trip of your life?
         </p>
-        <q-btn color="primary" icon="check" outline label="START PLANNING" />
+        <q-btn
+          class="q-px-lg q-py-xs btn-1"
+          size="1.1vw"
+          color="primary"
+          outline
+          label="START PLANNING"
+        />
       </div>
     </div>
 
@@ -160,7 +172,13 @@
           hidden luxury gems of Italy with you. Are you ready to experience the
           most beautiful and captivating trip of your life?
         </p>
-        <q-btn color="primary" icon="check" outline label="START THE QUIZ" />
+        <q-btn
+          class="q-px-lg q-py-xs btn-1"
+          size="1.1vw"
+          color="primary"
+          outline
+          label="START THE QUIZ"
+        />
       </div>
 
       <q-img
@@ -201,7 +219,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 // **********HEADER BLOCK***********
 @media screen and (max-width: 680px) {
   figcaption {

@@ -16,7 +16,13 @@
           <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+          <q-btn
+            class="q-px-lg q-py-xs"
+            size="1.1vw"
+            color="white"
+            outline
+            label="LEARN WHAT WE DO"
+          />
         </div>
       </q-img>
 
@@ -42,7 +48,7 @@
           your vision to life.
         </p>
 
-        <h6 class="text-primary">The Process:</h6>
+        <h6 class="text-primary process-text">The Process:</h6>
 
         <p>
           <span class="text-info"> Step 1:</span> You tell us what you like, why
@@ -127,9 +133,9 @@ export default {
 }
 
 hr {
-  height: 3px;
-  width: 12vw;
-  margin-bottom: 2vh;
+  height: 2px;
+  width: 20%;
+  margin: 2%;
 }
 
 // **********FIRST BLOCK**********
@@ -159,5 +165,13 @@ hr {
 .form {
   grid-column: 2;
   grid-row: 1/4;
+}
+
+span.text-info {
+    font-family: 'Commuters-Sans-Bold';
+}
+
+.process-text{
+  letter-spacing: 1px;
 }
 </style>
