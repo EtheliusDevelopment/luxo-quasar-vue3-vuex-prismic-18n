@@ -1,5 +1,6 @@
 <template>
-  <Carousel :itemsToShow="3.95" :wrapAround="true">
+ <div class="carousel-index">
+    <Carousel :itemsToShow="3.95" :wrapAround="true">
     <Slide v-for="slide in db" :key="slide">
       <div class="carousel__item">
 
@@ -7,9 +8,10 @@
         <q-img
           class="img1"
           img-class="img1-carousel"
-          :src="slide.img"
+          src="~assets/venice-footer-box.png"
           :ratio="16 / 9"
            height="450px"
+           no-spinner
 
         >
           <div class="figcaption">
@@ -24,6 +26,7 @@
       <!-- <Pagination /> -->
     </template>
   </Carousel>
+ </div>
 </template>
 
 <script>
