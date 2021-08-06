@@ -101,11 +101,20 @@ export default {
   .img1 {
     height: 15% !important;
   }
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh;
+  }
 }
 
 @media screen and (max-width: 990px) {
   .img1 {
     height: 20% !important;
+  }
+
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 5vh;
   }
 }
 

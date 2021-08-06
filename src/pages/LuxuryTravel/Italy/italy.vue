@@ -2,7 +2,7 @@
   <q-page>
     <PreLoader />
 
-       <div class="header-block">
+    <div class="header-block">
       <q-img
         class="img1"
         img-class="img1-luxury"
@@ -48,9 +48,13 @@
         </div>
 
         <div class="fourth-component">
-          <q-btn color="primary" icon="check" outline label="FOURTH component"/>
+          <q-btn
+            color="primary"
+            icon="check"
+            outline
+            label="FOURTH component"
+          />
         </div>
-
       </div>
     </div>
 
@@ -100,7 +104,7 @@
     </div>
 
     <div class="fourth-block bg-info" style="outline: dashed">
-            <div class="sub-section-first-fourth">
+      <div class="sub-section-first-fourth">
         <h2 class="text-primary">
           Lorem ipsum di nove parole parole parole parole
         </h2>
@@ -118,10 +122,14 @@
           voluptatum!
         </p>
         <q-btn color="primary" icon="check" outline label="BOOK NOW" />
-        <q-btn color="secondary" icon="check" outline label="CUSTOMIZE THIS TOUR" />
+        <q-btn
+          color="secondary"
+          icon="check"
+          outline
+          label="CUSTOMIZE THIS TOUR"
+        />
       </div>
     </div>
-
   </q-page>
 </template>
 
@@ -145,19 +153,24 @@ export default {
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
 @media screen and (max-width: 680px) {
-
-  .img1{
+  .img1 {
     height: 15% !important;
   }
 
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh;
+  }
 }
 
 @media screen and (max-width: 990px) {
-
-  .img1{
+  .img1 {
     height: 20% !important;
   }
-
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 5vh;
+  }
 }
 
 .figcaption {

@@ -113,17 +113,29 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
-}
-
 @media screen and (max-width: 990px) {
   .img1 {
     height: 20% !important;
   }
+
+  .figcaption h1.text-white.text-center {
+  margin-top: 0;
+  margin-bottom: 5vh !important;
 }
+}
+
+
+@media screen and (max-width: 680px) {
+  .img1 {
+    height: 15% !important;
+  }
+
+  .figcaption h1.text-white.text-center {
+  margin-top: 0;
+  margin-bottom: 3vh !important;
+}
+}
+
 
 .figcaption {
   width: 100%;

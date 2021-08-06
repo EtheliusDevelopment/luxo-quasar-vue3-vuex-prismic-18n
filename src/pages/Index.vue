@@ -11,9 +11,9 @@
         spinner-size="82px"
       >
         <div class="absolute-top figcaption" style="height: 100%">
-          <h1 class="text-white text-center">
-            ITALY'S FINEST <br />
-            LUXURY EXPERIENCES
+          <h1 class="text-white text-center h1-header-block">
+            Italy’s Finest <br />
+            Luxury Experiences
           </h1>
           <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
           <q-btn
@@ -367,9 +367,24 @@ export default {
   .fade-leave-active {
     transition: opacity 4s ease;
   }
+
+
+.h1-header-block {
+
+  font-size: 30px;
+  line-height: 35px;
+}
 }
 
 @media screen and (max-width: 1100px) {
+
+
+.h1-header-block {
+
+  font-size: 45px;
+  line-height: 50px;
+}
+
   .first-block {
     grid-template-columns: 56vw 40vw !important;
     grid-template-rows: 30vh 35vw !important;
@@ -394,6 +409,14 @@ export default {
     grid-row: 1 !important;
     margin: 30% 0.75rem 0 0.75rem;
   }
+}
+
+.h1-header-block {
+  font-family: Hatton-Semibold;
+  font-size: 60px;
+  line-height: 60px;
+  font-size: 30px;
+  line-height: 35px;
 }
 
 .figcaption {
