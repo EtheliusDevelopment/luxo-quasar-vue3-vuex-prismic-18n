@@ -15,7 +15,12 @@
             Italy’s Finest <br />
             Luxury Experiences
           </h1>
-          <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
+
+          <q-separator color="white" inset />
+
+          <h6 class="text-white title-header-h6">
+            TAILORED TO YOUR PASSIONS AND TASTES
+          </h6>
           <q-btn
             class="q-px-lg q-py-lg"
             color="white"
@@ -183,6 +188,13 @@
       </div>
     </div>
 
+    <div class="video-block">
+      <q-video
+      :ratio="16/9"
+      src="https://player.vimeo.com/video/464780853?dnt=1&app_id=122963"
+    />
+    </div>
+
     <div class="seventh-block">
       <q-img
         img-class="col-md-2 test22"
@@ -257,6 +269,7 @@ export default {
   .h1-header-block {
     font-size: 45px !important;
     line-height: 50px !important;
+    margin-bottom: 1.5% !important;
   }
 
   .first-block {
@@ -302,9 +315,16 @@ export default {
   .title-h2 {
     line-height: 50px !important;
   }
+
+  .title-header-h6 {
+    font-size: 18px !important;
+    line-height: 23px !important;
+    letter-spacing: 3px !important;
+    margin-top: 1% !important;
+  }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 680px) {
   figcaption {
     display: flex;
     justify-content: center;
@@ -465,6 +485,7 @@ export default {
   .h1-header-block {
     font-size: 30px !important;
     line-height: 35px !important;
+    margin-bottom: 1.5% !important;
   }
 
   .img4 {
@@ -491,6 +512,13 @@ export default {
   .fifth-block .sub-section-first-4 {
     grid-column: 1/3 !important;
   }
+
+  .title-header-h6 {
+    font-size: 18px !important;
+    line-height: 23px !important;
+    letter-spacing: 3px !important;
+    margin-top: 1% !important;
+  }
 }
 
 // ********HEADER BLOCK*********
@@ -498,6 +526,12 @@ export default {
   font-family: Hatton-Semibold;
   font-size: 60px;
   line-height: 60px;
+  margin-bottom: 1.5% !important;
+}
+
+hr {
+  height: 3px;
+  width: 20%;
 }
 
 h2.text-primary {
@@ -506,6 +540,12 @@ h2.text-primary {
 
 .p-first-block {
   padding: 0 17%;
+}
+.title-header-h6 {
+  font-size: 18px !important;
+  line-height: 23px !important;
+  letter-spacing: 3px !important;
+  margin-top: 1% !important;
 }
 
 .figcaption {
@@ -662,10 +702,20 @@ h2.text-primary {
   grid-column: 2;
 }
 
+h6.text-primary.subtitle-h6 {
+    padding: 0 30% 0 0 !important;
+}
+
+// **********VIDEO  BLOCK**********
+
+.video-block{
+  margin-bottom: 10%;
+}
 // **********SIXTH BLOCK**********
 
 .sixth-block {
   margin: 0 3%;
+  margin-bottom: 10%;
 }
 .sub-section-first-sixth-block {
   display: flex;
