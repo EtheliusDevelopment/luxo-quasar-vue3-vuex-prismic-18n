@@ -1,7 +1,7 @@
 <template>
   <PreLoader />
   <q-layout view="lHh lpR lFf">
-    <q-header class="text-white" height-hint="98" reveal>
+    <q-header class="text-white" height-hint="98">
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -336,6 +336,7 @@ export default {
 }
 .q-header {
       background: transparent;
+      position: absolute;
 }
 
 .q-tabs__content {
