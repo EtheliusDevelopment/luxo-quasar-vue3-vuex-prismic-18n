@@ -102,18 +102,34 @@
       <q-img
         class="img3"
         img-class="img3-index"
-        src="~assets/venice-bg.jpg"
+        src="~assets/paul_lewis.png"
         spinner-color="primary"
         spinner-size="82px"
-      />
+      >
+        <div class="figcaption figcaption-about">
+          <div class="figcaption-body">
+            <h2 class="text-white figcaption-title">Paul Lewis</h2>
+
+            <h6 class="text-white figcaption-subtitle">
+              COSMOPOLITAN AND DILIGENT PERFECTIONIST
+            </h6>
+
+            <q-separator color="white" inset />
+
+            <img src="~assets/social_test.png" alt="social_test" />
+          </div>
+        </div>
+      </q-img>
       <div class="sub-section-first">
         <h6 class="text-primary">PAUL LEWIS</h6>
+
         <p class="text-primary">
           My name is Paul and in spite of the name, I’m Italian, on my mother’s
           side. My mother passed on her passion and love for great gastronomy to
           me, while my father (of British nationality) passed on a strong sense
           of practicality and precision.
         </p>
+
         <p class="text-primary">
           This multicultural mix perfectly matched my eclectic spirit, leading
           me to an “exploratory” life. Even after my first trip to the USA
@@ -122,6 +138,7 @@
           global nomad, always looking for the beauty and exclusivity the world
           can offer.
         </p>
+
         <p class="text-primary">
           In addition, I became a restaurant expert and a fine wine connoisseur,
           two passions that I love to cultivate in my free time, as well as
@@ -134,18 +151,21 @@
 
       <div class="sub-section-second">
         <h6 class="text-primary">ANDREA DEGASPERI</h6>
+
         <p class="text-primary">
           I love traveling the world, it is my greatest passion. I take great
           pride in my authentic Italic roots, which have made me, and could not
           be otherwise, a fan of the multi-faceted Italian cuisine and its
           high-quality wines.
         </p>
+
         <p class="text-primary">
           Before becoming a co-founder of Luxo Italia, I experienced several
           work experiences in the hospitality industry that, combined with my
           passion for travel, proved to be fundamental in leading me to start
           this adventure with Paul.
         </p>
+
         <p class="text-primary">
           Factors reinforced by my desire to work with and for people. The
           radical knowledge of the territory and the great empathy that I share
@@ -153,6 +173,7 @@
           itineraries capable of responding to the needs of every client in whom
           we instill our passion and experience—100% Italian.
         </p>
+
         <q-btn
           class="q-px-lg q-py-xs"
           size="1.1vw"
@@ -165,10 +186,24 @@
       <q-img
         class="img4"
         img-class="img4-index"
-        src="~assets/venice-bg.jpg"
+        src="~assets/andrea_degasperi.png"
         spinner-color="primary"
         spinner-size="82px"
-      />
+      >
+        <div class="figcaption figcaption-about">
+          <div class="figcaption-body">
+            <h2 class="text-white figcaption-title">Andrea Degasperi</h2>
+
+            <h6 class="text-white figcaption-subtitle">
+              EMPATHETIC, VERSATILE WITH A COMPASSIONATE SOUL
+            </h6>
+
+            <q-separator color="white" inset />
+
+            <img src="~assets/social_test.png" alt="social_test" />
+          </div>
+        </div>
+      </q-img>
     </div>
 
     <div class="fourth-block">
@@ -208,8 +243,6 @@
         />
       </div>
     </div>
-
-
   </q-page>
 </template>
 
@@ -238,7 +271,7 @@ export default {
 }
 
 .figcaption h6.text-white {
-  margin-bottom: 0;
+  margin: 1% 0 0 0;
 }
 
 .figcaption h1.text-white.text-center {
@@ -251,7 +284,6 @@ hr {
   width: 20%;
   margin: 2%;
 }
-
 
 // **********FIRST BLOCK**********
 .first-block .sub-section-first {
@@ -308,14 +340,15 @@ hr {
 .third-block {
   display: grid;
   grid-template-columns: 49% 49%;
-  grid-template-rows: 10vh 80vh 15vh 80vh;
+  grid-template-rows: 18vh 80vh 15vh 80vh;
   grid-gap: 2%;
-  margin-bottom: 10%;
+  margin: 0 9% 10% 9%;
 }
 
 .heading-third-block {
   grid-column: 1/3;
   grid-row: 1;
+  margin: 0;
 }
 
 .third-block .img3 {
@@ -333,6 +366,31 @@ hr {
 .third-block .img4 {
   grid-column: 2;
   grid-row: 3/5;
+}
+
+.figcaption-about {
+  background-color: rgb(0 0 0 / 12%) !important;
+}
+
+.figcaption-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.figcaption-subtitle {
+  font-family: CommutersSans-Regular;
+  font-size: 14px;
+  // line-height: ;
+  letter-spacing: 1px;
+}
+
+.figcaption-title {
+  font-family: Hatton-Medium;
+  font-size: 40px;
+  letter-spacing: 2px;
 }
 
 // **********FOURTH BLOCK**********
