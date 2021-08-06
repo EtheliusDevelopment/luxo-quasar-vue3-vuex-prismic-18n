@@ -59,7 +59,7 @@
           is completely customized. What travel experience do you seek?
         </p>
         <q-btn
-          class="q-px-lg q-py-xs"
+          class="q-px-lg q-py-xs q-mt-md"
           size="1.1vw"
           color="primary"
           outline
@@ -68,35 +68,33 @@
       </div>
     </div>
 
-    <hr class="hr" />
-
     <div class="second-block">
       <div class="sub-section-first bg-info">
-        <h2 class="text-primary">
-          Why Luxo Italia? A passion that has become a job
-        </h2>
-        <p class="text-primary">
-          Luxo Italia originated from the passion and will to make your luxury
-          holidays in Italy unforgettable. Every itinerary we design for your
-          trip is extremely accurate and customized as if we were the clients:
-          this is perhaps the best guarantee to ensure a unique and inimitable
-          service. We are friends, we love to travel and we have both had work
-          experiences in tourism. Meeting and discovering that we had an
-          identical dream for work triggered our decision, leading us to
-          conceive and then found Luxo Italia.
-        </p>
+        <div class="text-box-second-block">
+          <h2 class="text-primary title-h2">
+            Why Luxo Italia? A passion that has become a job
+          </h2>
+          <p class="body-p">
+            Luxo Italia originated from the passion and will to make your luxury
+            holidays in Italy unforgettable. Every itinerary we design for your
+            trip is extremely accurate and customized as if we were the clients:
+            this is perhaps the best guarantee to ensure a unique and inimitable
+            service. We are friends, we love to travel and we have both had work
+            experiences in tourism. Meeting and discovering that we had an
+            identical dream for work triggered our decision, leading us to
+            conceive and then found Luxo Italia.
+          </p>
+        </div>
       </div>
 
       <q-img
         class="img1"
         img-class="img1-luxury"
-        src="~assets/venice-bg.jpg"
+        src="~assets/about_luxo_wine.png"
         spinner-color="primary"
         spinner-size="82px"
       />
     </div>
-
-    <hr class="hr" />
 
     <div class="third-block">
       <h2 class="text-primary heading-third-block text-center">Who We Are</h2>
@@ -173,8 +171,6 @@
       />
     </div>
 
-    <hr class="hr" />
-
     <div class="fourth-block">
       <q-img
         class="img1"
@@ -231,15 +227,42 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
-}
 
 @media screen and (max-width: 990px) {
   .img1 {
     height: 20% !important;
+  }
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 5vh;
+  }
+
+  // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10rem !important;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .img1 {
+    height: 15% !important;
+  }
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh;
+  }
+
+  // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem !important;
   }
 }
 
@@ -279,10 +302,11 @@ hr {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 18rem;
 }
 
 .first-block {
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
 // **********SECOND BLOCK**********
@@ -291,18 +315,35 @@ hr {
   display: grid;
   grid-template-columns: 1.8fr 0.6fr 1fr;
   grid-template-rows: 10vh 80vh 30vh;
+  margin-bottom: 10%;
 }
 
 .second-block .sub-section-first {
   grid-column: 1/3;
   grid-row: 1/3;
-  outline: dashed;
+  display: grid;
+  grid-template-columns: auto 30%;
+  grid-template-rows: 10vh auto;
 }
 
 .second-block .img1 {
   grid-column: 2/4;
   grid-row: 2/4;
-  outline: dashed;
+}
+
+.text-box-second-block {
+  grid-column: 1;
+  grid-row: 2;
+  margin-left: 10%;
+}
+
+.body-p {
+  margin-left: 5%;
+  padding-right: 18%;
+}
+
+.title-h2 {
+  padding: 0 30% 0 0 !important;
 }
 
 // **********THIRD BLOCK**********
@@ -312,7 +353,7 @@ hr {
   grid-template-columns: 49% 49%;
   grid-template-rows: 10vh 80vh 15vh 80vh;
   grid-gap: 2%;
-  margin-bottom: 8%;
+  margin-bottom: 10%;
 }
 
 .heading-third-block {
@@ -344,7 +385,7 @@ hr {
   grid-template-columns: 50% 15% 35%;
   grid-template-rows: 10vh 80vh 15vh;
   // grid-gap: 2%;
-  // margin-bottom: 8%;
+  margin-bottom: 10%;
 }
 .fourth-block .img1 {
   grid-column: 1/3;
