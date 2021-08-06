@@ -220,6 +220,42 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK***********
+
+@media screen and (max-width: 1100px) {
+
+
+.h1-header-block {
+
+  font-size: 45px !important;
+  line-height: 50px !important;
+}
+
+  .first-block {
+    grid-template-columns: 56vw 40vw !important;
+    grid-template-rows: 30vh 35vw !important;
+  }
+
+  .img1-index {
+    grid-column: 1;
+    grid-row: 1;
+    object-fit: contain;
+    position: 50% 50%;
+  }
+
+  .img1 {
+    bottom: 6rem !important;
+    display: none;
+  }
+
+  .sub-section-first {
+    position: unset !important;
+    padding: unset !important;
+    grid-column: 1/3 !important;
+    grid-row: 1 !important;
+    margin: 30% 0.75rem 0 0.75rem;
+  }
+}
+
 @media screen and (max-width: 680px) {
   figcaption {
     display: flex;
@@ -371,52 +407,18 @@ export default {
 
 .h1-header-block {
 
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 30px !important;
+  line-height: 35px !important;
 }
 }
 
-@media screen and (max-width: 1100px) {
 
-
-.h1-header-block {
-
-  font-size: 45px;
-  line-height: 50px;
-}
-
-  .first-block {
-    grid-template-columns: 56vw 40vw !important;
-    grid-template-rows: 30vh 35vw !important;
-  }
-
-  .img1-index {
-    grid-column: 1;
-    grid-row: 1;
-    object-fit: contain;
-    position: 50% 50%;
-  }
-
-  .img1 {
-    bottom: 6rem !important;
-    display: none;
-  }
-
-  .sub-section-first {
-    position: unset !important;
-    padding: unset !important;
-    grid-column: 1/3 !important;
-    grid-row: 1 !important;
-    margin: 30% 0.75rem 0 0.75rem;
-  }
-}
 
 .h1-header-block {
   font-family: Hatton-Semibold;
   font-size: 60px;
   line-height: 60px;
-  font-size: 30px;
-  line-height: 35px;
+
 }
 
 .figcaption {
