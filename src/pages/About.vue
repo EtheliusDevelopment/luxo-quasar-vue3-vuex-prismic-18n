@@ -209,7 +209,7 @@
       </div>
     </div>
 
-    <hr class="hr" />
+
   </q-page>
 </template>
 
@@ -252,11 +252,6 @@ hr {
   margin: 2%;
 }
 
-.hr {
-  height: 3px;
-  width: 100%;
-  background-color: $primary;
-}
 
 // **********FIRST BLOCK**********
 .first-block .sub-section-first {
