@@ -88,7 +88,7 @@
       </div>
 
       <q-img
-        class="img1"
+        class="img1 img-about"
         img-class="img1-luxury"
         src="~assets/about_luxo_wine.png"
         spinner-color="primary"
@@ -227,44 +227,6 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-
-@media screen and (max-width: 990px) {
-  .img1 {
-    height: 20% !important;
-  }
-  .figcaption h1.text-white.text-center {
-    margin-top: 0;
-    margin-bottom: 5vh;
-  }
-
-  // **********FIRST BLOCK**********
-  .first-block .sub-section-first {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 10rem !important;
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
-  .figcaption h1.text-white.text-center {
-    margin-top: 0;
-    margin-bottom: 3vh;
-  }
-
-  // **********FIRST BLOCK**********
-  .first-block .sub-section-first {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 2rem !important;
-  }
-}
 
 .figcaption {
   width: 100%;
@@ -405,4 +367,75 @@ hr {
 // .fade-enter-active {
 //   transition: opacity 2s ease;
 // }
+
+@media screen and (max-width: 1300px) {
+  .title-h2 {
+    padding: 0 10% 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .img1 {
+    height: 20% !important;
+  }
+
+  .img-about {
+    height: 100% !important;
+  }
+
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 5vh;
+  }
+
+  // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10rem !important;
+  }
+
+  .title-h2 {
+    padding: 0 10% 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .img1 {
+    height: 15% !important;
+  }
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh;
+  }
+
+  // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem !important;
+  }
+
+  .img-about {
+    display: none !important;
+  }
+
+  .second-block {
+    grid-template-columns: auto !important;
+    grid-template-rows: auto !important;
+  }
+
+  .second-block .sub-section-first {
+    grid-template-columns: auto !important;
+    grid-template-rows: auto !important;
+  }
+
+  .title-h2 {
+    padding: 0 5% 0 0 !important;
+  }
+}
 </style>
