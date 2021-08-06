@@ -5,6 +5,7 @@
       :on-cancel="onCancel"
       :is-full-page="fullPage"
       background-color="#4c4571"
+      color="#D9C5A0"
       opacity="1"
       transition="fade"
       loader="bars"
