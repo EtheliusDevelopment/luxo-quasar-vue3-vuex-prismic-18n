@@ -147,13 +147,60 @@
       </div>
     </div>
 
+    <div class="sixth-block">
+      <h2 class="text-primary text-center">Why book with Luxo Italia</h2>
+
+      <div class="sub-section-first-sixth-block">
+        <div class="members-review">
+          <p class="text-center title-card-six text-primary">Lorem Ipsum</p>
+
+          <p class="text-center body-card-six">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.
+          </p>
+        </div>
+
+        <div class="members-review">
+          <p class="text-center title-card-six text-primary">Lorem Ipsum</p>
+
+          <p class="text-center body-card-six">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.
+          </p>
+        </div>
+
+        <div class="members-review">
+          <p class="text-center title-card-six text-primary">Lorem Ipsum</p>
+
+          <p class="text-center body-card-six">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="seventh-block">
+      <q-img
+        img-class="col-md-2 test22"
+        src="~assets/main_sponsors_index.png"
+        spinner-color="primary"
+        spinner-size="82px"
+      />
+    </div>
+
     <div class="fifth-block">
       <div class="sub-section-first-4">
-        <h6 class="text-primary">
+        <h6 class="text-primary subtitle-h6">
           HELP US CREATE THE MOST BEAUTIFUL SCRIPT FOR YOUR HOLIDAY
         </h6>
-        <h2 class="text-primary">What kind of luxury traveler are you?</h2>
-        <p class="text-primary">
+        <h2 class="text-primary title-h2">
+          What kind of luxury traveler are you?
+        </h2>
+        <p class="text-primary body-p">
           We do not just create luxury vacations in Italy, but rather
           extraordinary and unique life experiences. Each of our luxury tours is
           different simply because our travelers arranged it with us. For this
@@ -161,7 +208,7 @@
           warm personal approach to discussing, creating, and planning every
           detail of your travel.
         </p>
-        <p class="text-primary">
+        <p class="text-primary body-p">
           During your entire luxury tour, you will travel with local experts,
           who have a deep love for their country and are proud to share the
           hidden luxury gems of Italy with you. Are you ready to experience the
@@ -178,16 +225,7 @@
       <q-img
         class="img5"
         img-class="img5-index"
-        src="~assets/venice-bg.jpg"
-        spinner-color="primary"
-        spinner-size="82px"
-      />
-    </div>
-
-    <div class="sixth-block">
-      <q-img
-        img-class="col-md-2 test22"
-        src="~assets/main_sponsors_index.png"
+        src="~assets/index_luxo_small_village.png"
         spinner-color="primary"
         spinner-size="82px"
       />
@@ -259,6 +297,10 @@ export default {
 
   .second-block {
     grid-template-rows: 0.185fr 2.1fr 0.55fr !important;
+  }
+
+  .title-h2 {
+    line-height: 50px !important;
   }
 }
 
@@ -377,12 +419,12 @@ export default {
     align-items: center;
   }
 
-  .fifth-block {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 70vh;
-    padding: 10vw 5vw;
-  }
+  // .fifth-block {
+  //   display: grid;
+  //   grid-template-columns: 50% 50%;
+  //   grid-template-rows: 70vh;
+  //   padding: 10vw 5vw;
+  // }
 
   .sub-section-first-4 {
     display: flex;
@@ -396,7 +438,7 @@ export default {
     grid-column: 2;
   }
 
-  .sixth-block {
+  .seventh-block {
     padding: 0 5vw 5vw 5vw;
   }
 
@@ -427,13 +469,28 @@ export default {
 
   .img4 {
     display: none !important;
-}
+  }
 
-.text-sub-section-first-3 {
-  margin-left: 5% !important;
-  padding: 5% 0 !important;
-}
+  .text-sub-section-first-3 {
+    margin-left: 5% !important;
+    padding: 5% 0 !important;
+  }
 
+  .sub-section-first-sixth-block[data-v-4bc9d7de] {
+    flex-direction: column !important;
+  }
+
+  .title-h2 {
+    line-height: 30px !important;
+  }
+
+  .img5 {
+    display: none !important;
+  }
+
+  .fifth-block .sub-section-first-4 {
+    grid-column: 1/3 !important;
+  }
 }
 
 // ********HEADER BLOCK*********
@@ -550,21 +607,22 @@ h2.text-primary {
 
 .title-h2 {
   padding: 0 45% 0 0 !important;
-  line-height: 65px !important;
-  margin-bottom: 2% !important;
+  line-height: 65px;
+  margin-bottom: 5% !important;
+  padding: 0 47% 0 0 !important;
+  letter-spacing: 1px !important;
 }
 
 .body-p {
   margin-left: 5%;
 }
 
-.body-btn{
+.body-btn {
   margin-left: 5%;
 }
 
 .text-sub-section-first-3 {
   margin-left: 5%;
-
 }
 
 .img4 {
@@ -583,11 +641,13 @@ h2.text-primary {
   grid-column: 2;
 }
 
+// **********FIFTH BLOCK**********
+
 .fifth-block {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 70vh;
-  padding: 10vw 5vw;
+  grid-template-rows: minmax(110vh, auto);
+  margin: 0 3%;
 }
 
 .sub-section-first-4 {
@@ -602,7 +662,29 @@ h2.text-primary {
   grid-column: 2;
 }
 
+// **********SIXTH BLOCK**********
+
 .sixth-block {
+  margin: 0 3%;
+}
+.sub-section-first-sixth-block {
+  display: flex;
+}
+
+.separator-sixth-block {
+}
+
+p.text-center.title-card-six {
+  font-family: "Commuters-Sans-Bold";
+  font-size: 17px;
+}
+
+.members-review {
+  padding: 0 6%;
+}
+
+// **********SEVENTH BLOCK**********
+.seventh-block {
   padding: 0 5vw 5vw 5vw;
 }
 
