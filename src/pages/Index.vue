@@ -112,34 +112,38 @@
       <q-img
         class="img4"
         img-class="img4-index"
-        src="~assets/venice-bg.jpg"
+        src="~assets/index_luxo_partners.png"
         spinner-color="primary"
         spinner-size="82px"
       />
 
       <div class="sub-section-first-3">
-        <h6 class="text-primary">PAUL &amp; ANDREA</h6>
-        <h2 class="text-primary">Your Personal Luxury Travel Designers</h2>
-        <p class="text-primary">
-          We do not just create luxury vacations in Italy, but rather
-          extraordinary and unique life experiences. Each of our luxury tours is
-          different simply because our travelers arranged it with us. For this
-          reason, our objective is to provide you with a friendly, unique and
-          warm personal approach to discussing, creating, and planning every
-          detail of your travel.
-        </p>
-        <p class="text-primary">
-          During your entire luxury tour, you will travel with local experts,
-          who have a deep love for their country and are proud to share the
-          hidden luxury gems of Italy with you. Are you ready to experience the
-          most beautiful and captivating trip of your life?
-        </p>
-        <q-btn
-          class="q-px-lg q-py-lg btn-1"
-          color="primary"
-          outline
-          label="START PLANNING"
-        />
+        <div class="text-sub-section-first-3">
+          <h6 class="text-primary subtitle-h6">PAUL &amp; ANDREA</h6>
+          <h2 class="text-primary title-h2">
+            Your Personal Luxury Travel Designers
+          </h2>
+          <p class="text-primary body-p">
+            We do not just create luxury vacations in Italy, but rather
+            extraordinary and unique life experiences. Each of our luxury tours
+            is different simply because our travelers arranged it with us. For
+            this reason, our objective is to provide you with a friendly, unique
+            and warm personal approach to discussing, creating, and planning
+            every detail of your travel.
+          </p>
+          <p class="text-primary body-p">
+            During your entire luxury tour, you will travel with local experts,
+            who have a deep love for their country and are proud to share the
+            hidden luxury gems of Italy with you. Are you ready to experience
+            the most beautiful and captivating trip of your life?
+          </p>
+          <q-btn
+            class="q-px-lg q-py-lg btn-1 body-btn"
+            color="primary"
+            outline
+            label="START PLANNING"
+          />
+        </div>
       </div>
     </div>
 
@@ -222,6 +226,13 @@ export default {
     grid-template-rows: 30vh 35vw !important;
   }
 
+  h2.text-primary {
+    padding: 0 15% !important;
+  }
+  .p-first-block {
+    padding: 0 10% !important;
+  }
+
   .img1-index {
     grid-column: 1;
     grid-row: 1;
@@ -300,7 +311,9 @@ export default {
     grid-column: 1/3;
     grid-row: 2;
   }
-
+  h2.text-primary {
+    padding: 0 5% !important;
+  }
   .p-first-block {
     padding: 0 5% !important;
   }
@@ -344,9 +357,9 @@ export default {
     display: none !important;
   }
   .fourth-block {
-    display: grid;
-    grid-template-columns: 20vw 10vw 60vw;
-    grid-template-rows: 10vh 55vh 20vh;
+    grid-template-columns: auto !important;
+    grid-template-rows: auto !important;
+    margin-bottom: 30% !important;
   }
 
   .img4 {
@@ -362,7 +375,6 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 18vw;
   }
 
   .fifth-block {
@@ -412,6 +424,16 @@ export default {
     font-size: 30px !important;
     line-height: 35px !important;
   }
+
+  .img4 {
+    display: none !important;
+}
+
+.text-sub-section-first-3 {
+  margin-left: 5% !important;
+  padding: 5% 0 !important;
+}
+
 }
 
 // ********HEADER BLOCK*********
@@ -464,7 +486,7 @@ h2.text-primary {
   grid-column: 2;
   grid-row: 1;
   position: absolute;
-  padding: 10rem;
+  padding: 6rem;
 }
 .btn-1 {
   grid-column: 1/3;
@@ -484,6 +506,7 @@ h2.text-primary {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10%;
 }
 
 .img2 {
@@ -516,11 +539,32 @@ h2.text-primary {
 }
 .third-block {
   padding: 0 5rem;
+  margin-bottom: 15%;
 }
 .fourth-block {
   display: grid;
-  grid-template-columns: 20vw 10vw 60vw;
-  grid-template-rows: 10vh 55vh 20vh;
+  grid-template-columns: 34% 10% 56%;
+  grid-template-rows: 10vh 80vh 20vh;
+  margin-bottom: 10%;
+}
+
+.title-h2 {
+  padding: 0 45% 0 0 !important;
+  line-height: 65px !important;
+  margin-bottom: 2% !important;
+}
+
+.body-p {
+  margin-left: 5%;
+}
+
+.body-btn{
+  margin-left: 5%;
+}
+
+.text-sub-section-first-3 {
+  margin-left: 5%;
+
 }
 
 .img4 {
@@ -532,11 +576,11 @@ h2.text-primary {
   background-color: $info;
   grid-column: 2/4;
   grid-row: 2/4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 18vw;
+  display: grid;
+  grid-template-columns: 10vw auto;
+}
+.text-sub-section-first-3 {
+  grid-column: 2;
 }
 
 .fifth-block {
