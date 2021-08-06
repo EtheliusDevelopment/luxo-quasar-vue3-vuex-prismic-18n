@@ -304,7 +304,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 750px) {
   figcaption {
     display: flex;
     justify-content: center;
