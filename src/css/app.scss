@@ -157,13 +157,22 @@ p {
   }
 
   .third-block button.carousel__prev,
-  button.carousel__next {
+  .third-block button.carousel__next {
     // background-color: white;
     // border-radius: 50%;
     // width: 4rem;
     // height: 4rem;
-    margin: 0px -9%;
+    margin: 0px -4%;
   }
+
+  // .third-block button.carousel__prev,
+  // button.carousel__next {
+  //   // background-color: white;
+  //   // border-radius: 50%;
+  //   // width: 4rem;
+  //   // height: 4rem;
+  //   // margin: 0px -9%;
+  // }
 
   .third-block .carousel__slide--active .q-img.q-img--menu.img1 {
     height: 250px !important;
@@ -194,6 +203,10 @@ p {
     font-size: 16px;
     line-height: 25px;
   }
+
+  .third-block button.carousel__prev, .third-block button.carousel__next {
+    margin: 0px -9%;
+}
 
   .q-btn {
   }
