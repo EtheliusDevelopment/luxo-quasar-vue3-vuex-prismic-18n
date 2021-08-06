@@ -497,7 +497,7 @@ export default {
     padding: 5% 0 !important;
   }
 
-  .sub-section-first-sixth-block[data-v-4bc9d7de] {
+  .sub-section-first-sixth-block {
     flex-direction: column !important;
   }
 
