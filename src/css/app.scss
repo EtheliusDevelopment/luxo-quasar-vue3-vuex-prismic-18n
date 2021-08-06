@@ -177,6 +177,9 @@ p {
     height: 250px !important;
     /* z-index: 9999; */
   }
+  .breadcrumbs {
+    display: none !important;
+}
 }
 
 @media screen and (max-width: 680px) {
@@ -219,10 +222,10 @@ p {
     rgba(76, 69, 113, 1) 100%
   );
 
-  .breadcrumbs {
-    display: none;
 }
 
+.breadcrumbs {
+  display: none !important;
 }
 
 // *****SCROLLBAR
