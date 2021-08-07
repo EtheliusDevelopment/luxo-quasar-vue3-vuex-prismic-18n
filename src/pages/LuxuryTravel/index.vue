@@ -39,37 +39,38 @@
       </div>
     </div>
 
+
     <div class="first-block">
       <div class="sub-section-first">
-        <h2 class="text-primary">
+        <h2 class="text-primary text-center">
           Meticulusly curated itineraries by Luxoitalia
         </h2>
-        <p class="text-primary">
+        <p class="text-center">
           Choosing Luxo Italia, and relying on our experience, means embarking
           on the trip to Italy that you’ve always dreamed of, experiencing the
           true meaning of luxury in the Bel Paese.
         </p>
-        <p class="text-primary">
+        <p class="text-center">
           Get ready to explore enchanting places, historical landscapes, and
           breathtaking experiences off the beaten path in signature style – not
           to mention staying in Italy’s most luxurious boutique hotels
         </p>
-        <p class="text-primary">
+        <p class="text-center">
           For us, luxury travel means curating exclusive and unforgettable
           experiences that invigorates your heart and mind. We love and savour
           Italy, what it offers, its history. We are passionate about this
           country, and we want to help you share in our passion.
         </p>
-        <p class="text-primary">
+        <p class="text-center">
+          We do not limit ourselves to organizing and booking a pre-established
+          and undistinguished itinerary. Our objective is different; we want to
+          offer you an exclusive, unique and inimitable luxury experience that
+          is completely customized. What travel experience do you seek?
+        </p>
+        <p class="text-center">
           Stimulate all your senses. Get some inspiration below:
         </p>
-        <q-btn
-          class="q-px-lg q-py-xs"
-          size="1.1vw"
-          color="primary"
-          outline
-          label="LEARN WHAT WE DO"
-        />
+
       </div>
     </div>
 
@@ -127,6 +128,7 @@ export default {
   }
 }
 
+//**************HEADER BLOCK*****
 .header-block .figcaption {
   width: 100%;
   height: 100%;
@@ -152,15 +154,41 @@ hr {
 }
 
 // **********FIRST BLOCK**********
-@media screen and (max-width: 990px) {
+
+.first-block .sub-section-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 18rem;
 }
 
-@media screen and (max-width: 990px) {
+.first-block {
+  margin-bottom: 10%;
 }
+
 // **********SECOND BLOCK**********
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1100px) {
+  // **********FIRST BLOCK**********
+    // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10rem !important;
+  }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 680px) {
+  // **********FIRST BLOCK**********
+    // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem !important;
+  }
 }
 </style>

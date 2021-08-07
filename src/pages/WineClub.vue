@@ -32,37 +32,35 @@
       </div>
     </div>
 
-    <div class="first-block" style="outline: dashed">
+    <div class="first-block">
       <div class="sub-section-first">
-        <h2 class="text-primary">Exclusive Italian Experience</h2>
-        <p>
+        <h2 class="text-primary text-center">Exclusive Italian Experience</h2>
+        <p class="text-center">
           Luxo Italia Wine Club brings to your attention exclusive, hand-picked
           wines from the best Italian wineries. The bottles that you won’t find
           at your local store, delivered directly to your doorstep.
         </p>
 
         <q-btn
-          class="q-px-lg q-py-xs btn-first-block"
+          class="q-px-lg q-py-xs q-mt-md"
           size="1.1vw"
           color="primary"
-          icon="check"
           outline
-          label="JOIN THE WINE CLUB NOW !
-"
+          label="JOIN THE WINE CLUB NOW !"
         />
       </div>
     </div>
 
-    <div class="second-block" style="outline: dashed">
+    <div class="second-block">
       <q-img
-        class="img2"
+        class="img2-wine-second-block"
         img-class="img2-wine"
         src="~assets/vineyard.jpg"
         :ratio="16 / 9"
       />
     </div>
 
-    <div class="third-block" style="outline: dashed">
+    <div class="third-block">
       <h2 class="text-primary text-center title-third-block">
         What do you need to know about Luxo Italia Wine Club
       </h2>
@@ -70,7 +68,7 @@
       <div class="sub-section-first">
         <div class="step-one">
           <div class="card-step" style="outline: dashed">
-            <h1>1</h1>
+            <h1 class="text-info h1-card-step">1</h1>
             <q-separator spaced inset vertical color="black" />
             <h3>CREATED BY WINE LOVERS, FOR WINE LOVERS</h3>
           </div>
@@ -95,8 +93,8 @@
         </div>
 
         <div class="step-two">
-          <div class="card-step" style="outline: dashed">
-            <h1>2</h1>
+          <div class="card-step">
+            <h1 class="text-info h1-card-step">2</h1>
             <q-separator spaced inset vertical color="black" />
             <h3>CAREFULLY SELECTED BY OUR WINE CURATOR</h3>
           </div>
@@ -124,8 +122,8 @@
         </div>
 
         <div class="step-three">
-          <div class="card-step" style="outline: dashed">
-            <h1>3</h1>
+          <div class="card-step">
+            <h1 class="text-info h1-card-step">3</h1>
             <q-separator spaced inset vertical color="black" />
             <h3>INCLUDES FOOD PAIRING</h3>
           </div>
@@ -347,17 +345,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .img1 {
-    height: 20% !important;
-  }
-}
 
 .figcaption {
   width: 100%;
@@ -384,25 +371,21 @@ export default defineComponent({
 }
 // **********FIRST BLOCK**********
 
-.first-block {
-  margin-bottom: 8%;
-}
-
 .first-block .sub-section-first {
   display: flex;
-  width: 100%;
-  padding: 0 10%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 18rem;
 }
 
-.btn-first-block {
-  margin-top: 5% !important;
+.first-block {
+  margin-bottom: 10%;
 }
+
 // **********SECOND BLOCK**********
-.img2-wine {
-  height: 50%;
+.img2-wine-second-block {
+  height: 75vh;
 }
 
 // **********THIRD BLOCK**********
@@ -442,7 +425,9 @@ export default defineComponent({
 }
 
 .card-step h3 {
-  font-size: 1.1rem;
+  font-family: "Hatton-Medium";
+  color: #4c4571;
+  font-size: 30px !important;
   line-height: 1.5;
 }
 
@@ -450,11 +435,6 @@ export default defineComponent({
   grid-column: 1;
   grid-row: 3;
   border: 2px solid red;
-}
-
-.description-step h5 {
-  line-height: 1.5;
-  font-size: 0.83rem;
 }
 
 .img-step {
@@ -465,6 +445,17 @@ export default defineComponent({
 .btn-step {
   grid-column: 1;
   grid-row: 4;
+}
+
+.h1-card-step {
+  font-family: "Hatton-Medium";
+  font-size: 140px;
+}
+.description-step h5 {
+  font-family: "CommutersSans-Regular" !important;
+  font-size: 17px !important;
+  line-height: 25px !important;
+  opacity: 0.8;
 }
 
 // **********FOURTH BLOCK**********
@@ -509,5 +500,39 @@ export default defineComponent({
 }
 
 .separator-sixth-block {
+}
+
+@media screen and (max-width: 1100px) {
+  // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10rem !important;
+  }
+
+  .title-h2 {
+    padding: 0 10% 0 0 !important;
+  }
+
+  .img1 {
+    height: 20% !important;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem !important;
+  }
+
+  .img1 {
+    height: 15% !important;
+  }
 }
 </style>
