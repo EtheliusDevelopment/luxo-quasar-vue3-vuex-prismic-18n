@@ -101,7 +101,7 @@
 
       <q-img
         class="img3"
-        img-class="img3-index"
+        img-class="img-about-4-index"
         src="~assets/paul_lewis.png"
         spinner-color="primary"
         spinner-size="82px"
@@ -208,39 +208,39 @@
 
     <div class="fourth-block">
       <q-img
-        class="img1"
-        img-class="img1-index"
-        src="~assets/venice-bg.jpg"
+        class="img4"
+        img-class="img4-index"
+        src="~assets/about_luxo_partners_lake.png"
         spinner-color="primary"
         spinner-size="82px"
       />
 
-      <div class="sub-section-first bg-info">
-        <h2 class="text-primary heading-fourth-block text-center">
-          A luxury trip that comes from getting to know each other
-        </h2>
-        <p>
-          To make sure that your luxury itinerary in Italy is perfect, it is
-          necessary for us to meet and get to know you, establishing a
-          confidential relationship that allows us to personalize it and make it
-          as congenial as possible to you. Our work starts with this initial and
-          fundamental approach.
-        </p>
-        <p>
-          It is no accident that our clients-travelers end up building a real
-          friendship with us, often deciding to come back to us for new travels
-          and new luxury experiences in Italy. An occurrence that we love to
-          reciprocate with dinners or gifts because we consider you more than a
-          regular client.
-        </p>
-
-        <q-btn
-          class="q-px-lg q-py-xs"
-          size="1.1vw"
-          color="primary"
-          outline
-          label="TREAD ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES"
-        />
+      <div class="sub-section-first-3">
+        <div class="text-sub-section-first-3">
+          <h2 class="text-primary title-h2">
+            A luxury trip that comes from getting to know each other
+          </h2>
+          <p class="text-primary body-p">
+            To make sure that your luxury itinerary in Italy is perfect, it is
+            necessary for us to meet and get to know you, establishing a
+            confidential relationship that allows us to personalize it and make
+            it as congenial as possible to you. Our work starts with this
+            initial and fundamental approach.
+          </p>
+          <p class="text-primary body-p">
+            It is no accident that our clients-travelers end up building a real
+            friendship with us, often deciding to come back to us for new
+            travels and new luxury experiences in Italy. An occurrence that we
+            love to reciprocate with dinners or gifts because we consider you
+            more than a regular client.
+          </p>
+          <q-btn
+            class="q-px-lg q-py-lg btn-1 body-btn"
+            color="primary"
+            outline
+            label="READ ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES"
+          />
+        </div>
       </div>
     </div>
   </q-page>
@@ -368,6 +368,39 @@ hr {
   grid-row: 3/5;
 }
 
+// *******FOURTH BLOCK***********************
+
+.fourth-block {
+  display: grid;
+  grid-template-columns: 34% 10% 56%;
+  grid-template-rows: 10vh 80vh 20vh;
+  margin-bottom: 10%;
+}
+
+.body-btn {
+  margin-left: 5%;
+}
+
+.text-sub-section-first-3 {
+  margin-left: 5%;
+}
+
+.img4 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.sub-section-first-3 {
+  background-color: $info;
+  grid-column: 2/4;
+  grid-row: 2/4;
+  display: grid;
+  grid-template-columns: 10vw auto;
+}
+.text-sub-section-first-3 {
+  grid-column: 2;
+}
+// ********HEADER BLOCK*****
 .figcaption-about {
   background-color: rgb(0 0 0 / 12%) !important;
 }
@@ -385,30 +418,13 @@ hr {
   font-size: 14px;
   // line-height: ;
   letter-spacing: 1px;
+  line-height: 16px;
 }
 
 .figcaption-title {
   font-family: Hatton-Medium;
   font-size: 40px;
   letter-spacing: 2px;
-}
-
-// **********FOURTH BLOCK**********
-
-.fourth-block {
-  display: grid;
-  grid-template-columns: 50% 15% 35%;
-  grid-template-rows: 10vh 80vh 15vh;
-  // grid-gap: 2%;
-  margin-bottom: 10%;
-}
-.fourth-block .img1 {
-  grid-column: 1/3;
-  grid-row: 1/3;
-}
-.fourth-block .sub-section-first {
-  grid-column: 2/4;
-  grid-row: 2/4;
 }
 
 // .fade-enter-from {
@@ -489,6 +505,28 @@ hr {
 
   .title-h2 {
     padding: 0 5% 0 0 !important;
+  }
+
+  // ******THIRD BLOCK*******************
+
+  .third-block {
+    grid-template-rows: auto auto auto auto !important;
+    margin: 0 9% 70% 9% !important;
+  }
+
+  // *******FOURTH BLOCK***********************
+
+  .fourth-block {
+    grid-template-columns: auto !important;
+    grid-template-rows: auto !important;
+    margin-bottom: 30% !important;
+  }
+  .fourth-block .img4 {
+    display: none !important;
+  }
+
+  .img-about-4-index {
+    object-position: 40% 50% !important; //riportato in app.css
   }
 }
 </style>

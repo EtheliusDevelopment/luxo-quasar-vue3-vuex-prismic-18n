@@ -488,7 +488,7 @@ export default {
     margin-bottom: 1.5% !important;
   }
 
-  .img4 {
+  .fourth-block .img4 {
     display: none !important;
   }
 
@@ -638,6 +638,9 @@ h2.text-primary {
   padding: 0 5rem;
   margin-bottom: 15%;
 }
+
+// ******FOURTH BLOCK******
+
 .fourth-block {
   display: grid;
   grid-template-columns: 34% 10% 56%;
