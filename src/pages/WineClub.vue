@@ -248,16 +248,19 @@
       </div>
 
       <q-img
-        class="img5"
+        class="img5 img-wine-block"
         img-class="img5-index"
         src="~assets/index_luxo_small_village.png"
         spinner-color="primary"
         spinner-size="82px"
+
       />
     </div>
 
     <div class="sixth-block">
-      <h2 class="text-primary text-center h2-title-review">What Our Members Are Saying….</h2>
+      <h2 class="text-primary text-center h2-title-review">
+        What Our Members Are Saying….
+      </h2>
 
       <div class="sub-section-first">
         <div class="members-review">
@@ -286,7 +289,7 @@
           color="info"
         />
 
-         <div class="members-review">
+        <div class="members-review">
           <p class="text-center body-review">
             I just wanted to share my experience with my friends and family, to
             show them what is it - to be an Italian. And then I found the Luxo
@@ -312,7 +315,7 @@
           color="info"
         />
 
-       <div class="members-review">
+        <div class="members-review">
           <p class="text-center body-review">
             I just wanted to share my experience with my friends and family, to
             show them what is it - to be an Italian. And then I found the Luxo
@@ -602,26 +605,26 @@ h6.text-primary.subtitle-h6 {
 }
 
 .payoff {
-    font-family: 'Hatton-Medium';
-    font-size: 20px;
-    margin-bottom: 0;
-    margin-top: 10%;
+  font-family: "Hatton-Medium";
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 10%;
 }
 
 .payoff-echo {
-    font-size: 17px;
-    margin-bottom: 20%;
+  font-size: 17px;
+  margin-bottom: 20%;
 }
 
 .body-review {
-    font-family: 'CommutersSans-Regular';
-    font-size: 17px;
-    padding: 0 15%;
+  font-family: "CommutersSans-Regular";
+  font-size: 17px;
+  padding: 0 15%;
 }
 
 .h2-title-review {
-    margin-bottom: 5%;
-    margin-top: 5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .separator-sixth-block {
@@ -729,15 +732,21 @@ h6.text-primary.subtitle-h6 {
   }
 
   // **********FIFTH BLOCK**********
-  .fifth-block .sub-section-first-4 {
-    grid-column: 1/3 !important;
+  .fifth-block{
+    grid-template-columns: auto;
+    grid-template-rows: 25% auto;
   }
-    // **********SIXTH BLOCK**********
+
+  .sub-section-first-4 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+
+  // **********SIXTH BLOCK**********
   .sixth-block .sub-section-first {
     display: flex;
     flex-direction: column;
-}
-
-
+  }
 }
 </style>
