@@ -67,9 +67,15 @@
 
       <div class="sub-section-first">
         <div class="step-one">
-          <div class="card-step" style="outline: dashed">
+          <div class="card-step">
             <h1 class="text-info h1-card-step">1</h1>
-            <q-separator spaced inset vertical color="black" />
+            <q-separator
+              spaced
+              inset
+              vertical
+              color="info"
+              class="hr-cardstep"
+            />
             <h3>CREATED BY WINE LOVERS, FOR WINE LOVERS</h3>
           </div>
 
@@ -95,7 +101,13 @@
         <div class="step-two">
           <div class="card-step">
             <h1 class="text-info h1-card-step">2</h1>
-            <q-separator spaced inset vertical color="black" />
+            <q-separator
+              spaced
+              inset
+              vertical
+              color="info"
+              class="hr-cardstep"
+            />
             <h3>CAREFULLY SELECTED BY OUR WINE CURATOR</h3>
           </div>
           <div class="description-step">
@@ -124,7 +136,13 @@
         <div class="step-three">
           <div class="card-step">
             <h1 class="text-info h1-card-step">3</h1>
-            <q-separator spaced inset vertical color="black" />
+            <q-separator
+              spaced
+              inset
+              vertical
+              color="info"
+              class="hr-cardstep"
+            />
             <h3>INCLUDES FOOD PAIRING</h3>
           </div>
           <div class="description-step">
@@ -159,7 +177,7 @@
       </div>
     </div>
 
-    <div class="fourth-block" style="outline: dashed">
+    <div class="fourth-block">
       <div class="sub-section-first">
         <h2 class="text-primary text-center">Wine Club Membership Plans</h2>
 
@@ -174,9 +192,11 @@
               src="~assets/ca_del_bosco.png"
               fit="contain"
             />
-            <h6 class="h6-wine-card">CLASSIC</h6>
-            <h4 class="h4-wine-card">€ 1100</h4>
-            <button class="btn-wine-card">MORE INFORMATION</button>
+            <h6 class="h6-wine-card text-center text-primary">CLASSIC</h6>
+            <h4 class="h4-wine-card text-center text-info">€ 1100</h4>
+            <button class="btn-wine-card" @click="fnalert">
+              MORE INFORMATION
+            </button>
           </div>
 
           <div class="wine-card">
@@ -186,9 +206,11 @@
               src="~assets/ca_del_bosco.png"
               fit="contain"
             />
-            <h6 class="h6-wine-card">PREMIUM</h6>
-            <h4 class="h4-wine-card">€ 2350</h4>
-            <button class="btn-wine-card">MORE INFORMATION</button>
+            <h6 class="h6-wine-card text-center text-primary">PREMIUM</h6>
+            <h4 class="h4-wine-card text-center text-info">€ 2350</h4>
+            <button type="button" class="btn-wine-card" @click="fnalert">
+              MORE INFORMATION
+            </button>
           </div>
         </div>
 
@@ -198,73 +220,61 @@
       </div>
     </div>
 
-    <div class="fifth-block" style="outline: dashed">
-      <q-img
-        class="img-5"
-        img-class="img1-fifth-block"
-        src="~assets/wine_club_luxo.jpg"
-        spinner-color="primary"
-        spinner-size="82px"
-      />
-
-      <div class="sub-section-first">
-        <h2 class="text-primary">Discover Our Plans</h2>
-
-        <p class="p-plans">
-          Luxo Italia Wine Club offers two types of memberships – both include
-          three shipments (sent in March, June and September), with 6 bottles
-          each (18 bottles per year).
+    <div class="fifth-block">
+      <div class="sub-section-first-4">
+        <h2 class="text-primary title-h2">
+          What kind of luxury traveler are you?
+        </h2>
+        <p class="body-p">
+          We do not just create luxury vacations in Italy, but rather
+          extraordinary and unique life experiences. Each of our luxury tours is
+          different simply because our travelers arranged it with us. For this
+          reason, our objective is to provide you with a friendly, unique and
+          warm personal approach to discussing, creating, and planning every
+          detail of your travel.
         </p>
-
-        <p class="p-plans">
-          Both membership plans offer a carefully chosen selection of the best
-          Italian wines, from award-winning wineries, recognized at the local
-          and international level.
+        <p class="body-p">
+          During your entire luxury tour, you will travel with local experts,
+          who have a deep love for their country and are proud to share the
+          hidden luxury gems of Italy with you. Are you ready to experience the
+          most beautiful and captivating trip of your life?
         </p>
-
-        <p class="p-plans">
-          Classic membership plan includes the “representative” wines of the
-          winery - the favorite picks of the producer. It is a great way to
-          start your travel in the world of wine!
-        </p>
-
-        <p class="p-plans">
-          Premium membership plan will satisfy every wine connoisseur. Having
-          the standard membership plan as a starting point, this membership will
-          bring a true excellent to your doorstep. The best vintages, limited
-          editions and hard-to-find blends – those are the bottles you will find
-          in your wine box.
-        </p>
-
         <q-btn
-          class="q-px-lg q-py-xs"
-          size="1.1vw"
+          class="q-px-lg q-py-lg btn-1"
           color="primary"
           outline
           label="DISCOVER THE PLANS"
         />
       </div>
+
+      <q-img
+        class="img5"
+        img-class="img5-index"
+        src="~assets/index_luxo_small_village.png"
+        spinner-color="primary"
+        spinner-size="82px"
+      />
     </div>
 
     <div class="sixth-block">
-      <h2 class="text-primary text-center">Discover Our Plans</h2>
+      <h2 class="text-primary text-center h2-title-review">What Our Members Are Saying….</h2>
 
       <div class="sub-section-first">
         <div class="members-review">
-          <p>
+          <p class="text-center body-review">
             I just wanted to share my experience with my friends and family, to
             show them what is it - to be an Italian. And then I found the Luxo
             wine club.
           </p>
 
-          <p>
+          <p class="text-center body-review">
             The wine selection, gifts, the community itself - is a literal
             experience of Italy I wanted to share with my family!
           </p>
 
-          <p class="payoff">So happy!</p>
+          <p class="payoff text-center text-primary">So happy!</p>
 
-          <p class="payoff-echo">Maureen, Florida</p>
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
 
         <q-separator
@@ -276,21 +286,21 @@
           color="info"
         />
 
-        <div class="members-review">
-          <p>
-            This might be one of the best ways on how to taste wine and identify
-            what you like/don’t like ……
+         <div class="members-review">
+          <p class="text-center body-review">
+            I just wanted to share my experience with my friends and family, to
+            show them what is it - to be an Italian. And then I found the Luxo
+            wine club.
           </p>
 
-          <p>
-            All the wines are delicious. It was ideal for us to get a taste of
-            the region/country. Super informative… Couldn’t speak more highly of
-            it.
+          <p class="text-center body-review">
+            The wine selection, gifts, the community itself - is a literal
+            experience of Italy I wanted to share with my family!
           </p>
 
-          <p class="payoff">Fantastic Wines!</p>
+          <p class="payoff text-center text-primary">So happy!</p>
 
-          <p class="payoff-echo">George, New York</p>
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
 
         <q-separator
@@ -302,26 +312,26 @@
           color="info"
         />
 
-        <div class="members-review">
-          <p>
-            Luxo Italia Wine Club is really fantastic, in which it is possible
-            to find not only a wide choice of fine wines, but a large number of
-            wines known to a few connoisseurs.
+       <div class="members-review">
+          <p class="text-center body-review">
+            I just wanted to share my experience with my friends and family, to
+            show them what is it - to be an Italian. And then I found the Luxo
+            wine club.
           </p>
 
-          <p>
-            This is the most evocative, refined and cultured Wine Club I ever
-            joined.
+          <p class="text-center body-review">
+            The wine selection, gifts, the community itself - is a literal
+            experience of Italy I wanted to share with my family!
           </p>
 
-          <p class="payoff">The Most Refined Wine Club</p>
+          <p class="payoff text-center text-primary">So happy!</p>
 
-          <p class="payoff-echo">Patti, San Francisco</p>
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
       </div>
     </div>
 
-    <div class="seventh-block" style="outline: dashed">
+    <div class="seventh-block">
       <q-img
         class="img7"
         img-class="img7-wine"
@@ -339,6 +349,14 @@ export default defineComponent({
   name: "PageIndex",
   components: {
     PreLoader,
+  },
+  setup() {
+    const fnalert = () => {
+      alert("Funziono");
+    };
+    return {
+      fnalert,
+    };
   },
 });
 </script>
@@ -390,38 +408,52 @@ export default defineComponent({
 
 // **********THIRD BLOCK**********
 
+.third-block {
+  margin-bottom: 25%;
+}
+
 .title-third-block {
   padding: 0px 20%;
 }
 
 .step-one {
   display: grid;
-  grid-template-columns: 60% 40%;
-  grid-template-rows: 10% 40% auto;
-  grid-gap: 1vw;
+  grid-template-columns: 46% minmax(auto, 47%);
+  grid-template-rows: 10% 40% auto 10%;
+  grid-gap: 7%;
   margin-bottom: 10%;
+  margin-right: 10%;
+  margin-left: 6%;
 }
+
 .step-two {
   display: grid;
-  grid-template-columns: 60% 40%;
-  grid-template-rows: 10% 40% auto;
-  grid-gap: 1vw;
+  grid-template-columns: 46% minmax(auto, 47%);
+  grid-template-rows: 10% 40% auto 10%;
+  grid-gap: 7%;
   margin-bottom: 10%;
+  margin-right: 10%;
+  margin-left: 6%;
 }
 
 .step-three {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 46% minmax(auto, 47%);
   grid-template-rows: 10% 40% auto 10%;
-  grid-gap: 1vw;
+  grid-gap: 7%;
   margin-bottom: 10%;
+  margin-right: 10%;
+  margin-left: 6%;
 }
 
 .card-step {
-  width: 100%;
+  width: 95%;
   grid-column: 1;
   grid-row: 2;
   display: flex;
+  justify-content: space-evenly;
+  border: 2px solid $info;
+  margin-left: 6%;
 }
 
 .card-step h3 {
@@ -432,9 +464,10 @@ export default defineComponent({
 }
 
 .description-step {
+  width: 95%;
   grid-column: 1;
   grid-row: 3;
-  border: 2px solid red;
+  margin-left: 6%;
 }
 
 .img-step {
@@ -445,11 +478,15 @@ export default defineComponent({
 .btn-step {
   grid-column: 1;
   grid-row: 4;
+  width: 50%;
+  margin-left: 6%;
 }
 
 .h1-card-step {
   font-family: "Hatton-Medium";
   font-size: 140px;
+  padding: 0 8%;
+  margin-top: 14%;
 }
 .description-step h5 {
   font-family: "CommutersSans-Regular" !important;
@@ -458,7 +495,16 @@ export default defineComponent({
   opacity: 0.8;
 }
 
+.hr-cardstep {
+  margin-right: 10% !important;
+  height: 75% !important;
+  align-self: center !important;
+}
+
 // **********FOURTH BLOCK**********
+.fourth-block {
+  margin-bottom: 15%;
+}
 
 .wine-card-loop {
   display: flex;
@@ -471,32 +517,111 @@ export default defineComponent({
   margin: 0 2%;
 }
 
+.h6-wine-card {
+  font-family: "CommutersSans-Regular";
+}
+.h4-wine-card {
+  font-size: 55px;
+  font-family: "Hatton-Medium";
+}
+
+.btn-wine-card {
+  margin-left: 25%;
+  margin-right: 25%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #4c4571;
+  color: #4c4571;
+  font-family: "Commuters-Sans-Bold";
+  padding-bottom: 2%;
+  position: relative;
+  bottom: 5%;
+  cursor: pointer;
+}
+
+.purchase-conditions {
+  margin-top: 2%;
+}
+
 // **********FIFTH BLOCK**********
 .fifth-block {
   display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 120vh;
-  margin: 0 1%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: minmax(110vh, auto);
+  grid-gap: 6%;
+  margin: 0 6% 10% 6%;
 }
 
-.fifth-block .img-5 {
-  grid-column: 1;
-}
-.fifth-block .sub-section-first {
-  grid-column: 2;
+.sub-section-first-4 {
   display: flex;
   flex-direction: column;
-  padding: 5rem;
+  align-items: center;
+  grid-column: 2;
+  margin-right: 6%;
+}
+
+.img5 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+h6.text-primary.subtitle-h6 {
+  padding: 0 30% 0 0 !important;
+}
+
+.title-h2 {
+  padding: 0 45% 0 0 !important;
+  line-height: 65px;
+  margin-bottom: 5% !important;
+  padding: 0 47% 0 0 !important;
+  letter-spacing: 1px !important;
+}
+
+.body-p {
+  margin-left: 5%;
+}
+
+.body-btn {
+  margin-left: 5%;
+}
+
+.btn-1 {
+  align-self: flex-start;
+  margin-top: 4%;
+  margin-left: 5%;
 }
 
 // **********SIXTH BLOCK**********
 
 .sixth-block {
   border: 2px solid $info;
-  margin: 0 1%;
+  margin: 0 6% 10% 6%;
 }
 .sixth-block .sub-section-first {
   display: flex;
+}
+
+.payoff {
+    font-family: 'Hatton-Medium';
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 10%;
+}
+
+.payoff-echo {
+    font-size: 17px;
+    margin-bottom: 20%;
+}
+
+.body-review {
+    font-family: 'CommutersSans-Regular';
+    font-size: 17px;
+    padding: 0 15%;
+}
+
+.h2-title-review {
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .separator-sixth-block {
@@ -519,6 +644,31 @@ export default defineComponent({
   .img1 {
     height: 20% !important;
   }
+
+  // ****THIRD BLOCK *********
+
+  // ****FLUID TEXT TEST******
+  .card-step h3 {
+    transform: scale(0.9);
+  }
+  .h1-card-step {
+    transform: scale(0.9);
+  }
+  .description-step h5 {
+    transform: scale(0.9);
+  }
+
+  // **********FOURTH BLOCK**********
+
+  // ****FLUID TEXT TEST******
+
+  .h6-wine-card {
+    transform: scale(0.9);
+  }
+  .h4-wine-card {
+    transform: scale(0.9);
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -534,5 +684,60 @@ export default defineComponent({
   .img1 {
     height: 15% !important;
   }
+
+  // *******THIRD BLOCK*****
+
+  .img-step {
+    display: none !important;
+  }
+
+  .step-one {
+    grid-template-columns: auto !important;
+    grid-template-rows: auto !important;
+  }
+
+  .step-two {
+    grid-template-columns: auto !important;
+    grid-template-rows: auto !important;
+  }
+
+  .step-three {
+    grid-template-columns: auto !important;
+    grid-template-rows: auto !important;
+  }
+
+  // ****FLUID TEXT TEST******
+  .card-step h3 {
+    transform: scale(0.8);
+  }
+  .h1-card-step {
+    transform: scale(0.8);
+  }
+  .description-step h5 {
+    transform: scale(0.8);
+  }
+
+  // **********FOURTH BLOCK**********
+
+  // ****FLUID TEXT TEST******
+
+  .h6-wine-card {
+    transform: scale(0.8);
+  }
+  .h4-wine-card {
+    transform: scale(0.8);
+  }
+
+  // **********FIFTH BLOCK**********
+  .fifth-block .sub-section-first-4 {
+    grid-column: 1/3 !important;
+  }
+    // **********SIXTH BLOCK**********
+  .sixth-block .sub-section-first {
+    display: flex;
+    flex-direction: column;
+}
+
+
 }
 </style>
