@@ -13,9 +13,11 @@
         height="450px"
       >
         <div class="figcaption">
-          <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
+          <h6 class="text-white">TALK WITH US</h6>
           <q-separator color="white" inset />
-          <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
+          <h1 class="text-white text-center">
+            The Perfect Italian Journey For You.
+          </h1>
           <q-btn
             class="q-px-lg q-py-xs"
             size="1.1vw"
@@ -39,9 +41,9 @@
       </div>
     </div>
 
-    <div class="first-block" style="outline: dashed">
+    <div class="first-block">
       <div class="info-component">
-        <p>
+        <p class="p-info">
           No matter what your interests and passions, no matter what the season,
           we can bring your perfect trip to life. Simply tell us what you’re
           into, share with us the real reason for your trip, and we’ll bring
@@ -50,20 +52,20 @@
 
         <h6 class="text-primary process-text">The Process:</h6>
 
-        <p>
+        <p class="p-info">
           <span class="text-info"> Step 1:</span> You tell us what you like, why
           you’re travelling and what you absolutely have to see and do.
         </p>
 
-        <p>
+        <p class="p-info">
           <span class="text-info"> Step 2:</span> We analyse your needs and
           compile an itinerary that is perfectly “you”.
         </p>
-        <p>
+        <p class="p-info">
           <span class="text-info"> Step 3:</span> Together we review your custom
           itinerary and fine-tune the details.
         </p>
-        <p>
+        <p class="p-info">
           <span class="text-info"> Step 4:</span> We lock the dates down and
           you’re ready to travel – it’s that simple!
         </p>
@@ -71,9 +73,13 @@
 
       <div class="contact-card-component bg-info">
         <div class="inner-component">
-          <h2 class="text-primary">Luxo Italia</h2>
-          <p>Via Galla Placidia 12 - Milano, Italy</p>
-          <p>Email : info@luxoitalia.com</p>
+          <h2 class="text-primary h2-inner-component">Luxo Italia</h2>
+          <p class="text-center p-inner-component">
+            Via Galla Placidia 12 - Milano, Italy
+          </p>
+          <p class="text-center p-inner-component">
+            Email : info@luxoitalia.com
+          </p>
         </div>
       </div>
 
@@ -105,14 +111,6 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
-}
-
-@media screen and (max-width: 990px) {
-}
 
 .figcaption {
   width: 100%;
@@ -138,18 +136,17 @@ hr {
   margin: 2%;
 }
 
-// **********FIRST BLOCK**********
-@media screen and (max-width: 990px) {
+.header-block{
+  margin-bottom:10%;
 }
 
-@media screen and (max-width: 990px) {
-}
+// **********FIRST BLOCK**********
 
 .first-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40% 25% auto;
-  grid-gap: 2%;
+  grid-template-rows: 40% 30% auto;
+  grid-gap: 10%;
   margin: 0 5%;
 }
 
@@ -161,6 +158,9 @@ hr {
 .contact-card-component {
   grid-column: 1;
   grid-row: 2;
+  margin-left: 20%;
+  position: relative;
+  bottom: 40%;
 }
 .form {
   grid-column: 2;
@@ -168,10 +168,54 @@ hr {
 }
 
 span.text-info {
-    font-family: 'Commuters-Sans-Bold';
+  font-family: "Commuters-Sans-Bold";
+  font-size: 16px !important;
+  line-height: 25px !important;
 }
 
-.process-text{
-  letter-spacing: 1px;
+.process-text {
+  font-family: "Hatton-Medium";
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: unset !important;
+}
+
+.inner-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 86%;
+  border: 5px solid white;
+  margin: 5%;
+}
+
+.h2-inner-component {
+  font-size: 40px !important;
+  line-height: 65px !important;
+  letter-spacing: 0.5px !important;
+}
+
+.p-inner-component {
+  font-family: "CommutersSans-Regular" !important;
+  font-size: 16px !important;
+  line-height: 31px !important;
+  letter-spacing: 1px !important;
+}
+
+.p-info {
+  font-family: "CommutersSans-Regular" !important;
+  font-size: 16px !important;
+  line-height: 25px !important;
+}
+
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 680px) {
+  .img1 {
+    height: 15% !important;
+  }
 }
 </style>
