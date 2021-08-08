@@ -231,5 +231,9 @@ export default {
   .question {
     font-size: 25px;
   }
+
+  .question-box {
+    margin-bottom: 25%;
+  }
 }
 </style>
