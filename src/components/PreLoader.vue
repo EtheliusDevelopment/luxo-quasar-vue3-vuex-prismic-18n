@@ -8,7 +8,7 @@
       color="#D9C5A0"
       opacity="1"
       transition="fade"
-      loader="bars"
+      loader="dots"
       lock-scroll="true"
     />
   </div>
@@ -19,10 +19,7 @@ import Loading from "vue-loading-overlay";
 import "vue-loading-overlay/dist/vue-loading.css";
 
 export default {
-  props: {
-    loaderOn: Boolean,
-    loaderNo: Boolean,
-  },
+ 
   data() {
     return {
       isLoading: true,

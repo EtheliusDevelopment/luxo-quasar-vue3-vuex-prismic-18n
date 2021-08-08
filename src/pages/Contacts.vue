@@ -136,8 +136,8 @@ hr {
   margin: 2%;
 }
 
-.header-block{
-  margin-bottom:10%;
+.header-block {
+  margin-bottom: 10%;
 }
 
 // **********FIRST BLOCK**********
@@ -145,9 +145,9 @@ hr {
 .first-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40% 30% auto;
-  grid-gap: 10%;
-  margin: 0 5%;
+  grid-template-rows: 35% 30% auto;
+  grid-gap: 9%;
+  margin: 0 9%;
 }
 
 .info-component {
@@ -158,9 +158,6 @@ hr {
 .contact-card-component {
   grid-column: 1;
   grid-row: 2;
-  margin-left: 20%;
-  position: relative;
-  bottom: 40%;
 }
 .form {
   grid-column: 2;
@@ -206,7 +203,7 @@ span.text-info {
 
 .p-info {
   font-family: "CommutersSans-Regular" !important;
-  font-size: 16px !important;
+  font-size: 17px !important;
   line-height: 25px !important;
 }
 
