@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <div class="first-block" >
+      <div class="first-block">
         <div class="sub-section-first">
           <!-- Header Quiz -->
           <div class="form-header text-center">
@@ -52,11 +52,10 @@
               color="primary"
               class="q-mt-sm linear-progress"
             />
-            <h6>Descrizione Step</h6>
           </div>
 
           <!-- Form -->
-          <div class="form-body" >
+          <div class="form-body">
             <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
               <Step1 v-if="count == 0" />
               <Step2 v-if="count == 1" />
@@ -162,6 +161,14 @@ hr {
   height: 2px;
   width: 20%;
   margin: 2%;
+}
+
+.question-box {
+  border: 3px solid red;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: white;
 }
 // **********FIRST BLOCK**********
 @media screen and (max-width: 990px) {
