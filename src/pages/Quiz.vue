@@ -40,10 +40,10 @@
         </div>
       </div>
 
-      <div class="first-block" style="outline: dashed">
+      <div class="first-block" >
         <div class="sub-section-first">
           <!-- Header Quiz -->
-          <div class="form-header text-center" style="width: 80vw">
+          <div class="form-header text-center">
             <h3>TITOLO QUIZ</h3>
             <q-linear-progress
               rounded
@@ -56,7 +56,7 @@
           </div>
 
           <!-- Form -->
-          <div class="form-body" style="width: 480vw">
+          <div class="form-body" >
             <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
               <Step1 v-if="count == 0" />
               <Step2 v-if="count == 1" />
