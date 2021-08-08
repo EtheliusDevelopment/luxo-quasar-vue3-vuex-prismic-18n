@@ -8,6 +8,16 @@
       <h6 class="text-center text-primary answer">
         Your Answer is: <span class="text-info">{{ answer }}</span>
       </h6>
+
+      <div class="progress-bar">
+        <q-linear-progress
+          rounded
+          size="20px"
+          :value="$props.step"
+          color="primary"
+          class="q-mt-sm linear-progress"
+        />
+      </div>
     </div>
   </div>
   <div class="quiz-layout">
@@ -97,17 +107,27 @@
       </q-item-section>
     </div>
   </div>
+
 </template>
 
 <script>
 import { ref } from "vue";
 
 export default {
-  setup() {
+
+   props: {
+    step: {
+      type: Number,
+      required: true,
+    },
+  },
+  setup(props) {
     const wrapper1 = ref();
     const wrapper2 = ref();
     const wrapper3 = ref();
     const wrapper4 = ref();
+
+
 
     return {
       answer: ref(),
@@ -116,6 +136,8 @@ export default {
       wrapper2,
       wrapper3,
       wrapper4,
+
+
 
       addClass(val, event) {
         if (val == "teal") {
@@ -202,6 +224,16 @@ export default {
   background: white;
   padding: 1%;
   margin-bottom: 5%;
+}
+
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.linear-progress{
+   width: 80%;
 }
 
 @media screen and (max-width: 990px) {

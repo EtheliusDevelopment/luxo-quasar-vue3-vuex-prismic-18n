@@ -45,23 +45,21 @@
           <!-- Header Quiz -->
           <div class="form-header text-center">
             <h3>TITOLO QUIZ</h3>
-            <q-linear-progress
-              rounded
-              size="20px"
-              :value="value"
-              color="primary"
-              class="q-mt-sm linear-progress"
-            />
+
           </div>
 
           <!-- Form -->
           <div class="form-body">
             <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
-              <Step1 v-if="count == 0" />
-              <Step2 v-if="count == 1" />
-              <Step3 v-if="count == 2" />
-              <Step4 v-if="count == 3" />
-              <Step5 v-if="count == 4" />
+              <Step1 v-if="count == 0" :step="value"/>
+              <Step2 v-if="count == 1" :step="value"/>
+              <Step3 v-if="count == 2" :step="value"/>
+              <Step4 v-if="count == 3" :step="value"/>
+              <Step5 v-if="count == 4" :step="value"/>
+              <Step6 v-if="count == 5" :step="value"/>
+              <Step7 v-if="count == 6" :step="value"/>
+              <Step8 v-if="count == 7" :step="value"/>
+              <Step9 v-if="count == 8" :step="value"/>
 
               <div>
                 <q-btn
@@ -91,12 +89,16 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, watchEffect } from "vue";
 import Step1 from "../components/Quiz/Step1.vue";
 import Step2 from "../components/Quiz/Step2.vue";
 import Step3 from "../components/Quiz/Step3.vue";
 import Step4 from "../components/Quiz/Step4.vue";
 import Step5 from "../components/Quiz/Step5.vue";
+import Step6 from "../components/Quiz/Step6.vue";
+import Step7 from "../components/Quiz/Step7.vue";
+import Step8 from "../components/Quiz/Step8.vue";
+import Step9 from "../components/Quiz/Step9.vue";
 import PreLoader from "src/components/PreLoader.vue";
 
 export default {
@@ -106,20 +108,33 @@ export default {
     Step3,
     Step4,
     Step5,
+    Step6,
+    Step7,
+    Step8,
+    Step9,
     PreLoader,
   },
 
   setup() {
     const count = ref(0);
+
+    const value = ref(1 / 9);
+
+    watchEffect(() => (value.value = (count.value + 1) / 9));
+
     return {
       count,
-      value: 0.325,
+      value,
       // **COMPONENTI STEP QUIZ
       Step1,
       Step2,
       Step3,
       Step4,
       Step5,
+      Step6,
+      Step7,
+      Step8,
+      Step9,
     };
   },
 };
@@ -163,18 +178,28 @@ hr {
   margin: 2%;
 }
 
-.question-box {
-  border: 3px solid red;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    background: white;
+.progress-bar {
+  width: 30%;
+  position: absolute;
+  top: 176vh;
+  right: 80vw;
+  transform: rotate(90deg);
 }
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+}
+
 // **********FIRST BLOCK**********
 @media screen and (max-width: 990px) {
 }
 
 @media screen and (max-width: 990px) {
+
+  .progress-bar{
+    display: none;
+  }
 }
 // **********SECOND BLOCK**********
 </style>
