@@ -148,6 +148,16 @@ p {
 
 // END WINE CLUB
 
+// CONTACT
+.form-component div {
+  font-family: 'Commuters-Sans-Bold' !important;
+}
+
+.q-item__label span {
+  font-family: 'CommutersSans-Regular' !important;
+}
+// END CONTACT
+
 @media screen and (max-width: 990px) {
   h1 {
     font-family: Hatton-Semibold;

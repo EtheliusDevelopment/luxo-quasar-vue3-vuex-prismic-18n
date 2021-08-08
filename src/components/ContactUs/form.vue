@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ stay_guest }}</h1>
+
   <q-form @submit="onSubmit" class="q-gutter-md" ref="contact_form">
     <q-input
       filled
@@ -33,6 +33,8 @@
       v-model="stay_guest"
       :options="options_stay"
       hint="Number of Days"
+      transition-show="flip-up"
+      transition-hide="flip-down"
       use-chips
     />
     <q-select
@@ -40,6 +42,8 @@
       v-model="travel_with_guest"
       :options="options_travel_with"
       hint="Who Are You Traveling With?"
+      transition-show="flip-up"
+      transition-hide="flip-down"
       use-chips
     />
     <q-select
@@ -47,6 +51,8 @@
       v-model="budget_guest"
       :options="options_budget"
       hint="Budget Per Person Per Day"
+      transition-show="flip-up"
+      transition-hide="flip-down"
       use-chips
     />
 
@@ -112,17 +118,17 @@
       ]"
     />
 
-    <q-input
+    <q-select
       filled
-      type="number"
-      v-model="age"
-      hint="Country*"
-      lazy-rules
-      :rules="[
-        (val) => (val !== null && val !== '') || 'Please type your age',
-        (val) => (val > 0 && val < 100) || 'Please type a real age',
-      ]"
+      v-model="country"
+      :options="options_countries"
+      hint="Your Country"
+      transition-show="jump-up"
+      transition-hide="jump-up"
+      use-chips
+
     />
+
     <q-input
       filled
       type="textarea"
@@ -152,7 +158,8 @@
 <script>
 import { useQuasar } from "quasar";
 import { ref } from "vue";
-import { api } from 'boot/axios'
+import { api } from "boot/axios";
+import countryList from "src/components/ContactUs/countryList.json";
 
 export default {
   setup() {
@@ -169,6 +176,8 @@ export default {
     const contact_number = ref();
     const email = ref();
     const contact_form = ref();
+    const countries = countryList;
+    const country = ref();
 
     const regexEmail =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -193,6 +202,8 @@ export default {
       "up to 3000 Eur",
       "Full Credit",
     ];
+
+    const options_countries = countries;
 
     // da ESPORTARE****************
     var today = new Date();
@@ -222,8 +233,11 @@ export default {
       regexEmail,
       today,
       contact_form,
+      countries,
+      options_countries,
+      country,
 
-      onSubmit() {
+      async onSubmit() {
         if (accept.value !== true) {
           $q.notify({
             color: "red-5",
@@ -232,7 +246,7 @@ export default {
             message: "You need to accept the license and terms first",
           });
         } else {
-          let dataFormContact = {
+          var payload = {
             stay_guest: stay_guest.value,
             travel_with_guest: travel_with_guest.value,
             budget_guest: budget_guest.value,
@@ -246,21 +260,34 @@ export default {
             privacy: accept.value,
           };
 
-          console.log(dataFormContact)
+          api
+            .post(
+              "https://webhook.site/85c0b276-132e-469c-ad90-b723120d830c",
+              payload
+            )
+            .then(
+              (response) => {
+                console.log(response);
+                $q.notify({
+                  color: "green-4",
+                  textColor: "white",
+                  icon: "cloud_done",
+                  message: "Your data has been submitted",
+                });
+              },
+              (error) => {
+                console.log(error);
+                $q.notify({
+                  color: "red-5",
+                  textColor: "white",
+                  icon: "warning",
+                  message: "Something was wong, try again!",
+                });
+              }
+            );
 
-        api.post('https://webhook.site/85c0b276-132e-469c-ad90-b723120d830c', {"hola":"ciao"})
-        .then(response => console.log(response))
-        .catch(error => console.error(error))
-
-         
-          $q.notify({
-            color: "green-4",
-            textColor: "white",
-            icon: "cloud_done",
-            message: "Your data has been submitted",
-          });
-
-          contact_form.value.resetValidation();
+          // contact_form.value.resetValidation();
+          contact_form.value.reset();
 
           stay_guest.value = null;
           travel_with_guest.value = null;
@@ -272,6 +299,7 @@ export default {
           age.value = null;
           date.value = today;
           textarea.value = null;
+          country.value = null;
           accept.value = false;
         }
       },
@@ -283,5 +311,9 @@ export default {
 <style lang="scss" scoped>
 .btn-form {
   // border: 2px solid $info;
+}
+
+div {
+    font-family: 'Commuters-Sans-Bold' !important;
 }
 </style>

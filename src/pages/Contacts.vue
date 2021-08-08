@@ -207,6 +207,10 @@ span.text-info {
   line-height: 25px !important;
 }
 
+.form-component div {
+    font-family: 'Commuters-Sans-Bold' !important;
+}
+
 @media screen and (max-width: 990px) {
 }
 
@@ -214,5 +218,28 @@ span.text-info {
   .img1 {
     height: 15% !important;
   }
+
+  .first-block {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: unset;
+  }
+
+  .info-component {
+    margin-bottom: 10%;
+  }
+
+  .contact-card-component {
+
+    grid-row: 3;
+  }
+
+  .form-component{
+    grid-row: 2;
+    margin-bottom: 10%;
+  }
+
+
+
 }
 </style>
