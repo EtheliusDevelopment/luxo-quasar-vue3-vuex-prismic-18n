@@ -62,6 +62,7 @@
               <Step2 v-if="count == 1" />
               <Step3 v-if="count == 2" />
               <Step4 v-if="count == 3" />
+              <Step5 v-if="count == 4" />
 
               <div>
                 <q-btn
@@ -96,6 +97,7 @@ import Step1 from "../components/Quiz/Step1.vue";
 import Step2 from "../components/Quiz/Step2.vue";
 import Step3 from "../components/Quiz/Step3.vue";
 import Step4 from "../components/Quiz/Step4.vue";
+import Step5 from "../components/Quiz/Step5.vue";
 import PreLoader from "src/components/PreLoader.vue";
 
 export default {
@@ -104,6 +106,7 @@ export default {
     Step2,
     Step3,
     Step4,
+    Step5,
     PreLoader,
   },
 
@@ -117,6 +120,7 @@ export default {
       Step2,
       Step3,
       Step4,
+      Step5,
     };
   },
 };

@@ -27,9 +27,6 @@
   src: url(./fonts/CommutersSans-Regular.ttf);
 }
 
-
-
-
 // ****C O R R E G G E R E ***********
 .img3-index {
   object-position: 15% 50% !important;
@@ -72,7 +69,7 @@ h6 {
   font-family: Commuters-Sans-Bold;
   font-size: 16px;
   line-height: 25px;
-  }
+}
 
 .q-toolbar .q-tab__label {
   font-family: "Commuters-Sans-Bold";
@@ -143,18 +140,24 @@ p {
 
 // WINCLUB
 
-
-
-
 // END WINE CLUB
+
+// QUIZ
+
+.wrapped-section-three div {
+  font-family: "Commuters-Sans-Regular" !important;
+  font-size: 3rem !important;
+}
+
+// END QUIZ
 
 // CONTACT
 .form-component div {
-  font-family: 'Commuters-Sans-Bold' !important;
+  font-family: "Commuters-Sans-Bold" !important;
 }
 
 .q-item__label span {
-  font-family: 'CommutersSans-Regular' !important;
+  font-family: "CommutersSans-Regular" !important;
 }
 // END CONTACT
 
@@ -210,11 +213,10 @@ p {
   }
   .breadcrumbs {
     display: none !important;
-}
-.title-h2 {
-  line-height: 50px !important;
-}
-
+  }
+  .title-h2 {
+    line-height: 50px !important;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -241,21 +243,22 @@ p {
     line-height: 25px;
   }
 
-  .third-block button.carousel__prev, .third-block button.carousel__next {
+  .third-block button.carousel__prev,
+  .third-block button.carousel__next {
     margin: 0px -9%;
-}
+  }
 
-.title-h2 {
-  line-height: 30px !important;
-}
+  .title-h2 {
+    line-height: 30px !important;
+  }
 
-.img-about-4-index {
-  object-position: 40% 50% !important; //riportato in app.css
-}
+  .img-about-4-index {
+    object-position: 40% 50% !important; //riportato in app.css
+  }
 
-.img-wine-block .img5-index {
-  object-fit: contain !important;
-}
+  .img-wine-block .img5-index {
+    object-fit: contain !important;
+  }
 
   // ***fine Media Query 680
 }
@@ -267,10 +270,7 @@ p {
     rgba(255, 255, 255, 0.9363095580028886) 0%,
     rgba(76, 69, 113, 1) 100%
   );
-
 }
-
-
 
 // *****SCROLLBAR
 
