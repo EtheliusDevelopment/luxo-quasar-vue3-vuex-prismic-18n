@@ -67,7 +67,7 @@
               <Step8 v-if="count == 7" :step="value" />
               <Step9 v-if="count == 8" :step="value" />
               <Step10 v-if="count == 9" :step="value" />
-              <q-btn label="Submit" type="submit" color="primary" />
+              <q-btn label="Submit" type="submit" color="primary" v-if="count>=9"/>
             </q-form>
           </div>
           <div class="button-group" v-if="!starter">
@@ -148,7 +148,7 @@
 
       <!-- END DIALOG -->
 
-       <q-btn label="Card" color="primary" @click="card = true" />
+
     </q-page>
   </transition>
 </template>
@@ -170,7 +170,7 @@ import PreLoader from "src/components/PreLoader.vue";
 
 import { ref, watchEffect } from "vue";
 import { api } from "boot/axios";
-import { useStore } from "vuex";
+import { useStore, mapMutations, mapActions } from "vuex";
 
 export default {
   components: {
@@ -187,20 +187,35 @@ export default {
     StarterStep,
     PreLoader,
   },
-
+  methods: {
+    ...mapActions(["quiz/actStep1"]),
+    ...mapMutations({
+      removeStep1: "quiz/removeStep1",
+      removeStep2: "quiz/removeStep2",
+      removeStep3: "quiz/removeStep3",
+      removeStep4: "quiz/removeStep4",
+      removeStep5: "quiz/removeStep5",
+      removeStep6: "quiz/removeStep6",
+      removeStep7: "quiz/removeStep7",
+      removeStep8: "quiz/removeStep8",
+      removeStep9: "quiz/removeStep9",
+    }),
+  },
   setup() {
     const $store = useStore();
 
     const count = ref(0);
     const value = ref(1 / 9);
     const starter = ref(true);
+    const card = ref(false);
     watchEffect(() => (value.value = (count.value + 1) / 9));
 
     return {
       count,
       value,
       starter,
-      card: ref(false),
+      card,
+      $store,
       stars: ref(3),
       startQuiz() {
         starter.value = false;
@@ -211,6 +226,38 @@ export default {
       },
 
       prevPage() {
+        if (count.value === 1 && $store.state.quiz.step1 !== "") {
+          $store.commit("quiz/removeStep1");
+          $store.commit("quiz/removeStep2");
+        } else if (count.value === 2 && $store.state.quiz.step2 !== "") {
+          $store.commit("quiz/removeStep2");
+          $store.commit("quiz/removeStep3");
+        } else if (count.value === 3 && $store.state.quiz.step3 !== "") {
+          $store.commit("quiz/removeStep3");
+          $store.commit("quiz/removeStep4");
+        } else if (count.value === 4 && $store.state.quiz.step4 !== "") {
+          $store.commit("quiz/removeStep4");
+          $store.commit("quiz/removeStep5");
+        } else if (count.value === 5 && $store.state.quiz.step5 !== "") {
+          $store.commit("quiz/removeStep5");
+          $store.commit("quiz/removeStep6");
+        } else if (count.value === 6 && $store.state.quiz.step6 !== "") {
+          $store.commit("quiz/removeStep6");
+          $store.commit("quiz/removeStep7");
+        } else if (count.value === 7 && $store.state.quiz.step7 !== "") {
+          $store.commit("quiz/removeStep7");
+          $store.commit("quiz/removeStep8");
+        } else if (count.value === 8 && $store.state.quiz.step8 !== "") {
+          $store.commit("quiz/removeStep8");
+          $store.commit("quiz/removeStep9");
+        } else if (count.value === 9 && $store.state.quiz.step9 !== "") {
+          $store.commit("quiz/removeStep9");
+          $store.commit("quiz/removeStep10");
+        } else if (count.value === 10 && $store.state.quiz.step10 !== "") {
+          $store.commit("quiz/removeStep10");
+          $store.commit("quiz/removeStep11");
+        }
+
         count.value--;
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
           window.scrollTo(0, 350);
@@ -220,11 +267,31 @@ export default {
       },
 
       nextPage() {
-        count.value++;
-        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-          window.scrollTo(0, 350);
+        if (count.value === 0 && $store.state.quiz.step1 === "") {
+          card.value = true;
+        } else if (count.value === 1 && $store.state.quiz.step2 === "") {
+          card.value = true;
+        } else if (count.value === 2 && $store.state.quiz.step3 === "") {
+          card.value = true;
+        } else if (count.value === 3 && $store.state.quiz.step4 === "") {
+          card.value = true;
+        } else if (count.value === 4 && $store.state.quiz.step5 === "") {
+          card.value = true;
+        } else if (count.value === 5 && $store.state.quiz.step6 === "") {
+          card.value = true;
+        } else if (count.value === 6 && $store.state.quiz.step7 === "") {
+          card.value = true;
+        } else if (count.value === 7 && $store.state.quiz.step8 === "") {
+          card.value = true;
+        } else if (count.value === 8 && $store.state.quiz.step9 === "") {
+          card.value = true;
         } else {
-          window.scrollTo(0, 600);
+          count.value++;
+          if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+            window.scrollTo(0, 350);
+          } else {
+            window.scrollTo(0, 600);
+          }
         }
       },
 
@@ -310,6 +377,11 @@ hr {
   height: 2px;
   width: 20%;
   margin: 2%;
+}
+
+.starter{
+  display:flex;
+  justify-content:center;
 }
 
 // **********FIRST BLOCK**********

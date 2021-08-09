@@ -25,3 +25,32 @@ export function updateStep8(state, payload) {
 export function updateStep9(state, payload) {
   state.step9 = payload.value;
 }
+
+
+export function removeStep1(state) {
+  state.step1 = "";
+}
+export function removeStep2(state) {
+  state.step2 = "";
+}
+export function removeStep3(state) {
+  state.step3 = "";
+}
+export function removeStep4(state) {
+  state.step4 = "";
+}
+export function removeStep5(state) {
+  state.step5 = "";
+}
+export function removeStep6(state) {
+  state.step6 = "";
+}
+export function removeStep7(state) {
+  state.step7 = "";
+}
+export function removeStep8(state) {
+  state.step8 = "";
+}
+export function removeStep9(state) {
+  state.step9 = "";
+}
