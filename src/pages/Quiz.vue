@@ -89,17 +89,71 @@
               color="primary"
               v-if="count >= 0 && count < 9"
             />
-
-
           </div>
         </div>
       </div>
+
+      <!-- DIALOG -->
+
+      <div class="dialog-box">
+        <q-dialog v-model="card">
+          <q-card class="my-card">
+            <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" />
+
+            <q-card-section>
+              <q-btn
+                fab
+                color="primary"
+                icon="place"
+                class="absolute"
+                style="top: 0; right: 12px; transform: translateY(-50%)"
+              />
+
+              <div class="row no-wrap items-center">
+                <div class="col text-h6 ellipsis">Cafe Basilico</div>
+                <div
+                  class="
+                    col-auto
+                    text-grey text-caption
+                    q-pt-md
+                    row
+                    no-wrap
+                    items-center
+                  "
+                >
+                  <q-icon name="place" />
+                  250 ft
+                </div>
+              </div>
+
+              <q-rating v-model="stars" :max="5" size="32px" />
+            </q-card-section>
+
+            <q-card-section class="q-pt-none">
+              <div class="text-subtitle1">$・Italian, Cafe</div>
+              <div class="text-caption text-grey">
+                Small plates, salads & sandwiches in an intimate setting.
+              </div>
+            </q-card-section>
+
+            <q-separator />
+
+            <q-card-actions align="right">
+              <q-btn v-close-popup flat color="primary" label="Reserve" />
+              <q-btn v-close-popup flat color="primary" round icon="event" />
+            </q-card-actions>
+          </q-card>
+        </q-dialog>
+      </div>
+
+      <!-- END DIALOG -->
+
+       <q-btn label="Card" color="primary" @click="card = true" />
     </q-page>
   </transition>
 </template>
 
 <script>
-import { ref, watchEffect } from "vue";
 import Step1 from "../components/Quiz/Step1.vue";
 import Step2 from "../components/Quiz/Step2.vue";
 import Step3 from "../components/Quiz/Step3.vue";
@@ -114,6 +168,8 @@ import StarterStep from "../components/Quiz/StarterStep.vue";
 
 import PreLoader from "src/components/PreLoader.vue";
 
+import { ref, watchEffect } from "vue";
+import { api } from "boot/axios";
 import { useStore } from "vuex";
 
 export default {
@@ -144,7 +200,8 @@ export default {
       count,
       value,
       starter,
-      test: $store.state.quiz.step1,
+      card: ref(false),
+      stars: ref(3),
       startQuiz() {
         starter.value = false;
         window.scroll({
@@ -172,7 +229,6 @@ export default {
       },
 
       onSubmit() {
-
         const payload = {
           step1: $store.state.quiz.step1,
           step2: $store.state.quiz.step2,
@@ -186,6 +242,32 @@ export default {
         };
 
         console.log(payload);
+
+        api
+          .post(
+            "https://webhook.site/85c0b276-132e-469c-ad90-b723120d830c",
+            payload
+          )
+          .then(
+            (response) => {
+              alert(JSON.stringify(response));
+              // $q.notify({
+              //   color: "green-4",
+              //   textColor: "white",
+              //   icon: "cloud_done",
+              //   message: "Your data has been submitted",
+              // });
+            },
+            (error) => {
+              alert(error);
+              // $q.notify({
+              //   color: "red-5",
+              //   textColor: "white",
+              //   icon: "warning",
+              //   message: "Something was wong, try again!",
+              // });
+            }
+          );
       },
     };
   },
