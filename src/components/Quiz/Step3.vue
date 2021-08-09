@@ -111,6 +111,8 @@
 
 <script>
 import { ref } from "vue";
+import { computed } from "vue";
+import { useStore, mapMutations, mapActions } from "vuex";
 
 export default {
   props: {
@@ -119,21 +121,39 @@ export default {
       required: true,
     },
   },
+  methods: {
+    ...mapActions(["quiz/actStep3"]),
+    ...mapMutations({
+      updateStep3: "quiz/updateStep3",
+    }),
+  },
+
   setup(props) {
+    const $store = useStore();
     const wrapper1 = ref();
     const wrapper2 = ref();
     const wrapper3 = ref();
     const wrapper4 = ref();
+    const answer = ref();
+
+
+    const stepVal = computed({
+      get: () => $store.state.quiz.step3,
+    });
+
 
     return {
-      answer: ref(),
-
       wrapper1,
       wrapper2,
       wrapper3,
       wrapper4,
+      stepVal,
+      answer,
 
       addClass(val, event) {
+
+        $store.dispatch("quiz/actStep3", answer);
+
         if (val == "teal") {
           wrapper2.value = null;
           wrapper3.value = null;
@@ -172,7 +192,7 @@ export default {
   height: 50vh;
   flex-direction: column;
   margin-left: 3%;
-  border: 3px solid #4c4571ef;
+  border: 3px solid #4c457149;
   border-radius: 5px;
   padding: 0.4%;
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
@@ -184,7 +204,7 @@ export default {
 
 .active-class {
   box-shadow: unset;
-  border: 3px solid #4c45717a;
+  border: 3px solid #4c4571c2;
 }
 
 .wrapped-section-two {
@@ -240,14 +260,19 @@ export default {
 }
 
 @media screen and (max-width: 990px) {
-
-
-    .answer {
+  .answer {
     transform: scale(0.9);
   }
 
   .question {
-  transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  .wrapper {
+    width: 40%;
+  }
+
+  .hr {
+    display: none;
   }
 }
 @media screen and (max-width: 680px) {
@@ -286,10 +311,8 @@ export default {
   }
 
   .question {
-  transform: scale(0.85);
-  margin-bottom: 1%;
+    transform: scale(0.85);
+    margin-bottom: 1%;
   }
-  }
-
-
+}
 </style>

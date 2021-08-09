@@ -111,6 +111,8 @@
 
 <script>
 import { ref } from "vue";
+import { computed } from "vue";
+import { useStore, mapMutations, mapActions } from "vuex";
 
 export default {
   props: {
@@ -119,21 +121,39 @@ export default {
       required: true,
     },
   },
+  methods: {
+    ...mapActions(["quiz/actStep1"]),
+    ...mapMutations({
+      updateStep1: "quiz/updateStep1",
+    }),
+  },
+
   setup(props) {
+    const $store = useStore();
     const wrapper1 = ref();
     const wrapper2 = ref();
     const wrapper3 = ref();
     const wrapper4 = ref();
+    const answer = ref();
+
+
+    const stepVal = computed({
+      get: () => $store.state.quiz.step1,
+    });
+
 
     return {
-      answer: ref(),
-
       wrapper1,
       wrapper2,
       wrapper3,
       wrapper4,
+      stepVal,
+      answer,
 
       addClass(val, event) {
+
+        $store.dispatch("quiz/actStep1", answer);
+
         if (val == "teal") {
           wrapper2.value = null;
           wrapper3.value = null;

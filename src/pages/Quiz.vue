@@ -56,7 +56,7 @@
           </div>
           <!-- QUIZ FLOW -->
           <div class="form-body" v-if="!starter">
-            <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+            <q-form @submit="onSubmit" class="q-gutter-md">
               <Step1 v-if="count == 0" :step="value" />
               <Step2 v-if="count == 1" :step="value" />
               <Step3 v-if="count == 2" :step="value" />
@@ -67,6 +67,7 @@
               <Step8 v-if="count == 7" :step="value" />
               <Step9 v-if="count == 8" :step="value" />
               <Step10 v-if="count == 9" :step="value" />
+              <q-btn label="Submit" type="submit" color="primary" />
             </q-form>
           </div>
           <div class="button-group" v-if="!starter">
@@ -88,6 +89,8 @@
               color="primary"
               v-if="count >= 0 && count < 9"
             />
+
+
           </div>
         </div>
       </div>
@@ -111,6 +114,8 @@ import StarterStep from "../components/Quiz/StarterStep.vue";
 
 import PreLoader from "src/components/PreLoader.vue";
 
+import { useStore } from "vuex";
+
 export default {
   components: {
     Step1,
@@ -128,6 +133,8 @@ export default {
   },
 
   setup() {
+    const $store = useStore();
+
     const count = ref(0);
     const value = ref(1 / 9);
     const starter = ref(true);
@@ -137,14 +144,14 @@ export default {
       count,
       value,
       starter,
-
+      test: $store.state.quiz.step1,
       startQuiz() {
         starter.value = false;
         window.scroll({
           top: 500,
           behavior: "smooth",
         });
-        },
+      },
 
       prevPage() {
         count.value--;
@@ -162,6 +169,23 @@ export default {
         } else {
           window.scrollTo(0, 600);
         }
+      },
+
+      onSubmit() {
+
+        const payload = {
+          step1: $store.state.quiz.step1,
+          step2: $store.state.quiz.step2,
+          step3: $store.state.quiz.step3,
+          step4: $store.state.quiz.step4,
+          step5: $store.state.quiz.step5,
+          step6: $store.state.quiz.step6,
+          step7: $store.state.quiz.step7,
+          step8: $store.state.quiz.step8,
+          step9: $store.state.quiz.step9,
+        };
+
+        console.log(payload);
       },
     };
   },
