@@ -47,8 +47,11 @@
             <h3>TITOLO QUIZ</h3>
           </div>
 
+          <div class="starter" v-if="starter">
+            <h6>WELCOME TO THE QUIZ</h6>
+          </div>
           <!-- Form -->
-          <div class="form-body">
+          <div class="form-body" v-if="!starter">
             <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
               <Step1 v-if="count == 0" :step="value" />
               <Step2 v-if="count == 1" :step="value" />
@@ -60,9 +63,10 @@
               <Step8 v-if="count == 7" :step="value" />
               <Step9 v-if="count == 8" :step="value" />
               <Step10 v-if="count == 9" :step="value" />
-
-              <div>
-                <q-btn
+            </q-form>
+          </div>
+          <div class="button-group">
+                 <q-btn
                   @click="prevPage"
                   v-if="count > 0 && count < 9"
                   class="q-px-lg q-py-xs btn-1"
@@ -81,8 +85,6 @@
                   color="primary"
                   v-if="count >= 0 && count < 9"
                 />
-              </div>
-            </q-form>
           </div>
         </div>
       </div>
@@ -124,14 +126,14 @@ export default {
 
   setup() {
     const count = ref(0);
-
     const value = ref(1 / 9);
-
+    const starter = ref(true);
     watchEffect(() => (value.value = (count.value + 1) / 9));
 
     return {
       count,
       value,
+      starter,
 
       prevPage() {
         count.value--;
@@ -143,12 +145,12 @@ export default {
       },
 
       nextPage() {
-        count.value++;
+        !starter.value ? count.value++ : (starter.value = false);
 
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
           window.scrollTo(0, 450);
         } else {
-          window.scrollTo(0, 700);
+          window.scrollTo(0, 570);
         }
       },
     };
