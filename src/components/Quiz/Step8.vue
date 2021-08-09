@@ -2,7 +2,7 @@
   <div class="question-box">
     <div class="inner-question-box">
       <h4 class="text-center text-primary question">
-        What’s the #1 thing you look for when planning a trip?
+        What’s the #8 thing you look for when planning a trip?
       </h4>
 
       <h6 class="text-center text-primary answer">
@@ -107,15 +107,13 @@
       </q-item-section>
     </div>
   </div>
-
 </template>
 
 <script>
 import { ref } from "vue";
 
 export default {
-
-   props: {
+  props: {
     step: {
       type: Number,
       required: true,
@@ -127,8 +125,6 @@ export default {
     const wrapper3 = ref();
     const wrapper4 = ref();
 
-
-
     return {
       answer: ref(),
 
@@ -136,8 +132,6 @@ export default {
       wrapper2,
       wrapper3,
       wrapper4,
-
-
 
       addClass(val, event) {
         if (val == "teal") {
@@ -175,10 +169,10 @@ export default {
 
 .wrapper {
   width: 20%;
-  height: 70vh;
+  height: 50vh;
   flex-direction: column;
   margin-left: 3%;
-  border: 3px solid #d9c5a0;
+  border: 3px solid #4c4571ef;
   border-radius: 5px;
   padding: 0.4%;
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
@@ -190,7 +184,7 @@ export default {
 
 .active-class {
   box-shadow: unset;
-  border: 3px solid #d9c5a080;
+  border: 3px solid #4c45717a;
 }
 
 .wrapped-section-two {
@@ -213,30 +207,48 @@ export default {
   background-color: $info;
   z-index: -1;
   position: relative;
-  top: 40vh;
+  top: 30vh;
   margin-top: 2vh;
 }
 
 .question-box {
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   background: white;
   padding: 1%;
   margin-bottom: 5%;
 }
-
 
 .progress-bar {
   display: flex;
   justify-content: center;
 }
 
-.linear-progress{
-   width: 80%;
+.linear-progress {
+  width: 80%;
+}
+
+.answer {
+  margin: unset;
+}
+
+.question {
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: unset;
 }
 
 @media screen and (max-width: 990px) {
+
+
+    .answer {
+    transform: scale(0.9);
+  }
+
+  .question {
+  transform: scale(0.9);
+  }
 }
 @media screen and (max-width: 680px) {
   .quiz-layout {
@@ -265,7 +277,19 @@ export default {
   }
 
   .question-box {
-    margin-bottom: 25%;
+    margin-bottom: 40%;
   }
-}
+
+  .answer {
+    transform: scale(0.85);
+    margin-bottom: 1%;
+  }
+
+  .question {
+  transform: scale(0.85);
+  margin-bottom: 1%;
+  }
+  }
+
+
 </style>

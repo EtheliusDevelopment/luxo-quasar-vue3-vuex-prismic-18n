@@ -45,39 +45,41 @@
           <!-- Header Quiz -->
           <div class="form-header text-center">
             <h3>TITOLO QUIZ</h3>
-
           </div>
 
           <!-- Form -->
           <div class="form-body">
             <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
-              <Step1 v-if="count == 0" :step="value"/>
-              <Step2 v-if="count == 1" :step="value"/>
-              <Step3 v-if="count == 2" :step="value"/>
-              <Step4 v-if="count == 3" :step="value"/>
-              <Step5 v-if="count == 4" :step="value"/>
-              <Step6 v-if="count == 5" :step="value"/>
-              <Step7 v-if="count == 6" :step="value"/>
-              <Step8 v-if="count == 7" :step="value"/>
-              <Step9 v-if="count == 8" :step="value"/>
+              <Step1 v-if="count == 0" :step="value" />
+              <Step2 v-if="count == 1" :step="value" />
+              <Step3 v-if="count == 2" :step="value" />
+              <Step4 v-if="count == 3" :step="value" />
+              <Step5 v-if="count == 4" :step="value" />
+              <Step6 v-if="count == 5" :step="value" />
+              <Step7 v-if="count == 6" :step="value" />
+              <Step8 v-if="count == 7" :step="value" />
+              <Step9 v-if="count == 8" :step="value" />
+              <Step10 v-if="count == 9" :step="value" />
 
               <div>
                 <q-btn
-                  @click="count--"
-                  v-if="count > 0"
+                  @click="prevPage"
+                  v-if="count > 0 && count < 9"
                   class="q-px-lg q-py-xs btn-1"
                   size="1.1vw"
                   label="Back"
                   type="button"
                   color="primary"
+
                 />
                 <q-btn
-                  @click="count++"
+                  @click="nextPage"
                   label="Forward"
                   class="q-px-lg q-py-xs q-ml-sm"
                   size="1.1vw"
                   type="button"
                   color="primary"
+                  v-if="count >= 0 && count < 9"
                 />
               </div>
             </q-form>
@@ -99,6 +101,9 @@ import Step6 from "../components/Quiz/Step6.vue";
 import Step7 from "../components/Quiz/Step7.vue";
 import Step8 from "../components/Quiz/Step8.vue";
 import Step9 from "../components/Quiz/Step9.vue";
+import Step10 from "../components/Quiz/Step10.vue";
+import StarterStep from "../components/Quiz/StarterStep.vue";
+
 import PreLoader from "src/components/PreLoader.vue";
 
 export default {
@@ -112,6 +117,8 @@ export default {
     Step7,
     Step8,
     Step9,
+    Step10,
+    StarterStep,
     PreLoader,
   },
 
@@ -125,16 +132,25 @@ export default {
     return {
       count,
       value,
-      // **COMPONENTI STEP QUIZ
-      Step1,
-      Step2,
-      Step3,
-      Step4,
-      Step5,
-      Step6,
-      Step7,
-      Step8,
-      Step9,
+
+      prevPage() {
+        count.value--;
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+          window.scrollTo(0, 450);
+        } else {
+          window.scrollTo(0, 700);
+        }
+      },
+
+      nextPage() {
+        count.value++;
+
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+          window.scrollTo(0, 450);
+        } else {
+          window.scrollTo(0, 700);
+        }
+      },
     };
   },
 };
@@ -178,28 +194,11 @@ hr {
   margin: 2%;
 }
 
-.progress-bar {
-  width: 30%;
-  position: absolute;
-  top: 176vh;
-  right: 80vw;
-  transform: rotate(90deg);
-}
-
-.progress-bar {
-  display: flex;
-  justify-content: center;
-}
-
 // **********FIRST BLOCK**********
 @media screen and (max-width: 990px) {
 }
 
 @media screen and (max-width: 990px) {
-
-  .progress-bar{
-    display: none;
-  }
 }
 // **********SECOND BLOCK**********
 </style>
