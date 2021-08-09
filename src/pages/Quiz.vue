@@ -98,7 +98,7 @@
       <div class="dialog-box">
         <q-dialog v-model="card">
           <q-card class="my-card">
-            <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" />
+            <q-img src="~assets/luxo-italia-paul-venezia-barca.jpg" />
 
             <q-card-section>
               <q-btn
@@ -110,7 +110,7 @@
               />
 
               <div class="row no-wrap items-center">
-                <div class="col text-h6 ellipsis">Cafe Basilico</div>
+                <div class="col text-h6 ellipsis">I think you have to pick an option!</div>
                 <div
                   class="
                     col-auto
