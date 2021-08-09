@@ -42,15 +42,19 @@
 
       <div class="first-block">
         <div class="sub-section-first">
-          <!-- Header Quiz -->
-          <div class="form-header text-center">
-            <h3>TITOLO QUIZ</h3>
-          </div>
-
+          <!-- QUIZ WELCOME PAGE -->
           <div class="starter" v-if="starter">
-            <h6>WELCOME TO THE QUIZ</h6>
+            <h4>WELCOME TO THE QUIZ</h4>
+            <q-btn
+              @click="startQuiz"
+              class="q-px-lg q-py-xs btn-1"
+              size="1.1vw"
+              label="START THE QUIZ"
+              type="button"
+              color="primary"
+            />
           </div>
-          <!-- Form -->
+          <!-- QUIZ FLOW -->
           <div class="form-body" v-if="!starter">
             <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
               <Step1 v-if="count == 0" :step="value" />
@@ -65,26 +69,25 @@
               <Step10 v-if="count == 9" :step="value" />
             </q-form>
           </div>
-          <div class="button-group">
-                 <q-btn
-                  @click="prevPage"
-                  v-if="count > 0 && count < 9"
-                  class="q-px-lg q-py-xs btn-1"
-                  size="1.1vw"
-                  label="Back"
-                  type="button"
-                  color="primary"
-
-                />
-                <q-btn
-                  @click="nextPage"
-                  label="Forward"
-                  class="q-px-lg q-py-xs q-ml-sm"
-                  size="1.1vw"
-                  type="button"
-                  color="primary"
-                  v-if="count >= 0 && count < 9"
-                />
+          <div class="button-group" v-if="!starter">
+            <q-btn
+              @click="prevPage"
+              v-if="count > 0 && count < 9"
+              class="q-px-lg q-py-xs btn-1"
+              size="1.1vw"
+              label="Back"
+              type="button"
+              color="primary"
+            />
+            <q-btn
+              @click="nextPage"
+              label="Forward"
+              class="q-px-lg q-py-xs q-ml-sm"
+              size="1.1vw"
+              type="button"
+              color="primary"
+              v-if="count >= 0 && count < 9"
+            />
           </div>
         </div>
       </div>
@@ -135,22 +138,29 @@ export default {
       value,
       starter,
 
+      startQuiz() {
+        starter.value = false;
+        window.scroll({
+          top: 500,
+          behavior: "smooth",
+        });
+        },
+
       prevPage() {
         count.value--;
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-          window.scrollTo(0, 450);
+          window.scrollTo(0, 350);
         } else {
-          window.scrollTo(0, 700);
+          window.scrollTo(0, 600);
         }
       },
 
       nextPage() {
-        !starter.value ? count.value++ : (starter.value = false);
-
+        count.value++;
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-          window.scrollTo(0, 450);
+          window.scrollTo(0, 350);
         } else {
-          window.scrollTo(0, 570);
+          window.scrollTo(0, 600);
         }
       },
     };
