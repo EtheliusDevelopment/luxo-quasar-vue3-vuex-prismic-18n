@@ -1,6 +1,7 @@
 import { store } from 'quasar/wrappers'
 import { createStore } from 'vuex'
 import quiz from './quiz'
+import dynamicClasses from './dynamicClasses'
 
 
 // import example from './module-example'
@@ -19,6 +20,7 @@ export default store(function (/* { ssrContext } */) {
     modules: {
 
       quiz,
+      dynamicClasses
 
     },
 

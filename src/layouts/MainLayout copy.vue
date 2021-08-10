@@ -1,7 +1,7 @@
 <template>
   <PreLoader />
   <q-layout view="lHh lpR lFf">
-    <q-header class="text-white bg-secondary" height-hint="98">
+    <q-header class="text-white" height-hint="98">
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -152,7 +152,8 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container class="testCONTAINER">
+    <q-page-container :class="bodyClass">
+      <h1>{{ bodyClass }}</h1>
       <router-view />
     </q-page-container>
 
@@ -215,23 +216,37 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed, onUpdated } from "vue";
 import SocialComponent from "../components/SocialComponent.vue";
 import PreLoader from "../components/PreLoader.vue";
+import { useStore, mapMutations } from "vuex";
 
 export default {
+  methods: {
+    ...mapMutations({
+      addBodyClass: "dynamicClasses/addBodyClass",
+    }),
+  },
+
   components: {
     SocialComponent,
     PreLoader,
   },
 
   setup() {
-
+    const $store = useStore();
     const leftDrawerOpen = ref(false);
+
+    const bodyClass = computed({
+      get: () => $store.state.dynamicClasses.bodyClass,
+    });
+
+    onUpdated(()=>$store.commit("dynamicClasses/addBodyClass",""))
+    //
 
     return {
       leftDrawerOpen,
-
+      bodyClass,
 
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
@@ -334,7 +349,8 @@ export default {
   min-width: unset;
 }
 .q-header {
-  position: unset !important;
+  background: transparent;
+  position: absolute;
 }
 
 .q-tabs__content {

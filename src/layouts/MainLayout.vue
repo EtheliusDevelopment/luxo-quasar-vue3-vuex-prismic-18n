@@ -152,7 +152,7 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container class="testCONTAINER">
+    <q-page-container :class="bodyClass">
       <router-view />
     </q-page-container>
 
@@ -215,9 +215,10 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed, onUpdated } from "vue";
 import SocialComponent from "../components/SocialComponent.vue";
 import PreLoader from "../components/PreLoader.vue";
+import { useStore, mapMutations } from "vuex";
 
 export default {
   components: {
@@ -225,14 +226,24 @@ export default {
     PreLoader,
   },
 
-  setup() {
+  methods: {
+    ...mapMutations({
+      addBodyClass: "dynamicClasses/addBodyClass",
+    }),
+  },
 
+  setup() {
     const leftDrawerOpen = ref(false);
+    const $store = useStore();
+    const bodyClass = computed({
+      get: () => $store.state.dynamicClasses.bodyClass,
+    });
+
+    onUpdated(() => $store.commit("dynamicClasses/addBodyClass", ""));
 
     return {
       leftDrawerOpen,
-
-
+      bodyClass,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
@@ -306,7 +317,6 @@ export default {
 .btn-toolbar {
   color: #4c4571 !important;
   flex-grow: 1;
-
 }
 
 .btn-footer-box {
@@ -335,8 +345,8 @@ export default {
   min-width: unset;
 }
 .q-header {
-      background: transparent;
-      position: absolute;
+  background: transparent;
+  position: absolute;
 }
 
 .q-tabs__content {

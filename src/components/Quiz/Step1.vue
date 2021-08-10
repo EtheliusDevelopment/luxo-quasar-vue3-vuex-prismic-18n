@@ -136,11 +136,9 @@ export default {
     const wrapper4 = ref();
     const answer = ref();
 
-
     const stepVal = computed({
       get: () => $store.state.quiz.step1,
     });
-
 
     return {
       wrapper1,
@@ -151,7 +149,6 @@ export default {
       answer,
 
       addClass(val, event) {
-
         $store.dispatch("quiz/actStep1", answer);
 
         if (val == "teal") {
@@ -217,6 +214,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  top: 20vh;
   margin: 0 6%;
 }
 
@@ -301,9 +300,9 @@ export default {
     font-size: 25px;
   }
 
-  .question-box {
-    margin-bottom: 40%;
-  }
+  // .question-box {
+  //   margin-bottom: 40%;
+  // }
 
   .answer {
     transform: scale(0.85);

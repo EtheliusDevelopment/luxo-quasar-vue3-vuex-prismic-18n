@@ -2,7 +2,7 @@
   <div class="question-box">
     <div class="inner-question-box">
       <h4 class="text-center text-primary question">
-        What’s the #1 thing you look for when planning a trip?
+        What’s the #19999 thing you look for when planning a trip?
       </h4>
 
       <h6 class="text-center text-primary answer">
@@ -122,9 +122,9 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["quiz/actStep1"]),
+    ...mapActions(["quiz/actStep9"]),
     ...mapMutations({
-      updateStep1: "quiz/updateStep1",
+      updateStep9: "quiz/updateStep9",
     }),
   },
 
@@ -138,7 +138,7 @@ export default {
 
 
     const stepVal = computed({
-      get: () => $store.state.quiz.step1,
+      get: () => $store.state.quiz.step9,
     });
 
 
@@ -152,7 +152,7 @@ export default {
 
       addClass(val, event) {
 
-        $store.dispatch("quiz/actStep1", answer);
+        $store.dispatch("quiz/actStep9", answer);
 
         if (val == "teal") {
           wrapper2.value = null;
@@ -217,6 +217,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  top: 20vh;
   margin: 0 6%;
 }
 
@@ -301,9 +303,9 @@ export default {
     font-size: 25px;
   }
 
-  .question-box {
-    margin-bottom: 40%;
-  }
+  // .question-box {
+  //   margin-bottom: 40%;
+  // }
 
   .answer {
     transform: scale(0.85);

@@ -56,7 +56,7 @@
           </div>
           <!-- QUIZ FLOW -->
           <div class="form-body" v-if="!starter">
-            <q-form @submit="onSubmit" class="q-gutter-md">
+            <q-form @submit="onSubmit">
               <Step1 v-if="count == 0" :step="value" />
               <Step2 v-if="count == 1" :step="value" />
               <Step3 v-if="count == 2" :step="value" />
@@ -67,14 +67,24 @@
               <Step8 v-if="count == 7" :step="value" />
               <Step9 v-if="count == 8" :step="value" />
               <Step10 v-if="count == 9" :step="value" />
-              <q-btn label="Submit" type="submit" color="primary" v-if="count>=9"/>
+              <div class="button-group">
+                <q-btn
+                  outline
+                  class="q-px-xl q-py-md"
+                  label="Submit"
+                  type="submit"
+                  color="primary"
+                  v-if="count >= 9"
+                />
+              </div>
             </q-form>
           </div>
           <div class="button-group" v-if="!starter">
             <q-btn
               @click="prevPage"
+              outline
               v-if="count > 0 && count < 9"
-              class="q-px-lg q-py-xs btn-1"
+              class="q-px-xl q-py-md btn-1"
               size="1.1vw"
               label="Back"
               type="button"
@@ -82,8 +92,9 @@
             />
             <q-btn
               @click="nextPage"
+              outline
               label="Forward"
-              class="q-px-lg q-py-xs q-ml-sm"
+              class="q-px-xl q-py-md"
               size="1.1vw"
               type="button"
               color="primary"
@@ -110,7 +121,9 @@
               />
 
               <div class="row no-wrap items-center">
-                <div class="col text-h6 ellipsis">I think you have to pick an option!</div>
+                <div class="col text-h6 ellipsis">
+                  I think you have to pick an option!
+                </div>
                 <div
                   class="
                     col-auto
@@ -147,8 +160,6 @@
       </div>
 
       <!-- END DIALOG -->
-
-
     </q-page>
   </transition>
 </template>
@@ -199,6 +210,7 @@ export default {
       removeStep7: "quiz/removeStep7",
       removeStep8: "quiz/removeStep8",
       removeStep9: "quiz/removeStep9",
+      addBodyClass: "dynamicClasses/addBodyClass",
     }),
   },
   setup() {
@@ -217,7 +229,9 @@ export default {
       card,
       $store,
       stars: ref(3),
+
       startQuiz() {
+        $store.commit("dynamicClasses/addBodyClass", "quiz");
         starter.value = false;
         window.scroll({
           top: 500,
@@ -379,9 +393,17 @@ hr {
   margin: 2%;
 }
 
-.starter{
-  display:flex;
-  justify-content:center;
+.starter {
+  display: flex;
+  justify-content: center;
+}
+
+.button-group {
+  position: relative;
+  top: 25vh;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1%;
 }
 
 // **********FIRST BLOCK**********

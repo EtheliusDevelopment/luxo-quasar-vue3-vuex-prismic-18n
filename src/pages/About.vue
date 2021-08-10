@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page class="overflow-hidden">
     <PreLoader />
 
     <div class="header-block">
@@ -120,10 +120,10 @@
           </div>
         </div>
       </q-img>
-      <div class="sub-section-first">
+      <div class="sub-section-first q-pa-md shadow-7">
         <h6 class="text-primary">PAUL LEWIS</h6>
 
-        <p class="text-primary">
+        <p class="text-primary text">
           My name is Paul and in spite of the name, I’m Italian, on my mother’s
           side. My mother passed on her passion and love for great gastronomy to
           me, while my father (of British nationality) passed on a strong sense
@@ -149,7 +149,7 @@
         </p>
       </div>
 
-      <div class="sub-section-second">
+      <div class="sub-section-second q-pa-md shadow-7">
         <h6 class="text-primary">ANDREA DEGASPERI</h6>
 
         <p class="text-primary">
@@ -340,9 +340,9 @@ hr {
 .third-block {
   display: grid;
   grid-template-columns: 49% 49%;
-  grid-template-rows: 18vh 80vh 15vh 80vh;
+  grid-template-rows: 18vh auto 15vh auto;
   grid-gap: 2%;
-  margin: 0 9% 10% 9%;
+  margin: 0 9% 20% 9%;
 }
 
 .heading-third-block {
@@ -358,10 +358,12 @@ hr {
 .third-block .sub-section-first {
   grid-column: 2;
   grid-row: 2;
+  border-radius: 2%;
 }
 .third-block .sub-section-second {
   grid-column: 1;
   grid-row: 4;
+  border-radius: 2%;
 }
 .third-block .img4 {
   grid-column: 2;

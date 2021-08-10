@@ -217,6 +217,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  top: 20vh;
   margin: 0 6%;
 }
 
@@ -301,9 +303,9 @@ export default {
     font-size: 25px;
   }
 
-  .question-box {
-    margin-bottom: 40%;
-  }
+  // .question-box {
+  //   margin-bottom: 40%;
+  // }
 
   .answer {
     transform: scale(0.85);
