@@ -234,7 +234,7 @@ export default {
         $store.commit("dynamicClasses/addBodyClass", "quiz");
         starter.value = false;
         window.scroll({
-          top: 500,
+          top: 750,
           behavior: "smooth",
         });
       },
@@ -276,7 +276,7 @@ export default {
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
           window.scrollTo(0, 350);
         } else {
-          window.scrollTo(0, 600);
+          window.scrollTo(0, 750);
         }
       },
 
@@ -304,7 +304,7 @@ export default {
           if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
             window.scrollTo(0, 350);
           } else {
-            window.scrollTo(0, 600);
+            window.scrollTo(0, 750);
           }
         }
       },

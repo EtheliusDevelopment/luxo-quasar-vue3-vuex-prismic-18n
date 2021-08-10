@@ -32,7 +32,7 @@
   object-position: 15% 50% !important;
 }
 
- .quiz+.footer {
+.quiz + .footer {
   display: none !important;
 }
 // ***********************************
@@ -105,6 +105,11 @@ p {
   width: 4rem;
   height: 4rem;
   margin: 0 12%;
+}
+
+.third-block button.carousel__next:hover,
+.third-block button.carousel__prev:hover {
+  opacity: 0.8;
 }
 
 .third-block .carousel__slide--active .figcaption {
