@@ -90,9 +90,84 @@
       <CarouselTestimonials />
     </div>
 
-    <div class="third-block-carousel">
-      <CarouselTestimonialsFb />
+   <div class="third-block">
+      <h2 class="text-primary text-center h2-title-review">
+        Facebook Review
+      </h2>
+
+      <div class="sub-section-first">
+
+        <div class="members-review">
+          <p class="text-center body-review">
+            I just wanted to share my experience with my friends and family, to
+            show them what is it - to be an Italian. And then I found the Luxo
+            wine club.
+          </p>
+
+          <p class="text-center body-review">
+            The wine selection, gifts, the community itself - is a literal
+            experience of Italy I wanted to share with my family!
+          </p>
+
+          <p class="payoff text-center text-primary">Mario Rossi</p>
+
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
+        </div>
+
+        <q-separator
+          class="separator-sixth-block"
+          spaced
+          inset
+          vertical
+          dark
+          color="info"
+        />
+
+        <div class="members-review">
+          <p class="text-center body-review">
+            I just wanted to share my experience with my friends and family, to
+            show them what is it - to be an Italian. And then I found the Luxo
+            wine club.
+          </p>
+
+          <p class="text-center body-review">
+            The wine selection, gifts, the community itself - is a literal
+            experience of Italy I wanted to share with my family!
+          </p>
+
+          <p class="payoff text-center text-primary">Mario Rossi</p>
+
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
+        </div>
+
+        <q-separator
+          class="separator-sixth-block"
+          spaced
+          inset
+          vertical
+          dark
+          color="info"
+        />
+
+        <div class="members-review">
+          <p class="text-center body-review">
+            I just wanted to share my experience with my friends and family, to
+            show them what is it - to be an Italian. And then I found the Luxo
+            wine club.
+          </p>
+
+          <p class="text-center body-review">
+            The wine selection, gifts, the community itself - is a literal
+            experience of Italy I wanted to share with my family!
+          </p>
+
+          <p class="payoff text-center text-primary">Mario Rossi</p>
+
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
+        </div>
+      </div>
     </div>
+
   </q-page>
 </template>
 
@@ -145,15 +220,11 @@ export default {
 
 // **********SECOND BLOCK**********
 .second-block-carousel {
-
+  margin-bottom: 10%;
 }
 
 // **********THIRD BLOCK**********
 
-.third-block-carousel {
-  margin: 6%;
-  border: 2px solid $info;
-}
 
 .figcaption {
   width: 100%;
@@ -173,10 +244,46 @@ export default {
   margin-bottom: 7vh;
 }
 
-hr {
+.header-block hr {
   height: 2px;
   width: 20%;
   margin: 2%;
+}
+
+// **********THIRD BLOCK**********
+
+.third-block {
+  border: 2px solid $info;
+  margin: 0 6% 20% 6%;
+}
+.third-block .sub-section-first {
+  display: flex;
+}
+
+.payoff {
+  font-family: "Hatton-Medium";
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 10%;
+}
+
+.payoff-echo {
+  font-size: 17px;
+  margin-bottom: 20%;
+}
+
+.body-review {
+  font-family: "CommutersSans-Regular";
+  font-size: 17px;
+  padding: 0 15%;
+}
+
+.h2-title-review {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.separator-sixth-block {
 }
 
 
@@ -215,6 +322,12 @@ hr {
     align-items: center;
     flex-direction: column;
     padding: 0 2rem !important;
+  }
+
+    // **********THIRD BLOCK**********
+  .third-block .sub-section-first {
+    display: flex;
+    flex-direction: column;
   }
 }
 

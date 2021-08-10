@@ -1,22 +1,21 @@
 <template>
   <Carousel :items-to-show="1.8" :wrap-around="true">
     <Slide v-for="slide in db" :key="slide">
-
       <div class="carousel__item">
-
-
-         <q-img
-            class="img-carousel-testimonials-1"
-            img-class="img1-carousel-testimonials"
-            :src="slide.img"
-            :ratio="16 / 9"
-            height="95vh"
-            no-spinner
-          >
-            <div class="figcaption">
-              <h4 class="title-carousel">{{ slide.title }}</h4>
-            </div>
-          </q-img>
+        <q-img
+          class="img-carousel-testimonials-1"
+          img-class="img1-carousel-testimonials"
+          :src="slide.img"
+          :ratio="16 / 9"
+          height="95vh"
+          no-spinner
+        >
+          <div class="figcaption">
+            <h4 class="title-carousel">{{ slide.testimonial_name }}</h4>
+            <h5 class="body-carousel">{{ slide.payoff }}</h5>
+            <h6 class="cta-carousel">DISCOVER MORE</h6>
+          </div>
+        </q-img>
       </div>
     </Slide>
 
@@ -71,5 +70,39 @@ export default defineComponent({
 .carousel__next {
   box-sizing: content-box;
   border: 5px solid white;
+}
+
+.figcaption {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 8%;
+}
+.title-carousel {
+  margin: unset;
+  font-family: "Hatton-Medium";
+  font-size: 40px;
+  letter-spacing: .5px;
+}
+.body-carousel {
+  margin: unset;
+  font-family: "Commuters-Sans-Light";
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.cta-carousel {
+  margin: unset;
+  margin-top: 5%;
+  padding-bottom: 1%;
+  border-bottom: 2px solid;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: #d9c5a0;
 }
 </style>
