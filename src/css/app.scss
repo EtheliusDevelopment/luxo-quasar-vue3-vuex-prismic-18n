@@ -158,15 +158,13 @@ p {
   width: 10rem;
   height: 10rem;
   margin: 0 5%;
-  transition: all .1s ease-in;
-
+  transition: all 0.1s ease-in;
 }
 
 .second-block-carousel button.carousel__next:hover,
 .second-block-carousel button.carousel__prev:hover {
   width: 11rem;
   height: 11rem;
-
 }
 
 .second-block-carousel svg.carousel__icon {
@@ -188,7 +186,7 @@ p {
   bottom: 1%;
 }
 
-.second-block-carousel .carousel__item{
+.second-block-carousel .carousel__item {
   background-color: transparent !important;
 }
 
@@ -288,6 +286,11 @@ p {
 
     // transition: all .2s ease-in-out;
   }
+  .second-block-carousel button.carousel__next:hover,
+  .second-block-carousel button.carousel__prev:hover {
+    width: 9rem;
+    height: 9rem;
+  }
 
   // END CAROUSEL TESTIMONIAL 1
 }
@@ -346,6 +349,11 @@ p {
     // margin: 0 5%;
 
     // transition: all .2s ease-in-out;
+  }
+  .second-block-carousel button.carousel__next:hover,
+  .second-block-carousel button.carousel__prev:hover {
+    width: 5rem;
+    height: 5rem;
   }
 
   // END CAROUSEL TESTIMONIAL 1
