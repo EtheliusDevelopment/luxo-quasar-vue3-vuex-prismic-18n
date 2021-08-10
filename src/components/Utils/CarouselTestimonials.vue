@@ -1,7 +1,23 @@
 <template>
   <Carousel :items-to-show="1.8" :wrap-around="true">
-    <Slide v-for="slide in 10" :key="slide">
-      <div class="carousel__item">{{ slide }}</div>
+    <Slide v-for="slide in db" :key="slide">
+
+      <div class="carousel__item">
+
+
+         <q-img
+            class="img1"
+            img-class="img1-carousel"
+            :src="slide.img"
+            :ratio="16 / 9"
+            height="450px"
+            no-spinner
+          >
+            <div class="figcaption">
+              <h4 class="title-carousel">{{ slide.title }}</h4>
+            </div>
+          </q-img>
+      </div>
     </Slide>
 
     <template #addons>
@@ -11,17 +27,25 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import { Carousel, Navigation, Slide } from 'vue3-carousel';
+import { defineComponent } from "vue";
+import { Carousel, Navigation, Slide } from "vue3-carousel";
+import dbIndex from "src/db_test/db_carousel.json";
 
-import 'vue3-carousel/dist/carousel.css';
+import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
-  name: 'WrapAround',
+  name: "WrapAround",
   components: {
     Carousel,
     Slide,
     Navigation,
+  },
+  setup() {
+    const db = dbIndex;
+
+    return {
+      db,
+    };
   },
 });
 </script>
@@ -31,7 +55,7 @@ export default defineComponent({
   min-height: 200px;
   width: 100%;
   background-color: var(--carousel-color-primary);
-  color:  var(--carousel-color-white);
+  color: var(--carousel-color-white);
   font-size: 20px;
   border-radius: 8px;
   display: flex;

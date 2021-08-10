@@ -1,14 +1,23 @@
 [
-  { "title": "Umbria Yoga Retreat", "img": "umbria_luxo.jpg" },
-  { "title": "Como to Portofino", "img": "umbria_luxo.jpg" },
-  { "title": "Sicily in Style", "img": "umbria_luxo.jpg" },
-  { "title": "Luxury wine Tour", "img": "umbria_luxo.jpg" },
-  { "title": "The Gran Classic", "img": "umbria_luxo.jpg" },
-  { "title": "Grand Tour in Italy", "img": "umbria_luxo.jpg" },
-  { "title": "Grand Tour in Italy 1", "img": "umbria_luxo.jpg" },
-  { "title": "Grand Tour in Italy 2", "img": "umbria_luxo.jpg" },
-  { "title": "Grand Tour in Italy 3", "img": "umbria_luxo.jpg" },
-  { "title": "Grand Tour in Italy 4", "img": "umbria_luxo.jpg" },
-  { "title": "Grand Tour in Italy 5", "img": "umbria_luxo.jpg" },
-  { "title": "Grand Tour in Italy 6", "img": "umbria_luxo.jpg" }
+  {
+    "testimonial_name": "Umbria Yoga Retreat",
+    "payoff": "a second honeymoon",
+    "img": "/italy_pics/christopher-czermak-7ybKmhDTcz0-unsplash.jpg"
+  },
+
+  {
+    "testimonial_name": "Umbria Yoga Retreat",
+    "payoff": "a second honeymoon",
+    "img": "/italy_pics/futc-Re1Uc-eabi8-unsplash.jpg"
+  },
+  {
+    "testimonial_name": "Umbria Yoga Retreat",
+    "payoff": "a second honeymoon",
+    "img": "/italy_pics/giuseppe-mondi-fJWYwHWYQpY-unsplash.jpg"
+  },
+  {
+    "testimonial_name": "Umbria Yoga Retreat",
+    "payoff": "a second honeymoon",
+    "img": "/italy_pics/reuben-teo-XvxFqD3uUEk-unsplash.jpg"
+  }
 ]
