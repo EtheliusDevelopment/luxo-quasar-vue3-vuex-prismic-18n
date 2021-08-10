@@ -11,7 +11,7 @@
             :src="slide.img"
             :ratio="16 / 9"
             height="95vh"
-            no-spinner
+
           >
             <div class="figcaption">
               <h4 class="title-carousel">{{ slide.title }}</h4>
