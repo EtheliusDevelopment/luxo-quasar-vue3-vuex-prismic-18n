@@ -6,11 +6,11 @@
 
 
          <q-img
-            class="img1"
-            img-class="img1-carousel"
+            class="img-carousel-testimonials-1"
+            img-class="img1-carousel-testimonials"
             :src="slide.img"
             :ratio="16 / 9"
-            height="450px"
+            height="95vh"
             no-spinner
           >
             <div class="figcaption">

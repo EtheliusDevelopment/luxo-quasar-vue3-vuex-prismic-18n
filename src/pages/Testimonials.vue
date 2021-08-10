@@ -58,8 +58,7 @@
           There are several and varied experiences, from art to those dedicated
           to outdoor activities or immersing yourself in the most beautiful
           Italian cities, without forgetting the well-being and comfort of the
-          luxury hotels and resorts that we choose and that characterize every
-          story.
+          luxury hotels and resorts that we choose and that characterize every story.
         </p>
       </div>
     </div> -->
@@ -82,7 +81,7 @@
           There are several and varied experiences, from art to those dedicated
           to outdoor activities or immersing yourself in the most beautiful
           Italian cities, without forgetting the well-being and comfort of the
-          luxury hotels and resorts that we choose and that characterize every
+          luxury hotels and resorts that we choose and that characterize every story.
         </p>
       </div>
     </div>
@@ -123,26 +122,7 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
-  .figcaption h1.text-white.text-center {
-    margin-top: 0;
-    margin-bottom: 3vh;
-  }
-}
 
-@media screen and (max-width: 990px) {
-  .img1 {
-    height: 20% !important;
-  }
-
-  .figcaption h1.text-white.text-center {
-    margin-top: 0;
-    margin-bottom: 5vh;
-  }
-}
 
 // **********FIRST BLOCK**********
 
@@ -165,7 +145,7 @@ export default {
 
 // **********SECOND BLOCK**********
 .second-block-carousel {
-  padding: 0 1rem;
+
 }
 
 // **********THIRD BLOCK**********
@@ -198,11 +178,45 @@ hr {
   width: 20%;
   margin: 2%;
 }
-// **********FIRST BLOCK**********
-// **********SECOND BLOCK**********
-@media screen and (max-width: 990px) {
+
+
+@media screen and (max-width: 1100px) {
+  .img1 {
+    height: 20% !important;
+  }
+
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 5vh;
+  }
+
+      // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10rem !important;
+  }
+}
+@media screen and (max-width: 680px) {
+
+  .img1 {
+    height: 15% !important;
+  }
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh;
+  }
+      // **********FIRST BLOCK**********
+  .first-block .sub-section-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem !important;
+  }
 }
 
-@media screen and (max-width: 990px) {
-}
+
 </style>
