@@ -105,11 +105,13 @@ p {
   width: 4rem;
   height: 4rem;
   margin: 0 12%;
+
+  transition: all .2s ease-in-out;
 }
 
-.third-block button.carousel__next:hover,
+.third-block button.carousel__next:hover ,
 .third-block button.carousel__prev:hover {
-  opacity: 0.8;
+  background-color: #D9C5A0;
 }
 
 .third-block .carousel__slide--active .figcaption {

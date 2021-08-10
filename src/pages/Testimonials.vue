@@ -13,9 +13,9 @@
         height="450px"
       >
         <div class="figcaption">
-          <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
+          <h6 class="text-white">THAT’S WHY WE LOVE</h6>
           <q-separator color="white" inset />
-          <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
+          <h1 class="text-white text-center">Luxury Travel For Our Clients</h1>
           <q-btn
             class="q-px-lg q-py-xs"
             size="1.1vw"
@@ -39,24 +39,50 @@
       </div>
     </div>
 
-    <div class="first-block">
+    <!-- <div class="first-block">
       <div class="sub-section-first">
         <h2 class="text-primary">Read about our clients’ travel stories</h2>
+
         <p class="text-primary">
           Every travel experience that our clients have with us inevitably
           becomes a story, and it is because it remains indelible and
           unforgettable in their eyes and especially in their hearts.
         </p>
+
         <p class="text-primary">
           Many have wanted to share with us how beautiful their luxury holiday
           experience was and tell us why it was so special for them.
         </p>
+
         <p class="text-primary">
           There are several and varied experiences, from art to those dedicated
           to outdoor activities or immersing yourself in the most beautiful
           Italian cities, without forgetting the well-being and comfort of the
           luxury hotels and resorts that we choose and that characterize every
           story.
+        </p>
+      </div>
+    </div> -->
+
+    <div class="first-block">
+      <div class="sub-section-first">
+        <h2 class="text-primary text-center title-first-block">
+          Read about our clients’ travel stories
+        </h2>
+        <p class="text-center">
+          Every travel experience that our clients have with us inevitably
+          becomes a story, and it is because it remains indelible and
+          unforgettable in their eyes and especially in their hearts.
+        </p>
+        <p class="text-center">
+          Many have wanted to share with us how beautiful their luxury holiday
+          experience was and tell us why it was so special for them.
+        </p>
+        <p class="text-center">
+          There are several and varied experiences, from art to those dedicated
+          to outdoor activities or immersing yourself in the most beautiful
+          Italian cities, without forgetting the well-being and comfort of the
+          luxury hotels and resorts that we choose and that characterize every
         </p>
       </div>
     </div>
@@ -119,13 +145,22 @@ export default {
 }
 
 // **********FIRST BLOCK**********
+
 .first-block .sub-section-first {
   display: flex;
-  width: 100%;
-  min-height: 60vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 18rem;
+}
+
+.first-block {
+  margin-bottom: 10%;
+}
+
+.title-first-block {
+  padding: 0 13%;
+  line-height: 60px;
 }
 
 // **********SECOND BLOCK**********
