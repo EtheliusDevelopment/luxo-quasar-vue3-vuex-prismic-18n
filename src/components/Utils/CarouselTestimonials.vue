@@ -13,7 +13,7 @@
           <div class="figcaption">
             <h4 class="title-carousel">{{ slide.testimonial_name }}</h4>
             <h5 class="body-carousel">{{ slide.payoff }}</h5>
-            <h6 class="cta-carousel">DISCOVER MORE</h6>
+            <q-btn class="cta-carousel" label="DISCOVER MORE" :to="'/testimonials/'+ slide.slug" />
           </div>
         </q-img>
       </div>
@@ -85,7 +85,7 @@ export default defineComponent({
   margin: unset;
   font-family: "Hatton-Medium";
   font-size: 40px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 .body-carousel {
   margin: unset;
@@ -97,7 +97,7 @@ export default defineComponent({
 .cta-carousel {
   margin: unset;
   margin-top: 5%;
-  padding-bottom: 1%;
+  padding: 0 1% 1% 1%;
   border-bottom: 2px solid;
   font-family: "Commuters-Sans-Bold";
   font-size: 13px;

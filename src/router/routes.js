@@ -6,7 +6,7 @@ const routes = [
       {
         path: "",
         name: "Home",
-        component: () => import("pages/Index.vue")
+        component: () => import("pages/Index.vue"),
       },
       {
         path: "about",
@@ -24,13 +24,12 @@ const routes = [
         component: () => import("pages/LuxuryTravel/Italy/italy.vue"),
 
         children: [
-
           {
             path: ":slug",
             name: "Luxury Travel Italy",
-            component: () => import("pages/LuxuryTravel/Italy/italy.vue")
-          }
-        ]
+            component: () => import("pages/LuxuryTravel/Italy/italy.vue"),
+          },
+        ],
       },
 
       {
@@ -48,7 +47,12 @@ const routes = [
         name: "Testimonials",
         component: () => import("pages/Testimonials.vue"),
       },
-            {
+      {
+        path: "testimonials/:slug",
+        name: "Testimonials Luxo Italia",
+        component: () => import("pages/TestimonialSingle.vue"),
+      },
+      {
         path: "quiz",
         name: "Quiz",
         component: () => import("pages/Quiz.vue"),
@@ -82,6 +86,11 @@ const routes = [
         path: "terms-and-conditions",
         name: "Terms and Conditions",
         component: () => import("pages/Terms.vue"),
+      },
+      {
+        path: "error_404",
+        name: "Luxo Italia Error 404",
+        component: () => import("pages/Error404"),
       },
     ],
   },

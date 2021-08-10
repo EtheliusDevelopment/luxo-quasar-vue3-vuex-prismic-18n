@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "anna_and_gill",
+    "header_subtitle": "a fulfilling experience",
+    "header_title": "a fulfilling experience",
+    "intro": "From the magnificent villas of the north, up to the splendid southern coast, passing through the enchanted hills of central Italy, a perfect trip which allowed us to stay in the most beautiful hotels, try the most delicious dishesand travel in comfortable cars and private yachts, for a tour that simply made us feel lucky.",
+    "check_in":"june 12",
+    "check_out":"july 7",
+    "location": ["MILANO", "COMO", "BRIGNOLES", "PORTOFINO",
+      "CINQUE TERRE", "FIRENZE", "SAN GIMIGNANO", "LUCCA",
+      "MONTALCINO",  "PORTO ERCOLE", "AMALFI", "CAPRI"
+      ]
+
+  },
+  {
+    "slug": "meghan_and_lara",
+    "header_subtitle": "a fulfilling experience",
+    "header_title": "a fulfilling experience",
+    "intro": "From the magnificent villas of the north, up to the splendid southern coast, passing through the enchanted hills of central Italy, a perfect trip which allowed us to stay in the most beautiful hotels, try the most delicious dishesand travel in comfortable cars and private yachts, for a tour that simply made us feel lucky.",
+    "check_in":"june 12",
+    "check_out":"july 7",
+    "location": ["MILANO", "COMO", "BRIGNOLES", "PORTOFINO",
+      "CINQUE TERRE", "FIRENZE", "SAN GIMIGNANO", "LUCCA",
+      "MONTALCINO",  "PORTO ERCOLE", "AMALFI", "CAPRI"
+      ]
+
+  },
+  {
+    "slug": "mr_hamilton_and_family",
+    "header_subtitle": "a fulfilling experience",
+    "header_title": "a fulfilling experience",
+    "intro": "From the magnificent villas of the north, up to the splendid southern coast, passing through the enchanted hills of central Italy, a perfect trip which allowed us to stay in the most beautiful hotels, try the most delicious dishesand travel in comfortable cars and private yachts, for a tour that simply made us feel lucky.",
+    "check_in":"june 12",
+    "check_out":"july 7",
+    "location": ["MILANO", "COMO", "BRIGNOLES", "PORTOFINO",
+      "CINQUE TERRE", "FIRENZE", "SAN GIMIGNANO", "LUCCA",
+      "MONTALCINO",  "PORTO ERCOLE", "AMALFI", "CAPRI"
+      ]
+
+  },
+  {
+    "slug": "olivia_and_michael",
+    "header_subtitle": "a fulfilling experience",
+    "header_title": "a fulfilling experience",
+    "intro": "From the magnificent villas of the north, up to the splendid southern coast, passing through the enchanted hills of central Italy, a perfect trip which allowed us to stay in the most beautiful hotels, try the most delicious dishesand travel in comfortable cars and private yachts, for a tour that simply made us feel lucky.",
+    "check_in":"june 12",
+    "check_out":"july 7",
+    "location": ["MILANO", "COMO", "BRIGNOLES", "PORTOFINO",
+      "CINQUE TERRE", "FIRENZE", "SAN GIMIGNANO", "LUCCA",
+      "MONTALCINO",  "PORTO ERCOLE", "AMALFI", "CAPRI"
+      ]
+
+  }
+]
