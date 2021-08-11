@@ -504,6 +504,11 @@ export default defineComponent({
   align-self: center !important;
 }
 
+.step-one .card-step{
+
+    height: 110%;
+}
+
 // **********FOURTH BLOCK**********
 .fourth-block {
   margin-bottom: 15%;
