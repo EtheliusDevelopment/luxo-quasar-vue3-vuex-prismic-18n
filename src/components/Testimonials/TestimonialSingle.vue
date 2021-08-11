@@ -481,6 +481,9 @@ hr {
     margin-top: 0;
     margin-bottom: 3vh;
   }
+  .text-box{
+  padding: 3% 8%;
+}
 
   // *****SECOND BLOCK****
 
