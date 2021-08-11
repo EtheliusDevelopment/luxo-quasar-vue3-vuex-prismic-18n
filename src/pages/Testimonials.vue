@@ -221,6 +221,7 @@ export default {
 // **********SECOND BLOCK**********
 .second-block-carousel {
   margin-bottom: 10%;
+  overflow: hidden;
 }
 
 // **********THIRD BLOCK**********
