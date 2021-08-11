@@ -27,7 +27,7 @@
 
   <div class="first-block">
     <div class="sub-section-first">
-      <p class="text-center">{{ single.intro }}</p>
+      <p class="text-center p-body-testimonials">{{ single.intro }}</p>
       <q-btn
         color="info"
         outline
@@ -51,26 +51,30 @@
     </div>
 
     <div class="sub-section-first bg-info">
-      <h2 class="text-primary">Trip Journal</h2>
-      <h6 class="text-primary">DATE: JUNE 12TH – JULY 7TH</h6>
-      <p>Location:</p>
+      <h2 class="text-primary trip-journal">Trip Journal</h2>
+      <h6 class="text-primary date-range">DATE: JUNE 12TH – JULY 7TH</h6>
+      <p class="p-location">Locations:</p>
       <h6 class="itinerary">{{ single.location }}</h6>
     </div>
   </div>
 
   <div class="third-block">
-    <h3 class="text-primary title-block">Date:</h3>
-    <h3 class="text-primary title-block">June 12th – July 7 th</h3>
+    <div class="text-box">
+      <h3 class="text-primary title-block">Date:</h3>
+      <h3 class="text-primary title-block">
+        June 12<sup>th</sup> – July 7<sup>th</sup>
+      </h3>
 
-    <div class="location-block">
-      <p class="location_cursor">Location:</p>
-      <p class="location_itinerary">{{ single.places_bl1 }}</p>
+      <p class="location_itinerary">
+        <span class="location_cursor p-location">Location: </span
+        >{{ single.places_bl1 }}
+      </p>
+
+      <p class="text-center p-body-testimonials">{{ single.first_par_bl1 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.second_par_bl1 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.third_par_bl1 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.fourth_par_bl1 }}</p>
     </div>
-
-    <p>{{ single.first_par_bl1 }}</p>
-    <p>{{ single.second_par_bl1 }}</p>
-    <p>{{ single.third_par_bl1 }}</p>
-    <p>{{ single.fourth_par_bl1 }}</p>
 
     <q-img
       class="img-third-block"
@@ -82,18 +86,21 @@
   </div>
 
   <div class="fourth-block">
-    <h3 class="text-primary title-block">Date:</h3>
-    <h3 class="text-primary title-block">June 12th – July 7 th</h3>
+    <div class="text-box">
+      <h3 class="text-primary title-block">Date:</h3>
+      <h3 class="text-primary title-block">
+        June 12<sup>th</sup> – July 7<sup>th</sup>
+      </h3>
 
-    <div class="location-block">
-      <p class="location_cursor">Location:</p>
-      <p class="location_itinerary">{{ single.places_bl2 }}</p>
+      <p class="location_itinerary">
+        <span class="location_cursor p-location">Location: </span
+        >{{ single.places_bl2 }}
+      </p>
+
+      <p class="text-center p-body-testimonials">{{ single.first_par_bl2 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.second_par_bl2 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.third_par_bl2 }}</p>
     </div>
-
-    <p>{{ single.first_par_bl2 }}</p>
-    <p>{{ single.second_par_bl2 }}</p>
-    <p>{{ single.third_par_bl2 }}</p>
-
     <q-img
       class="img-third-block"
       src="https://placeimg.com/500/300/nature"
@@ -104,18 +111,22 @@
   </div>
 
   <div class="fifth-block">
-    <h3 class="text-primary title-block">Date:</h3>
-    <h3 class="text-primary title-block">June 12th – July 7 th</h3>
+    <div class="text-box">
+      <h3 class="text-primary title-block">Date:</h3>
+      <h3 class="text-primary title-block">
+        June 12<sup>th</sup> – July 7<sup>th</sup>
+      </h3>
 
-    <div class="location-block">
-      <p class="location_cursor">Location:</p>
-      <p class="location_itinerary">{{ single.places_bl1 }}</p>
+      <p class="location_itinerary">
+        <span class="location_cursor p-location">Location: </span
+        >{{ single.places_bl3 }}
+      </p>
+
+      <p class="text-center p-body-testimonials">{{ single.first_par_bl3 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.second_par_bl3 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.third_par_bl3 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.fourth_par_bl3 }}</p>
     </div>
-
-    <p>{{ single.first_par_bl3 }}</p>
-    <p>{{ single.second_par_bl3 }}</p>
-    <p>{{ single.third_par_bl3 }}</p>
-    <p>{{ single.fourth_par_bl3 }}</p>
 
     <q-img
       class="img-third-block"
@@ -127,26 +138,29 @@
   </div>
 
   <div class="sixth-block">
-    <h3 class="text-primary title-block">Date:</h3>
-    <h3 class="text-primary title-block">June 12th – July 7 th</h3>
+    <div class="text-box">
+      <h3 class="text-primary title-block">Date:</h3>
+      <h3 class="text-primary title-block">
+        June 12<sup>th</sup> – July 7<sup>th</sup>
+      </h3>
 
-    <div class="location-block">
-      <p class="location_cursor">Location:</p>
-      <p class="location_itinerary">{{ single.places_bl1 }}</p>
+      <p class="location_itinerary">
+        <span class="location_cursor p-location">Location: </span
+        >{{ single.places_bl4 }}
+      </p>
+
+      <p class="text-center p-body-testimonials">{{ single.first_par_bl4 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.second_par_bl4 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.third_par_bl5 }}</p>
+      <p class="text-center p-body-testimonials">{{ single.fourth_par_bl4 }}</p>
     </div>
-
-    <p>{{ single.first_par_bl4 }}</p>
-    <p>{{ single.second_par_bl4 }}</p>
-    <p>{{ single.third_par_bl5 }}</p>
-    <p>{{ single.fourth_par_bl4 }}</p>
-
     <q-btn
       color="info"
       outline
       label="BACK TO TESTIMONIALS AND REVIEWS"
       class="q-px-lg q-py-xs q-mt-md btn-sixth-block"
       size="1.1vw"
-      @click="onClick"
+      to="/testimonials"
       text-color="primary"
     />
   </div>
@@ -177,6 +191,69 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// TYPO**************
+
+.p-body-testimonials {
+  font-family: "Commuters-Sans-Light";
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.title-block {
+  font-family: Hatton-Semibold;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+.trip-journal {
+  font-family: Hatton-Medium;
+  font-size: 50px;
+  line-height: 65px;
+  letter-spacing: 0.5px;
+  margin-bottom: unset;
+}
+
+.date-range {
+  font-family: "Commuters-Sans-Bold";
+  font-size: 20px;
+  line-height: 31px;
+  margin-top: unset;
+}
+
+.itinerary {
+  font-family: "Commuters-Sans-Light";
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: unset;
+}
+.p-location {
+  font-family: "Commuters-Sans-Bold";
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: unset;
+}
+
+
+.location_itinerary {
+  margin-top: 1%;
+  margin-bottom: 3%;
+  width: 100%;
+  text-align: center;
+  font-family: "Commuters-Sans-Regular";
+}
+
+.location_cursor {
+  margin-right: 1%;
+}
+
+sup {
+    font-size: .8rem !important;
+
+}
+
 // **********HEADER BLOCK**********
 
 .figcaption {
@@ -222,6 +299,10 @@ hr {
   line-height: 60px;
 }
 
+.text-box{
+  padding: 3% 18%;
+}
+
 // *******SECOND BLOCK***************
 
 .second-block {
@@ -234,11 +315,12 @@ hr {
 .sub-section-first {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   padding-left: 35%;
   grid-column: 2/4;
   grid-row: 1/3;
+  margin-left: 5%;
 }
 
 .sub-section-first-img {
@@ -260,14 +342,6 @@ hr {
   justify-content: center;
 }
 
-.location_cursor {
-  transform: scale(1.5);
-  margin-right: 7%;
-}
-.location_itinerary {
-  transform: scale(1.5);
-}
-
 // ********FOURTH BLOCK ************
 .fourth-block {
   display: flex;
@@ -276,18 +350,7 @@ hr {
   align-items: center;
 }
 
-.location-block {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
 .location_cursor {
-  transform: scale(1.5);
-  margin-right: 7%;
-}
-.location_itinerary {
-  transform: scale(1.5);
 }
 
 // ********FIFTH BLOCK ************
@@ -298,18 +361,7 @@ hr {
   align-items: center;
 }
 
-.location-block {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
 .location_cursor {
-  transform: scale(1.5);
-  margin-right: 7%;
-}
-.location_itinerary {
-  transform: scale(1.5);
 }
 
 // ********SIXTH BLOCK ************
@@ -320,21 +372,33 @@ hr {
   align-items: center;
 }
 
-.location-block {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.location_cursor {
-  transform: scale(1.5);
-  margin-right: 7%;
-}
-.location_itinerary {
-  transform: scale(1.5);
-}
-
 @media screen and (max-width: 1100px) {
+  // TYPO**************
+
+  .p-body-testimonials {
+    transform: scale(0.9);
+  }
+
+  .title-block {
+    transform: scale(0.9);
+  }
+
+  .trip-journal {
+    transform: scale(0.9);
+  }
+
+  .date-range {
+    transform: scale(0.9);
+  }
+
+  .itinerary {
+    transform: scale(0.9);
+  }
+  .p-location {
+    transform: scale(0.9);
+  }
+
+  // HEADER BLOCK****************
   .img1 {
     height: 20% !important;
   }
@@ -366,6 +430,31 @@ hr {
 }
 
 @media screen and (max-width: 680px) {
+  .p-body-testimonials {
+    transform: scale(0.85);
+  }
+
+  .title-block {
+    transform: scale(0.85);
+  }
+
+  .trip-journal {
+    transform: scale(0.85);
+  }
+
+  .date-range {
+    transform: scale(0.85);
+  }
+
+  .itinerary {
+    transform: scale(0.85);
+  }
+  .p-location {
+    transform: scale(0.85);
+  }
+
+  // HEADER BLOCK****************
+
   .img1 {
     height: 15% !important;
   }
@@ -374,6 +463,10 @@ hr {
     margin-bottom: 3vh;
   }
   // **********FIRST BLOCK**********
+  .first-block {
+    margin-bottom: 10%;
+  }
+
   .first-block .sub-section-first {
     display: flex;
     justify-content: center;
@@ -387,6 +480,29 @@ hr {
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 3vh;
+  }
+
+  // *****SECOND BLOCK****
+
+  .second-block {
+    grid-template-columns: auto;
+    grid-auto-rows: 30vh auto;
+    margin-bottom: 10%;
+  }
+
+  .sub-section-first-img {
+    grid-column: 1;
+    grid-row: 1;
+    box-sizing: border-box;
+    border: 10px solid $info;
+    background-color: $info !important;
+  }
+
+  .sub-section-first {
+    padding-left: unset;
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: unset;
   }
 }
 </style>
