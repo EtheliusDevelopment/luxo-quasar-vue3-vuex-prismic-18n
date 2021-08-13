@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: Commuters-Sans-Regular;
+  font-family: CommutersSans-Regular;
   src: url(./fonts/CommutersSans-Regular.ttf);
 }
 
@@ -192,6 +192,48 @@ p {
 
 //END CAROUSEL TESTIMONIAL 1
 
+// CAROUSEL LUXURY SINGLE
+
+.second-block-carousel-luxury button.carousel__prev,
+.second-block-carousel-luxury button.carousel__next {
+  background-color: transparent;
+  // border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 5%;
+  transition: all 0.1s ease-in;
+}
+
+.second-block-carousel-luxury button.carousel__next:hover,
+.second-block-carousel-luxury button.carousel__prev:hover {
+  width: 12rem;
+  height: 12rem;
+}
+.second-block-carousel-luxury svg.carousel__icon {
+  display: none;
+}
+
+.second-block-carousel-luxury button.carousel__prev:after {
+  transform: rotate(180deg);
+}
+
+.second-block-carousel-luxury button.carousel__prev:after,
+.second-block-carousel-luxury button.carousel__next:after {
+  content: ">";
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 30%;
+  font-size: 2vw;
+  // border-radius: 50%;
+  position: relative;
+  bottom: 1%;
+}
+
+.second-block-carousel-luxury .carousel__item {
+  background-color: transparent !important;
+}
+
+// END CAROUSEL LUXURY SINGLE
+
 // WINCLUB
 
 // END WINE CLUB
@@ -214,6 +256,12 @@ p {
   font-family: "CommutersSans-Regular" !important;
 }
 // END CONTACT
+
+// ITALY LUXURY SINGLE
+
+.btn-component-luxury span.block {
+  line-height: 20px;
+}
 
 @media screen and (max-width: 990px) {
   h1 {

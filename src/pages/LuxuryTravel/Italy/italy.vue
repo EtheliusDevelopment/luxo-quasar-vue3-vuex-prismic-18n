@@ -32,98 +32,140 @@
         </q-breadcrumbs>
       </div>
     </div>
-      <h3 class="text-teal">
-        {{thisRoute}}
-      </h3>
-      <q-btn color="primary"  label="GO BACK" to="/luxury-travel" />
-    <div class="first-block" style="outline: dashed">
+
+    <!-- <h3 class="text-teal">
+      {{ thisRoute }}
+    </h3> -->
+
+
+    <div class="first-block">
       <div class="sub-section-first">
-        <div class="first-component">
-          <p>FIRST component</p>
+        <div class="first-component component-box">
+          <q-img
+            class="img-component"
+            src="~assets/calendar.svg"
+            :ratio="16 / 9"
+            spinner-color="primary"
+            spinner-size="82px"
+            height="6vh"
+            width="3vw"
+          />
+
+          <h4 class="title-component">WHEN TO GO</h4>
+          <p class="p-component">March - October</p>
         </div>
 
-        <div class="second-component">
-          <p>FIRST component</p>
+        <div class="second-component component-box">
+          <q-img
+            class="img-component"
+            src="~assets/price.svg"
+            :ratio="16 / 9"
+            spinner-color="primary"
+            spinner-size="82px"
+            width="3vw"
+            height="6vh"
+          />
+
+          <h4 class="title-component">PRICE</h4>
+          <p class="p-component">6.490 € PP</p>
         </div>
 
-        <div class="third-component">
-          <p>THIRD component</p>
+        <div class="third-component component-box">
+          <q-img
+            class="img-component"
+            src="~assets/time.svg"
+            :ratio="16 / 9"
+            spinner-color="primary"
+            spinner-size="82px"
+            height="6vh"
+            width="3vw"
+          />
+
+          <h4 class="title-component">IDEAL LENGTH</h4>
+          <p class="p-component">7 days</p>
         </div>
 
-        <div class="fourth-component">
+        <div class="fourth-component component-box">
           <q-btn
-            color="primary"
-            icon="check"
+            class="btn-component-luxury"
+            color="info"
+            padding="2.4vw"
             outline
-            label="FOURTH component"
+            label="DOWNLOAD JOURNEY DETAIL"
           />
         </div>
       </div>
     </div>
 
-    <div class="second-block" style="border: 2px solid red">
-      <div class="q-pa-md">
-        <q-carousel
-          animated
-          v-model="slide"
-          navigation
-          infinite
-          :autoplay="autoplay"
-          arrows
-          transition-prev="slide-right"
-          transition-next="slide-left"
-          @mouseenter="autoplay = false"
-          @mouseleave="autoplay = true"
-        >
-          <q-carousel-slide
-            :name="1"
-            img-src="https://cdn.quasar.dev/img/mountains.jpg"
-          />
-          <q-carousel-slide
-            :name="2"
-            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-          />
-          <q-carousel-slide
-            :name="3"
-            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-          />
-          <q-carousel-slide
-            :name="4"
-            img-src="https://cdn.quasar.dev/img/quasar.jpg"
-          />
-        </q-carousel>
-      </div>
+    <div class="second-block-carousel-luxury">
+      <CarouselLuxurySingle />
     </div>
 
-    <div class="third-block" style="outline: dashed">
+    <div class="third-block">
       <div class="sub-section-first-third">
         <div class="header-component">
-          <h3>HEADER COMOPNENT</h3>
+          <p class="p-header-component text-center">
+            <span class="span-header-component">At A Glance</span> Itinerary
+          </p>
         </div>
+
         <div class="body-component">
-          <h3>BODY COMPONENT</h3>
+          <ul>
+            <li>
+              7 Day Yoga Retreat in the heart of Umbria, a verdant region
+              bordering Tuscany
+            </li>
+            <li>Daily Yoga and Meditation Practice</li>
+            <li>Five-star Cuisine</li>
+            <li>Day Trip to Discover Assisi</li>
+            <li>Authentic Brunello Wine Experience</li>
+          </ul>
+          <p class="p-body-component">
+            Revive and invigorate against a backdrop of hillside olive groves,
+            flower meadows and oak forests when you embark on the best yoga
+            retreat Italy has to offer. Breathe in the wildness and let the
+            worries of the world melt away.
+          </p>
+
+          <p class="p-body-component">
+            Restore your balance and focus on your practice while surrounded by
+            the calm and tranquility of the rolling Umbrian countryside. Known
+            as the green heart of Italy, Umbria is made up of medieval towns and
+            lush foothills, showcasing both pristine natural settings and the
+            country’s rich history. This unique package offers the chance to
+            return to nature, while still enjoying the pinnacle of contemporary
+            comforts. Take advantage of the world-class facilities and
+            complement your daily yoga practice with downtime next to the pool,
+            or a full body massage in the spa. This truly is Italy luxury travel
+            at its best.
+          </p>
+
+          <p class="p-body-component">
+            While the plethora of activities will feed your soul, there’s no
+            doubt the tantalising Italian cuisine will nourish your body. Feast
+            on gourmet, vegetarian meals made from only the freshest, locally
+            sourced ingredients and sample the delectable wine from the
+            neighbouring regions. The 7 day retreat also offers the chance to
+            set out on day trips to the ancient city of Assisi, and explore the
+            Brunello wine region. What’s more, you can choose from an array of
+            optional activities such as horse riding, hiking, cooking classes
+            and biking depending on your preference.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="fourth-block bg-info" style="outline: dashed">
-      <div class="sub-section-first-fourth">
-        <h2 class="text-primary">
-          Lorem ipsum di nove parole parole parole parole
-        </h2>
-        <p class="text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem
-          eaque voluptate omnis quod,
+    <div class="fourth-block">
+      <div class="sub-section-first-fourth bg-info">
+        <h2 class="text-primary h2-fourth-block">MAKE THIS ITINERARY YOURS</h2>
+        <p class="p-fourth-block">
+          Like what you see? Book a call with us today to find out more about
+          this exclusive itinerary and get a quote. Remember: we can tailor to
+          your needs each and every Luxo Italia trip. So, if you are looking for
+          a tailor-made experience, we highly suggest you to book a call for our
+          premium service!
         </p>
-        <p class="text-primary">
-          earum laborum possimus, corporis dolor sit blanditiis iusto recusandae
-          enim
-        </p>
-        <p class="text-primary">fugit porro ratione</p>
-        <p class="text-primary">
-          Exercitationem eaque voluptate omnis quod, fugiat praesentium minus
-          voluptatum!
-        </p>
+
         <q-btn color="primary" icon="check" outline label="BOOK NOW" />
         <q-btn
           color="secondary"
@@ -138,12 +180,14 @@
 
 <script>
 import PreLoader from "src/components/PreLoader.vue";
+import CarouselLuxurySingle from "src/components/Utils/CarouselLuxurySingle.vue";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 
 export default {
   components: {
     PreLoader,
+    CarouselLuxurySingle,
   },
   setup() {
     const route = useRoute();
@@ -160,26 +204,52 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
 
-  .figcaption h1.text-white.text-center {
-    margin-top: 0;
-    margin-bottom: 3vh;
-  }
+// TYPO*************
+.title-component {
+  font-family: "Commuters-Sans-Bold";
+  font-size: 17px;
+  margin: 5% 0;
 }
 
-@media screen and (max-width: 990px) {
-  .img1 {
-    height: 20% !important;
-  }
-  .figcaption h1.text-white.text-center {
-    margin-top: 0;
-    margin-bottom: 5vh;
-  }
+.p-component {
+  font-family: "Commuters-Sans-Regular";
+  font-size: 17px;
+  opacity: 0.6;
+  margin: unset;
 }
+
+.span-header-component {
+  color: $info;
+  margin-right: 1%;
+}
+
+.p-header-component {
+  font-family: "Hatton-Semibold";
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+}
+
+.h2-fourth-block {
+  font-family: "Hatton-Medium";
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+
+.p-fourth-block {
+  font-family: "Commuters-Sans-Light";
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+
+// ***HEADER BLOCK******
+
+  .header-block{
+    margin-bottom: 10%;
+  }
 
 .figcaption {
   width: 100%;
@@ -206,19 +276,113 @@ hr {
 }
 
 // **********FIRST BLOCK**********
-// **********SECOND BLOCK**********
-@media screen and (max-width: 990px) {
-}
-
-@media screen and (max-width: 990px) {
-}
-
 .first-block {
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  margin: 0 10% 10% 10%;
+  padding: 1.5% 0;
 }
 
-.sub-section-first {
+.first-block .sub-section-first {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2%;
+  // grid-auto-rows: auto;
+}
+
+.component-box {
   display: flex;
-  justify-content: space-around;
-  margin: 0 5vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// **********SECOND BLOCK**********
+
+.second-block-carousel-luxury {
+  margin-bottom: 10%;
+  overflow: hidden;
+}
+
+// **********THIRD BLOCK**********
+.header-component {
+  border-bottom: 1.5px solid $primary;
+}
+
+.third-block {
+  margin-bottom: 10%;
+}
+
+.third-block .sub-section-first-third {
+  margin: 0 9%;
+}
+
+// **********FOURTH BLOCK**********
+
+.fourth-block {
+  margin-bottom: 10%;
+}
+
+.sub-section-first-fourth {
+  margin: 0 9%;
+  padding: 2.5% 5%;
+}
+
+ul {
+  font-family: "Commuters-Sans-Light";
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1100px) {
+  .img1 {
+    height: 20% !important;
+  }
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 5vh;
+  }
+
+  // TYPO****************
+  .title-component {
+    transform: scale(0.9);
+  }
+  .p-component {
+    transform: scale(0.9);
+  }
+
+  // FIRST BLOCK*****************
+  .img-component {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  // TYPO****************
+  .title-component {
+    transform: scale(0.85);
+    margin: 1% 0;
+  }
+  .p-component {
+    transform: scale(0.85);
+  }
+
+  .img1 {
+    height: 15% !important;
+  }
+
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh;
+  }
+
+  // FIRST BLOCK*****************
+  .img-component {
+    transform: scale(0.6);
+    width: 6vw !important;
+  }
+
+  .first-block .sub-section-first {
+    grid-template-columns: auto;
+  }
 }
 </style>
