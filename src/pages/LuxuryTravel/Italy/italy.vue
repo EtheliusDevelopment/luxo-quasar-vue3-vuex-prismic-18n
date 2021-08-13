@@ -320,7 +320,7 @@ hr {
 // **********FOURTH BLOCK**********
 
 .fourth-block {
-  margin-bottom: 10%;
+
 }
 
 .sub-section-first-fourth {
