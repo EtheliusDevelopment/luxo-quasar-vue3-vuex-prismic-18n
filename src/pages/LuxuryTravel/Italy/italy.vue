@@ -32,7 +32,10 @@
         </q-breadcrumbs>
       </div>
     </div>
-
+      <h3 class="text-teal">
+        {{thisRoute}}
+      </h3>
+      <q-btn color="primary"  label="GO BACK" to="/luxury-travel" />
     <div class="first-block" style="outline: dashed">
       <div class="sub-section-first">
         <div class="first-component">
@@ -136,15 +139,20 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
+import { useRoute } from "vue-router";
 
 export default {
   components: {
     PreLoader,
   },
   setup() {
+    const route = useRoute();
+    const thisRoute = route.params.slug;
+
     return {
       slide: ref(1),
       autoplay: ref(true),
+      thisRoute,
     };
   },
 };
