@@ -179,7 +179,7 @@ export default {
     const params = route.params.slug;
     const single = dbIndex.find((val) => val.slug === params);
 
-    single ? null : router.push("/error_404");
+    single ? null : router.push("/uid");
 
     return {
       params,
