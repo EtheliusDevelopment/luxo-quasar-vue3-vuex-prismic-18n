@@ -6,7 +6,7 @@
       class="img-luxury-loop"
       img-class="img-loop"
       :src="item.data.main_img.url"
-      spinner-color="primary"
+      spinner-color="info"
       spinner-size="82px"
     >
       <div class="figcatpion_loop" @click="clickFunct(item.uid)">
@@ -38,7 +38,6 @@
 <script>
 import { api } from "boot/axios";
 
-
 export default {
   name: "Italy Luxury Travel",
   components: {},
@@ -61,17 +60,15 @@ export default {
     };
   },
   methods: {
-
-    clickFunct (e) {
-      this.$router.push(`/luxury-travel/italy/${e}`)
+    clickFunct(e) {
+      this.$router.push(`/luxury-travel/italy/${e}`);
     },
-
 
     async getContent() {
       // Query the API and assign the response to "response"
       const response = await this.$prismic.client.query(
         this.$prismic.Predicates.at("document.type", "pacchetti"),
-        { pageSize: 4 }
+        { pageSize: 9 }
       );
 
       this.response = response;
@@ -116,6 +113,11 @@ export default {
 // *******TYPO
 
 .text-figcaption {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  font-family: "Commuters-Sans-Regular";
 }
 
 // ****** BLOCK
@@ -144,11 +146,24 @@ export default {
   cursor: pointer;
 }
 
+// FIRST BLOCK************
 .first-block {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-columns: auto;
+  grid-auto-rows: 0.6fr;
   grid-gap: 2%;
+  margin: 0 8%;
+}
+
+.img-luxury-loop {
+  margin-bottom: 1%;
+}
+
+@media screen and (max-width: 1100px) {
+  .text-figcaption {
+    transform: scale(0.9);
+    margin-bottom: unset;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -157,6 +172,18 @@ export default {
   }
   .fluidText {
     font-size: 0.9rem;
+  }
+  // *******TYPO
+
+  .text-figcaption {
+    transform: scale(0.8);
+    margin-bottom: unset;
+  }
+
+  // FIRST BLOCK *************
+
+  .first-block {
+    grid-template-columns: auto;
   }
 }
 </style>
