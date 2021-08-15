@@ -70,6 +70,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+h4.text-pink.q-ma-xl {
+    word-wrap: break-word;
+}
 // ****TYPO*****
 .h2-blog-card {
   font-size: 20px;
