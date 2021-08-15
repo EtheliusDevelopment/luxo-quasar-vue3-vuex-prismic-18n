@@ -83,7 +83,7 @@ export default {
     myFunct(val) {
       api
         .get(
-          `https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRQsWxIAACwADHvw&q=%5B%5Bat%28document.type%2C+%22pacchetti%22%29%5D%5D&page=${val}&pageSize=${this.pageSize}`
+          `https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRkXHRIAAC4A4F15&q=%5B%5Bat%28document.type%2C+%22pacchetti%22%29%5D%5D&page=${val}&pageSize=${this.pageSize}`
         )
         .then(
           (response) => {

@@ -44,7 +44,7 @@ export default {
     const dataResults = ref(null);
 
     const endPoint =
-      "https://luxobackend.prismic.io/api/v2/documents/search?ref=YRQsWxIAACwADHvw";
+      "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRkXHRIAAC4A4F15";
 
     api.get(`${endPoint}&q=[[at(document.type, +"blog")]]`).then(
       (response) => {

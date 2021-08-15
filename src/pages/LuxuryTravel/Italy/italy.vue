@@ -187,7 +187,7 @@ export default {
     const execrpt = ref("");
 
     const endPoint =
-      "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRQsWxIAACwADHvw";
+      "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRkXHRIAAC4A4F15";
 
     api.get(`${endPoint}&q=[[at(my.pacchetti.uid, "${thisRoute}")]]`)
     .then(
