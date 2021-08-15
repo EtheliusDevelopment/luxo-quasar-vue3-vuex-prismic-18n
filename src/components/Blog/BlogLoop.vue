@@ -1,11 +1,4 @@
 <template>
-  <h4
-    class="text-pink q-ma-xl"
-    v-for="(item, index) in dataResults"
-    :key="index"
-  >
-    {{ item.data.main_img.url }}
-  </h4>
   <div class="loop-block">
     <div class="blog-card" v-for="(item, index) in dataResults" :key="index">
       <div class="img-blog-card">
@@ -22,9 +15,12 @@
         {{ item.data.article_title[0].text }}
       </h2>
 
-      <p class="p-blog-card">
-        In the past year we’ve spent a lot of time dreaming and planning, and if
-        we’ve learnt anything…..
+      <p class="p-blog-card ellipsis-3-lines">
+        {{ item.data.post_body[0].paragraph_body[0].text }}
+        {{ item.data.post_body[0].paragraph_body[0].text }}
+        {{ item.data.post_body[0].paragraph_body[0].text }}
+        {{ item.data.post_body[0].paragraph_body[0].text }}
+        {{ item.data.post_body[0].paragraph_body[0].text }}
       </p>
 
       <q-btn
@@ -43,23 +39,24 @@ import { ref } from "vue";
 import { api } from "boot/axios";
 
 export default {
+  methods: {
+    async getContent() {
+      // Query the API and assign the response to "response"
+      const response = await this.$prismic.client.query(
+        this.$prismic.Predicates.at("document.type", "blog")
+      );
+      console.log(response.results);
+      this.dataResults = response.results;
+    },
+  },
+
+  created() {
+    this.getContent();
+  },
+
   setup() {
     const dataBlog = ref(null);
     const dataResults = ref(null);
-
-    const endPoint =
-      "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRkXHRIAAC4A4F15";
-
-    api.get(`${endPoint}&q=[[at(document.type, +"blog")]]`).then(
-      (response) => {
-        dataBlog.value = response.data;
-        dataResults.value = response.data.results;
-        console.log(response);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
 
     return {
       dataBlog,
@@ -70,10 +67,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 h4.text-pink.q-ma-xl {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
 // ****TYPO*****
 .h2-blog-card {
