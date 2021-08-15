@@ -1,13 +1,17 @@
 <template>
-<h4 class="text-pink q-ma-xl" v-for="(item, index) in dataResults" :key="index">
-  {{item.data.article_title}}
-</h4>
+  <h4
+    class="text-pink q-ma-xl"
+    v-for="(item, index) in dataResults"
+    :key="index"
+  >
+    {{ item.data.main_img.url }}
+  </h4>
   <div class="loop-block">
     <div class="blog-card" v-for="(item, index) in dataResults" :key="index">
       <div class="img-blog-card">
         <q-img
           class="img-blog-card-class"
-          src="https://placeimg.com/500/300/nature"
+          :src="item.data.main_img.url"
           :ratio="16 / 9"
           spinner-color="primary"
           spinner-size="82px"
@@ -69,12 +73,8 @@ export default {
 // ****TYPO*****
 .h2-blog-card {
   font-size: 20px;
-
   padding: 0px 20%;
   line-height: unset;
-}
-.h2-blog-card::first-letter{
-
 }
 .p-blog-card {
   padding: 0px 10%;
@@ -87,7 +87,6 @@ export default {
   display: grid;
   grid-template-columns: 31.66% 31.66% 31.66%;
   grid-auto-rows: auto;
-  grid-auto-rows: auto;
   grid-gap: 2.5%;
 }
 
@@ -97,5 +96,41 @@ export default {
   border: 2px solid $info;
 
   height: 70vh;
+}
+
+@media screen and (max-width: 1100px) {
+  // ****TYPO*****
+
+  .h2-blog-card {
+    transform: scale(0.9);
+
+    padding: 0px 20%;
+    transform: scale(0.9);
+  }
+  .p-blog-card {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  // ****TYPO*****
+
+  .h2-blog-card {
+    transform: scale(0.85);
+    padding: 0px 5%;
+    transform: scale(0.85);
+    text-align: center;
+  }
+  .p-blog-card {
+    transform: scale(0.85);
+    padding: unset;
+  }
+
+  // *** LOOP BLOCK ****
+
+  .loop-block {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 }
 </style>
