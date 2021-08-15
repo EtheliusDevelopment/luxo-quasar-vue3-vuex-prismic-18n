@@ -51,42 +51,47 @@
               sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
             </p>
           </div>
-          <div class="head-main">
-            <ul class="head-navigation">
-              <li>ALL</li>
-
-              <li>Sea</li>
-
-              <li>Lake</li>
-
-              <li>Montain</li>
-
-              <li>Wine</li>
-
-              <li>Islands</li>
-
-              <li>Food</li>
-
-              <li>Art</li>
-
-              <li>Yatch</li>
-
-              <li>Wedding</li>
-
-              <li>Hotel</li>
-            </ul>
-          </div>
         </div>
-        <q-separator
-          spaced
-          inset
-          vertical
-          color="primary"
-          class="separator-block"
-        />
-        <div class="body-component">
-          <TestComponent />
-        </div>
+      </div>
+    </div>
+
+    <div class="second-block">
+      <div class="head-main">
+        <ul class="head-navigation">
+          <li>ALL</li>
+
+          <li>Sea</li>
+
+          <li>Lake</li>
+
+          <li>Montain</li>
+
+          <li>Wine</li>
+
+          <li>Islands</li>
+
+          <li>Food</li>
+
+          <li>Art</li>
+
+          <li>Yatch</li>
+
+          <li>Wedding</li>
+
+          <li>Hotel</li>
+        </ul>
+      </div>
+
+      <q-separator
+        spaced
+        inset
+        vertical
+        color="primary"
+        class="separator-block"
+      />
+
+      <div class="body-component">
+        <BlogLoop />
       </div>
     </div>
   </q-page>
@@ -95,12 +100,12 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
-import TestComponent from "../components/Utils/TestComponent.vue";
+import BlogLoop from "../components/Blog/BlogLoop.vue";
 
 export default {
   components: {
     PreLoader,
-    TestComponent,
+    BlogLoop,
   },
   setup() {
     return {
@@ -119,11 +124,10 @@ export default {
   }
 
   .figcaption h1.text-white.text-center {
-  margin-top: 0;
-  margin-bottom: 5vh !important;
+    margin-top: 0;
+    margin-bottom: 5vh !important;
+  }
 }
-}
-
 
 @media screen and (max-width: 680px) {
   .img1 {
@@ -131,11 +135,10 @@ export default {
   }
 
   .figcaption h1.text-white.text-center {
-  margin-top: 0;
-  margin-bottom: 3vh !important;
+    margin-top: 0;
+    margin-bottom: 3vh !important;
+  }
 }
-}
-
 
 .figcaption {
   width: 100%;
@@ -161,11 +164,6 @@ hr {
   margin: 2%;
 }
 // **********FIRST BLOCK**********
-@media screen and (max-width: 990px) {
-}
-
-@media screen and (max-width: 990px) {
-}
 
 .first-block {
   display: grid;
@@ -192,5 +190,10 @@ hr {
   width: 100%;
   padding: 0 10%;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+// ******SECOND BLOCK**************
+.second-block{
+margin: 0 10% 10% 10%;
 }
 </style>

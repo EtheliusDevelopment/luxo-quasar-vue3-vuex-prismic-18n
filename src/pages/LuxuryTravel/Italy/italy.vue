@@ -107,8 +107,11 @@
         </div>
 
         <div class="body-component">
-          <h6 class="excerpt">
-            <!-- {{responseObj.at_glance_excerpt[0].text}} -->
+          <h6
+            class="excerpt"
+            v-for="(execrpt, index) in responseObj.at_glance_excerpt"
+          >
+            {{ execrpt.text }}
           </h6>
           <ul>
             <li v-for="(text, index) in bulletPoints" :key="index">
@@ -116,12 +119,15 @@
             </li>
           </ul>
 
-          <div class="par-body">
-            <p
-              class="p-body-component"
-              v-for="(text, index) in responseObj.itinerary_field"
-              :key="index"
-            >
+          <div
+            class="par-body"
+            v-for="(text, index) in responseObj.itinerary_field"
+            :key="index"
+          >
+            <h6 class="h6-body-title text-primary">
+              {{ text.itinerary_title[0].text }}
+            </h6>
+            <p class="p-body-component">
               {{ text.itinerary_paragraph[0].text }}
             </p>
           </div>
@@ -140,21 +146,21 @@
           premium service!
         </p>
 
-       <div class="btn-box-fourth-block">
+        <div class="btn-box-fourth-block">
           <q-btn
-          class="q-px-xl q-py-lg q-mr-lg"
-          color="primary"
-          outline
-          label="BOOK NOW"
-        />
+            class="q-px-xl q-py-lg q-mr-lg"
+            color="primary"
+            outline
+            label="BOOK NOW"
+          />
 
-        <q-btn
-          class="q-px-xl q-py-lg"
-          color="primary"
-          outline
-          label="CUSTOMIZE THIS TOUR"
-        />
-       </div>
+          <q-btn
+            class="q-px-xl q-py-lg"
+            color="primary"
+            outline
+            label="CUSTOMIZE THIS TOUR"
+          />
+        </div>
       </div>
     </div>
   </q-page>
@@ -183,7 +189,8 @@ export default {
     const endPoint =
       "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRQsWxIAACwADHvw";
 
-    api.get(`${endPoint}&q=[[at(my.pacchetti.uid, "${thisRoute}")]]`).then(
+    api.get(`${endPoint}&q=[[at(my.pacchetti.uid, "${thisRoute}")]]`)
+    .then(
       (response) => {
         let dataRes = response.data.results;
         dataResponse.value = dataRes;
@@ -327,8 +334,8 @@ hr {
 
 // **********FOURTH BLOCK**********
 
-.btn-box-fourth-block{
-  margin-top:3%;
+.btn-box-fourth-block {
+  margin-top: 3%;
   width: 60%;
   display: flex;
 }
