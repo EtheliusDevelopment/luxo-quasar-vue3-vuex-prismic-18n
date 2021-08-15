@@ -33,11 +33,6 @@
       </div>
     </div>
 
-    <!-- <h3 class="text-teal">
-      {{ thisRoute }}
-    </h3> -->
-
-
     <div class="first-block">
       <div class="sub-section-first">
         <div class="first-component component-box">
@@ -52,7 +47,9 @@
           />
 
           <h4 class="title-component">WHEN TO GO</h4>
-          <p class="p-component">March - October</p>
+          <p class="p-component">
+            {{ responseObj.from }} - {{ responseObj.to }}
+          </p>
         </div>
 
         <div class="second-component component-box">
@@ -67,7 +64,7 @@
           />
 
           <h4 class="title-component">PRICE</h4>
-          <p class="p-component">6.490 € PP</p>
+          <p class="p-component">{{ responseObj.price }} € PP</p>
         </div>
 
         <div class="third-component component-box">
@@ -82,7 +79,7 @@
           />
 
           <h4 class="title-component">IDEAL LENGTH</h4>
-          <p class="p-component">7 days</p>
+          <p class="p-component">{{ responseObj.ideal_length }}</p>
         </div>
 
         <div class="fourth-component component-box">
@@ -110,47 +107,24 @@
         </div>
 
         <div class="body-component">
+          <h6 class="excerpt">
+            <!-- {{responseObj.at_glance_excerpt[0].text}} -->
+          </h6>
           <ul>
-            <li>
-              7 Day Yoga Retreat in the heart of Umbria, a verdant region
-              bordering Tuscany
+            <li v-for="(text, index) in bulletPoints" :key="index">
+              {{ text.bullet_point[0].text }}
             </li>
-            <li>Daily Yoga and Meditation Practice</li>
-            <li>Five-star Cuisine</li>
-            <li>Day Trip to Discover Assisi</li>
-            <li>Authentic Brunello Wine Experience</li>
           </ul>
-          <p class="p-body-component">
-            Revive and invigorate against a backdrop of hillside olive groves,
-            flower meadows and oak forests when you embark on the best yoga
-            retreat Italy has to offer. Breathe in the wildness and let the
-            worries of the world melt away.
-          </p>
 
-          <p class="p-body-component">
-            Restore your balance and focus on your practice while surrounded by
-            the calm and tranquility of the rolling Umbrian countryside. Known
-            as the green heart of Italy, Umbria is made up of medieval towns and
-            lush foothills, showcasing both pristine natural settings and the
-            country’s rich history. This unique package offers the chance to
-            return to nature, while still enjoying the pinnacle of contemporary
-            comforts. Take advantage of the world-class facilities and
-            complement your daily yoga practice with downtime next to the pool,
-            or a full body massage in the spa. This truly is Italy luxury travel
-            at its best.
-          </p>
-
-          <p class="p-body-component">
-            While the plethora of activities will feed your soul, there’s no
-            doubt the tantalising Italian cuisine will nourish your body. Feast
-            on gourmet, vegetarian meals made from only the freshest, locally
-            sourced ingredients and sample the delectable wine from the
-            neighbouring regions. The 7 day retreat also offers the chance to
-            set out on day trips to the ancient city of Assisi, and explore the
-            Brunello wine region. What’s more, you can choose from an array of
-            optional activities such as horse riding, hiking, cooking classes
-            and biking depending on your preference.
-          </p>
+          <div class="par-body">
+            <p
+              class="p-body-component"
+              v-for="(text, index) in responseObj.itinerary_field"
+              :key="index"
+            >
+              {{ text.itinerary_paragraph[0].text }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -166,13 +140,21 @@
           premium service!
         </p>
 
-        <q-btn color="primary" icon="check" outline label="BOOK NOW" />
+       <div class="btn-box-fourth-block">
+          <q-btn
+          class="q-px-xl q-py-lg q-mr-lg"
+          color="primary"
+          outline
+          label="BOOK NOW"
+        />
+
         <q-btn
-          color="secondary"
-          icon="check"
+          class="q-px-xl q-py-lg"
+          color="primary"
           outline
           label="CUSTOMIZE THIS TOUR"
         />
+       </div>
       </div>
     </div>
   </q-page>
@@ -181,8 +163,9 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import CarouselLuxurySingle from "src/components/Utils/CarouselLuxurySingle.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import { api } from "boot/axios";
 
 export default {
   components: {
@@ -192,11 +175,36 @@ export default {
   setup() {
     const route = useRoute();
     const thisRoute = route.params.slug;
+    const dataResponse = ref([]);
+    const responseObj = ref({});
+    const bulletPoints = ref([]);
+    const execrpt = ref("");
+
+    const endPoint =
+      "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRQsWxIAACwADHvw";
+
+    api.get(`${endPoint}&q=[[at(my.pacchetti.uid, "${thisRoute}")]]`).then(
+      (response) => {
+        let dataRes = response.data.results;
+        dataResponse.value = dataRes;
+        responseObj.value = dataRes[0].data;
+        bulletPoints.value = dataRes[0].data.at_glance_bullet_point;
+
+        console.log(dataResponse);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
 
     return {
       slide: ref(1),
       autoplay: ref(true),
       thisRoute,
+      dataResponse,
+      responseObj,
+      bulletPoints,
+      execrpt,
     };
   },
 };
@@ -247,9 +255,9 @@ export default {
 
 // ***HEADER BLOCK******
 
-  .header-block{
-    margin-bottom: 10%;
-  }
+.header-block {
+  margin-bottom: 10%;
+}
 
 .figcaption {
   width: 100%;
@@ -319,8 +327,10 @@ hr {
 
 // **********FOURTH BLOCK**********
 
-.fourth-block {
-
+.btn-box-fourth-block{
+  margin-top:3%;
+  width: 60%;
+  display: flex;
 }
 
 .sub-section-first-fourth {
