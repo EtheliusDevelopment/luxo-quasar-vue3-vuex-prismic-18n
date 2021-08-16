@@ -10,52 +10,44 @@
       height="600px"
     >
       <div class="absolute-top figcaption">
-        <h1 class="text-white text-center">
-          ITALY'S FINEST <br />
-          LUXURY EXPERIENCES
-        </h1>
+        <h2 class="text-primary">
+          {{ articleTitle }}
+        </h2>
         <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
         <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
       </div>
     </q-img>
   </div>
 
-  <div
-    class="text-pink q-ma-xl blog-par"
-    style="word-wrap: break-word"
-    v-for="(post, index) in dataContent"
-    :key="index"
-  >
+  <div class="first-block">
+    <div
+      class="q-ma-xl blog-par"
+      style="word-wrap: break-word"
+      v-for="(post, index) in dataContent"
+      :key="index"
+    >
+      <h4
+        class="text-info h4-blog-par"
+        v-for="(postTit, index) in post.paragraph_title"
+        :key="index"
+      >
+        {{ postTit.text }}
+      </h4>
 
-    <q-img
-      :src="post.post_image.url"
-      :ratio="16/9"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
-    <h3 class="title-blog-par">
-      {{post}}
-    </h3>
+      <p
+        class="p-blog-par text-primary"
+        v-for="(postPar, index) in post.paragraph_body"
+        :key="index"
+      >
+        {{ postPar.text }}
+      </p>
 
-    <p class="text-center p-blog-par">
-      {{post.paragraph_body}}
-    </p>
-
-  </div>
-
-  <div class="first-block" style="outline: dashed">
-    <div class="sub-section-first">
-      <div class="info-component">
-        <h3>INFO COMOPNENT</h3>
-      </div>
-
-      <div class="form-component">
-        <h3>FORM COMOPNENT</h3>
-      </div>
-
-      <div class="contact-card-component">
-        <h3>CONTACT CARD COMPONENT</h3>
-      </div>
+      <q-img
+        :src="post.post_image.url"
+        :ratio="16 / 9"
+        spinner-color="primary"
+        spinner-size="82px"
+      />
     </div>
   </div>
 </template>
@@ -75,6 +67,7 @@ export default {
       this.dataPost = response.results;
       this.bgImg = response.results[0].data.main_img.url;
       this.dataContent = response.results[0].data.post_body;
+      this.articleTitle = response.results[0].data.article_title[0].text;
     },
   },
   created() {
@@ -86,28 +79,33 @@ export default {
     const dataPost = ref();
     const bgImg = ref();
     const dataContent = ref();
+    const articleTitle = ref();
 
     return {
       thisRoute,
       dataPost,
       bgImg,
       dataContent,
+      articleTitle,
     };
   },
 };
 </script>
 
 <style scoped lang="scss">
+// *******TYPO************
+
+.h4-blog-par {
+  font-family: "CommutersSans-Regular";
+  font-size: 25px;
+  letter-spacing: 0.5px;
+}
+
+.p-blog-par {
+  margin-bottom: 5%;
+}
+
 // **********HEADER BLOCK**********
-
-@media screen and (max-width: 680px) {
-}
-
-@media screen and (max-width: 990px) {
-  .img1 {
-    height: 20% !important;
-  }
-}
 
 .figcaption {
   display: flex;
@@ -137,7 +135,20 @@ div:has(.figcaption) {
 }
 
 // **********FIRST BLOCK**********
+.first-block {
+  margin: 0 25% 10% 25%;
+}
+
+.blog-par {
+  margin-bottom: 10%;
+}
+
 @media screen and (max-width: 1100px) {
+  // *******TYPO************
+
+  .h4-blog-par {
+    transform: scale(0.9);
+  }
   // **********HEADER BLOCK**********
 
   .img1 {
@@ -146,6 +157,12 @@ div:has(.figcaption) {
 }
 
 @media screen and (max-width: 680px) {
+  // *******TYPO************
+
+  .h4-blog-par {
+    transform: scale(0.85);
+  }
+
   // **********HEADER BLOCK**********
 
   .img1 {
