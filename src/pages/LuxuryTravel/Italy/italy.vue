@@ -169,7 +169,7 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import CarouselLuxurySingle from "src/components/Utils/CarouselLuxurySingle.vue";
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { api } from "boot/axios";
 
