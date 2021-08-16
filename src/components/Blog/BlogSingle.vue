@@ -10,11 +10,25 @@
       height="600px"
     >
       <div class="absolute-top figcaption">
-        <h2 class="text-primary">
+        <h2 class="text-primary title-header-block">
           {{ articleTitle }}
         </h2>
-        <h6 class="text-white">TAILORED TO YOUR PASSIONS AND TASTES</h6>
-        <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+
+        <div class="tags-container flex">
+          <h6 class="text-white tags" v-for="(tag, index) in tags" :key="index">
+            {{ tag }}/
+          </h6>
+        </div>
+
+        <div class="tags-container btn-box flex">
+          <q-btn
+            color="white"
+            to="/blog"
+            flat
+            label="BACK TO THE BLOG"
+            class="btn-header-block"
+          />
+        </div>
       </div>
     </q-img>
   </div>
@@ -63,11 +77,12 @@ export default {
       const response = await this.$prismic.client.query(
         this.$prismic.Predicates.at("my.blog.uid", this.thisRoute)
       );
-      console.log(response);
+
       this.dataPost = response.results;
       this.bgImg = response.results[0].data.main_img.url;
       this.dataContent = response.results[0].data.post_body;
       this.articleTitle = response.results[0].data.article_title[0].text;
+      this.tags = response.results[0].tags;
     },
   },
   created() {
@@ -80,6 +95,7 @@ export default {
     const bgImg = ref();
     const dataContent = ref();
     const articleTitle = ref();
+    const tags = ref();
 
     return {
       thisRoute,
@@ -87,6 +103,7 @@ export default {
       bgImg,
       dataContent,
       articleTitle,
+      tags,
     };
   },
 };
@@ -94,6 +111,14 @@ export default {
 
 <style scoped lang="scss">
 // *******TYPO************
+
+.title-header-block {
+  font-family: "Hatton-Medium";
+  font-size: 55px;
+  line-height: 63px;
+  letter-spacing: 0.5px;
+  margin-bottom: 20%;
+}
 
 .h4-blog-par {
   font-family: "CommutersSans-Regular";
@@ -103,6 +128,16 @@ export default {
 
 .p-blog-par {
   margin-bottom: 5%;
+}
+
+.tags {
+  margin: unset;
+  font-family: "Commuters-Sans-Light";
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  margin-bottom: 10% !important;
 }
 
 // **********HEADER BLOCK**********
@@ -119,6 +154,18 @@ export default {
 
 div:has(.figcaption) {
   grid-column: 2;
+}
+
+.btn-header-block {
+
+}
+
+.btn-header-block:after {
+  content: "";
+  height: 3px;
+  background-color: white;
+  width: 100%;
+  margin-top: 3%;
 }
 
 // .q-img__content.absolute-full.q-anchor--skip {
@@ -143,6 +190,16 @@ div:has(.figcaption) {
   margin-bottom: 10%;
 }
 
+.tags-container {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.btn-box {
+  position: absolute;
+  top: 90%;
+}
+
 @media screen and (max-width: 1100px) {
   // *******TYPO************
 
@@ -155,11 +212,10 @@ div:has(.figcaption) {
     height: 20% !important;
   }
 
-
   // **********FIRST BLOCK**********
-.first-block {
-  margin: 0 5% 10% 5%;
-}
+  .first-block {
+    margin: 0 5% 10% 5%;
+  }
 }
 
 @media screen and (max-width: 680px) {
