@@ -154,6 +154,12 @@ div:has(.figcaption) {
   .img1 {
     height: 20% !important;
   }
+
+
+  // **********FIRST BLOCK**********
+.first-block {
+  margin: 0 5% 10% 5%;
+}
 }
 
 @media screen and (max-width: 680px) {
