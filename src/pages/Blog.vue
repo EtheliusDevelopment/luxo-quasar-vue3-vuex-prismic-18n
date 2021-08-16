@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="first-block" style="outline: dashed">
+    <div class="first-block" >
       <div class="sub-section-first">
         <div class="header-component">
           <div class="headcaption">
@@ -56,39 +56,7 @@
     </div>
 
     <div class="second-block">
-      <div class="head-main">
-        <ul class="head-navigation">
-          <li>ALL</li>
 
-          <li>Sea</li>
-
-          <li>Lake</li>
-
-          <li>Montain</li>
-
-          <li>Wine</li>
-
-          <li>Islands</li>
-
-          <li>Food</li>
-
-          <li>Art</li>
-
-          <li>Yatch</li>
-
-          <li>Wedding</li>
-
-          <li>Hotel</li>
-        </ul>
-      </div>
-
-      <q-separator
-        spaced
-        inset
-        vertical
-        color="primary"
-        class="separator-block"
-      />
 
       <div class="body-component">
         <BlogLoop />
@@ -106,6 +74,9 @@ export default {
   components: {
     PreLoader,
     BlogLoop,
+  },
+  methods: {
+
   },
   setup() {
     return {
@@ -193,7 +164,7 @@ hr {
   flex-wrap: wrap;
 }
 // ******SECOND BLOCK**************
-.second-block{
-margin: 0 10% 10% 10%;
+.second-block {
+  margin: 0 10% 30% 10%;
 }
 </style>
