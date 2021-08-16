@@ -19,10 +19,29 @@
       </div>
     </q-img>
   </div>
-  <h3>{{bgImg}}</h3>
-  <code class="text-pink" style="word-wrap: break-word" v-for="(post, index) in dataPost" :key="index">
-    {{ post.data.main_img.url }}
-    </code>
+
+  <div
+    class="text-pink q-ma-xl blog-par"
+    style="word-wrap: break-word"
+    v-for="(post, index) in dataContent"
+    :key="index"
+  >
+
+    <q-img
+      :src="post.post_image.url"
+      :ratio="16/9"
+      spinner-color="primary"
+      spinner-size="82px"
+    />
+    <h3 class="title-blog-par">
+      {{post}}
+    </h3>
+
+    <p class="text-center p-blog-par">
+      {{post.paragraph_body}}
+    </p>
+
+  </div>
 
   <div class="first-block" style="outline: dashed">
     <div class="sub-section-first">
@@ -54,7 +73,8 @@ export default {
       );
       console.log(response);
       this.dataPost = response.results;
-      this.bgImg = response.results[0].data.main_img.url
+      this.bgImg = response.results[0].data.main_img.url;
+      this.dataContent = response.results[0].data.post_body;
     },
   },
   created() {
@@ -64,12 +84,14 @@ export default {
     const route = useRoute();
     const thisRoute = route.params.slug;
     const dataPost = ref();
-    const bgImg = ref()
+    const bgImg = ref();
+    const dataContent = ref();
 
     return {
       thisRoute,
       dataPost,
       bgImg,
+      dataContent,
     };
   },
 };
