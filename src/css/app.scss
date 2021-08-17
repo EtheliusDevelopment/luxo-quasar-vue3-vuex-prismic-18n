@@ -27,6 +27,15 @@
   src: url(./fonts/CommutersSans-Regular.ttf);
 }
 
+
+// ****LAYOUT*******************
+
+.navigation-block > div {
+  flex-wrap: wrap !important;
+
+}
+
+
 // ****C O R R E G G E R E ***********
 .img3-index {
   object-position: 15% 50% !important;

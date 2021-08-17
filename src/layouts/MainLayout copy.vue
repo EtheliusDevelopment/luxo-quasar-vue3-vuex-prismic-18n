@@ -20,7 +20,7 @@
             />
           </router-link>
 
-          <q-tabs>
+          <q-tabs class="justify-around">
             <!-- <q-route-tab to="/" label="Home" /> -->
             <q-route-tab to="/about" label="About Us" />
             <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
@@ -153,7 +153,6 @@
     </q-drawer>
 
     <q-page-container :class="bodyClass">
-      <h1>{{ bodyClass }}</h1>
       <router-view />
     </q-page-container>
 
@@ -222,32 +221,29 @@ import PreLoader from "../components/PreLoader.vue";
 import { useStore, mapMutations } from "vuex";
 
 export default {
+  components: {
+    SocialComponent,
+    PreLoader,
+  },
+
   methods: {
     ...mapMutations({
       addBodyClass: "dynamicClasses/addBodyClass",
     }),
   },
 
-  components: {
-    SocialComponent,
-    PreLoader,
-  },
-
   setup() {
-    const $store = useStore();
     const leftDrawerOpen = ref(false);
-
+    const $store = useStore();
     const bodyClass = computed({
       get: () => $store.state.dynamicClasses.bodyClass,
     });
 
-    onUpdated(()=>$store.commit("dynamicClasses/addBodyClass",""))
-    //
+    onUpdated(() => $store.commit("dynamicClasses/addBodyClass", ""));
 
     return {
       leftDrawerOpen,
       bodyClass,
-
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
@@ -257,6 +253,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.justify-around > .q-tabs__content {
+  justify-content: space-around;
+}
+
 .footer {
   background-color: #4c4571;
   height: 100vh;
