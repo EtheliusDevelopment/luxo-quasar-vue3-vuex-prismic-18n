@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page class="blog-single">
     <PreLoader />
     <BlogSingle />
 
@@ -28,6 +28,9 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
+header{
+  display:none !important;
+}
 
 @media screen and (max-width: 680px) {
 

@@ -63,7 +63,7 @@ const routes = [
         component: () => import("pages/Blog.vue"),
       },
       {
-        path: "blog/:slug",
+        path: "blog/:post",
         name: "Blog Luxo Italia",
         component: () => import("pages/BlogSingle.vue"),
       },

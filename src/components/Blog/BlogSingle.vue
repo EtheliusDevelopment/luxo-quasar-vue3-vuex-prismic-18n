@@ -90,7 +90,7 @@ export default {
   },
   setup() {
     const route = useRoute();
-    const thisRoute = route.params.slug;
+    const thisRoute = route.params.post;
     const dataPost = ref();
     const bgImg = ref();
     const dataContent = ref();
