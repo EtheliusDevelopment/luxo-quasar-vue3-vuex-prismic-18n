@@ -66,7 +66,11 @@
 
           <q-space />
 
-          <img src="~assets/social_test.png" alt="social_test" class="desktop-only"/>
+          <img
+            src="~assets/social_test.png"
+            alt="social_test"
+            class="desktop-only"
+          />
         </q-toolbar>
       </div>
     </q-header>
@@ -220,10 +224,9 @@ export default {
 
 // *********NAVBAR BLOCK *******************
 .navigation-toolbar {
-
 }
 
-.navigation-block{
+.navigation-block {
   margin-left: -1.5% !important;
 }
 
@@ -232,7 +235,7 @@ export default {
 }
 
 .wrapper-toolbar {
-  padding: unset;
+  padding: 0 6%;
 }
 
 // *********DRAWER BLOCK *******************
