@@ -44,24 +44,26 @@
           class="desktop-only"
         />
 
-        <q-toolbar class="justify-start navigation-toolbar desktop-only">
-          <q-tabs class="navigation-block justify-start wrap">
+        <q-toolbar class="navigation-toolbar desktop-only">
+          <q-tabs class="navigation-block  wrap" >
             <!-- <q-route-tab to="/" label="Home" /> -->
-            <q-route-tab class="route-tab" to="/about" label="About Us" />
+            <q-route-tab class="route-tab" to="/about" label="About Us" active-class="route-active"/>
             <q-route-tab
               class="route-tab"
               to="/luxury-travel"
               label="Italy Luxury Travel"
+              active-class="route-active"
             />
-            <q-route-tab class="route-tab" to="/wine-club" label="Wine Club" />
+            <q-route-tab class="route-tab" to="/wine-club" label="Wine Club" active-class="route-active"/>
             <q-route-tab
               class="route-tab"
               to="/testimonials"
               label="Testimonials"
+              active-class="route-active"
             />
-            <q-route-tab class="route-tab" to="/quiz" label="Quiz" />
-            <q-route-tab class="route-tab" to="/blog" label="Blog" />
-            <q-route-tab class="route-tab" to="/contact-us" label="Contact" />
+            <q-route-tab class="route-tab" to="/quiz" label="Quiz" active-class="route-active"/>
+            <q-route-tab class="route-tab" to="/blog" label="Blog" active-class="route-active"/>
+            <q-route-tab class="route-tab" to="/contact-us" label="Contact Us" active-class="route-active"/>
           </q-tabs>
 
           <q-space />
@@ -227,16 +229,27 @@ export default {
 }
 
 .navigation-block {
-  margin-left: -1.5% !important;
+  margin-left: -1% !important;
 }
 
 .route-tab {
-  padding: unset;
+  // padding: unset;
 }
 
 .wrapper-toolbar {
   padding: 0 6%;
 }
+
+
+.route-active{
+  color: $info;
+  border-bottom-width: 20px;
+}
+
+
+
+
+
 
 // *********DRAWER BLOCK *******************
 

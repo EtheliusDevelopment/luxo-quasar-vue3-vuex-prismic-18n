@@ -10,7 +10,7 @@
         :ratio="16 / 9"
         spinner-color="primary"
         spinner-size="82px"
-        height="450px"
+        height="600px"
       >
         <div class="figcaption">
           <h6 class="text-white">TALK WITH US</h6>

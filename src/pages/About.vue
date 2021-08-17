@@ -10,12 +10,12 @@
         :ratio="16 / 9"
         spinner-color="primary"
         spinner-size="82px"
-        height="450px"
+        height="600px"
       >
         <div class="figcaption">
           <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
           <q-separator color="white" inset />
-          <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
+          <h1 class="text-white text-center">Paul &amp; Andrea</h1>
         </div>
       </q-img>
 

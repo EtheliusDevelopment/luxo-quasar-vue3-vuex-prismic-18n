@@ -32,7 +32,19 @@
 
 .navigation-block > div {
   flex-wrap: wrap !important;
+  
+}
 
+ span.block {
+  font-size: 14px !important;
+}
+
+ .q-tab__content {
+  min-width: unset !important;
+}
+
+.q-tab__indicator.absolute-bottom {
+  display: none !important;
 }
 
 
