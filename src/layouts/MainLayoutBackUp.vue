@@ -1,7 +1,7 @@
 <template>
   <PreLoader />
   <q-layout view="lHh lpR lFf">
-    <q-header class="text-white" height-hint="98">
+    <q-header class="text-white" height-hint="98" reveal>
       <q-toolbar class="toolbar">
         <q-btn
           class="mobile-only"
@@ -39,17 +39,7 @@
           />
         </q-toolbar-title>
       </q-toolbar>
-      <!--
-      <q-tabs class="desktop-only">
-        <q-route-tab to="/" label="Home" />
-        <q-route-tab to="/about" label="About Us" />
-        <q-route-tab to="/luxury-travel" label="Italy Luxury Travel" />
-        <q-route-tab to="/wine-club" label="Wine Club" />
-        <q-route-tab to="/testimonials" label="Testimonials" />
-        <q-route-tab to="/quiz" label="Quiz" />
-        <q-route-tab to="/blog" label="Blog" />
-        <q-route-tab to="/contact-us" label="Contact" />
-      </q-tabs> -->
+
     </q-header>
 
     <q-drawer
@@ -350,7 +340,7 @@ export default {
 }
 .q-header {
   background: transparent;
-  position: absolute;
+
 }
 
 .q-tabs__content {

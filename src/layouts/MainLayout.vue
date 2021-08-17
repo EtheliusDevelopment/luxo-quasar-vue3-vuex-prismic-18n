@@ -1,11 +1,12 @@
 <template>
   <PreLoader />
   <q-layout view="lHh lpR lFf">
-    <q-header class="text-white bg-transparent absolute" height-hint="98">
-      <div
-        class="bg-transparent absolute text-white q-px-xl wrapper-toolbar"
+    <q-header class="text-white bg-transparent" height-hint="98" reveal>
+      <!-- <div
+        class="bg-transparent  text-white q-px-xl wrapper-toolbar"
         style="width: 100%"
-      >
+
+      > -->
         <q-toolbar :class="bodyClass">
           <q-btn
 
@@ -101,7 +102,7 @@
             class="desktop-only"
           />
         </q-toolbar>
-      </div>
+      <!-- </div> -->
     </q-header>
 
     <q-drawer

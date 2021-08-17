@@ -32,7 +32,7 @@
 
 .navigation-block > div {
   flex-wrap: wrap !important;
-  
+
 }
 
  span.block {
@@ -51,11 +51,11 @@
 .q-drawer-container +.q-header{
   display:none !important;
 }
-  
 
-// .q-page-container {
-//   &.
-// }
+
+.q-page-container{
+  padding-top: unset !important;
+}
 
 // ****C O R R E G G E R E ***********
 .img3-index {
