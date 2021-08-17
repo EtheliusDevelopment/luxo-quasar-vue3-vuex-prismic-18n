@@ -16,7 +16,6 @@
       </div>
     </q-img>
   </div>
-<router-link to="/blog" target='_blank' active-class="prova"><h3 class="q-mt-xl">click</h3></router-link>
   <div class="flex flex-center pagination-luxury-block">
     <q-pagination
       v-if="max > 1"

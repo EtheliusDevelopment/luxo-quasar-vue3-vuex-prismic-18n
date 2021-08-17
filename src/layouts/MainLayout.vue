@@ -32,7 +32,7 @@
             class="q-px-lg q-py-xs q-mt-md btn-toolbar desktop-only"
             color="white"
             text-color="primary"
-            label="Start a planning"
+            label="Start planning"
           />
         </q-toolbar>
 
