@@ -245,7 +245,11 @@
     </q-page-container>
 
     <q-footer class="absolute bg-white">
-      <div class="title-footer"></div>
+      <div class="title-footer">
+            <h6 class="text-primary subtitle-h6-card-block text-center">
+            FOLLOW US ON INSTAGRAM
+          </h6>
+      </div>
 
       <div class="instagram-feed">
         <a href="https://www.instagram.com/luxoitalia/" target="_blank">
@@ -419,6 +423,13 @@ export default {
   font-family: "Commuters-Sans-Regular";
   font-size: 15px;
   letter-spacing: 1px;
+}
+
+
+.subtitle-h6-card-block {
+  margin-top: 1.5%;
+  font-size: 24px;
+  letter-spacing: 5px;
 }
 
 // *********NAVBAR BLOCK *******************

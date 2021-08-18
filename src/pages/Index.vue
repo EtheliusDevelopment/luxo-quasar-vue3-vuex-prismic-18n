@@ -135,12 +135,6 @@
             the most beautiful and captivating trip of your life?
           </p>
 
-          <!-- <q-btn
-            class="q-px-lg q-py-lg btn-1 body-btn"
-            color="primary"
-            outline
-            label="START PLANNING"
-          /> -->
           <button class="general-btn-2 btn-fifth-block">START PLANNING</button>
         </div>
       </div>
@@ -233,7 +227,34 @@
       />
     </div>
 
+    <div class="card-block flex flex-center">
+      <q-img
+        class="footer-dialog"
+        src="~assets\venice-footer-box.png"
+        width="80%"
+      >
+        <div
+          class="flex flex-center"
+          style="
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            background-color: #48447130;
+          "
+        >
+          <h2 class="text-white h2-card-block text-center">
+            Design your luxury tour.
+          </h2>
 
+          <h6 class="text-white subtitle-h6-card-block text-center">
+            LIMITED ONLY BY YOUR IMAGINATION .
+          </h6>
+
+          <button class="btn-toolbar-new">START THE QUIZ</button>
+        </div>
+      </q-img>
+    </div>
   </q-page>
 </template>
 
@@ -260,8 +281,6 @@ export default {
 @media screen and (max-width: 1580px) {
   .first-block {
     margin-bottom: 5%;
-      grid-template-rows: minmax(10%, 85%)!important;
-
   }
 
   .fourth-block {
@@ -273,7 +292,8 @@ export default {
   }
 
   .fifth-block {
-    margin: 0 3% !important;
+    margin: 0 3% 10% 3% !important;
+    grid-template-rows: minmax(10%, 85%) !important;
   }
 }
 
@@ -715,8 +735,7 @@ h2.text-primary {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: minmax(10%, 75%);
-  margin: 0 7%;
-  margin-bottom: 10%;
+  margin: 0 7% 10% 7%;
 }
 
 .btn-fifth-block {
@@ -779,34 +798,47 @@ p.text-center.title-card-six {
   padding: 0 5vw 5vw 5vw;
 }
 
+// **********CARD BLOCK**********
+
+.card-block {
+  margin-bottom: 10%;
+}
+
+.my-card {
+  position: relative;
+  left: 15vw;
+  width: 50vw;
+  z-index: 9;
+}
+
+.btn-toolbar-new {
+  border: none;
+  padding: 1% 3%;
+  background-color: white;
+  color: #4c4571;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  cursor: pointer;
+}
+
+
+// TYPO**********************
+.h2-card-block {
+  margin-bottom: unset;
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+.subtitle-h6-card-block {
+  margin-top: 1.5%;
+  font-size: 24px;
+  letter-spacing: 5px;
+}
+
+// END TYPO**********************
+
+
 // **********THIRD BLOCK**********
-
-.figcaption {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-}
-
-.figcaption h6.text-white {
-  margin-bottom: 0;
-}
-
-.figcaption h1.text-white.text-center {
-  margin-top: 0;
-  margin-bottom: 7vh;
-}
-
-.header-block hr {
-  height: 2px;
-  width: 20%;
-  margin: 2%;
-}
-
-// **********THIRD BLOCK**********
-
 
 .fade-enter-from {
   opacity: 0;
