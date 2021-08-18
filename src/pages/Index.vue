@@ -347,6 +347,11 @@ export default {
   .text-sub-section-first-3 {
     padding-top: 1% !important;
   }
+
+  .fifth-block {
+  margin: 0 3% !important;
+
+}
 }
 
 @media screen and (max-width: 1100px) {
@@ -787,7 +792,7 @@ h2.text-primary {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: minmax(10%, 85%);
-  margin: 0 3%;
+  margin: 0 7%;
   margin-bottom: 10%;
 }
 
