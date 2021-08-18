@@ -19,7 +19,7 @@
           <router-link to="/" class="wrapper-logo desktop-only">
             <q-img
               class="navbar-logo q-mt-md"
-              width="20vw"
+              width="14vw"
               src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
             />
           </router-link>
@@ -314,11 +314,16 @@ export default {
       },
       navBarBg() {
         const el = document.querySelector("header");
+        const btn = document.querySelector(".btn-toolbar");
+        // const el = document.querySelector("header");
+        // const el = document.querySelector("header");
 
         window.scrollY > 599
-          ? (el.style.backgroundColor = "#d9c5a091")
+          ? (el.style.backgroundColor = "#d9c5a091")(
+              (btn.style.display = "none")
+            )
           : (el.style.backgroundColor = "transparent");
-
+        btn.style.display = "flex";
       },
     };
   },
