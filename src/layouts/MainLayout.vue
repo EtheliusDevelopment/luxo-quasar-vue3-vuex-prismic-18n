@@ -1,7 +1,7 @@
 <template>
   <PreLoader />
   <q-layout view="lHh lpR lFf" @scroll="navBarBg">
-    <q-header class="text-white bg-transaprent" height-hint="98" reveal>
+    <q-header class="text-white bg-transaprent" height-hint="98" >
       <div
         class="bg-transparent text-white q-px-xl wrapper-toolbar"
         style="width: 100%"
