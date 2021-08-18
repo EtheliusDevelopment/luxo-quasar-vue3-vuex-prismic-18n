@@ -18,7 +18,7 @@
 
           <router-link to="/" class="wrapper-logo desktop-only">
             <q-img
-              class="navbar-logo q-mt-md"
+              class="navbar-logo q-mt-md ddd"
               width="14vw"
               src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
             />
