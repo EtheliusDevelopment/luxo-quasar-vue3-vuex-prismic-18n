@@ -60,7 +60,7 @@
           itineraries, all kinds of bookings, and being frustrated.
         </p>
 
-        <button class="general-btn-1 q-mt-xl">LEARN WHAT WE DO</button>
+        <button class="general-btn-1 q-mt-xl" style="padding: 1% 2%;">LEARN WHAT WE DO</button>
       </div>
     </div>
 
@@ -365,9 +365,9 @@ export default {
     background: transparent !important;
   }
 
-  .imgMain-index {
-    height: 85%;
-  }
+  .imgMain {
+    height: 110vh;
+}
 
   .first-block {
     display: grid;
@@ -600,6 +600,7 @@ h2.text-primary {
   align-items: center;
   flex-direction: column;
   z-index: 9;
+  margin-top: 5%;
   background: transparent !important;
 }
 
