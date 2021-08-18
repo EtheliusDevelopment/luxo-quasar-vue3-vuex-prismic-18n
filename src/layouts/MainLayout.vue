@@ -6,102 +6,157 @@
         class="bg-transparent text-white q-px-xl wrapper-toolbar"
         style="width: 100%"
       >
-        <q-toolbar :class="bodyClass">
-          <q-btn
-            class="mobile-only"
-            dense
-            flat
-            round
-            icon="menu"
-            @click="toggleLeftDrawer"
-          />
-
-          <router-link to="/" class="wrapper-logo desktop-only">
-            <q-img
-              class="navbar-logo q-mt-md ddd"
-              width="14vw"
-              src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+        <div class="navbar-no-offset">
+          <q-toolbar :class="bodyClass">
+            <q-btn
+              class="mobile-only"
+              dense
+              flat
+              round
+              icon="menu"
+              @click="toggleLeftDrawer"
             />
-          </router-link>
 
-          <q-space />
-          <!--
-          <q-btn
-            size="1.1vw"
-            class="q-px-lg q-py-xs q-mt-md btn-toolbar desktop-only"
+            <router-link to="/" class="wrapper-logo desktop-only">
+              <q-img
+                class="navbar-logo q-mt-md"
+                width="14vw"
+                src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+              />
+            </router-link>
+
+            <q-space />
+
+            <button class="btn-toolbar-new q-mt-md">START PLANNING</button>
+          </q-toolbar>
+
+          <q-separator
             color="white"
-            text-color="primary"
-            label="Start planning"
-          /> -->
-
-          <button class="btn-toolbar-new q-mt-md">START PLANNING</button>
-        </q-toolbar>
-
-        <q-separator
-          color="white"
-          size="1px"
-          inset
-          spaced
-          style="margin-top: 2%"
-          class="desktop-only"
-          :class="bodyClass"
-        />
-
-        <q-toolbar class="navigation-toolbar desktop-only" :class="bodyClass">
-          <q-tabs class="navigation-block wrap">
-            <!-- <q-route-tab to="/" label="Home" /> -->
-            <q-route-tab
-              class="route-tab"
-              to="/about"
-              label="About Us"
-              active-class="route-active"
-            />
-            <q-route-tab
-              class="route-tab"
-              to="/luxury-travel"
-              label="Italy Luxury Travel"
-              active-class="route-active"
-            />
-            <q-route-tab
-              class="route-tab"
-              to="/wine-club"
-              label="Wine Club"
-              active-class="route-active"
-            />
-            <q-route-tab
-              class="route-tab"
-              to="/testimonials"
-              label="Testimonials"
-              active-class="route-active"
-            />
-            <q-route-tab
-              class="route-tab"
-              to="/quiz"
-              label="Quiz"
-              active-class="route-active"
-            />
-            <q-route-tab
-              class="route-tab"
-              to="/blog"
-              label="Blog"
-              active-class="route-active"
-            />
-            <q-route-tab
-              class="route-tab"
-              to="/contact-us"
-              label="Contact Us"
-              active-class="route-active"
-            />
-          </q-tabs>
-
-          <q-space />
-
-          <img
-            src="~assets/social_test.png"
-            alt="social_test"
+            size="1px"
+            inset
+            spaced
+            style="margin-top: 2%"
             class="desktop-only"
+            :class="bodyClass"
           />
-        </q-toolbar>
+
+          <q-toolbar class="navigation-toolbar desktop-only" :class="bodyClass">
+            <q-tabs class="navigation-block wrap">
+              <!-- <q-route-tab to="/" label="Home" /> -->
+              <q-route-tab
+                class="route-tab"
+                to="/about"
+                label="About Us"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/luxury-travel"
+                label="Italy Luxury Travel"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/wine-club"
+                label="Wine Club"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/testimonials"
+                label="Testimonials"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/quiz"
+                label="Quiz"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/blog"
+                label="Blog"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/contact-us"
+                label="Contact Us"
+                active-class="route-active"
+              />
+            </q-tabs>
+
+            <q-space />
+
+            <img
+              src="~assets/social_test.png"
+              alt="social_test"
+              class="desktop-only"
+            />
+          </q-toolbar>
+        </div>
+
+        <div class="navbar-offset">
+          <q-toolbar
+            class="navigation-toolbar desktop-only justify-around"
+            :class="bodyClass"
+          >
+            <router-link to="/" class="wrapper-logo desktop-only">
+              <q-img
+                class="navbar-logo"
+                width="10vw"
+                src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+              />
+            </router-link>
+
+            <q-tabs class="navigation-block wrap">
+              <!-- <q-route-tab to="/" label="Home" /> -->
+              <q-route-tab
+                class="route-tab"
+                to="/about"
+                label="About Us"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/luxury-travel"
+                label="Italy Luxury Travel"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/wine-club"
+                label="Wine Club"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/testimonials"
+                label="Testimonials"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/quiz"
+                label="Quiz"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/blog"
+                label="Blog"
+                active-class="route-active"
+              />
+              <q-route-tab
+                class="route-tab"
+                to="/contact-us"
+                label="Contact Us"
+                active-class="route-active"
+              />
+            </q-tabs>
+          </q-toolbar>
+        </div>
       </div>
     </q-header>
 
@@ -316,16 +371,23 @@ export default {
       },
       navBarBg() {
         const el = document.querySelector("header");
-        const btn = document.querySelector(".btn-toolbar");
-        // const el = document.querySelector("header");
-        // const el = document.querySelector("header");
+        const btn = document.querySelector(".btn-toolbar-new");
+        const navBarOffset = document.querySelector(".navbar-offset");
+        const navBarNoOffset = document.querySelector(".navbar-no-offset");
 
         window.scrollY > 599
-          ? (el.style.backgroundColor = "#d9c5a091")(
-              (btn.style.display = "none")
+          ? (
+            (el.style.backgroundColor = "#d9c5a091"),
+            (btn.style.display = "none"),
+            (navBarOffset.style.display = "block")
+            (navBarNoOffset.style.display = "none")
             )
-          : (el.style.backgroundColor = "transparent");
-        btn.style.display = "flex";
+          : (
+            (el.style.backgroundColor = "transparent"),
+            (btn.style.display = "flex"),
+            (navBarOffset.style.display = "none")
+            (navBarNoOffset.style.display = "block")
+            );
       },
     };
   },
@@ -396,6 +458,10 @@ header {
   font-family: "Commuters-Sans-Bold";
   font-size: 13px;
   cursor: pointer;
+}
+
+.navbar-offset {
+  display: none;
 }
 
 // *********DRAWER BLOCK *******************
