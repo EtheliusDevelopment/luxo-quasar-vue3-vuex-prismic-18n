@@ -27,19 +27,54 @@
   src: url(./fonts/CommutersSans-Regular.ttf);
 }
 
+// GLOBAL BUTTONS
+
+.general-btn-1 {
+  border: 2px solid;
+  padding: 2% 4%;
+  background-color: transparent;
+  color: #4c4571;
+  border-color: #d9c5a0;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.general-btn-1:hover {
+  background-color: #d9c5a0;
+  color: white;
+}
+
+
+.general-btn-2 {
+  border: 2px solid;
+  padding: 2% 4%;
+  background-color: transparent;
+  color: #4c4571;
+  border-color: white;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.general-btn-2:hover {
+  background-color: white;
+
+}
 
 // ****LAYOUT*******************
 
 .navigation-block > div {
   flex-wrap: wrap !important;
-
 }
 
- span.block {
+span.block {
   font-size: 14px !important;
 }
 
- .q-tab__content {
+.q-tab__content {
   min-width: unset !important;
 }
 
@@ -47,18 +82,20 @@
   display: none !important;
 }
 
-
-.q-drawer-container +.q-header{
-  display:none !important;
+.q-drawer-container + .q-header {
+  display: none !important;
 }
 
-
-.q-page-container{
+.q-page-container {
   padding-top: unset !important;
 }
 
-// *********FOOTER BLOCK *******************
+// BREADCRUMBS REMOVED********************
+.breadcrumbs {
+  display: none;
+}
 
+// *********FOOTER BLOCK *******************
 
 // ****C O R R E G G E R E ***********
 .img3-index {

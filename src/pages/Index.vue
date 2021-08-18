@@ -21,12 +21,17 @@
           <h6 class="text-white title-header-h6">
             TAILORED TO YOUR PASSIONS AND TASTES
           </h6>
-          <q-btn
+
+
+          <!-- <q-btn
             class="q-px-lg q-py-lg"
             color="white"
             outline
             label="LEARN WHAT WE DO"
-          />
+          /> -->
+          <button class="btn-main-index">LEARN WHAT WE DO</button>
+
+
         </div>
       </q-img>
 
@@ -63,12 +68,17 @@
           pre-trip arrangements. You’ll save time on planning complex
           itineraries, all kinds of bookings, and being frustrated.
         </p>
-        <q-btn
+
+
+        <!-- <q-btn
           class="q-px-lg q-py-lg btn-1"
           color="primary"
           outline
           label="LEARN WHAT WE DO"
-        />
+        /> -->
+
+      <button class="general-btn-1">LEARN WHAT WE DO</button>
+
       </div>
     </div>
 
@@ -142,12 +152,16 @@
             hidden luxury gems of Italy with you. Are you ready to experience
             the most beautiful and captivating trip of your life?
           </p>
-          <q-btn
+
+
+          <!-- <q-btn
             class="q-px-lg q-py-lg btn-1 body-btn"
             color="primary"
             outline
             label="START PLANNING"
-          />
+          /> -->
+          <button class="general-btn-2">START PLANNING</button>
+
         </div>
       </div>
     </div>
@@ -226,12 +240,9 @@
           hidden luxury gems of Italy with you. Are you ready to experience the
           most beautiful and captivating trip of your life?
         </p>
-        <q-btn
-          class="q-px-lg q-py-lg btn-1"
-          color="primary"
-          outline
-          label="START THE QUIZ"
-        />
+
+    <button class="general-btn-1">START THE QUIZ</button>
+
       </div>
 
       <q-img
@@ -548,6 +559,22 @@ h2.text-primary {
   margin-top: 1% !important;
 }
 
+.btn-main-index {
+    border: 2px solid;
+    padding: 1% 2%;
+    background-color: transparent;
+    color: white;
+    font-family: 'Commuters-Sans-Bold';
+    font-size: 13px;
+    transition: all .3s ease;
+    cursor: pointer;
+    }
+
+.btn-main-index:hover {
+    background-color: white;
+    color: #4c4571;
+}
+
 .figcaption {
   display: flex;
   justify-content: center;
@@ -635,7 +662,7 @@ h2.text-primary {
   padding: 0 10vw;
 }
 .third-block {
-  padding: 0 5rem;
+
   margin-bottom: 15%;
 }
 

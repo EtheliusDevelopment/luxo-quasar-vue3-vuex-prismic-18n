@@ -25,14 +25,16 @@
           </router-link>
 
           <q-space />
-
+<!--
           <q-btn
             size="1.1vw"
             class="q-px-lg q-py-xs q-mt-md btn-toolbar desktop-only"
             color="white"
             text-color="primary"
             label="Start planning"
-          />
+          /> -->
+
+          <button class="btn-toolbar-new q-mt-md">START PLANNING</button>
         </q-toolbar>
 
         <q-separator
@@ -192,8 +194,7 @@
 
       <div class="instagram-feed">
         <a href="https://www.instagram.com/luxoitalia/" target="_blank">
-          <q-img src="/img/instagram_feed.png" />
-
+          <q-img src="~assets/instagram_feed.png" />
         </a>
       </div>
 
@@ -384,6 +385,16 @@ header {
   background-color: transparent;
 }
 
+.btn-toolbar-new {
+    border: none;
+    padding: 1% 3%;
+    background-color: white;
+    color: #4c4571;
+    font-family: 'Commuters-Sans-Bold';
+    font-size: 13px;
+    cursor: pointer;
+}
+
 // *********DRAWER BLOCK *******************
 
 // *********FOOTER BLOCK *******************
@@ -391,10 +402,15 @@ header {
 .footer-content {
   min-height: 40vh;
   align-items: center;
+  background-color: #fbf8f4;
 }
 
 .instagram-feed {
   border-bottom: 1.3rem solid $info;
+}
+
+.footer-bottom {
+  background-color: #fbf8f4;
 }
 
 // ***FADING***************
@@ -413,6 +429,16 @@ header {
   .h6-footer-bottom {
     transform: scale(0.9);
   }
+
+  // ***NAVBAR********
+  .btn-toolbar-new {
+
+    padding: 1% 3%;
+    background-color: white;
+    color: #4c4571;
+    font-family: 'Commuters-Sans-Bold';
+    font-size: 13px;
+}
 }
 
 @media screen and (max-width: 680px) {
