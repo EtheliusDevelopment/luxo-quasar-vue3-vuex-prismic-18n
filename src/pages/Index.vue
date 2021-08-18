@@ -23,12 +23,7 @@
           </h6>
 
 
-          <!-- <q-btn
-            class="q-px-lg q-py-lg"
-            color="white"
-            outline
-            label="LEARN WHAT WE DO"
-          /> -->
+
           <button class="btn-main-index">LEARN WHAT WE DO</button>
 
 
@@ -70,14 +65,9 @@
         </p>
 
 
-        <!-- <q-btn
-          class="q-px-lg q-py-lg btn-1"
-          color="primary"
-          outline
-          label="LEARN WHAT WE DO"
-        /> -->
 
-      <button class="general-btn-1">LEARN WHAT WE DO</button>
+
+      <button class="general-btn-1 q-mt-xl">LEARN WHAT WE DO</button>
 
       </div>
     </div>
