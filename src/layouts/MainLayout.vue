@@ -198,14 +198,12 @@
 
       <div class="footer-content flex justify-around">
         <div class="img-footer-content">
-          <router-link to="/" class="wrapper-logo desktop-only">
-            <q-img
-              img-class="img-footer-logo"
-              class="footer-logo"
-              width="15vw"
-              src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
-            />
-          </router-link>
+          <q-img
+            img-class="img-footer-logo"
+            class="footer-logo"
+            width="15vw"
+            src="~assets/luxoitalia-logo-2.svg"
+          />
         </div>
         <div class="text-footer-content">
           <h6 class="text-info text-center h6-text-footer-content">
@@ -316,9 +314,11 @@ export default {
       },
       navBarBg() {
         const el = document.querySelector("header");
-        console.log(window.scrollY);
-        window.scrollY > 599 ? el.style.backgroundColor = "red": el.style.backgroundColor = "transparent";
-        // el.style.backgroundColor = "red";
+
+        window.scrollY > 599
+          ? (el.style.backgroundColor = "#d9c5a091")
+          : (el.style.backgroundColor = "transparent");
+
       },
     };
   },
