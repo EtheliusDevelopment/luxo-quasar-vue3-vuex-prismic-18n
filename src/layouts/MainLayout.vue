@@ -1,16 +1,14 @@
 <template>
   <PreLoader />
   <q-layout view="lHh lpR lFf">
-    <q-header class="text-white bg-transparent" height-hint="98" reveal>
-      <!-- <div
-        class="bg-transparent  text-white q-px-xl wrapper-toolbar"
+    <q-header class="text-white bg-transaprent" height-hint="98" reveal>
+      <div
+        class="bg-transparent text-white q-px-xl wrapper-toolbar"
         style="width: 100%"
-
-      > -->
+      >
         <q-toolbar :class="bodyClass">
           <q-btn
-
-            class="mobile-only"
+            class="mobile-only "
             dense
             flat
             round
@@ -102,7 +100,7 @@
             class="desktop-only"
           />
         </q-toolbar>
-      <!-- </div> -->
+      </div>
     </q-header>
 
     <q-drawer
@@ -188,6 +186,86 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer class="absolute bg-white">
+      <div class="title-footer"></div>
+
+      <div class="instagram-feed">
+        <a href="https://www.instagram.com/luxoitalia/" target="_blank">
+          <q-img src="~assets/instagram_feed.png" />
+        </a>
+      </div>
+
+      <div class="footer-content flex justify-around">
+        <div class="img-footer-content">
+          <router-link to="/" class="wrapper-logo desktop-only">
+            <q-img
+              img-class="img-footer-logo"
+              class="footer-logo"
+              width="15vw"
+              src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+            />
+          </router-link>
+        </div>
+        <div class="text-footer-content">
+          <h6 class="text-info text-center h6-text-footer-content">
+            Contact us
+          </h6>
+          <h5 class="text-black text-center h5-text-footer-content">
+            INFO@LUXOITALIA.COM
+          </h5>
+        </div>
+        <div class="social-footer-content flex justify-evenly" style="width: 9%;">
+          <a href="https://www.facebook.com/luxoitalia/" target="_blank">
+            <q-img
+            img-class="img-footer-logo"
+            width="1.8vw"
+            class="footer-logo"
+            src="~assets/fb-foter.svg"
+          />
+          </a>
+
+          <a href="https://www.instagram.com/luxoitalia/" target="_blank">
+             <q-img
+            img-class="img-footer-logo"
+            width="1.8vw"
+            class="footer-logo"
+            src="~assets/ig-foter.svg"
+          />
+
+          </a>
+
+           <a href="https://www.linkedin.com/company/luxo-italia/" target="_blank">
+             <q-img
+            img-class="img-footer-logo"
+            width="1.8vw"
+            class="footer-logo"
+            src="~assets/in-foter.svg"
+          />
+           </a>
+
+
+          <a href="https://twitter.com/luxo_italia" target="_blank">
+             <q-img
+            img-class="img-footer-logo"
+            width="1.8vw"
+            class="footer-logo"
+            src="~assets/tw-foter.svg"
+          />
+          </a>
+
+        </div>
+      </div>
+
+      <q-separator inset color="info" />
+
+      <div class="footer-bottom">
+        <h6 class="h6-footer-bottom text-center text-black">
+          © LUXO ITALIA SNC - P.IVA 08637280960.ALL RIGHTS RESERVED. | PRIVACY
+          POLICY | TERMS AND CONDITION | BROCHURE
+        </h6>
+      </div>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -241,6 +319,27 @@ export default {
 <style lang="scss" scoped>
 // *********TYPO *******************
 
+.h6-footer-bottom {
+  font-family: Commuters-Sans-Regular;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: 0px;
+}
+
+.h6-text-footer-content {
+  margin-bottom: unset;
+  font-family: "Hatton-Medium";
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.h5-text-footer-content {
+  margin-top: unset;
+  font-family: "Commuters-Sans-Regular";
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
 // *********NAVBAR BLOCK *******************
 .navigation-toolbar {
 }
@@ -266,9 +365,24 @@ export default {
   display: none !important;
 }
 
+header{
+  background-color: transparent !important;
+}
+
 // *********DRAWER BLOCK *******************
 
 // *********FOOTER BLOCK *******************
+
+.footer-content {
+  min-height: 40vh;
+  align-items: center;
+}
+
+.instagram-feed {
+  border-bottom: 1.3rem solid $info;
+}
+
+// ***FADING***************
 
 .fade-enter-from {
   opacity: 0;
@@ -278,5 +392,17 @@ export default {
 }
 .fade-enter-active {
   transition: opacity 2s ease;
+}
+
+@media screen and (max-width: 1100px) {
+  .h6-footer-bottom {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .h6-footer-bottom {
+    transform: scale(0.85);
+  }
 }
 </style>

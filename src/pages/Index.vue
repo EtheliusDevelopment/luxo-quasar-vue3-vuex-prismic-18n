@@ -691,6 +691,7 @@ h2.text-primary {
   grid-template-columns: 50% 50%;
   grid-template-rows: minmax(110vh, auto);
   margin: 0 3%;
+  margin-bottom: 10%;
 }
 
 .sub-section-first-4 {
