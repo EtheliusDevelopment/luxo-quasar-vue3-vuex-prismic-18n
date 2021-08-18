@@ -233,14 +233,10 @@
       />
     </div>
 
-
-     <div class="fb-block">
-      <h2 class="text-primary text-center h2-title-review">
-        Facebook Review
-      </h2>
+    <div class="fb-block">
+      <h2 class="text-primary text-center h2-title-review">Facebook Review</h2>
 
       <div class="sub-section-first">
-
         <div class="members-review">
           <p class="text-center body-review">
             I just wanted to share my experience with my friends and family, to
@@ -311,7 +307,6 @@
         </div>
       </div>
     </div>
-
   </q-page>
 </template>
 
@@ -338,6 +333,8 @@ export default {
 @media screen and (max-width: 1580px) {
   .first-block {
     margin-bottom: 5%;
+      grid-template-rows: minmax(10%, 85%);
+
   }
 
   .fourth-block {
@@ -349,9 +346,8 @@ export default {
   }
 
   .fifth-block {
-  margin: 0 3% !important;
-
-}
+    margin: 0 3% !important;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -791,7 +787,7 @@ h2.text-primary {
 .fifth-block {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: minmax(10%, 85%);
+  grid-template-rows: minmax(10%, 75%);
   margin: 0 7%;
   margin-bottom: 10%;
 }
@@ -856,9 +852,7 @@ p.text-center.title-card-six {
   padding: 0 5vw 5vw 5vw;
 }
 
-
 // **********THIRD BLOCK**********
-
 
 .figcaption {
   width: 100%;
