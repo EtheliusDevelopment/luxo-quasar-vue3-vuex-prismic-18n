@@ -375,9 +375,9 @@ export default {
         const navBarOffset = document.querySelector(".navbar-offset");
         const navBarNoOffset = document.querySelector(".navbar-no-offset");
 
-        window.scrollY > 200
+        window.scrollY > 100
           ? (
-            (el.style.backgroundColor = "#d9c5a091"),
+            (el.style.backgroundColor = "#D9C5A0"),
             (btn.style.display = "none"),
             (navBarOffset.style.display = "block")
             (navBarNoOffset.style.display = "none")
