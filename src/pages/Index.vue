@@ -221,7 +221,7 @@
           most beautiful and captivating trip of your life?
         </p>
 
-        <button class="general-btn-1">START THE QUIZ</button>
+        <button class="general-btn-1 btn-start-quiz">START THE QUIZ</button>
       </div>
 
       <q-img
@@ -232,6 +232,86 @@
         spinner-size="82px"
       />
     </div>
+
+
+     <div class="fb-block">
+      <h2 class="text-primary text-center h2-title-review">
+        Facebook Review
+      </h2>
+
+      <div class="sub-section-first">
+
+        <div class="members-review">
+          <p class="text-center body-review">
+            I just wanted to share my experience with my friends and family, to
+            show them what is it - to be an Italian. And then I found the Luxo
+            wine club.
+          </p>
+
+          <p class="text-center body-review">
+            The wine selection, gifts, the community itself - is a literal
+            experience of Italy I wanted to share with my family!
+          </p>
+
+          <p class="payoff text-center text-primary">Mario Rossi</p>
+
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
+        </div>
+
+        <q-separator
+          class="separator-sixth-block"
+          spaced
+          inset
+          vertical
+          dark
+          color="info"
+        />
+
+        <div class="members-review">
+          <p class="text-center body-review">
+            I just wanted to share my experience with my friends and family, to
+            show them what is it - to be an Italian. And then I found the Luxo
+            wine club.
+          </p>
+
+          <p class="text-center body-review">
+            The wine selection, gifts, the community itself - is a literal
+            experience of Italy I wanted to share with my family!
+          </p>
+
+          <p class="payoff text-center text-primary">Mario Rossi</p>
+
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
+        </div>
+
+        <q-separator
+          class="separator-sixth-block"
+          spaced
+          inset
+          vertical
+          dark
+          color="info"
+        />
+
+        <div class="members-review">
+          <p class="text-center body-review">
+            I just wanted to share my experience with my friends and family, to
+            show them what is it - to be an Italian. And then I found the Luxo
+            wine club.
+          </p>
+
+          <p class="text-center body-review">
+            The wine selection, gifts, the community itself - is a literal
+            experience of Italy I wanted to share with my family!
+          </p>
+
+          <p class="payoff text-center text-primary">Mario Rossi</p>
+
+          <p class="payoff-echo text-center text-info">Maureen, Florida</p>
+        </div>
+      </div>
+    </div>
+
   </q-page>
 </template>
 
@@ -261,10 +341,12 @@ export default {
   }
 
   .fourth-block {
-
     grid-template-rows: 10vh 80vh 20vh !important;
+  }
 
-}
+  .text-sub-section-first-3 {
+    padding-top: 1% !important;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -449,7 +531,7 @@ export default {
   .sub-section-first-4 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     grid-column: 1;
   }
@@ -663,10 +745,9 @@ h2.text-primary {
 }
 
 .title-h2 {
-  padding: 0 45% 0 0 !important;
   line-height: 65px;
   margin-bottom: 5% !important;
-  padding: 0 47% 0 0 !important;
+  padding: 0 40% 0 0 !important;
   letter-spacing: 1px !important;
 }
 
@@ -697,7 +778,7 @@ h2.text-primary {
 }
 .text-sub-section-first-3 {
   grid-column: 2;
-  padding-top: 1%;
+  padding-top: 6%;
 }
 
 // **********FIFTH BLOCK**********
@@ -705,23 +786,29 @@ h2.text-primary {
 .fifth-block {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: minmax(110vh, auto);
+  grid-template-rows: minmax(10%, 85%);
   margin: 0 3%;
   margin-bottom: 10%;
 }
 
-.btn-fifth-block{
+.btn-fifth-block {
   margin-left: 5%;
   margin-top: 2%;
-
 }
 
 .sub-section-first-4 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   grid-column: 1;
+  margin-left: 4%;
+}
+
+.btn-start-quiz {
+  align-self: flex-start;
+  margin-left: 5%;
+  margin-top: 2%;
 }
 
 .img5 {
@@ -730,6 +817,7 @@ h2.text-primary {
 
 h6.text-primary.subtitle-h6 {
   padding: 0 30% 0 0 !important;
+  margin-bottom: unset;
 }
 
 // **********VIDEO  BLOCK**********
@@ -740,7 +828,7 @@ h6.text-primary.subtitle-h6 {
 // **********SIXTH BLOCK**********
 
 .sixth-block {
- margin: 10% 3%;
+  margin: 10% 3%;
 }
 .sub-section-first-sixth-block {
   display: flex;
@@ -761,6 +849,67 @@ p.text-center.title-card-six {
 // **********SEVENTH BLOCK**********
 .seventh-block {
   padding: 0 5vw 5vw 5vw;
+}
+
+
+// **********THIRD BLOCK**********
+
+
+.figcaption {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.figcaption h6.text-white {
+  margin-bottom: 0;
+}
+
+.figcaption h1.text-white.text-center {
+  margin-top: 0;
+  margin-bottom: 7vh;
+}
+
+.header-block hr {
+  height: 2px;
+  width: 20%;
+  margin: 2%;
+}
+
+// **********THIRD BLOCK**********
+
+.fb-block {
+  border: 2px solid $info;
+  margin: 0 6% 20% 6%;
+}
+.fb-block .sub-section-first {
+  display: flex;
+}
+
+.payoff {
+  font-family: "Hatton-Medium";
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 10%;
+}
+
+.payoff-echo {
+  font-size: 17px;
+  margin-bottom: 20%;
+}
+
+.body-review {
+  font-family: "CommutersSans-Regular";
+  font-size: 17px;
+  padding: 0 15%;
+}
+
+.h2-title-review {
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .fade-enter-from {
