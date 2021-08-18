@@ -255,10 +255,10 @@ export default {
 <style lang="scss" scoped>
 // **********HEADER BLOCK***********
 
-@media screen and (min-width: 1580px) {
+@media screen and (max-width: 1580px) {
 
-  .first-block {
-    margin-bottom: 5%;
+.first-block {
+ margin-bottom: 5%;
   }
 
 }
@@ -575,7 +575,7 @@ h2.text-primary {
   display: grid;
   grid-template-columns: 40vw 60vw;
   grid-template-rows: 80vh auto;
-  margin-bottom: 10%;
+
 
   /* grid-template-columns: auto; */
 }
