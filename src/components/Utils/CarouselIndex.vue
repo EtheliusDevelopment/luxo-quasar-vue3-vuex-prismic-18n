@@ -8,7 +8,7 @@
             img-class="img1-carousel"
             src="~assets/venice-footer-box.png"
             :ratio="16 / 9"
-            height="450px"
+            height="600px"
             no-spinner
           >
             <div class="figcaption">

@@ -84,8 +84,8 @@
 
     <div class="second-block-add">
       <div class="sub-section-first-2">
-        <h2 class="text-primary text-center">Need some inspiration?</h2>
-        <p class="text-center p-first-block">
+        <h2 class="text-primary">Need some inspiration?</h2>
+        <p class="p-first-block">
           At Luxo Italia, we pride ourselves in offering our clients luxury
           private tours of Italy that are exclusive, authentic and that treat
           each guest as an individual. Our founders, Andrea and Paul, are
@@ -256,11 +256,16 @@ export default {
 // **********HEADER BLOCK***********
 
 @media screen and (max-width: 1580px) {
-
-.first-block {
- margin-bottom: 5%;
+  .first-block {
+    margin-bottom: 5%;
   }
 
+  .fourth-block {
+    display: grid;
+    grid-template-columns: 34% 10% 56%;
+    grid-template-rows: 10vh 80vh 20vh;
+    margin-bottom: 10%;
+}
 }
 
 @media screen and (max-width: 1100px) {
@@ -276,7 +281,6 @@ export default {
   }
 
   h2.text-primary {
-    padding: 0 15% !important;
   }
   .p-first-block {
     padding: 0 10% !important;
@@ -372,7 +376,6 @@ export default {
     grid-row: 2;
   }
   h2.text-primary {
-    padding: 0 5% !important;
   }
   .p-first-block {
     padding: 0 5% !important;
@@ -533,12 +536,12 @@ hr {
 }
 
 h2.text-primary {
-  padding: 0 25%;
 }
 
 .p-first-block {
-  padding: 0 17%;
+  padding: 0 17% 0 11%;
 }
+
 .title-header-h6 {
   font-size: 18px !important;
   line-height: 23px !important;
@@ -575,7 +578,6 @@ h2.text-primary {
   display: grid;
   grid-template-columns: 40vw 60vw;
   grid-template-rows: 80vh auto;
-
 
   /* grid-template-columns: auto; */
 }
@@ -657,7 +659,7 @@ h2.text-primary {
 .fourth-block {
   display: grid;
   grid-template-columns: 34% 10% 56%;
-  grid-template-rows: 10vh 80vh 20vh;
+  grid-template-rows: 10vh 80vh 10vh;
   margin-bottom: 10%;
 }
 
