@@ -22,11 +22,7 @@
             TAILORED TO YOUR PASSIONS AND TASTES
           </h6>
 
-
-
           <button class="btn-main-index">LEARN WHAT WE DO</button>
-
-
         </div>
       </q-img>
 
@@ -64,11 +60,7 @@
           itineraries, all kinds of bookings, and being frustrated.
         </p>
 
-
-
-
-      <button class="general-btn-1 q-mt-xl">LEARN WHAT WE DO</button>
-
+        <button class="general-btn-1 q-mt-xl">LEARN WHAT WE DO</button>
       </div>
     </div>
 
@@ -143,7 +135,6 @@
             the most beautiful and captivating trip of your life?
           </p>
 
-
           <!-- <q-btn
             class="q-px-lg q-py-lg btn-1 body-btn"
             color="primary"
@@ -151,7 +142,6 @@
             label="START PLANNING"
           /> -->
           <button class="general-btn-2">START PLANNING</button>
-
         </div>
       </div>
     </div>
@@ -194,9 +184,9 @@
 
     <div class="video-block">
       <q-video
-      :ratio="16/9"
-      src="https://player.vimeo.com/video/464780853?dnt=1&app_id=122963"
-    />
+        :ratio="16 / 9"
+        src="https://player.vimeo.com/video/464780853?dnt=1&app_id=122963"
+      />
     </div>
 
     <div class="seventh-block">
@@ -231,8 +221,7 @@
           most beautiful and captivating trip of your life?
         </p>
 
-    <button class="general-btn-1">START THE QUIZ</button>
-
+        <button class="general-btn-1">START THE QUIZ</button>
       </div>
 
       <q-img
@@ -265,6 +254,14 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK***********
+
+@media screen and (min-width: 1580px) {
+
+  .first-block {
+    margin-bottom: 5%;
+  }
+
+}
 
 @media screen and (max-width: 1100px) {
   .h1-header-block {
@@ -550,19 +547,19 @@ h2.text-primary {
 }
 
 .btn-main-index {
-    border: 2px solid;
-    padding: 1% 2%;
-    background-color: transparent;
-    color: white;
-    font-family: 'Commuters-Sans-Bold';
-    font-size: 13px;
-    transition: all .3s ease;
-    cursor: pointer;
-    }
+  border: 2px solid;
+  padding: 1% 2%;
+  background-color: transparent;
+  color: white;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
 .btn-main-index:hover {
-    background-color: white;
-    color: #4c4571;
+  background-color: white;
+  color: #4c4571;
 }
 
 .figcaption {
@@ -652,7 +649,6 @@ h2.text-primary {
   padding: 0 10vw;
 }
 .third-block {
-
   margin-bottom: 15%;
 }
 
@@ -724,12 +720,12 @@ h2.text-primary {
 }
 
 h6.text-primary.subtitle-h6 {
-    padding: 0 30% 0 0 !important;
+  padding: 0 30% 0 0 !important;
 }
 
 // **********VIDEO  BLOCK**********
 
-.video-block{
+.video-block {
   margin-bottom: 10%;
 }
 // **********SIXTH BLOCK**********
