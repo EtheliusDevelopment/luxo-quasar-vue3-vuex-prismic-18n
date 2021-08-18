@@ -141,7 +141,7 @@
             outline
             label="START PLANNING"
           /> -->
-          <button class="general-btn-2">START PLANNING</button>
+          <button class="general-btn-2 btn-fifth-block">START PLANNING</button>
         </div>
       </div>
     </div>
@@ -709,6 +709,12 @@ h2.text-primary {
   margin-bottom: 10%;
 }
 
+.btn-fifth-block{
+  margin-left: 5%;
+  margin-top: 2%;
+
+}
+
 .sub-section-first-4 {
   display: flex;
   flex-direction: column;
@@ -733,8 +739,7 @@ h6.text-primary.subtitle-h6 {
 // **********SIXTH BLOCK**********
 
 .sixth-block {
-  margin: 0 3%;
-  margin-bottom: 10%;
+ margin: 10% 3%;
 }
 .sub-section-first-sixth-block {
   display: flex;
