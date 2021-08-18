@@ -608,7 +608,7 @@ h2.text-primary {
 .second-block {
   display: grid;
   grid-template-columns: 2fr 0.3fr 1fr;
-  grid-template-rows: 25vh 90vh 25vh;
+  grid-template-rows: 25vh 50vh 25vh;
 }
 
 // *********SECOND BLOCK ADD********
