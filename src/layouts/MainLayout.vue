@@ -25,7 +25,7 @@
           </router-link>
 
           <q-space />
-<!--
+          <!--
           <q-btn
             size="1.1vw"
             class="q-px-lg q-py-xs q-mt-md btn-toolbar desktop-only"
@@ -340,6 +340,9 @@ export default {
   font-size: 11px;
   line-height: 12px;
   letter-spacing: 0px;
+  margin: 0;
+  line-height: 12px;
+  padding: 2% 0%;
 }
 
 .h6-text-footer-content {
@@ -386,13 +389,13 @@ header {
 }
 
 .btn-toolbar-new {
-    border: none;
-    padding: 1% 3%;
-    background-color: white;
-    color: #4c4571;
-    font-family: 'Commuters-Sans-Bold';
-    font-size: 13px;
-    cursor: pointer;
+  border: none;
+  padding: 1% 3%;
+  background-color: white;
+  color: #4c4571;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  cursor: pointer;
 }
 
 // *********DRAWER BLOCK *******************
@@ -432,13 +435,12 @@ header {
 
   // ***NAVBAR********
   .btn-toolbar-new {
-
     padding: 1% 3%;
     background-color: white;
     color: #4c4571;
-    font-family: 'Commuters-Sans-Bold';
+    font-family: "Commuters-Sans-Bold";
     font-size: 13px;
-}
+  }
 }
 
 @media screen and (max-width: 680px) {
