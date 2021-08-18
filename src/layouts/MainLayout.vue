@@ -1,7 +1,7 @@
 <template>
   <PreLoader />
   <q-layout view="lHh lpR lFf" @scroll="navBarBg">
-    <q-header class="text-white bg-transaprent" height-hint="98" >
+    <q-header class="text-white bg-transaprent" height-hint="98">
       <div
         class="bg-transparent text-white q-px-xl wrapper-toolbar"
         style="width: 100%"
@@ -42,7 +42,6 @@
 
           <q-toolbar class="navigation-toolbar desktop-only" :class="bodyClass">
             <q-tabs class="navigation-block wrap">
-              <!-- <q-route-tab to="/" label="Home" /> -->
               <q-route-tab
                 class="route-tab"
                 to="/about"
@@ -246,9 +245,9 @@
 
     <q-footer class="absolute bg-white">
       <div class="title-footer">
-            <h6 class="text-primary subtitle-h6-card-block text-center">
-            FOLLOW US ON INSTAGRAM
-          </h6>
+        <h6 class="text-primary subtitle-h6-card-block text-center">
+          FOLLOW US ON INSTAGRAM
+        </h6>
       </div>
 
       <div class="instagram-feed">
@@ -380,18 +379,16 @@ export default {
         const navBarNoOffset = document.querySelector(".navbar-no-offset");
 
         window.scrollY > 100
-          ? (
-            (el.style.backgroundColor = "#D9C5A0"),
+          ? ((el.style.backgroundColor = "#D9C5A0"),
             (btn.style.display = "none"),
-            (navBarOffset.style.display = "block")
-            (navBarNoOffset.style.display = "none")
-            )
-          : (
-            (el.style.backgroundColor = "transparent"),
+            (navBarOffset.style.display = "block")(
+              (navBarNoOffset.style.display = "none")
+            ))
+          : ((el.style.backgroundColor = "transparent"),
             (btn.style.display = "flex"),
-            (navBarOffset.style.display = "none")
-            (navBarNoOffset.style.display = "block")
-            );
+            (navBarOffset.style.display = "none")(
+              (navBarNoOffset.style.display = "block")
+            ));
       },
     };
   },
@@ -402,7 +399,7 @@ export default {
 // *********TYPO *******************
 
 .h6-footer-bottom {
-  font-family: Commuters-Sans-Regular;
+  font-family: "CommutersSans-Regular";
   font-size: 11px;
   line-height: 12px;
   letter-spacing: 0px;
@@ -420,11 +417,10 @@ export default {
 
 .h5-text-footer-content {
   margin-top: unset;
-  font-family: "Commuters-Sans-Regular";
+  font-family: "CommutersSans-Regular";
   font-size: 15px;
   letter-spacing: 1px;
 }
-
 
 .subtitle-h6-card-block {
   margin-top: 1.5%;
