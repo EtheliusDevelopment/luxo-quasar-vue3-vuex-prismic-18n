@@ -261,10 +261,9 @@ export default {
   }
 
   .fourth-block {
-    display: grid;
-    grid-template-columns: 34% 10% 56%;
-    grid-template-rows: 10vh 80vh 20vh;
-    margin-bottom: 10%;
+
+    grid-template-rows: 10vh 80vh 20vh !important;
+
 }
 }
 
@@ -673,6 +672,7 @@ h2.text-primary {
 
 .body-p {
   margin-left: 5%;
+  padding-right: 10%;
 }
 
 .body-btn {
