@@ -192,7 +192,7 @@
 
       <div class="instagram-feed">
         <a href="https://www.instagram.com/luxoitalia/" target="_blank">
-          <q-img src="/italy_pics/instagram_feed.png" />
+          <q-img src="~assets/instagram_feed.png" />
 
         </a>
       </div>
