@@ -697,6 +697,7 @@ h2.text-primary {
 }
 .text-sub-section-first-3 {
   grid-column: 2;
+  padding-top: 1%;
 }
 
 // **********FIFTH BLOCK**********
