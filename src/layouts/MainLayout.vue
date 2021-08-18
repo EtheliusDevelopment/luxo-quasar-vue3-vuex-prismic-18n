@@ -1,6 +1,6 @@
 <template>
   <PreLoader />
-  <q-layout view="lHh lpR lFf">
+  <q-layout view="lHh lpR lFf" @scroll="navBarBg">
     <q-header class="text-white bg-transaprent" height-hint="98" reveal>
       <div
         class="bg-transparent text-white q-px-xl wrapper-toolbar"
@@ -8,7 +8,7 @@
       >
         <q-toolbar :class="bodyClass">
           <q-btn
-            class="mobile-only "
+            class="mobile-only"
             dense
             flat
             round
@@ -215,45 +215,48 @@
             INFO@LUXOITALIA.COM
           </h5>
         </div>
-        <div class="social-footer-content flex justify-evenly" style="width: 9%;">
+        <div
+          class="social-footer-content flex justify-evenly"
+          style="width: 9%"
+        >
           <a href="https://www.facebook.com/luxoitalia/" target="_blank">
             <q-img
-            img-class="img-footer-logo"
-            width="1.8vw"
-            class="footer-logo"
-            src="~assets/fb-foter.svg"
-          />
+              img-class="img-footer-logo"
+              width="1.8vw"
+              class="footer-logo"
+              src="~assets/fb-foter.svg"
+            />
           </a>
 
           <a href="https://www.instagram.com/luxoitalia/" target="_blank">
-             <q-img
-            img-class="img-footer-logo"
-            width="1.8vw"
-            class="footer-logo"
-            src="~assets/ig-foter.svg"
-          />
-
+            <q-img
+              img-class="img-footer-logo"
+              width="1.8vw"
+              class="footer-logo"
+              src="~assets/ig-foter.svg"
+            />
           </a>
 
-           <a href="https://www.linkedin.com/company/luxo-italia/" target="_blank">
-             <q-img
-            img-class="img-footer-logo"
-            width="1.8vw"
-            class="footer-logo"
-            src="~assets/in-foter.svg"
-          />
-           </a>
-
+          <a
+            href="https://www.linkedin.com/company/luxo-italia/"
+            target="_blank"
+          >
+            <q-img
+              img-class="img-footer-logo"
+              width="1.8vw"
+              class="footer-logo"
+              src="~assets/in-foter.svg"
+            />
+          </a>
 
           <a href="https://twitter.com/luxo_italia" target="_blank">
-             <q-img
-            img-class="img-footer-logo"
-            width="1.8vw"
-            class="footer-logo"
-            src="~assets/tw-foter.svg"
-          />
+            <q-img
+              img-class="img-footer-logo"
+              width="1.8vw"
+              class="footer-logo"
+              src="~assets/tw-foter.svg"
+            />
           </a>
-
         </div>
       </div>
 
@@ -311,6 +314,12 @@ export default {
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
+      navBarBg() {
+        const el = document.querySelector("header");
+        console.log(window.scrollY);
+        window.scrollY > 599 ? el.style.backgroundColor = "red": el.style.backgroundColor = "transparent";
+        // el.style.backgroundColor = "red";
+      },
     };
   },
 };
@@ -365,8 +374,8 @@ export default {
   display: none !important;
 }
 
-header{
-  background-color: transparent !important;
+header {
+  background-color: transparent;
 }
 
 // *********DRAWER BLOCK *******************

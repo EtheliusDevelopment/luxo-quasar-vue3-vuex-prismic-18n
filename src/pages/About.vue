@@ -1,5 +1,5 @@
 <template>
-  <q-page class="overflow-hidden">
+  <q-page>
     <PreLoader />
 
     <div class="header-block">
