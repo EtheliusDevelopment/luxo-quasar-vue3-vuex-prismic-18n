@@ -16,7 +16,6 @@
           <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-
         </div>
       </q-img>
 
@@ -46,7 +45,7 @@
             width="3vw"
           />
 
-          <h4 class="title-component">WHEN TO GO</h4>
+          <h4 class="title-component text-primary">WHEN TO GO</h4>
           <p class="p-component">
             {{ responseObj.from }} - {{ responseObj.to }}
           </p>
@@ -59,11 +58,11 @@
             :ratio="16 / 9"
             spinner-color="primary"
             spinner-size="82px"
-            width="3vw"
+            width="3.2vw"
             height="6vh"
           />
 
-          <h4 class="title-component">PRICE</h4>
+          <h4 class="title-component text-primary">PRICE</h4>
           <p class="p-component">{{ responseObj.price }} € PP</p>
         </div>
 
@@ -78,18 +77,15 @@
             width="3vw"
           />
 
-          <h4 class="title-component">IDEAL LENGTH</h4>
+          <h4 class="title-component text-primary">IDEAL LENGTH</h4>
           <p class="p-component">{{ responseObj.ideal_length }}</p>
         </div>
 
         <div class="fourth-component component-box">
-          <q-btn
-            class="btn-component-luxury"
-            color="info"
-            padding="2.4vw"
-            outline
-            label="DOWNLOAD JOURNEY DETAIL"
-          />
+
+          <button class="general-btn-1" style="padding: 4% 4%">
+          DOWNLOAD JOURNEY DETAIL
+        </button>
         </div>
       </div>
     </div>
@@ -190,8 +186,7 @@ export default {
     const endPoint =
       "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRkXHRIAAC4A4F15";
 
-    api.get(`${endPoint}&q=[[at(my.pacchetti.uid, "${thisRoute}")]]`)
-    .then(
+    api.get(`${endPoint}&q=[[at(my.pacchetti.uid, "${thisRoute}")]]`).then(
       (response) => {
         let dataRes = response.data.results;
         dataResponse.value = dataRes;
@@ -229,14 +224,11 @@ export default {
 }
 
 .p-component {
-  font-family: "Commuters-Sans-Regular";
-  font-size: 17px;
+  font-family: "CommutersSans-Regular";
+  font-size: 14px;
   opacity: 0.6;
   margin: unset;
 }
-
-
-
 
 .span-header-component {
   color: $info;
@@ -269,7 +261,6 @@ export default {
 .header-block {
   margin-bottom: 10%;
 }
-
 
 .figcaption {
   width: 100%;
