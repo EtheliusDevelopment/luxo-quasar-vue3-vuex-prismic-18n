@@ -33,8 +33,8 @@
       v-model="stay_guest"
       :options="options_stay"
       hint="Number of Days"
-      transition-show="flip-up"
-      transition-hide="flip-down"
+      transition-show="jump-up"
+      transition-hide="jump-up"
       use-chips
     />
     <q-select
@@ -42,8 +42,8 @@
       v-model="travel_with_guest"
       :options="options_travel_with"
       hint="Who Are You Traveling With?"
-      transition-show="flip-up"
-      transition-hide="flip-down"
+      transition-show="jump-up"
+      transition-hide="jump-up"
       use-chips
     />
     <q-select
@@ -51,8 +51,8 @@
       v-model="budget_guest"
       :options="options_budget"
       hint="Budget Per Person Per Day"
-      transition-show="flip-up"
-      transition-hide="flip-down"
+      transition-show="jump-up"
+      transition-hide="jump-up"
       use-chips
     />
 
