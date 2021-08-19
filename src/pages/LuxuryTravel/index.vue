@@ -16,13 +16,6 @@
           <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-          <q-btn
-            class="q-px-lg q-py-xs"
-            size="1.1vw"
-            color="white"
-            outline
-            label="LEARN WHAT WE DO"
-          />
         </div>
       </q-img>
 
@@ -75,7 +68,6 @@
     <div class="second-block">
       <LuxuryTravel />
     </div>
-
   </q-page>
 </template>
 
@@ -108,7 +100,8 @@ export default defineComponent({
 });
 </script>
 
-// <style lang="scss" scoped>
+//
+<style lang="scss" scoped>
 // //************TYPO*****
 
 // //************HEADER BLOCK*****
@@ -128,15 +121,11 @@ export default defineComponent({
 
 //   //************HEADER BLOCK*****
 // }
-// </style>
+//
+</style>
 
 <style lang="scss" scoped>
-
-
 // **********TYPO**********
-
-
-
 
 //**************HEADER BLOCK*****
 .header-block .figcaption {
@@ -178,14 +167,12 @@ hr {
 }
 
 // **********SECOND BLOCK**********
-.second-block{
-
+.second-block {
 }
-
 
 @media screen and (max-width: 1100px) {
   // **********HEADER BLOCK**********
-    .img1 {
+  .img1 {
     height: 20% !important;
   }
   // **********FIRST BLOCK**********
@@ -199,7 +186,6 @@ hr {
 }
 
 @media screen and (max-width: 680px) {
-
   // **********HEADER BLOCK**********
 
   .img1 {

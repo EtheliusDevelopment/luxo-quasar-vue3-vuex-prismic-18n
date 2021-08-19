@@ -16,13 +16,6 @@
           <h6 class="text-white">AMAZING STORIES</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">Blog</h1>
-          <q-btn
-            class="q-px-lg q-py-xs"
-            size="1.1vw"
-            color="white"
-            outline
-            label="LEARN WHAT WE DO"
-          />
         </div>
       </q-img>
 
@@ -39,7 +32,7 @@
       </div>
     </div>
 
-    <div class="first-block" >
+    <div class="first-block">
       <div class="sub-section-first">
         <div class="header-component">
           <div class="headcaption">
@@ -56,8 +49,6 @@
     </div>
 
     <div class="second-block">
-
-
       <div class="body-component">
         <BlogLoop />
       </div>
@@ -75,9 +66,7 @@ export default {
     PreLoader,
     BlogLoop,
   },
-  methods: {
-
-  },
+  methods: {},
   setup() {
     return {
       slide: ref(1),

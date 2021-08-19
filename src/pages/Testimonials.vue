@@ -16,13 +16,7 @@
           <h6 class="text-white">THAT’S WHY WE LOVE</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">Luxury Travel For Our Clients</h1>
-          <q-btn
-            class="q-px-lg q-py-xs"
-            size="1.1vw"
-            color="white"
-            outline
-            label="LEARN WHAT WE DO"
-          />
+
         </div>
       </q-img>
 

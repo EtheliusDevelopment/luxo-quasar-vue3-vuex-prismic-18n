@@ -17,14 +17,7 @@
             <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
             <q-separator color="white" inset />
             <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-            <q-btn
-              class="q-px-lg q-py-xs btn-1"
-              size="1.1vw"
-              color="white"
-              outline
-              label="LEARN WHAT WE DO"
-            />
-          </div>
+                     </div>
         </q-img>
 
         <div class="breadcrumbs">
@@ -231,7 +224,7 @@ export default {
       stars: ref(3),
 
       startQuiz() {
-        $store.commit("dynamicClasses/addBodyClass", "quiz");
+        $store.commit("dynamicClasses/addFooterClass", "quiz");
         starter.value = false;
         window.scroll({
           top: 750,

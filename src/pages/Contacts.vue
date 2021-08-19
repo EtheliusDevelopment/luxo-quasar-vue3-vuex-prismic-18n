@@ -18,14 +18,7 @@
           <h1 class="text-white text-center">
             The Perfect Italian Journey For You.
           </h1>
-          <q-btn
-            class="q-px-lg q-py-xs"
-            size="1.1vw"
-            color="white"
-            outline
-            label="LEARN WHAT WE DO"
-          />
-        </div>
+         </div>
       </q-img>
 
       <div class="breadcrumbs">
