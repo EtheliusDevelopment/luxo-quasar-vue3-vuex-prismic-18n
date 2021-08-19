@@ -41,17 +41,20 @@
           at your local store, delivered directly to your doorstep.
         </p>
 
-            <button class="general-btn-1" style="padding: 1% 2%;">JOIN THE WINE CLUB NOW !</button>
+        <button class="general-btn-1" style="padding: 1% 2%">
+          JOIN THE WINE CLUB NOW !
+        </button>
       </div>
     </div>
 
     <div class="second-block">
-      <q-img
+      <!-- <q-img
         class="img2-wine-second-block"
         img-class="img2-wine"
         src="~assets/vineyard.jpg"
         :ratio="16 / 9"
-      />
+      /> -->
+      <q-parallax src="~assets/vineyard.jpg" :speed="0.5" style="max-width:100%"> </q-parallax>
     </div>
 
     <div class="third-block">
@@ -247,7 +250,6 @@
         src="~assets/index_luxo_small_village.png"
         spinner-color="primary"
         spinner-size="82px"
-
       />
     </div>
 
@@ -366,7 +368,6 @@ export default defineComponent({
   }
 }
 
-
 .figcaption {
   width: 100%;
   height: 100%;
@@ -375,10 +376,7 @@ export default defineComponent({
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
-
 }
-
-
 
 .figcaption h6.text-white {
   margin-bottom: 0;
@@ -509,9 +507,8 @@ export default defineComponent({
   align-self: center !important;
 }
 
-.step-one .card-step{
-
-    height: 110%;
+.step-one .card-step {
+  height: 110%;
 }
 
 // **********FOURTH BLOCK**********
@@ -742,7 +739,7 @@ h6.text-primary.subtitle-h6 {
   }
 
   // **********FIFTH BLOCK**********
-  .fifth-block{
+  .fifth-block {
     grid-template-columns: auto;
     grid-template-rows: 25% auto;
   }
@@ -751,7 +748,6 @@ h6.text-primary.subtitle-h6 {
     grid-column: 1;
     grid-row: 2;
   }
-
 
   // **********SIXTH BLOCK**********
   .sixth-block .sub-section-first {
