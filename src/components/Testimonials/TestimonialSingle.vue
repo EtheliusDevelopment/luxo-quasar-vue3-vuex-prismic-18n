@@ -246,6 +246,7 @@ h6.itinerary {
 
 // **********HEADER BLOCK**********
 
+
 .figcaption {
   width: 100%;
   height: 100%;
@@ -253,6 +254,7 @@ h6.itinerary {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 6%;
 }
 
 .figcaption h6.text-white {
