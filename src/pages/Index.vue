@@ -296,6 +296,12 @@ export default {
     margin: 0 3% 10% 3% !important;
     grid-template-rows: minmax(10%, 85%) !important;
   }
+
+
+  .first-block {
+
+  grid-template-rows: 80vh auto !important;
+}
 }
 
 @media screen and (max-width: 1100px) {
@@ -608,7 +614,7 @@ h2.text-primary {
 .first-block {
   display: grid;
   grid-template-columns: 40vw 60vw;
-  grid-template-rows: 80vh auto;
+  grid-template-rows: 65vh auto;
 
   /* grid-template-columns: auto; */
 }

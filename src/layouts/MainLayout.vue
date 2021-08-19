@@ -192,6 +192,8 @@
                 active-class="route-active-new"
               />
             </q-tabs>
+
+            <button class="btn-toolbar-new">START PLANNING</button>
           </q-toolbar>
         </div>
       </div>
@@ -281,7 +283,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer class="absolute bg-white" >
+    <q-footer class="absolute bg-white">
       <div class="title-footer">
         <h6 class="text-primary subtitle-h6-card-block text-center">
           FOLLOW US ON INSTAGRAM
