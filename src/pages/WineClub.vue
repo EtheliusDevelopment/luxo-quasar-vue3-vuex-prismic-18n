@@ -224,31 +224,28 @@
 
     <div class="fifth-block">
       <div class="sub-section-first-4">
-        <h2 class="text-primary title-h2">
-          What kind of luxury traveler are you?
-        </h2>
+        <h2 class="text-primary title-h2">Discover our plans</h2>
         <p class="body-p">
           Luxo Italia Wine Club offers two types of memberships – both include
           three shipments (sent in March, June and September), with 6 bottles
           each (18 bottles per year).
         </p>
         <p class="body-p">
-          Both membership plans offer a carefully
-          chosen selection of the best Italian wines, from award-winning
-          wineries, recognized at the local and international level.
+          Both membership plans offer a carefully chosen selection of the best
+          Italian wines, from award-winning wineries, recognized at the local
+          and international level.
         </p>
         <p class="body-p">
-         Classic
-          membership plan includes the “representative” wines of the winery -
-          the favorite picks of the producer. It is a great way to start your
-          travel in the world of wine!
+          Classic membership plan includes the “representative” wines of the
+          winery - the favorite picks of the producer. It is a great way to
+          start your travel in the world of wine!
         </p>
         <p class="body-p">
-          Premium membership plan will satisfy
-          every wine connoisseur. Having the standard membership plan as a
-          starting point, this membership will bring a true excellent to your
-          doorstep. The best vintages, limited editions and hard-to-find blends
-          – those are the bottles you will find in your wine box.
+          Premium membership plan will satisfy every wine connoisseur. Having
+          the standard membership plan as a starting point, this membership will
+          bring a true excellent to your doorstep. The best vintages, limited
+          editions and hard-to-find blends – those are the bottles you will find
+          in your wine box.
         </p>
 
         <button class="general-btn-1 btn-1" style="padding: 2% 4%">
@@ -591,11 +588,10 @@ h6.text-primary.subtitle-h6 {
 }
 
 .title-h2 {
-  padding: 0 45% 0 0 !important;
   line-height: 65px;
   margin-bottom: 5% !important;
-  padding: 0 47% 0 0 !important;
   letter-spacing: 1px !important;
+  padding: 0 0 0 0;
 }
 
 .body-p {
