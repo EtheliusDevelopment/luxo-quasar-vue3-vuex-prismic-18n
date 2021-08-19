@@ -54,7 +54,12 @@
         src="~assets/vineyard.jpg"
         :ratio="16 / 9"
       /> -->
-      <q-parallax src="~assets/vineyard.jpg" :speed="0.5" style="max-width:100%; height: 700px"> </q-parallax>
+      <q-parallax
+        src="~assets/vineyard.jpg"
+        :speed="0.5"
+        style="max-width: 100%; height: 700px"
+      >
+      </q-parallax>
     </div>
 
     <div class="third-block">
@@ -163,13 +168,9 @@
             spinner-size="82px"
           />
 
-          <q-btn
-            class="q-px-lg q-py-xs btn-step"
-            size="1.1vw"
-            color="primary"
-            outline
-            label="JOIN THE WINE CLUB NOW !"
-          />
+          <button class="general-btn-1 btn-step" style="padding: 1% 2%">
+            JOIN THE WINE CLUB NOW !
+          </button>
         </div>
       </div>
     </div>
@@ -191,9 +192,11 @@
             />
             <h6 class="h6-wine-card text-center text-primary">CLASSIC</h6>
             <h4 class="h4-wine-card text-center text-info">€ 1100</h4>
-            <button class="btn-wine-card" @click="fnalert">
-              MORE INFORMATION
-            </button>
+            <div class="flex flex-center q-mb-xl">
+              <button class="btn-wine-card" @click="fnalert">
+                MORE INFORMATION
+              </button>
+            </div>
           </div>
 
           <div class="wine-card">
@@ -205,9 +208,11 @@
             />
             <h6 class="h6-wine-card text-center text-primary">PREMIUM</h6>
             <h4 class="h4-wine-card text-center text-info">€ 2350</h4>
-            <button type="button" class="btn-wine-card" @click="fnalert">
-              MORE INFORMATION
-            </button>
+            <div class="flex flex-center q-mb-xl">
+              <button type="button" class="btn-wine-card" @click="fnalert">
+                MORE INFORMATION
+              </button>
+            </div>
           </div>
         </div>
 
@@ -223,25 +228,32 @@
           What kind of luxury traveler are you?
         </h2>
         <p class="body-p">
-          We do not just create luxury vacations in Italy, but rather
-          extraordinary and unique life experiences. Each of our luxury tours is
-          different simply because our travelers arranged it with us. For this
-          reason, our objective is to provide you with a friendly, unique and
-          warm personal approach to discussing, creating, and planning every
-          detail of your travel.
+          Luxo Italia Wine Club offers two types of memberships – both include
+          three shipments (sent in March, June and September), with 6 bottles
+          each (18 bottles per year).
         </p>
         <p class="body-p">
-          During your entire luxury tour, you will travel with local experts,
-          who have a deep love for their country and are proud to share the
-          hidden luxury gems of Italy with you. Are you ready to experience the
-          most beautiful and captivating trip of your life?
+          Both membership plans offer a carefully
+          chosen selection of the best Italian wines, from award-winning
+          wineries, recognized at the local and international level.
         </p>
-        <q-btn
-          class="q-px-lg q-py-lg btn-1"
-          color="primary"
-          outline
-          label="DISCOVER THE PLANS"
-        />
+        <p class="body-p">
+         Classic
+          membership plan includes the “representative” wines of the winery -
+          the favorite picks of the producer. It is a great way to start your
+          travel in the world of wine!
+        </p>
+        <p class="body-p">
+          Premium membership plan will satisfy
+          every wine connoisseur. Having the standard membership plan as a
+          starting point, this membership will bring a true excellent to your
+          doorstep. The best vintages, limited editions and hard-to-find blends
+          – those are the bottles you will find in your wine box.
+        </p>
+
+        <button class="general-btn-1 btn-1" style="padding: 2% 4%">
+          DISCOVER THE PLANS
+        </button>
       </div>
 
       <q-img
@@ -415,7 +427,8 @@ export default defineComponent({
 // **********THIRD BLOCK**********
 
 .third-block {
-  margin-bottom: 25%;
+  margin-bottom: 17%;
+  margin-top: 7%;
 }
 
 .title-third-block {
@@ -424,9 +437,9 @@ export default defineComponent({
 
 .step-one {
   display: grid;
-  grid-template-columns: 46% minmax(auto, 47%);
-  grid-template-rows: 10% 40% auto 10%;
-  grid-gap: 7%;
+  grid-template-columns: 54% minmax(auto, 47%);
+  grid-template-rows: 10% 40% 50% 10%;
+  grid-gap: 5%;
   margin-bottom: 10%;
   margin-right: 10%;
   margin-left: 6%;
@@ -434,9 +447,9 @@ export default defineComponent({
 
 .step-two {
   display: grid;
-  grid-template-columns: 46% minmax(auto, 47%);
+  grid-template-columns: 54% minmax(auto, 47%);
   grid-template-rows: 10% 40% auto 10%;
-  grid-gap: 7%;
+  grid-gap: 5%;
   margin-bottom: 10%;
   margin-right: 10%;
   margin-left: 6%;
@@ -444,9 +457,9 @@ export default defineComponent({
 
 .step-three {
   display: grid;
-  grid-template-columns: 46% minmax(auto, 47%);
+  grid-template-columns: 54% minmax(auto, 47%);
   grid-template-rows: 10% 40% auto 10%;
-  grid-gap: 7%;
+  grid-gap: 5%;
   margin-bottom: 10%;
   margin-right: 10%;
   margin-left: 6%;
@@ -536,8 +549,6 @@ export default defineComponent({
 }
 
 .btn-wine-card {
-  margin-left: 25%;
-  margin-right: 25%;
   border: none;
   background-color: transparent;
   border-bottom: 2px solid #4c4571;
