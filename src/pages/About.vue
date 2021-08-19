@@ -329,15 +329,9 @@ export default {
     grid-template-rows: 6vh 65vh 10vh !important;
   }
 
-
   .third-block {
-    display: grid;
-    grid-template-columns: 49% 49%;
-    grid-template-rows: 18vh auto 20vh auto !important;
-    grid-gap: 2%;
-    margin: 0 12% 20% 12%;
-}
-
+    grid-template-rows: 18vh auto 25vh auto !important;
+  }
 }
 
 .figcaption {
