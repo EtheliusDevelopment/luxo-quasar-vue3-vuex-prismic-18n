@@ -54,7 +54,7 @@
         src="~assets/vineyard.jpg"
         :ratio="16 / 9"
       /> -->
-      <q-parallax src="~assets/vineyard.jpg" :speed="0.5" style="max-width:100%"> </q-parallax>
+      <q-parallax src="~assets/vineyard.jpg" :speed="0.5" style="max-width:100%; height: 700px"> </q-parallax>
     </div>
 
     <div class="third-block">
