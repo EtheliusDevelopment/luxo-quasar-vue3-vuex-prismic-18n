@@ -150,7 +150,7 @@
           </div>
         </div>
       </q-img>
-      <div class="sub-section-first q-pa-md shadow-7">
+      <div class="sub-section-first q-pa-md">
         <h6 class="text-primary">PAUL LEWIS</h6>
 
         <p class="text-primary text">
@@ -179,7 +179,7 @@
         </p>
       </div>
 
-      <div class="sub-section-second q-pa-md shadow-7">
+      <div class="sub-section-second q-pa-md">
         <h6 class="text-primary">ANDREA DEGASPERI</h6>
 
         <p class="text-primary">
