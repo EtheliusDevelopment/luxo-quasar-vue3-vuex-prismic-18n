@@ -64,6 +64,11 @@
 
 }
 
+  // RADIO INPUTS******
+  .q-radio__label.q-anchor--skip {
+    font-family: 'CommutersSans-Regular' !important;
+}
+
 // ****LAYOUT*******************
 
 .navigation-block > div {
@@ -165,6 +170,8 @@ p {
 
 .q-breadcrumbs__el {
   font-family: "Commuters-Sans-Light";
+
+
 }
 
 // STYLES CAROUSEL INDEX

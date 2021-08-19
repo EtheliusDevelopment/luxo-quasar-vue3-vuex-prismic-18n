@@ -17,7 +17,7 @@
             <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
             <q-separator color="white" inset />
             <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-                     </div>
+          </div>
         </q-img>
 
         <div class="breadcrumbs">
@@ -37,16 +37,33 @@
         <div class="sub-section-first">
           <!-- QUIZ WELCOME PAGE -->
           <div class="starter" v-if="starter">
-            <h4>WELCOME TO THE QUIZ</h4>
-            <q-btn
+
+            <h6 class="h6-title-quiz">TAKE THIS FREE QUIZ</h6>
+            <h2 class="h2-title-quiz">
+              DISCOVER WHICH OF OUR MANY EXPERIENCES IS RIGHT FOR YOU!
+            </h2>
+            <h4 class="h4-title-quiz">Complete The Quiz And Get:</h4>
+
+            <ol class="ol-title-quiz">
+              <li class="li-title-quiz">Detailed and professionally designed itinerary that match your
+            traveler profile ( 250$ Value)</li>
+              <li class="li-title-quiz">Our guide: " The Ultimate List of
+            Exclusive Things To Do In Italy You Won't Find On Google"</li>
+              <li class="li-title-quiz">Access
+            to our Inner Circle and get practical advice on where to go, when to
+            go and what to see once in Italy!</li>
+            </ol>
+
+
+            <button
+              class="general-btn-1"
+              style="padding: 2% 4%"
               @click="startQuiz"
-              class="q-px-lg q-py-xs btn-1"
-              size="1.1vw"
-              label="START THE QUIZ"
-              type="button"
-              color="primary"
-            />
+            >
+              START THE QUIZ
+            </button>
           </div>
+
           <!-- QUIZ FLOW -->
           <div class="form-body" v-if="!starter">
             <q-form @submit="onSubmit">
@@ -376,7 +393,6 @@ export default {
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
-
 }
 
 .figcaption h6.text-white {
@@ -397,7 +413,10 @@ hr {
 .starter {
   display: flex;
   justify-content: center;
-}
+  align-items:center;
+  flex-direction: column;
+  margin: 4% 9% 6% 9%
+  }
 
 .button-group {
   position: relative;
