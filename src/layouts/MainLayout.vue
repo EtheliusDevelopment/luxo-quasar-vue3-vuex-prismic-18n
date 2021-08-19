@@ -427,7 +427,8 @@ export default {
 
     const bodyClass = ref();
     thisRoute.value
-      ? (bodyClass.value = "blog-single-display-none")
+      // ? (bodyClass.value = "blog-single-display-none")
+      ? (bodyClass.value = "")
       : (bodyClass.value = "");
 
     const footerClass = ref();

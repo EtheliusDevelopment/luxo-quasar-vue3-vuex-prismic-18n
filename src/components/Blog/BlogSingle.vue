@@ -119,7 +119,8 @@ export default {
   font-size: 55px;
   line-height: 63px;
   letter-spacing: 0.5px;
-  margin-bottom: 20%;
+  margin-bottom: 0;
+
 }
 
 .h4-blog-par {
@@ -145,18 +146,21 @@ export default {
 .h6-header-blog{
   font-size: 15px;
   font-family: 'Commuters-Sans-Light';
+  width: 100%;
+  margin-top: 2%;
 }
 
 // **********HEADER BLOCK**********
 
 .figcaption {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   z-index: 9;
   background: $info !important;
   height: 100%;
+  padding-bottom: 20%;
 }
 
 div:has(.figcaption) {
@@ -181,7 +185,7 @@ div:has(.figcaption) {
 
 .img1 {
   display: grid;
-  grid-auto-columns: 70% 30%;
+  grid-auto-columns: 65% 35%;
 }
 
 .img1-blog {
