@@ -43,6 +43,10 @@
             spinner-size="82px"
             height="6vh"
             width="3vw"
+            style="
+              filter: invert(83%) sepia(9%) saturate(836%) hue-rotate(0deg)
+                brightness(94%) contrast(93%);
+            "
           />
 
           <h4 class="title-component text-primary">WHEN TO GO</h4>
@@ -60,6 +64,10 @@
             spinner-size="82px"
             width="3.2vw"
             height="6vh"
+            style="
+              filter: invert(83%) sepia(9%) saturate(836%) hue-rotate(0deg)
+                brightness(94%) contrast(93%);
+            "
           />
 
           <h4 class="title-component text-primary">PRICE</h4>
@@ -75,6 +83,10 @@
             spinner-size="82px"
             height="6vh"
             width="3vw"
+            style="
+              filter: invert(83%) sepia(9%) saturate(836%) hue-rotate(0deg)
+                brightness(94%) contrast(93%);
+            "
           />
 
           <h4 class="title-component text-primary">IDEAL LENGTH</h4>
@@ -82,10 +94,9 @@
         </div>
 
         <div class="fourth-component component-box">
-
           <button class="general-btn-1" style="padding: 4% 4%">
-          DOWNLOAD JOURNEY DETAIL
-        </button>
+            DOWNLOAD JOURNEY DETAIL
+          </button>
         </div>
       </div>
     </div>
@@ -97,26 +108,40 @@
     <div class="third-block">
       <div class="sub-section-first-third">
         <div class="header-component">
-          <p class="p-header-component text-center">
-            <span class="span-header-component">At A Glance</span> Itinerary
+          <p
+            class="p-header-component text-center"
+            @click="atglance = false"
+            style="cursor: pointer"
+          >
+            Itinerary
           </p>
+          <p
+            class="span-header-component"
+            @click="atglance = true"
+            style="cursor: pointer"
+            >At A Glance</p
+          >
         </div>
 
         <div class="body-component">
-          <h6
-            class="excerpt"
-            v-for="(execrpt, index) in responseObj.at_glance_excerpt"
-            :key="index"
-          >
-            {{ execrpt.text }}
-          </h6>
-          <ul>
-            <li v-for="(text, index) in bulletPoints" :key="index">
-              {{ text.bullet_point[0].text }}
-            </li>
-          </ul>
+          <div class="at-glance-exc" v-if="atglance">
+            <ul>
+              <li v-for="(text, index) in bulletPoints" :key="index">
+                {{ text.bullet_point[0].text }}
+              </li>
+            </ul>
+
+            <p
+              class="excerpt"
+              v-for="(execrpt, index) in responseObj.at_glance_excerpt"
+              :key="index"
+            >
+              {{ execrpt.text }}
+            </p>
+          </div>
 
           <div
+            v-if="!atglance"
             class="par-body"
             v-for="(text, index) in responseObj.itinerary_field"
             :key="index"
@@ -182,6 +207,7 @@ export default {
     const responseObj = ref({});
     const bulletPoints = ref([]);
     const execrpt = ref("");
+    const atglance = ref(true);
 
     const endPoint =
       "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRkXHRIAAC4A4F15";
@@ -208,6 +234,7 @@ export default {
       responseObj,
       bulletPoints,
       execrpt,
+      atglance,
     };
   },
 };
