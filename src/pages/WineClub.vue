@@ -366,6 +366,12 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
+@media screen and (min-width: 1580px) {
+  .figcaption {
+    padding-bottom: 3% !important;
+  }
+}
+
 
 .figcaption {
   width: 100%;
@@ -377,6 +383,8 @@ export default defineComponent({
   padding-bottom: 6%;
 
 }
+
+
 
 .figcaption h6.text-white {
   margin-bottom: 0;

@@ -362,6 +362,12 @@ export default {
   }
 }
 
+@media screen and (min-width: 1580px) {
+  .figcaption {
+    padding-bottom: 3% !important;
+  }
+}
+
 .figcaption {
   width: 100%;
   height: 100%;

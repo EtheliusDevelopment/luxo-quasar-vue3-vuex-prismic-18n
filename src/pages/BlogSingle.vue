@@ -32,6 +32,12 @@ header{
   display:none !important;
 }
 
+@media screen and (min-width: 1580px) {
+  .figcaption {
+    padding-bottom: 3% !important;
+  }
+}
+
 @media screen and (max-width: 680px) {
 
   .img1{

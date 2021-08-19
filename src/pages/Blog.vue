@@ -78,6 +78,12 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
+@media screen and (min-width: 1580px) {
+  .figcaption {
+    padding-bottom: 3% !important;
+  }
+}
+
 @media screen and (max-width: 990px) {
   .img1 {
     height: 20% !important;
