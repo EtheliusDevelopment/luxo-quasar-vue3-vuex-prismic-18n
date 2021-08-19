@@ -6,7 +6,7 @@
           <q-img
             class="img1"
             img-class="img1-carousel"
-            src="~assets/venice-footer-box.png"
+            src="~assets/Umbria-yoga-retreat-carousel-index.jpg"
             :ratio="16 / 9"
             height="600px"
             no-spinner
