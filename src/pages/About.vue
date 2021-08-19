@@ -59,9 +59,9 @@
           is completely customized. What travel experience do you seek?
         </p>
 
-
-        <button class="general-btn-1 q-mt-xl" style="padding: 1% 2%;">LET’S FIND OUT TOGHETER</button>
-
+        <button class="general-btn-1 q-mt-xl" style="padding: 1% 2%">
+          LET’S FIND OUT TOGHETER
+        </button>
       </div>
     </div>
 
@@ -153,14 +153,14 @@
       <div class="sub-section-first q-pa-md">
         <h6 class="text-primary">PAUL LEWIS</h6>
 
-        <p class="text-primary text">
+        <p class="text">
           My name is Paul and in spite of the name, I’m Italian, on my mother’s
           side. My mother passed on her passion and love for great gastronomy to
           me, while my father (of British nationality) passed on a strong sense
           of practicality and precision.
         </p>
 
-        <p class="text-primary">
+        <p class="">
           This multicultural mix perfectly matched my eclectic spirit, leading
           me to an “exploratory” life. Even after my first trip to the USA
           (during my childhood), I realized I was destined to travel far and
@@ -169,7 +169,7 @@
           can offer.
         </p>
 
-        <p class="text-primary">
+        <p class="">
           In addition, I became a restaurant expert and a fine wine connoisseur,
           two passions that I love to cultivate in my free time, as well as
           making the most use of them for my work. I like to design (and try)
@@ -182,21 +182,21 @@
       <div class="sub-section-second q-pa-md">
         <h6 class="text-primary">ANDREA DEGASPERI</h6>
 
-        <p class="text-primary">
+        <p class="">
           I love traveling the world, it is my greatest passion. I take great
           pride in my authentic Italic roots, which have made me, and could not
           be otherwise, a fan of the multi-faceted Italian cuisine and its
           high-quality wines.
         </p>
 
-        <p class="text-primary">
+        <p class="">
           Before becoming a co-founder of Luxo Italia, I experienced several
           work experiences in the hospitality industry that, combined with my
           passion for travel, proved to be fundamental in leading me to start
           this adventure with Paul.
         </p>
 
-        <p class="text-primary">
+        <p class="">
           Factors reinforced by my desire to work with and for people. The
           radical knowledge of the territory and the great empathy that I share
           with my partner and friend Paul allows us to design trips and
@@ -204,13 +204,9 @@
           we instill our passion and experience—100% Italian.
         </p>
 
-        <q-btn
-          class="q-px-lg q-py-xs"
-          size="1.1vw"
-          color="primary"
-          outline
-          label="TALK WITH US"
-        />
+        <button class="general-btn-1 q-mt-xl" style="padding: 2% 4%">
+          TALK WITH US
+        </button>
       </div>
 
       <q-img
@@ -330,7 +326,16 @@ export default {
   }
 
   .second-block {
-  grid-template-rows: 6vh 65vh 10vh !important;
+    grid-template-rows: 6vh 65vh 10vh !important;
+  }
+
+
+  .third-block {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 18vh auto 20vh auto;
+    grid-gap: 2%;
+    margin: 0 12% 20% 12%;
 }
 
 }
