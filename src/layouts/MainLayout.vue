@@ -21,7 +21,7 @@
               <q-img
                 class="navbar-logo q-mt-md"
                 width="14vw"
-                src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+                src="~assets/luxoitalia_logo_white_2020.svg"
               />
             </router-link>
 
@@ -281,7 +281,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer class="absolute bg-white">
+    <q-footer class="absolute bg-white" >
       <div class="title-footer">
         <h6 class="text-primary subtitle-h6-card-block text-center">
           FOLLOW US ON INSTAGRAM
@@ -389,24 +389,43 @@ export default {
   setup() {
     const route = useRoute();
     const thisRoute = ref(route.params.post);
+    const tryRoute = ref(route.path);
+
     const leftDrawerOpen = ref(false);
     const $store = useStore();
+
     const bodyClass = ref();
     thisRoute.value
       ? (bodyClass.value = "blog-single-display-none")
       : (bodyClass.value = "");
 
+    const footerClass = ref();
+    tryRoute.value === "/quiz"
+      ? (footerClass.value = "quiz-display-none")
+      : (footerClass.value = "");
+
     onUpdated(() => {
+      console.log("footerClass.value");
+      console.log(footerClass.value);
+
       thisRoute.value = route.params.post;
       thisRoute.value
         ? (bodyClass.value = "blog-single-display-none")
         : (bodyClass.value = "");
+
+      tryRoute.value = route.path;
+
+      tryRoute === "/quiz"
+        ? (footerClass.value = "quiz-display-none")
+        : (footerClass.value = "");
     });
 
     return {
       leftDrawerOpen,
       bodyClass,
       thisRoute,
+      footerClass,
+      tryRoute,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
@@ -464,7 +483,6 @@ export default {
   margin-top: 1.5%;
   font-size: 24px;
   letter-spacing: 5px;
-
 }
 
 // *********NAVBAR BLOCK *******************
@@ -531,6 +549,10 @@ header {
 
 .footer-bottom {
   background-color: #fbf8f4;
+}
+
+.quiz-display-none {
+  display: none;
 }
 
 // ***FADING***************

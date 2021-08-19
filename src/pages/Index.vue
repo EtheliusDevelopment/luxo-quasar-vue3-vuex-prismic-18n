@@ -9,6 +9,7 @@
         src="~assets/img_main_index.jpg"
         spinner-color="primary"
         spinner-size="82px"
+        height="120vh"
       >
         <div class="absolute-top figcaption" style="height: 100%">
           <h1 class="text-white text-center h1-header-block">
