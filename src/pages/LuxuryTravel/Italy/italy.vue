@@ -112,7 +112,7 @@
             :class="active"
             class="span-header-component p-header-component"
             @click="clickMenu"
-            style="cursor: pointer; margin-rigth: 2%"
+            style="cursor: pointer; margin-rigth: 5%"
           >
             At A Glance
           </p>
@@ -172,19 +172,15 @@
         </p>
 
         <div class="btn-box-fourth-block">
-          <q-btn
-            class="q-px-xl q-py-lg q-mr-lg"
-            color="primary"
-            outline
-            label="BOOK NOW"
-          />
 
-          <q-btn
-            class="q-px-xl q-py-lg"
-            color="primary"
-            outline
-            label="CUSTOMIZE THIS TOUR"
-          />
+          <button class="general-btn-2 btn-fifth-block" style="padding: 2% 4%; margin-right: 5%">
+            BOOK NOW
+          </button>
+
+
+          <button class="general-btn-2 btn-fifth-block" style="padding: 2% 4%">
+            CUSTOMIZE THIS TOUR
+          </button>
         </div>
       </div>
     </div>
@@ -211,8 +207,8 @@ export default {
     const bulletPoints = ref([]);
     const execrpt = ref("");
     const atglance = ref(true);
-    const active = ref();
-    const activeItin = ref();
+    const active = ref("active-header-component");
+    const activeItin = ref("");
 
     const endPoint =
       "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRkXHRIAAC4A4F15";
@@ -308,6 +304,14 @@ export default {
   letter-spacing: 0.5px;
 }
 
+.h6-body-title {
+  font-family: Commuters-Sans-Bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 1%;
+}
+
 // ***HEADER BLOCK******
 
 .header-block {
@@ -374,7 +378,7 @@ hr {
 }
 
 .third-block {
-  margin-bottom: 10%;
+  margin-bottom: 3%;
 }
 
 .third-block .sub-section-first-third {
@@ -419,6 +423,10 @@ ul {
     transform: scale(0.9);
   }
 
+  .h6-body-title {
+    transform: scale(0.9);
+  }
+
   // FIRST BLOCK*****************
   .img-component {
     transform: scale(0.8);
@@ -442,6 +450,10 @@ ul {
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 3vh;
+  }
+
+  .h6-body-title {
+    transform: scale(0.85);
   }
 
   // FIRST BLOCK*****************
