@@ -1,7 +1,7 @@
 <template>
   <div class="head-main">
     <ul class="head-navigation text-primary">
-      <li @click="myLi" class="li-item">ALL</li>
+      <li @click="myLi" class="li-item active">ALL</li>
       <li @click="myLi" class="li-item">sea</li>
       <li @click="myLi" class="li-item">lake</li>
       <li @click="myLi" class="li-item">montain</li>
@@ -29,11 +29,11 @@
         />
       </div>
 
-      <h2 class="text-primary h2-blog-card">
+      <h2 class="text-primary h2-blog-card text-center">
         {{ item.data.article_title[0].text }}
       </h2>
 
-      <p class="p-blog-card ellipsis-3-lines">
+      <p class="p-blog-card ellipsis-3-lines text-center">
         {{ item.data.post_body[0].paragraph_body[0].text }}
       </p>
 

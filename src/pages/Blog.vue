@@ -36,7 +36,7 @@
       <div class="sub-section-first">
         <div class="header-component">
           <div class="headcaption">
-            <p class="text-primary">
+            <p class="text-center">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
@@ -140,7 +140,7 @@ hr {
 .headcaption {
   display: flex;
   width: 100%;
-  padding: 10%;
+  padding: 6% 20%;
   justify-content: center;
   align-items: center;
 }

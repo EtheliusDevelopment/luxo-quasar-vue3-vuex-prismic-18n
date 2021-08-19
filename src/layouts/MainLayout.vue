@@ -441,7 +441,8 @@ export default {
 
       thisRoute.value = route.params.post;
       thisRoute.value
-        ? (bodyClass.value = "blog-single-display-none")
+        // ? (bodyClass.value = "blog-single-display-none") WORKING!
+        ? (bodyClass.value = "")
         : (bodyClass.value = "");
 
       tryRoute.value = route.path;
