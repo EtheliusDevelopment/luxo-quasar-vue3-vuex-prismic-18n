@@ -107,7 +107,15 @@
 
     <div class="third-block">
       <div class="sub-section-first-third">
-        <div class="header-component">
+        <div class="header-component flex flex-center">
+
+               <p
+            class="span-header-component p-header-component"
+            @click="atglance = true"
+            style="cursor: pointer;
+            margin-rigth: 2%"
+            >At A Glance
+            </p>
           <p
             class="p-header-component text-center"
             @click="atglance = false"
@@ -115,12 +123,8 @@
           >
             Itinerary
           </p>
-          <p
-            class="span-header-component"
-            @click="atglance = true"
-            style="cursor: pointer"
-            >At A Glance</p
-          >
+
+
         </div>
 
         <div class="body-component">
