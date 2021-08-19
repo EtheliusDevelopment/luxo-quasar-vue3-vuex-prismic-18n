@@ -14,6 +14,8 @@
           {{ articleTitle }}
         </h2>
 
+        <h6 class="text-primary h6-header-blog">27/02/2020</h6>
+
         <div class="tags-container flex">
           <h6 class="text-white tags" v-for="(tag, index) in tags" :key="index">
             {{ tag }}/
@@ -138,6 +140,11 @@ export default {
   line-height: 24px;
   letter-spacing: 4px;
   margin-bottom: 10% !important;
+}
+
+.h6-header-blog{
+  font-size: 15px;
+  font-family: 'Commuters-Sans-Light';
 }
 
 // **********HEADER BLOCK**********
