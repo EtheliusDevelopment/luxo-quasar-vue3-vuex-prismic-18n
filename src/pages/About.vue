@@ -333,7 +333,7 @@ export default {
   .third-block {
     display: grid;
     grid-template-columns: 49% 49%;
-    grid-template-rows: 18vh auto 20vh auto;
+    grid-template-rows: 18vh auto 20vh auto !important;
     grid-gap: 2%;
     margin: 0 12% 20% 12%;
 }
