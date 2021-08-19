@@ -13,9 +13,9 @@
         height="600px"
       >
         <div class="figcaption">
-          <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
+          <h6 class="text-white">NEED SOME INSPIRATION?</h6>
           <q-separator color="white" inset />
-          <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
+          <h1 class="text-white text-center">Italy Luxury Travel</h1>
         </div>
       </q-img>
 
@@ -136,7 +136,6 @@ export default defineComponent({
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
-
 }
 
 .header-block .figcaption h6.text-white {
@@ -165,7 +164,8 @@ hr {
 }
 
 .first-block {
-  margin-bottom: 10%;
+  margin-bottom: 6%;
+  margin-top: 4%;
 }
 
 // **********SECOND BLOCK**********

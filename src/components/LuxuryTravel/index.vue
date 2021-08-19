@@ -113,10 +113,10 @@ export default {
 
 .text-figcaption {
   text-transform: uppercase;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 20px;
   letter-spacing: 0.5px;
-  font-family: "Commuters-Sans-Regular";
+  font-family: "Hatton-Semibold";
 }
 
 // ****** BLOCK
