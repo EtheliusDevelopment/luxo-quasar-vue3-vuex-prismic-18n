@@ -41,13 +41,7 @@
           at your local store, delivered directly to your doorstep.
         </p>
 
-        <q-btn
-          class="q-px-lg q-py-xs q-mt-md"
-          size="1.1vw"
-          color="primary"
-          outline
-          label="JOIN THE WINE CLUB NOW !"
-        />
+            <button class="general-btn-1" style="padding: 1% 2%;">JOIN THE WINE CLUB NOW !</button>
       </div>
     </div>
 
@@ -411,7 +405,8 @@ export default defineComponent({
 }
 
 .first-block {
-  margin-bottom: 10%;
+  margin-top: 4%;
+  margin-bottom: 6%;
 }
 
 // **********SECOND BLOCK**********
