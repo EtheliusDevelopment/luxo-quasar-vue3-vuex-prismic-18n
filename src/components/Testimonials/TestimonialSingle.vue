@@ -28,15 +28,9 @@
   <div class="first-block">
     <div class="sub-section-first">
       <p class="text-center p-body-testimonials">{{ single.intro }}</p>
-      <q-btn
-        color="info"
-        outline
-        label="DOWNLOAD STORY"
-        class="q-px-lg q-py-xs q-mt-md"
-        size="1.1vw"
-        @click="onClick"
-        text-color="primary"
-      />
+      <button class="general-btn-1" style="padding: 2% 4%">
+        DOWNLOAD STORY
+      </button>
     </div>
   </div>
 
@@ -154,15 +148,9 @@
       <p class="text-center p-body-testimonials">{{ single.third_par_bl5 }}</p>
       <p class="text-center p-body-testimonials">{{ single.fourth_par_bl4 }}</p>
     </div>
-    <q-btn
-      color="info"
-      outline
-      label="BACK TO TESTIMONIALS AND REVIEWS"
-      class="q-px-lg q-py-xs q-mt-md btn-sixth-block"
-      size="1.1vw"
-      to="/testimonials"
-      text-color="primary"
-    />
+    <button class="general-btn-1" style="padding: 1% 2%">
+      BACK TO TESTIMONIALS AND REVIEWS
+    </button>
   </div>
 </template>
 
@@ -218,7 +206,7 @@ export default {
 
 .date-range {
   font-family: "Commuters-Sans-Bold";
-  font-size: 20px;
+  font-size: 16px;
   line-height: 31px;
   margin-top: unset;
 }
@@ -236,7 +224,6 @@ export default {
   margin-bottom: unset;
 }
 
-
 .location_itinerary {
   margin-top: 1%;
   margin-bottom: 3%;
@@ -250,8 +237,11 @@ export default {
 }
 
 sup {
-    font-size: .8rem !important;
+  font-size: 0.8rem !important;
+}
 
+h6.itinerary {
+  padding-right: 20%;
 }
 
 // **********HEADER BLOCK**********
@@ -299,7 +289,7 @@ hr {
   line-height: 60px;
 }
 
-.text-box{
+.text-box {
   padding: 3% 18%;
 }
 
@@ -309,7 +299,7 @@ hr {
   display: grid;
   grid-template-columns: 1fr 20% 1.3fr;
   grid-auto-rows: 10vh 65vh 18vh;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
 }
 
 .sub-section-first {
@@ -320,7 +310,6 @@ hr {
   padding-left: 35%;
   grid-column: 2/4;
   grid-row: 1/3;
-  margin-left: 5%;
 }
 
 .sub-section-first-img {
@@ -370,6 +359,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10%;
 }
 
 @media screen and (max-width: 1100px) {
@@ -453,6 +443,10 @@ hr {
     transform: scale(0.85);
   }
 
+  .itinerary {
+    transform: scale(0.85);
+}
+
   // HEADER BLOCK****************
 
   .img1 {
@@ -481,9 +475,9 @@ hr {
     margin-top: 0;
     margin-bottom: 3vh;
   }
-  .text-box{
-  padding: 3% 3%;
-}
+  .text-box {
+    padding: 3% 3%;
+  }
 
   // *****SECOND BLOCK****
 
