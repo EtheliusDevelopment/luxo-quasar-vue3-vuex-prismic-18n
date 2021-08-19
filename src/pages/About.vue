@@ -34,37 +34,34 @@
 
     <div class="first-block">
       <div class="sub-section-first">
-        <h2 class="text-primary">Your Luxury Travel Designers</h2>
-        <p class="text-primary">
+        <h2 class="text-primary text-center">Your Luxury Travel Designers</h2>
+        <p class="text-primary text-center">
           We know and love every small village, corner, and place in our
           country, and we want to help you get to know it in the way that best
           reflects your tastes and preferences.
         </p>
-        <p class="text-primary">
+        <p class="text-primary text-center">
           But before luxury travel designers we are above all travelers.
         </p>
-        <p class="text-primary">
+        <p class="text-primary text-center">
           We love discovering new places, new foods, new cultures, learning how
           to get to know those who accompany us and enjoying the beauty of Italy
           together.
         </p>
-        <p class="text-primary">
+        <p class="text-primary text-center">
           Precisely, this aspect defines the difference between what we offer
           you and what the classic luxury travel agencies offer.
         </p>
-        <p class="text-primary">
+        <p class="text-primary text-center">
           We do not limit ourselves to organizing and booking a pre-established
           and undistinguished itinerary. Our objective is different; we want to
           offer you an exclusive, unique and inimitable luxury experience that
           is completely customized. What travel experience do you seek?
         </p>
-        <q-btn
-          class="q-px-lg q-py-xs q-mt-md"
-          size="1.1vw"
-          color="primary"
-          outline
-          label="LET’S FIND OUT TOGHETER"
-        />
+
+
+        <button class="general-btn-1 q-mt-xl" style="padding: 1% 2%;">LET’S FIND OUT TOGHETER</button>
+
       </div>
     </div>
 
@@ -368,7 +365,8 @@ hr {
 }
 
 .first-block {
-  margin-bottom: 10%;
+  margin-bottom: 6%;
+  margin-top: 4%;
 }
 
 // **********SECOND BLOCK**********
@@ -376,7 +374,7 @@ hr {
 .second-block {
   display: grid;
   grid-template-columns: 1.8fr 0.6fr 1fr;
-  grid-template-rows: 10vh 80vh 30vh;
+  grid-template-rows: 10vh 80vh 10vh;
   margin-bottom: 10%;
 }
 
@@ -396,7 +394,7 @@ hr {
 .text-box-second-block {
   grid-column: 1;
   grid-row: 2;
-  margin-left: 10%;
+  margin-left: 14%;
 }
 
 .body-p {
