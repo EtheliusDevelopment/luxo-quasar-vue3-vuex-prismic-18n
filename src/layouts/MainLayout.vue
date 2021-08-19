@@ -41,12 +41,13 @@
           />
 
           <q-toolbar class="navigation-toolbar desktop-only" :class="bodyClass">
-            <q-tabs class="navigation-block wrap">
+            <q-tabs class="navigation-block wrap" indicator-color="primary">
               <q-route-tab
                 class="route-tab"
                 to="/about"
                 label="About Us"
                 active-class="route-active"
+
               />
               <q-route-tab
                 class="route-tab"

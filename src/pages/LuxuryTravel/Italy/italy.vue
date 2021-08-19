@@ -108,23 +108,22 @@
     <div class="third-block">
       <div class="sub-section-first-third">
         <div class="header-component flex flex-center">
-
-               <p
+          <p
+            :class="active"
             class="span-header-component p-header-component"
-            @click="atglance = true"
-            style="cursor: pointer;
-            margin-rigth: 2%"
-            >At A Glance
-            </p>
+            @click="clickMenu"
+            style="cursor: pointer; margin-rigth: 2%"
+          >
+            At A Glance
+          </p>
           <p
             class="p-header-component text-center"
-            @click="atglance = false"
+            :class="activeItin"
+            @click="clickMenuItin"
             style="cursor: pointer"
           >
             Itinerary
           </p>
-
-
         </div>
 
         <div class="body-component">
@@ -212,6 +211,8 @@ export default {
     const bulletPoints = ref([]);
     const execrpt = ref("");
     const atglance = ref(true);
+    const active = ref();
+    const activeItin = ref();
 
     const endPoint =
       "https://luxobackend.cdn.prismic.io/api/v2/documents/search?ref=YRkXHRIAAC4A4F15";
@@ -239,6 +240,19 @@ export default {
       bulletPoints,
       execrpt,
       atglance,
+      active,
+      activeItin,
+      clickMenu() {
+        atglance.value = true;
+        activeItin.value = "";
+        active.value = "active-header-component";
+      },
+
+      clickMenuItin() {
+        atglance.value = false;
+        active.value = "";
+        activeItin.value = "active-header-component-itin";
+      },
     };
   },
 };
@@ -262,8 +276,15 @@ export default {
 }
 
 .span-header-component {
-  color: $info;
   margin-right: 1%;
+}
+
+.active-header-component {
+  color: $info;
+}
+
+.active-header-component-itin {
+  color: $info;
 }
 
 .p-header-component {
@@ -362,6 +383,9 @@ hr {
 
 // **********FOURTH BLOCK**********
 
+.fourth-block {
+  margin-bottom: 10%;
+}
 .btn-box-fourth-block {
   margin-top: 3%;
   width: 60%;
