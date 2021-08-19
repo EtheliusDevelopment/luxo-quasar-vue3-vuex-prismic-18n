@@ -88,11 +88,49 @@
 
             <q-space />
 
-            <img
-              src="~assets/social_test.png"
-              alt="social_test"
-              class="desktop-only"
-            />
+            <div
+              class="social-footer-content flex justify-evenly"
+              style="width: 9%"
+            >
+              <a href="https://www.facebook.com/luxoitalia/" target="_blank">
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/facebook.svg"
+                />
+              </a>
+
+              <a href="https://www.instagram.com/luxoitalia/" target="_blank">
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/instagram.svg"
+                />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/luxo-italia/"
+                target="_blank"
+              >
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/linkedin.svg"
+                />
+              </a>
+
+              <a href="https://twitter.com/luxo_italia" target="_blank">
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/twitter.svg"
+                />
+              </a>
+            </div>
           </q-toolbar>
         </div>
 
@@ -115,43 +153,43 @@
                 class="route-tab"
                 to="/about"
                 label="About Us"
-                active-class="route-active"
+                active-class="route-active-new"
               />
               <q-route-tab
                 class="route-tab"
                 to="/luxury-travel"
                 label="Italy Luxury Travel"
-                active-class="route-active"
+                active-class="route-active-new"
               />
               <q-route-tab
                 class="route-tab"
                 to="/wine-club"
                 label="Wine Club"
-                active-class="route-active"
+                active-class="route-active-new"
               />
               <q-route-tab
                 class="route-tab"
                 to="/testimonials"
                 label="Testimonials"
-                active-class="route-active"
+                active-class="route-active-new"
               />
               <q-route-tab
                 class="route-tab"
                 to="/quiz"
                 label="Quiz"
-                active-class="route-active"
+                active-class="route-active-new"
               />
               <q-route-tab
                 class="route-tab"
                 to="/blog"
                 label="Blog"
-                active-class="route-active"
+                active-class="route-active-new"
               />
               <q-route-tab
                 class="route-tab"
                 to="/contact-us"
                 label="Contact Us"
-                active-class="route-active"
+                active-class="route-active-new"
               />
             </q-tabs>
           </q-toolbar>
@@ -426,6 +464,7 @@ export default {
   margin-top: 1.5%;
   font-size: 24px;
   letter-spacing: 5px;
+
 }
 
 // *********NAVBAR BLOCK *******************
@@ -446,6 +485,11 @@ export default {
 
 .route-active {
   color: $info;
+  border-bottom-width: 20px;
+}
+
+.route-active-new {
+  color: $primary;
   border-bottom-width: 20px;
 }
 

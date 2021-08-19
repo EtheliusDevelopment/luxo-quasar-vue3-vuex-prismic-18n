@@ -116,7 +116,40 @@
 
             <q-separator color="white" inset />
 
-            <img src="~assets/social_test.png" alt="social_test" />
+               <div
+              class="social-footer-content flex justify-evenly"
+              style="width: 20%"
+            >
+              <a href="https://www.facebook.com/luxoitalia/" target="_blank">
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/facebook.svg"
+                />
+              </a>
+
+              <a href="https://www.instagram.com/luxoitalia/" target="_blank">
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/instagram.svg"
+                />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/luxo-italia/"
+                target="_blank"
+              >
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/linkedin.svg"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </q-img>
@@ -200,7 +233,40 @@
 
             <q-separator color="white" inset />
 
-            <img src="~assets/social_test.png" alt="social_test" />
+               <div
+              class="social-footer-content flex justify-evenly"
+              style="width: 20%"
+            >
+              <a href="https://www.facebook.com/luxoitalia/" target="_blank">
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/facebook.svg"
+                />
+              </a>
+
+              <a href="https://www.instagram.com/luxoitalia/" target="_blank">
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/instagram.svg"
+                />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/luxo-italia/"
+                target="_blank"
+              >
+                <q-img
+                  img-class="img-footer-logo"
+                  width="1.1vw"
+                  class="footer-logo"
+                  src="~assets/linkedin.svg"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </q-img>
