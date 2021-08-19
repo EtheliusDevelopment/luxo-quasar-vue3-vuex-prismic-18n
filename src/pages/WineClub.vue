@@ -374,6 +374,8 @@ export default defineComponent({
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 6%;
+
 }
 
 .figcaption h6.text-white {
