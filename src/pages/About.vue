@@ -116,7 +116,7 @@
 
             <q-separator color="white" inset />
 
-               <div
+            <div
               class="social-footer-content flex justify-evenly"
               style="width: 20%"
             >
@@ -233,7 +233,7 @@
 
             <q-separator color="white" inset />
 
-               <div
+            <div
               class="social-footer-content flex justify-evenly"
               style="width: 20%"
             >
@@ -327,6 +327,12 @@ export default {
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
 
+@media screen and (min-width: 1580px) {
+  .figcaption {
+    padding-bottom: 3% !important;
+  }
+}
+
 .figcaption {
   width: 100%;
   height: 100%;
@@ -335,7 +341,6 @@ export default {
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
-
 }
 
 .figcaption h6.text-white {
