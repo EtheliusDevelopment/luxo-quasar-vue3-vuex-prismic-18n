@@ -328,6 +328,11 @@ export default {
   .figcaption {
     padding-bottom: 3% !important;
   }
+
+  .second-block {
+  grid-template-rows: 6vh 65vh 10vh !important;
+}
+
 }
 
 .figcaption {
