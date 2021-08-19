@@ -10,7 +10,7 @@
       spinner-size="82px"
     >
       <div class="figcatpion_loop" @click="clickFunct(item.uid)">
-        <h4 class="text-figcaption">
+        <h4 class="text-figcaption text-center">
           {{ item.data.package_title[0].text }}
         </h4>
       </div>
@@ -152,11 +152,17 @@ export default {
   grid-auto-rows: 0.6fr;
   grid-gap: 2%;
   margin: 0 8%;
-  margin-bottom: 10% !important;
+  margin-bottom: 5% !important;
 }
 
 .img-luxury-loop {
   margin-bottom: 1%;
+}
+
+// Pagination ********
+
+.pagination-luxury-block{
+  margin-bottom: 5%;
 }
 
 @media screen and (max-width: 1100px) {
