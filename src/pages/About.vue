@@ -151,7 +151,7 @@
         </div>
       </q-img>
       <div class="sub-section-first q-pa-md">
-        <h6 class="text-primary">PAUL LEWIS</h6>
+        <h6 class="text-primary h6-title-sub">PAUL LEWIS</h6>
 
         <p class="text">
           My name is Paul and in spite of the name, I’m Italian, on my mother’s
@@ -319,6 +319,12 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
+
+// TYPO***************
+.figcaption-title {
+  margin-bottom: 2%;
+}
+
 
 @media screen and (min-width: 1580px) {
   .figcaption {
@@ -521,6 +527,14 @@ hr {
 }
 
 @media screen and (max-width: 1100px) {
+
+
+
+// TYPO***************
+.figcaption-title{
+  transform: scale(.9);
+}
+
   .img1 {
     height: 20% !important;
   }
@@ -549,6 +563,15 @@ hr {
 }
 
 @media screen and (max-width: 680px) {
+
+
+
+// TYPO***************
+.figcaption-title{
+  transform: scale(.85);
+}
+
+
   .img1 {
     height: 15% !important;
   }
