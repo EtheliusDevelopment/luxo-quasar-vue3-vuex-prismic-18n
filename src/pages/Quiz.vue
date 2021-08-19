@@ -43,20 +43,20 @@
             </h2>
             <h6 class="h4-title-quiz text-info">Complete The Quiz And Get:</h6>
 
-            <ol class="ol-title-quiz">
+            <ul class="ul-title-quiz">
               <li class="li-title-quiz text-center">
-                Detailed and professionally designed itinerary that match your
+                1. Detailed and professionally designed itinerary that match your
                 traveler profile ( 250$ Value)
               </li>
               <li class="li-title-quiz text-center">
-                Our guide: " The Ultimate List of Exclusive Things To Do In
+                2. Our guide: " The Ultimate List of Exclusive Things To Do In
                 Italy You Won't Find On Google"
               </li>
               <li class="li-title-quiz text-center">
-                Access to our Inner Circle and get practical advice on where to
+                3. Access to our Inner Circle and get practical advice on where to
                 go, when to go and what to see once in Italy!
               </li>
-            </ol>
+            </ul>
 
             <button
               class="general-btn-1 q-mt-xl"
@@ -369,17 +369,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+@media screen and (min-width: 1580px) {
+
+.h2-title-quiz {
+  padding: 0 15% !important;
+}
+
+}
+
+
 // TYPO***************
 .h6-title-quiz {
+
 }
 .h2-title-quiz {
 }
 .h4-title-quiz {
 }
-.ol-title-quiz {
+.ul-title-quiz {
   font-family: 'CommutersSans-Regular';
+  list-style: none;
 }
 .li-title-quiz {
+  margin-bottom: 1%;
 }
 
 // **********HEADER BLOCK**********
