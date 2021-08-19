@@ -375,6 +375,10 @@ export default defineComponent({
   .figcaption {
     padding-bottom: 3% !important;
   }
+
+  .fifth-block {
+  grid-template-rows: minmax(10vh, 80vh) !important;
+}
 }
 
 .figcaption {
@@ -565,9 +569,9 @@ export default defineComponent({
 .fifth-block {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: minmax(110vh, auto);
+  grid-template-rows: minmax(10vh, 90vh);
   grid-gap: 6%;
-  margin: 0 6% 10% 6%;
+  margin: 0 8% 10% 8%;
 }
 
 .sub-section-first-4 {
@@ -592,6 +596,7 @@ h6.text-primary.subtitle-h6 {
   margin-bottom: 5% !important;
   letter-spacing: 1px !important;
   padding: 0 0 0 0;
+  align-self: flex-start;
 }
 
 .body-p {
