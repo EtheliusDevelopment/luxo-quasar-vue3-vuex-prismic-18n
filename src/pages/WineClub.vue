@@ -377,8 +377,8 @@ export default defineComponent({
   }
 
   .fifth-block {
-  grid-template-rows: minmax(10vh, 80vh) !important;
-}
+    grid-template-rows: minmax(10vh, 80vh) !important;
+  }
 }
 
 .figcaption {
@@ -580,6 +580,7 @@ export default defineComponent({
   align-items: center;
   grid-column: 2;
   margin-right: 6%;
+  margin-top: 5%;
 }
 
 .img5 {
@@ -647,6 +648,13 @@ h6.text-primary.subtitle-h6 {
 }
 
 .separator-sixth-block {
+  height: 30vh !important;
+}
+
+// SEVENTH BLOCK*************
+
+.seventh-block {
+    margin-bottom: 10%;
 }
 
 @media screen and (max-width: 1100px) {
