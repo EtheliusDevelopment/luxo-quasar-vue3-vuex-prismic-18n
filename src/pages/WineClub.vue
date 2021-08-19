@@ -654,7 +654,7 @@ h6.text-primary.subtitle-h6 {
 // SEVENTH BLOCK*************
 
 .seventh-block {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 @media screen and (max-width: 1100px) {

@@ -7,7 +7,7 @@
           img-class="img1-carousel-testimonials"
           :src="slide.img"
           :ratio="16 / 9"
-          height="95vh"
+          height="80vh"
           no-spinner
         >
           <div class="figcaption">

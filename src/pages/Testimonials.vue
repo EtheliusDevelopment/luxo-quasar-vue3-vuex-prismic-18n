@@ -16,7 +16,6 @@
           <h6 class="text-white">THAT’S WHY WE LOVE</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">Luxury Travel For Our Clients</h1>
-
         </div>
       </q-img>
 
@@ -75,7 +74,8 @@
           There are several and varied experiences, from art to those dedicated
           to outdoor activities or immersing yourself in the most beautiful
           Italian cities, without forgetting the well-being and comfort of the
-          luxury hotels and resorts that we choose and that characterize every story.
+          luxury hotels and resorts that we choose and that characterize every
+          story.
         </p>
       </div>
     </div>
@@ -84,13 +84,10 @@
       <CarouselTestimonials />
     </div>
 
-   <div class="third-block">
-      <h2 class="text-primary text-center h2-title-review">
-        Facebook Review
-      </h2>
+    <div class="third-block">
+      <h2 class="text-primary text-center h2-title-review">Facebook Review</h2>
 
       <div class="sub-section-first">
-
         <div class="members-review">
           <p class="text-center body-review">
             I just wanted to share my experience with my friends and family, to
@@ -161,7 +158,6 @@
         </div>
       </div>
     </div>
-
   </q-page>
 </template>
 
@@ -192,7 +188,6 @@ export default {
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
 
-
 // **********FIRST BLOCK**********
 
 .first-block .sub-section-first {
@@ -204,7 +199,8 @@ export default {
 }
 
 .first-block {
-  margin-bottom: 10%;
+  margin-bottom: 6%;
+  margin-top: 4%;
 }
 
 .title-first-block {
@@ -233,7 +229,6 @@ export default {
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
-
 }
 
 .figcaption h6.text-white {
@@ -287,7 +282,6 @@ export default {
 .separator-sixth-block {
 }
 
-
 @media screen and (max-width: 1100px) {
   .img1 {
     height: 20% !important;
@@ -298,7 +292,7 @@ export default {
     margin-bottom: 5vh;
   }
 
-      // **********FIRST BLOCK**********
+  // **********FIRST BLOCK**********
   .first-block .sub-section-first {
     display: flex;
     justify-content: center;
@@ -308,7 +302,6 @@ export default {
   }
 }
 @media screen and (max-width: 680px) {
-
   .img1 {
     height: 15% !important;
   }
@@ -316,7 +309,7 @@ export default {
     margin-top: 0;
     margin-bottom: 3vh;
   }
-      // **********FIRST BLOCK**********
+  // **********FIRST BLOCK**********
   .first-block .sub-section-first {
     display: flex;
     justify-content: center;
@@ -325,12 +318,10 @@ export default {
     padding: 0 2rem !important;
   }
 
-    // **********THIRD BLOCK**********
+  // **********THIRD BLOCK**********
   .third-block .sub-section-first {
     display: flex;
     flex-direction: column;
   }
 }
-
-
 </style>
