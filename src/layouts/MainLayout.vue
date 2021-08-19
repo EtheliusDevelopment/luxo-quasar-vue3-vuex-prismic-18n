@@ -284,6 +284,37 @@
     </q-page-container>
 
     <q-footer class="absolute bg-white">
+
+        <div class="card-block flex flex-center">
+      <q-img
+        class="footer-dialog"
+        src="~assets\venice-footer-box.png"
+        width="80%"
+      >
+        <div
+          class="flex flex-center"
+          style="
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            background-color: #48447130;
+          "
+        >
+          <h2 class="text-white h2-card-block text-center">
+            Design your luxury tour.
+          </h2>
+
+          <h6 class="text-white subtitle-h6-card-block text-center">
+            LIMITED ONLY BY YOUR IMAGINATION .
+          </h6>
+
+          <button class="btn-toolbar-new">START THE QUIZ</button>
+        </div>
+      </q-img>
+    </div>
+
+
       <div class="title-footer">
         <h6 class="text-primary subtitle-h6-card-block text-center">
           FOLLOW US ON INSTAGRAM
@@ -555,6 +586,27 @@ header {
 
 .quiz-display-none {
   display: none;
+}
+
+.card-block {
+  margin-bottom: 10%;
+}
+
+.my-card {
+  position: relative;
+  left: 15vw;
+  width: 50vw;
+  z-index: 9;
+}
+
+.btn-toolbar-new {
+  border: none;
+  padding: 1% 3%;
+  background-color: white;
+  color: #4c4571;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  cursor: pointer;
 }
 
 // ***FADING***************

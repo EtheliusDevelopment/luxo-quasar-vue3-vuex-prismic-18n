@@ -228,34 +228,7 @@
       />
     </div>
 
-    <div class="card-block flex flex-center">
-      <q-img
-        class="footer-dialog"
-        src="~assets\venice-footer-box.png"
-        width="80%"
-      >
-        <div
-          class="flex flex-center"
-          style="
-            width: 100%;
-            height: 100%;
-            align-items: center;
-            flex-direction: column;
-            background-color: #48447130;
-          "
-        >
-          <h2 class="text-white h2-card-block text-center">
-            Design your luxury tour.
-          </h2>
 
-          <h6 class="text-white subtitle-h6-card-block text-center">
-            LIMITED ONLY BY YOUR IMAGINATION .
-          </h6>
-
-          <button class="btn-toolbar-new">START THE QUIZ</button>
-        </div>
-      </q-img>
-    </div>
   </q-page>
 </template>
 
@@ -283,6 +256,7 @@ export default {
   .first-block {
     margin-bottom: 5%;
   }
+
 
   .fourth-block {
     grid-template-rows: 10vh 80vh 20vh !important;

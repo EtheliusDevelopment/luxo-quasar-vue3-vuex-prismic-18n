@@ -293,7 +293,12 @@
             love to reciprocate with dinners or gifts because we consider you
             more than a regular client.
           </p>
-            <button class="general-btn-2 btn-fifth-block q-mt-md">READ ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES</button>
+          <button
+            class="general-btn-2 btn-fifth-block q-mt-md"
+            style="margin-left: 5%"
+          >
+            READ ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES
+          </button>
         </div>
       </div>
     </div>
@@ -320,7 +325,6 @@ export default {
   margin-bottom: 2%;
 }
 
-
 @media screen and (min-width: 1580px) {
   .figcaption {
     padding-bottom: 3% !important;
@@ -335,15 +339,12 @@ export default {
   }
 
   .fourth-block {
-  grid-template-rows: 9vh 65vh 9vh !important;
+    grid-template-rows: 9vh 65vh 9vh !important;
+  }
 
-}
-
-.text-sub-section-first-3 {
+  .text-sub-section-first-3 {
     margin-top: 4% !important;
-}
-
-
+  }
 }
 
 .figcaption {
@@ -533,13 +534,10 @@ hr {
 }
 
 @media screen and (max-width: 1100px) {
-
-
-
-// TYPO***************
-.figcaption-title{
-  transform: scale(.9);
-}
+  // TYPO***************
+  .figcaption-title {
+    transform: scale(0.9);
+  }
 
   .img1 {
     height: 20% !important;
@@ -569,14 +567,10 @@ hr {
 }
 
 @media screen and (max-width: 680px) {
-
-
-
-// TYPO***************
-.figcaption-title{
-  transform: scale(.85);
-}
-
+  // TYPO***************
+  .figcaption-title {
+    transform: scale(0.85);
+  }
 
   .img1 {
     height: 15% !important;
