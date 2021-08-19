@@ -47,7 +47,6 @@
                 to="/about"
                 label="About Us"
                 active-class="route-active"
-
               />
               <q-route-tab
                 class="route-tab"
@@ -285,36 +284,34 @@
     </q-page-container>
 
     <q-footer class="absolute bg-white">
-
-        <div class="card-block flex flex-center">
-      <q-img
-        class="footer-dialog"
-        src="~assets\venice-footer-box.png"
-        width="80%"
-      >
-        <div
-          class="flex flex-center"
-          style="
-            width: 100%;
-            height: 100%;
-            align-items: center;
-            flex-direction: column;
-            background-color: #48447130;
-          "
+      <div class="card-block flex flex-center">
+        <q-img
+          class="footer-dialog"
+          src="~assets\venice-footer-box.png"
+          width="80%"
         >
-          <h2 class="text-white h2-card-block text-center">
-            Design your luxury tour.
-          </h2>
+          <div
+            class="flex flex-center"
+            style="
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              flex-direction: column;
+              background-color: #48447130;
+            "
+          >
+            <h2 class="text-white h2-card-block text-center">
+              Design your luxury tour.
+            </h2>
 
-          <h6 class="text-white subtitle-h6-card-block text-center">
-            LIMITED ONLY BY YOUR IMAGINATION .
-          </h6>
+            <h6 class="text-white subtitle-h6-card-block text-center">
+              LIMITED ONLY BY YOUR IMAGINATION .
+            </h6>
 
-          <button class="btn-toolbar-new">START THE QUIZ</button>
-        </div>
-      </q-img>
-    </div>
-
+            <button class="btn-toolbar-new">START THE QUIZ</button>
+          </div>
+        </q-img>
+      </div>
 
       <div class="title-footer">
         <h6 class="text-primary subtitle-h6-card-block text-center">
@@ -627,6 +624,10 @@ header {
     transform: scale(0.9);
   }
 
+  .subtitle-h6-card-block {
+    transform: scale(0.9);
+  }
+
   // ***NAVBAR********
   .btn-toolbar-new {
     padding: 1% 3%;
@@ -639,6 +640,10 @@ header {
 
 @media screen and (max-width: 680px) {
   .h6-footer-bottom {
+    transform: scale(0.85);
+  }
+
+   .subtitle-h6-card-block {
     transform: scale(0.85);
   }
 }

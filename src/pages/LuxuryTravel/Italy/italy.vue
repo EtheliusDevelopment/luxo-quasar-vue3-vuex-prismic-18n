@@ -112,7 +112,7 @@
             :class="active"
             class="span-header-component p-header-component"
             @click="clickMenu"
-            style="cursor: pointer; margin-rigth: 5%"
+            style="cursor: pointer; margin-right: 5%;"
           >
             At A Glance
           </p>
