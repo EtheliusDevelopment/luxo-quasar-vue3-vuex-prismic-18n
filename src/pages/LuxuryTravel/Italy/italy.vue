@@ -16,7 +16,7 @@
           <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
           <q-separator color="white" inset />
           <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
-          <q-btn color="white" icon="check" outline label="LEARN WHAT WE DO" />
+
         </div>
       </q-img>
 
@@ -110,6 +110,7 @@
           <h6
             class="excerpt"
             v-for="(execrpt, index) in responseObj.at_glance_excerpt"
+            :key="index"
           >
             {{ execrpt.text }}
           </h6>
@@ -197,7 +198,7 @@ export default {
         responseObj.value = dataRes[0].data;
         bulletPoints.value = dataRes[0].data.at_glance_bullet_point;
 
-        console.log(dataResponse);
+        console.log(dataResponse.value);
       },
       (error) => {
         console.log(error);
@@ -234,6 +235,9 @@ export default {
   margin: unset;
 }
 
+
+
+
 .span-header-component {
   color: $info;
   margin-right: 1%;
@@ -266,6 +270,7 @@ export default {
   margin-bottom: 10%;
 }
 
+
 .figcaption {
   width: 100%;
   height: 100%;
@@ -273,6 +278,7 @@ export default {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 6%;
 }
 
 .figcaption h6.text-white {
