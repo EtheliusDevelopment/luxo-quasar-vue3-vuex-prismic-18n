@@ -14,9 +14,9 @@
           height="600px"
         >
           <div class="figcaption">
-            <h6 class="text-white">LUXURY TRAVEL DESIGNERS</h6>
+            <h6 class="text-white">LOREM IPSUM</h6>
             <q-separator color="white" inset />
-            <h1 class="text-white text-center">PAUL &amp; ANDREA</h1>
+            <h1 class="text-white text-center">Take this free quiz</h1>
           </div>
         </q-img>
 
@@ -38,25 +38,28 @@
           <!-- QUIZ WELCOME PAGE -->
           <div class="starter" v-if="starter">
 
-            <h6 class="h6-title-quiz">TAKE THIS FREE QUIZ</h6>
-            <h2 class="h2-title-quiz">
-              DISCOVER WHICH OF OUR MANY EXPERIENCES IS RIGHT FOR YOU!
+            <h2 class="h2-title-quiz text-primary text-center">
+              Discover which of our many experiences is right for you!
             </h2>
-            <h4 class="h4-title-quiz">Complete The Quiz And Get:</h4>
+            <h6 class="h4-title-quiz text-info">Complete The Quiz And Get:</h6>
 
             <ol class="ol-title-quiz">
-              <li class="li-title-quiz">Detailed and professionally designed itinerary that match your
-            traveler profile ( 250$ Value)</li>
-              <li class="li-title-quiz">Our guide: " The Ultimate List of
-            Exclusive Things To Do In Italy You Won't Find On Google"</li>
-              <li class="li-title-quiz">Access
-            to our Inner Circle and get practical advice on where to go, when to
-            go and what to see once in Italy!</li>
+              <li class="li-title-quiz text-center">
+                Detailed and professionally designed itinerary that match your
+                traveler profile ( 250$ Value)
+              </li>
+              <li class="li-title-quiz text-center">
+                Our guide: " The Ultimate List of Exclusive Things To Do In
+                Italy You Won't Find On Google"
+              </li>
+              <li class="li-title-quiz text-center">
+                Access to our Inner Circle and get practical advice on where to
+                go, when to go and what to see once in Italy!
+              </li>
             </ol>
 
-
             <button
-              class="general-btn-1"
+              class="general-btn-1 q-mt-xl"
               style="padding: 2% 4%"
               @click="startQuiz"
             >
@@ -286,7 +289,7 @@ export default {
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
           window.scrollTo(0, 350);
         } else {
-          window.scrollTo(0, 750);
+          window.scrollTo(0, 850);
         }
       },
 
@@ -314,7 +317,7 @@ export default {
           if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
             window.scrollTo(0, 350);
           } else {
-            window.scrollTo(0, 750);
+            window.scrollTo(0, 850);
           }
         }
       },
@@ -366,6 +369,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// TYPO***************
+.h6-title-quiz {
+}
+.h2-title-quiz {
+}
+.h4-title-quiz {
+}
+.ol-title-quiz {
+  font-family: 'CommutersSans-Regular';
+}
+.li-title-quiz {
+}
+
 // **********HEADER BLOCK**********
 @media screen and (max-width: 680px) {
   .img1 {
@@ -413,10 +429,10 @@ hr {
 .starter {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
-  margin: 4% 9% 6% 9%
-  }
+  margin: 4% 9% 6% 9%;
+}
 
 .button-group {
   position: relative;
