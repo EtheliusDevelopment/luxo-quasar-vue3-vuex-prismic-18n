@@ -279,26 +279,21 @@
           <h2 class="text-primary title-h2">
             A luxury trip that comes from getting to know each other
           </h2>
-          <p class="text-primary body-p">
+          <p class="body-p">
             To make sure that your luxury itinerary in Italy is perfect, it is
             necessary for us to meet and get to know you, establishing a
             confidential relationship that allows us to personalize it and make
             it as congenial as possible to you. Our work starts with this
             initial and fundamental approach.
           </p>
-          <p class="text-primary body-p">
+          <p class="body-p">
             It is no accident that our clients-travelers end up building a real
             friendship with us, often deciding to come back to us for new
             travels and new luxury experiences in Italy. An occurrence that we
             love to reciprocate with dinners or gifts because we consider you
             more than a regular client.
           </p>
-          <q-btn
-            class="q-px-lg q-py-lg btn-1 body-btn"
-            color="primary"
-            outline
-            label="READ ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES"
-          />
+            <button class="general-btn-2 btn-fifth-block q-mt-md">READ ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES</button>
         </div>
       </div>
     </div>
@@ -338,6 +333,17 @@ export default {
   .third-block {
     grid-template-rows: 18vh auto 25vh auto !important;
   }
+
+  .fourth-block {
+  grid-template-rows: 9vh 65vh 9vh !important;
+
+}
+
+.text-sub-section-first-3 {
+    margin-top: 4% !important;
+}
+
+
 }
 
 .figcaption {
@@ -456,7 +462,7 @@ hr {
 .fourth-block {
   display: grid;
   grid-template-columns: 34% 10% 56%;
-  grid-template-rows: 10vh 80vh 20vh;
+  grid-template-rows: 10vh 70vh 20vh;
   margin-bottom: 10%;
 }
 
