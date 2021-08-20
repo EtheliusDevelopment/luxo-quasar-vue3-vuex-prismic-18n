@@ -108,7 +108,7 @@
       <Carouselindex />
     </div>
 
-    <LuxuryHomePage />
+    <LuxuryHomePage class="luxury-home-page" />
 
     <div class="fourth-block">
       <q-img
@@ -466,6 +466,11 @@ h2.text-primary {
 .text-sub-section-first-3 {
   grid-column: 2;
   padding-top: 6%;
+}
+
+// LUXURY BLOCK *******************
+.luxury-home-page {
+  display: none;
 }
 
 // **********FIFTH BLOCK**********
@@ -915,6 +920,9 @@ p.text-center.title-card-six {
     text-align: center !important;
   }
 
+  .luxury-home-page {
+    display: grid !important;
+  }
   .btn-fifth-block-x {
     display: flex;
     justify-content: center;
@@ -923,6 +931,10 @@ p.text-center.title-card-six {
 
   .btn-fifth-block-x .btn-fifth-block {
     margin-left: unset !important;
+  }
+
+  .sub-section-first-4 {
+    margin-left: 0% !important;
   }
 }
 </style>
