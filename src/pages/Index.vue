@@ -61,7 +61,9 @@
           itineraries, all kinds of bookings, and being frustrated.
         </p>
 
-        <button class="general-btn-1 q-mt-xl" style="padding: 1% 2%;">LEARN WHAT WE DO</button>
+        <button class="general-btn-1 q-mt-xl" style="padding: 1% 2%">
+          LEARN WHAT WE DO
+        </button>
       </div>
     </div>
 
@@ -227,8 +229,6 @@
         spinner-size="82px"
       />
     </div>
-
-
   </q-page>
 </template>
 
@@ -257,7 +257,6 @@ export default {
     margin-bottom: 5%;
   }
 
-
   .fourth-block {
     grid-template-rows: 10vh 80vh 20vh !important;
   }
@@ -271,11 +270,9 @@ export default {
     grid-template-rows: minmax(10%, 85%) !important;
   }
 
-
   .first-block {
-
-  grid-template-rows: 80vh auto !important;
-}
+    grid-template-rows: 80vh auto !important;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -348,7 +345,7 @@ export default {
 
   .imgMain {
     height: 110vh;
-}
+  }
 
   .first-block {
     display: grid;
@@ -582,7 +579,12 @@ h2.text-primary {
   flex-direction: column;
   z-index: 9;
   margin-top: 5%;
-  background: transparent !important;
+  background: rgb(0, 0, 0) !important;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 65%
+  ) !important;
 }
 
 .first-block {
@@ -803,7 +805,6 @@ p.text-center.title-card-six {
   cursor: pointer;
 }
 
-
 // TYPO**********************
 .h2-card-block {
   margin-bottom: unset;
@@ -818,7 +819,6 @@ p.text-center.title-card-six {
 }
 
 // END TYPO**********************
-
 
 // **********THIRD BLOCK**********
 
