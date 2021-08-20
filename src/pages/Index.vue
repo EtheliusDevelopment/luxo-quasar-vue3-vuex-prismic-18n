@@ -125,7 +125,7 @@
           <h2 class="text-primary title-h2">
             Your Personal Luxury Travel Designers
           </h2>
-          <p class="text-primary body-p">
+          <p class="body-p">
             We do not just create luxury vacations in Italy, but rather
             extraordinary and unique life experiences. Each of our luxury tours
             is different simply because our travelers arranged it with us. For
@@ -133,19 +133,20 @@
             and warm personal approach to discussing, creating, and planning
             every detail of your travel.
           </p>
-          <p class="text-primary body-p">
+          <p class="body-p">
             During your entire luxury tour, you will travel with local experts,
             who have a deep love for their country and are proud to share the
             hidden luxury gems of Italy with you. Are you ready to experience
             the most beautiful and captivating trip of your life?
           </p>
-
-          <button class="general-btn-2 btn-fifth-block">START PLANNING</button>
+          <div class="btn-fifth-block-x">
+            <button class="general-btn-2 btn-fifth-block">
+              START PLANNING
+            </button>
+          </div>
         </div>
       </div>
     </div>
-
-
 
     <div class="sixth-block">
       <h2 class="text-primary text-center">Why book with Luxo Italia</h2>
@@ -207,7 +208,7 @@
         <h2 class="text-primary title-h2">
           What kind of luxury traveler are you?
         </h2>
-        <p class="text-primary body-p">
+        <p class="body-p">
           We do not just create luxury vacations in Italy, but rather
           extraordinary and unique life experiences. Each of our luxury tours is
           different simply because our travelers arranged it with us. For this
@@ -215,14 +216,16 @@
           warm personal approach to discussing, creating, and planning every
           detail of your travel.
         </p>
-        <p class="text-primary body-p">
+        <p class="body-p">
           During your entire luxury tour, you will travel with local experts,
           who have a deep love for their country and are proud to share the
           hidden luxury gems of Italy with you. Are you ready to experience the
           most beautiful and captivating trip of your life?
         </p>
 
-        <button class="general-btn-1 btn-start-quiz">START THE QUIZ</button>
+        <div class="btn-fifth-block-x">
+          <button class="general-btn-1 btn-start-quiz">START THE QUIZ</button>
+        </div>
       </div>
 
       <q-img
@@ -240,7 +243,7 @@
 import { ref } from "vue";
 import PreLoader from "src/components/PreLoader.vue";
 import Carouselindex from "src/components/Utils/CarouselIndex.vue";
-import LuxuryHomePage from 'src/components/LuxuryTravel/LuxuryHomePage.vue';
+import LuxuryHomePage from "src/components/LuxuryTravel/LuxuryHomePage.vue";
 
 export default {
   components: {
@@ -826,7 +829,7 @@ p.text-center.title-card-six {
 
   .text-sub-section-first-3 {
     margin-left: 5% !important;
-    padding: 250px 0 !important;
+    padding: 250px 0 15% 0 !important;
   }
 
   .sub-section-first-sixth-block {
@@ -887,6 +890,35 @@ p.text-center.title-card-six {
 
   .general-btn-1 {
     margin-top: 4% !important;
+  }
+
+  h6.text-primary.subtitle-h6 {
+    font-family: Commuters-Sans-Bold;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 !important;
+  }
+
+  .title-h2 {
+    text-align: center;
+    padding: 0 !important;
+  }
+
+  .text-sub-section-first-3 {
+    margin-left: 0% !important;
+  }
+
+  .body-p {
+    margin-left: 5%;
+    padding-right: 10%;
+    text-align: center !important;
+  }
+
+  .btn-fifth-block-x {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
 </style>
