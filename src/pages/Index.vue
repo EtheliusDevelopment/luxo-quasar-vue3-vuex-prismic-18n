@@ -236,6 +236,16 @@
         spinner-size="82px"
       />
     </div>
+
+    <div class="img-block-last">
+      <q-img
+        src="~assets/luxo_img_1_index.jpg"
+        :ratio="16/9"
+        spinner-color="primary"
+        spinner-size="82px"
+        height="530px"
+      />
+    </div>
   </q-page>
 </template>
 
@@ -580,7 +590,13 @@ p.text-center.title-card-six {
 
 // END TYPO**********************
 
-// **********THIRD BLOCK**********
+// **********IMAGE BLOCK LAST**********
+
+.img-block-last {
+  display: none;
+  margin-top: 4%;
+  margin-bottom: 10%;
+}
 
 .fade-enter-from {
   opacity: 0;
@@ -937,5 +953,10 @@ p.text-center.title-card-six {
   .sub-section-first-4 {
     margin-left: 0% !important;
   }
+
+  .img-block-last {
+  display: block;
+}
+
 }
 </style>
