@@ -216,7 +216,7 @@
             width="60%"
             src="~assets/luxoitalia_logo_white_2020.svg"
           />
-          <q-icon name="close" color="white" size="8vw" />
+          <q-icon name="close" color="white" size="8vw" class="q-mr-md" @click="toggleLeftDrawer"/>
         </div>
 
         <q-item clickable v-ripple to="/">
