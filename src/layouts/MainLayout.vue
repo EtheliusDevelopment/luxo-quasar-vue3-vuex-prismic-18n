@@ -300,7 +300,7 @@
               height: 100%;
               align-items: center;
               flex-direction: column;
-              background-color: #48447130;
+              background-color: #48447150;
             "
           >
             <h2 class="text-white h2-card-block text-center">
@@ -333,8 +333,8 @@
       <div class="footer-content flex justify-around">
         <div class="img-footer-content">
           <q-img
-            img-class="img-footer-logo"
-            class="footer-logo"
+            img-class="img-footer-logo-main"
+            class="img-footer-logo-main"
             width="15vw"
             src="~assets/luxoitalia-logo-2.svg"
           />
@@ -354,7 +354,7 @@
           <a href="https://www.facebook.com/luxoitalia/" target="_blank">
             <q-img
               img-class="img-footer-logo"
-              width="1.8vw"
+              width="9vw"
               class="footer-logo"
               src="~assets/fb-foter.svg"
             />
@@ -363,7 +363,7 @@
           <a href="https://www.instagram.com/luxoitalia/" target="_blank">
             <q-img
               img-class="img-footer-logo"
-              width="1.8vw"
+              width="9vw"
               class="footer-logo"
               src="~assets/ig-foter.svg"
             />
@@ -375,7 +375,7 @@
           >
             <q-img
               img-class="img-footer-logo"
-              width="1.8vw"
+              width="9vw"
               class="footer-logo"
               src="~assets/in-foter.svg"
             />
@@ -384,7 +384,7 @@
           <a href="https://twitter.com/luxo_italia" target="_blank">
             <q-img
               img-class="img-footer-logo"
-              width="1.8vw"
+              width="9vw"
               class="footer-logo"
               src="~assets/tw-foter.svg"
             />
@@ -688,5 +688,21 @@ header {
     font-size: 40px;
     line-height: 46px;
   }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .img-footer-logo-main {
+    width: 70vw !important;
+  }
+
+  .social-footer-content {
+    width: 70vw !important;
+    justify-content: center;
+}
+.footer-logo{
+  margin-right: 2% !important;
+}
 }
 </style>
