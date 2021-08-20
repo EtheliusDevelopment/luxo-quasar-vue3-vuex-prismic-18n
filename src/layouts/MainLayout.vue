@@ -8,15 +8,22 @@
       >
         <div class="navbar-no-offset">
           <q-toolbar>
-            <q-btn
-              class="mobile-only btn-ham-mobile"
-              dense
-              flat
-              round
-              icon="menu"
-              @click="toggleLeftDrawer"
-            />
-
+            <div class="mobile-navbar mobile-only q-mt-md flex flex-center">
+              <q-img
+                @click="toHome"
+                class="navbar-logo-home mobile-only"
+                width="50vw"
+                src="~assets/luxoitalia_logo_white_2020.svg"
+              />
+              <q-btn
+                class="mobile-only btn-ham-mobile"
+                dense
+                flat
+                round
+                icon="menu"
+                @click="toggleLeftDrawer"
+              />
+            </div>
             <router-link to="/" class="wrapper-logo desktop-only">
               <q-img
                 class="navbar-logo q-mt-md"
@@ -212,11 +219,19 @@
         </router-link> -->
         <div class="img-index-drawer-box flex justify-between items-center">
           <q-img
+            @click="toHome"
             class="navbar-logo"
             width="60%"
             src="~assets/luxoitalia_logo_white_2020.svg"
           />
-          <q-icon name="close" color="white" size="8vw" class="q-mr-md" @click="toggleLeftDrawer"/>
+
+          <q-icon
+            name="close"
+            color="white"
+            size="8vw"
+            class="q-mr-md"
+            @click="toggleLeftDrawer"
+          />
         </div>
 
         <q-item clickable v-ripple to="/">
@@ -392,7 +407,7 @@ import { ref, computed, onUpdated } from "vue";
 import SocialComponent from "../components/SocialComponent.vue";
 import PreLoader from "../components/PreLoader.vue";
 import { useStore, mapMutations } from "vuex";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 export default {
   components: {
     SocialComponent,
@@ -407,6 +422,7 @@ export default {
 
   setup() {
     const route = useRoute();
+    const router = useRouter();
     const thisRoute = ref(route.path);
 
     const leftDrawerOpen = ref(false);
@@ -430,6 +446,10 @@ export default {
       thisRoute,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+
+      toHome() {
+        router.push("/");
       },
       navBarBg() {
         const el = document.querySelector("header");
@@ -531,8 +551,6 @@ header {
   cursor: pointer;
 }
 
-
-
 .navbar-offset {
   display: none;
 }
@@ -541,7 +559,7 @@ header {
 
 .btn-ham-mobile {
   position: relative;
-  left: 90%;
+  left: 40%;
 }
 
 .qitem-align {

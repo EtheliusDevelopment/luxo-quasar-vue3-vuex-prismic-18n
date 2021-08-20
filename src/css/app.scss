@@ -69,6 +69,8 @@
 
 // ****LAYOUT*******************
 
+
+
 .navigation-block > div {
   flex-wrap: wrap !important;
 }
@@ -480,6 +482,11 @@ p {
   .second-block-carousel button.carousel__prev:hover {
     width: 5rem;
     height: 5rem;
+  }
+
+
+  .q-toolbar{
+    padding: unset !important;
   }
 
   // END CAROUSEL TESTIMONIAL 1
