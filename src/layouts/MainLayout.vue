@@ -311,7 +311,9 @@
               LIMITED ONLY BY YOUR IMAGINATION .
             </h6>
 
-            <button class="btn-toolbar-new">START THE QUIZ</button>
+            <button class="btn-toolbar-new btn-dialog-footer">
+              START THE QUIZ
+            </button>
           </div>
         </q-img>
       </div>
@@ -664,11 +666,27 @@ header {
   }
 
   .subtitle-h6-card-block {
-    transform: scale(0.85);
+    font-size: 18px;
+    line-height: 27px;
   }
 
   .btn-toolbar-new {
     display: none !important;
+  }
+
+  .footer-dialog {
+    width: 100% !important;
+    height: 430px !important;
+  }
+
+  .btn-dialog-footer {
+    display: block !important;
+    padding: 3% 6%;
+  }
+
+  .h2-card-block {
+    font-size: 40px;
+    line-height: 46px;
   }
 }
 </style>
