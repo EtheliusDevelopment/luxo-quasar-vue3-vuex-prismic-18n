@@ -121,8 +121,8 @@
               <a href="https://www.facebook.com/luxoitalia/" target="_blank">
                 <q-img
                   img-class="img-footer-logo"
-                  width="1.1vw"
-                  class="footer-logo"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/facebook.svg"
                 />
               </a>
@@ -130,8 +130,8 @@
               <a href="https://www.instagram.com/luxoitalia/" target="_blank">
                 <q-img
                   img-class="img-footer-logo"
-                  width="1.1vw"
-                  class="footer-logo"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/instagram.svg"
                 />
               </a>
@@ -142,8 +142,8 @@
               >
                 <q-img
                   img-class="img-footer-logo"
-                  width="1.1vw"
-                  class="footer-logo"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/linkedin.svg"
                 />
               </a>
@@ -161,7 +161,7 @@
           of practicality and precision.
         </p>
 
-        <p class="">
+        <p class="text">
           This multicultural mix perfectly matched my eclectic spirit, leading
           me to an “exploratory” life. Even after my first trip to the USA
           (during my childhood), I realized I was destined to travel far and
@@ -170,7 +170,7 @@
           can offer.
         </p>
 
-        <p class="">
+        <p class="text">
           In addition, I became a restaurant expert and a fine wine connoisseur,
           two passions that I love to cultivate in my free time, as well as
           making the most use of them for my work. I like to design (and try)
@@ -181,23 +181,23 @@
       </div>
 
       <div class="sub-section-second q-pa-md">
-        <h6 class="text-primary">ANDREA DEGASPERI</h6>
+        <h6 class="text-primary h6-title-sub ">ANDREA DEGASPERI</h6>
 
-        <p class="">
+        <p class="text">
           I love traveling the world, it is my greatest passion. I take great
           pride in my authentic Italic roots, which have made me, and could not
           be otherwise, a fan of the multi-faceted Italian cuisine and its
           high-quality wines.
         </p>
 
-        <p class="">
+        <p class="text">
           Before becoming a co-founder of Luxo Italia, I experienced several
           work experiences in the hospitality industry that, combined with my
           passion for travel, proved to be fundamental in leading me to start
           this adventure with Paul.
         </p>
 
-        <p class="">
+        <p class="text">
           Factors reinforced by my desire to work with and for people. The
           radical knowledge of the territory and the great empathy that I share
           with my partner and friend Paul allows us to design trips and
@@ -205,7 +205,13 @@
           we instill our passion and experience—100% Italian.
         </p>
 
-        <button class="general-btn-1 q-mt-xl" style="padding: 2% 4%">
+        <button class="general-btn-1 q-mt-xl desktop-only" style="padding: 2% 4%">
+          TALK WITH US
+        </button>
+      </div>
+
+      <div class="btn-about flex flex-center" style="width:100%">
+          <button class="general-btn-1 q-mt-xl" style="padding: 2% 4%">
           TALK WITH US
         </button>
       </div>
@@ -217,11 +223,10 @@
         spinner-color="primary"
         spinner-size="82px"
         height="530px"
-
       >
         <div class="figcaption figcaption-about">
           <div class="figcaption-body">
-            <h2 class="text-white figcaption-title">Andrea Degasperi</h2>
+            <h2 class="text-white figcaption-title text-center">Andrea Degasperi</h2>
 
             <h6 class="text-white figcaption-subtitle">
               EMPATHETIC, VERSATILE WITH A COMPASSIONATE SOUL
@@ -236,8 +241,8 @@
               <a href="https://www.facebook.com/luxoitalia/" target="_blank">
                 <q-img
                   img-class="img-footer-logo"
-                  width="1.1vw"
-                  class="footer-logo"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/facebook.svg"
                 />
               </a>
@@ -245,8 +250,8 @@
               <a href="https://www.instagram.com/luxoitalia/" target="_blank">
                 <q-img
                   img-class="img-footer-logo"
-                  width="1.1vw"
-                  class="footer-logo"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/instagram.svg"
                 />
               </a>
@@ -257,8 +262,8 @@
               >
                 <q-img
                   img-class="img-footer-logo"
-                  width="1.1vw"
-                  class="footer-logo"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/linkedin.svg"
                 />
               </a>
@@ -641,7 +646,7 @@ hr {
 
   .third-block {
     grid-template-columns: 100% !important;
-    grid-template-rows: auto auto 530px auto 120vh !important;
+    grid-template-rows: auto auto 530px auto auto auto !important;
     margin: unset !important;
   }
 
@@ -649,29 +654,44 @@ hr {
     grid-column: 1 !important;
     grid-row: 1 !important;
     margin: 0 !important;
-}
+  }
 
-.third-block .img3 {
+  .third-block .img3 {
     grid-column: 1 !important;
     grid-row: 3 !important;
-}
+  }
 
-.third-block .sub-section-first{
+  .third-block .sub-section-first {
     grid-column: 1 !important;
     grid-row: 2 !important;
     border-radius: unset !important;
-}
+  }
 
-.third-block .img4{
+  .third-block .img4 {
     grid-column: 1 !important;
     grid-row: 5 !important;
-}
+  }
+
+  .btn-about {
+    grid-column: 1 !important;
+    grid-row: 6 !important;
+  }
+
+  .h6-title-sub {
+    font-size: 14px !important;
+    text-align: center !important;
+  }
+
+  .text {
+    text-align: center !important;
+  }
 
   // *******FOURTH BLOCK***********************
 
   .fourth-block {
     grid-template-columns: auto !important;
     grid-template-rows: auto !important;
+    margin-top: 50vh !important;
     margin-bottom: 30% !important;
   }
   .fourth-block .img4 {
@@ -696,5 +716,15 @@ hr {
   .text-box-second-block {
     margin-left: unset !important;
   }
+
+  .social-footer-content {
+    width: 40% !important;
+    margin-top: 5% !important;
+}
+
+.figcaption-subtitle {
+    text-align: center !important;
+    margin-bottom: 5% !important;
+}
 }
 </style>
