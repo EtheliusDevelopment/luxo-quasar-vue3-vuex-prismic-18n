@@ -143,6 +143,8 @@
       </div>
     </div>
 
+    <LuxuryHomePage />
+
     <div class="sixth-block">
       <h2 class="text-primary text-center">Why book with Luxo Italia</h2>
 
@@ -236,11 +238,13 @@
 import { ref } from "vue";
 import PreLoader from "src/components/PreLoader.vue";
 import Carouselindex from "src/components/Utils/CarouselIndex.vue";
+import LuxuryHomePage from 'src/components/LuxuryTravel/LuxuryHomePage.vue';
 
 export default {
   components: {
     PreLoader,
     Carouselindex,
+    LuxuryHomePage,
   },
 
   setup() {
