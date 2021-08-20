@@ -444,7 +444,7 @@ ul {
   }
 
   .img1 {
-    height: 15% !important;
+    height: 35vh !important;
   }
 
   .figcaption h1.text-white.text-center {

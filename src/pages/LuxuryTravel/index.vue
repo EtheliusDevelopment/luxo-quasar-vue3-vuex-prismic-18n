@@ -191,7 +191,7 @@ hr {
   // **********HEADER BLOCK**********
 
   .img1 {
-    height: 15% !important;
+    height: 35vh !important;
   }
   // **********FIRST BLOCK**********
   .first-block .sub-section-first {
