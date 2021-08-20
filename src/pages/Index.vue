@@ -895,6 +895,7 @@ p.text-center.title-card-six {
 
   .general-btn-1 {
     margin-top: 4% !important;
+    margin-left: 0% !important;
   }
 
   h6.text-primary.subtitle-h6 {
