@@ -2,7 +2,7 @@
   <div class="question-box">
     <div class="inner-question-box">
       <h4 class="text-center text-primary question">
-        What’s the #4 thing you look for when planning a trip?
+        What’s the #222 thing you look for when planning a trip?
       </h4>
 
       <h6 class="text-center text-primary answer">
@@ -124,7 +124,7 @@ export default {
   methods: {
     ...mapActions(["quiz/actStep4"]),
     ...mapMutations({
-      updateStep4: "quiz/updateStep4",
+      updateStep1: "quiz/updateStep4",
     }),
   },
 
@@ -136,11 +136,9 @@ export default {
     const wrapper4 = ref();
     const answer = ref();
 
-
     const stepVal = computed({
       get: () => $store.state.quiz.step4,
     });
-
 
     return {
       wrapper1,
@@ -151,7 +149,6 @@ export default {
       answer,
 
       addClass(val, event) {
-
         $store.dispatch("quiz/actStep4", answer);
 
         if (val == "teal") {
@@ -217,8 +214,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  position: relative;
-  top: 20vh;
+  // position: relative;
+  // top: 5vh;
   margin: 0 6%;
 }
 
@@ -234,12 +231,13 @@ export default {
 }
 
 .question-box {
-  position: sticky;
-  top: 0;
+  // position: sticky;
+  // top: 0;
   z-index: 999;
   background: white;
   padding: 1%;
-  margin-bottom: 5%;
+  margin-top: 6%;
+
 }
 
 .progress-bar {

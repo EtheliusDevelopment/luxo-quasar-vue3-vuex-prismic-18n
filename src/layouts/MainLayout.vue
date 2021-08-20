@@ -7,7 +7,7 @@
         style="width: 100%"
       >
         <div class="navbar-no-offset">
-          <q-toolbar :class="bodyClass">
+          <q-toolbar>
             <q-btn
               class="mobile-only"
               dense
@@ -37,10 +37,10 @@
             spaced
             style="margin-top: 2%"
             class="desktop-only"
-            :class="bodyClass"
+
           />
 
-          <q-toolbar class="navigation-toolbar desktop-only" :class="bodyClass">
+          <q-toolbar class="navigation-toolbar desktop-only" >
             <q-tabs class="navigation-block wrap" indicator-color="primary">
               <q-route-tab
                 class="route-tab"
@@ -134,12 +134,12 @@
           </q-toolbar>
         </div>
 
-        <div class="navbar-offset">
+        <div class="navbar-offset"  :class="bodyClass">
           <q-toolbar
             class="navigation-toolbar desktop-only justify-around"
-            :class="bodyClass"
+
           >
-            <router-link to="/" class="wrapper-logo desktop-only">
+                  <router-link to="/" class="wrapper-logo desktop-only">
               <q-img
                 class="navbar-logo"
                 width="10vw"
@@ -283,7 +283,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer class="absolute bg-white">
+    <q-footer class="absolute bg-white" :class="bodyClass">
       <div class="card-block flex flex-center">
         <q-img
           class="footer-dialog"
@@ -419,47 +419,32 @@ export default {
 
   setup() {
     const route = useRoute();
-    const thisRoute = ref(route.params.post);
-    const tryRoute = ref(route.path);
+    const thisRoute = ref(route.path);
+
 
     const leftDrawerOpen = ref(false);
     const $store = useStore();
 
     const bodyClass = ref();
-    thisRoute.value
-      // ? (bodyClass.value = "blog-single-display-none")
-      ? (bodyClass.value = "")
+    thisRoute.value === "/quiz"
+      ? (bodyClass.value = "blog-single-display-none")
       : (bodyClass.value = "");
 
-    const footerClass = ref();
-    tryRoute.value === "/quiz"
-      ? (footerClass.value = "quiz-display-none")
-      : (footerClass.value = "");
-
     onUpdated(() => {
-      console.log("footerClass.value");
-      console.log(footerClass.value);
 
-      thisRoute.value = route.params.post;
-      thisRoute.value
-        // ? (bodyClass.value = "blog-single-display-none") WORKING!
-        ? (bodyClass.value = "")
+      thisRoute.value = route.path;
+      thisRoute.value === "/quiz"
+        ? (bodyClass.value = "blog-single-display-none")
         : (bodyClass.value = "");
 
-      tryRoute.value = route.path;
 
-      tryRoute === "/quiz"
-        ? (footerClass.value = "quiz-display-none")
-        : (footerClass.value = "");
     });
 
     return {
       leftDrawerOpen,
       bodyClass,
       thisRoute,
-      footerClass,
-      tryRoute,
-      toggleLeftDrawer() {
+       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
       navBarBg() {

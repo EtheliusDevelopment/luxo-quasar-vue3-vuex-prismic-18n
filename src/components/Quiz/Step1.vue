@@ -214,8 +214,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  position: relative;
-  top: 20vh;
+  // position: relative;
+  // top: 5vh;
   margin: 0 6%;
 }
 
@@ -231,12 +231,13 @@ export default {
 }
 
 .question-box {
-  position: sticky;
-  top: 0;
+  // position: sticky;
+  // top: 0;
   z-index: 999;
   background: white;
   padding: 1%;
-  margin-bottom: 5%;
+  margin-top: 6%;
+
 }
 
 .progress-bar {

@@ -114,6 +114,7 @@
               v-if="count >= 0 && count < 9"
             />
           </div>
+          <div  style="height:25vh; width:100%"></div>
         </div>
       </div>
 
@@ -247,10 +248,12 @@ export default {
         $store.commit("dynamicClasses/addFooterClass", "quiz");
         starter.value = false;
         window.scroll({
-          top: 750,
+          top: 700,
           behavior: "smooth",
         });
+
       },
+
 
       prevPage() {
         if (count.value === 1 && $store.state.quiz.step1 !== "") {
@@ -289,7 +292,7 @@ export default {
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
           window.scrollTo(0, 350);
         } else {
-          window.scrollTo(0, 850);
+          window.scrollTo(0, 700);
         }
       },
 
@@ -317,7 +320,7 @@ export default {
           if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
             window.scrollTo(0, 350);
           } else {
-            window.scrollTo(0, 850);
+            window.scrollTo(0, 700);
           }
         }
       },
@@ -449,14 +452,20 @@ hr {
 }
 
 .button-group {
-  position: relative;
-  top: 25vh;
+  // position: relative;
+  // top: 15vh;
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 1%;
 }
 
 // **********FIRST BLOCK**********
+
+.sub-section-first {
+    margin-bottom: 10vh;
+}
+
+
 @media screen and (max-width: 990px) {
 }
 

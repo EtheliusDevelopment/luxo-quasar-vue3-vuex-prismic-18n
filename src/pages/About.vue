@@ -391,7 +391,7 @@ hr {
 .second-block {
   display: grid;
   grid-template-columns: 1.8fr 0.6fr 1fr;
-  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-rows: .1fr .8fr .1fr;
   margin-bottom: 10%;
 }
 

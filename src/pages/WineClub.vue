@@ -696,8 +696,7 @@ h6.text-primary.subtitle-h6 {
     transform: scale(0.9);
   }
   .h4-wine-card {
-    transform: scale(0.9);
-    font-size: 50px;
+    font-size: 35px;
   }
 }
 
@@ -718,7 +717,7 @@ h6.text-primary.subtitle-h6 {
   // *******THIRD BLOCK*****
 
   .img-step {
-    display: none !important;
+    margin-bottom: 10%;
   }
 
   .step-one {
@@ -747,16 +746,30 @@ h6.text-primary.subtitle-h6 {
     transform: scale(0.8);
   }
 
-  // **********FOURTH BLOCK**********
-
-  // ****FLUID TEXT TEST******
-
   .h6-wine-card {
-    transform: scale(0.8);
+    font-size: 12px;
   }
   .h4-wine-card {
-    transform: scale(0.8);
+    font-size: scale(0.8);
   }
+
+  // **********FOURTH BLOCK**********
+  .btn-wine-card {
+    transform: scale(0.7);
+  }
+
+  .wine-card-loop {
+    flex-direction: column;
+    padding: 0 4%;
+  }
+
+  .wine-card {
+    border: 2px solid #d9c5a0;
+    width: 100%;
+    margin: 0 0%;
+    margin-bottom: 5%;
+  }
+  // ****FLUID TEXT TEST******
 
   // **********FIFTH BLOCK**********
   .fifth-block {
