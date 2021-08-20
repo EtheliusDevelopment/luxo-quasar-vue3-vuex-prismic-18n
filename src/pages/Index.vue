@@ -108,6 +108,8 @@
       <Carouselindex />
     </div>
 
+    <LuxuryHomePage />
+
     <div class="fourth-block">
       <q-img
         class="img4"
@@ -143,7 +145,7 @@
       </div>
     </div>
 
-    <LuxuryHomePage />
+
 
     <div class="sixth-block">
       <h2 class="text-primary text-center">Why book with Luxo Italia</h2>
