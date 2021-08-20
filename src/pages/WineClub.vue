@@ -389,6 +389,12 @@ export default defineComponent({
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.9037990196078431) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .figcaption h6.text-white {

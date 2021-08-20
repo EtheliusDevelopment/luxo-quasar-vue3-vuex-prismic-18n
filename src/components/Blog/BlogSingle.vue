@@ -231,6 +231,12 @@ div:has(.figcaption) {
   .first-block {
     margin: 0 5% 10% 5%;
   }
+
+
+  .btn-box {
+    position: absolute;
+    top: 80%;
+}
 }
 
 @media screen and (max-width: 680px) {

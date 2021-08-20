@@ -56,13 +56,19 @@ header{
 
 
 .figcaption {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  z-index: 9;
-  background: $info !important;
-  height: 100%;
+  padding-bottom: 6%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.9037990196078431) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 

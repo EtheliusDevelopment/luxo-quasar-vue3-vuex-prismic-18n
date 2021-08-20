@@ -355,6 +355,12 @@ export default {
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.9037990196078431) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .figcaption h6.text-white {
@@ -391,7 +397,7 @@ hr {
 .second-block {
   display: grid;
   grid-template-columns: 1.8fr 0.6fr 1fr;
-  grid-template-rows: .1fr .8fr .1fr;
+  grid-template-rows: 0.1fr 0.8fr 0.1fr;
   margin-bottom: 10%;
 }
 
@@ -492,7 +498,12 @@ hr {
 }
 // ********HEADER BLOCK*****
 .figcaption-about {
-  background-color: rgb(0 0 0 / 12%) !important;
+  background: rgb(0, 0, 0) !important;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 65%
+  ) !important;
 }
 
 .figcaption-body {
