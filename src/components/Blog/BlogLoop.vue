@@ -222,8 +222,9 @@ h4.text-pink.q-ma-xl {
 
 .blog-card {
   border: 2px solid $info;
-
-  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5%;
 }
 
 @media screen and (max-width: 1100px) {

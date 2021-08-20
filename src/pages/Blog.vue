@@ -162,6 +162,10 @@ hr {
 }
 // ******SECOND BLOCK**************
 .second-block {
-  margin: 0 10% 30% 10%;
+  margin: 0 10% 5% 10%;
+}
+
+.pagination-luxury-block {
+    margin-top: 5%;
 }
 </style>
