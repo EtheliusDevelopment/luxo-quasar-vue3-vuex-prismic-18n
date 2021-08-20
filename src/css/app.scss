@@ -438,8 +438,8 @@ p {
   }
 
   h2 {
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 30px;
+    line-height: 38px;
   }
 
   p {
@@ -490,6 +490,43 @@ p {
   }
 
   // END CAROUSEL TESTIMONIAL 1
+
+  // GLOBAL BUTTONS
+
+.general-btn-1 {
+  border: 2px solid;
+  padding: 3% 6% !important;
+  background-color: transparent;
+  color: #4c4571;
+  border-color: #d9c5a0;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.general-btn-1:hover {
+  background-color: #d9c5a0;
+  color: white;
+}
+
+.general-btn-2 {
+  border: 2px solid;
+  padding: 3% 6% !important;
+  background-color: transparent;
+  color: #4c4571;
+  border-color: white;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.general-btn-2:hover {
+  background-color: white;
+}
+
+
   // ***fine Media Query 680
 }
 
