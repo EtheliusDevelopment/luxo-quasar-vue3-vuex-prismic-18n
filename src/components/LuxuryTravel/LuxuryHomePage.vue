@@ -15,11 +15,17 @@
         </h4>
       </div>
     </q-img>
+    <div class="btn-first-block-luxury flex flex-center">
+      <button class="general-btn-1" style="padding: 1% 2%" @click="$router.push('/luxury-travel')">
+        GO TO OUR PACKAGES
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 import { api } from "boot/axios";
+
 
 export default {
   name: "Italy Luxury Travel",
@@ -135,7 +141,6 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 0.6fr;
   grid-gap: 2%;
-  margin: 0 8%;
   margin-bottom: 5% !important;
 }
 
@@ -143,9 +148,13 @@ export default {
   margin-bottom: 1%;
 }
 
+.btn-first-block-luxury.flex.flex-center {
+    height: 20vh;
+}
+
 // Pagination ********
 
-.pagination-luxury-block{
+.pagination-luxury-block {
   margin-bottom: 5%;
 }
 
@@ -175,5 +184,7 @@ export default {
   .first-block-luxury {
     grid-template-columns: auto;
   }
+
+
 }
 </style>

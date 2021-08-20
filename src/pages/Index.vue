@@ -750,7 +750,7 @@ p.text-center.title-card-six {
   .fourth-block {
     grid-template-columns: 100% !important;
     grid-template-rows: 220px 220px auto !important;
-    margin-bottom: 30% !important;
+    margin-bottom: 10% !important;
   }
 
   .img4 {
