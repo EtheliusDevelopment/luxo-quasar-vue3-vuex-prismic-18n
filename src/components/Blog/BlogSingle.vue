@@ -112,6 +112,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media screen and (min-width: 1580px) {
+  .figcaption {
+    padding-bottom: 10% !important;
+  }
+}
+
 // *******TYPO************
 
 .title-header-block {
@@ -120,7 +126,6 @@ export default {
   line-height: 63px;
   letter-spacing: 0.5px;
   margin-bottom: 0;
-
 }
 
 .h4-blog-par {
@@ -143,9 +148,9 @@ export default {
   margin-bottom: 10% !important;
 }
 
-.h6-header-blog{
+.h6-header-blog {
   font-size: 15px;
-  font-family: 'Commuters-Sans-Light';
+  font-family: "Commuters-Sans-Light";
   width: 100%;
   margin-top: 2%;
 }
@@ -168,7 +173,6 @@ div:has(.figcaption) {
 }
 
 .btn-header-block {
-
 }
 
 .btn-header-block:after {
