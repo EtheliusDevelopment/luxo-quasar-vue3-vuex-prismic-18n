@@ -46,7 +46,6 @@
   color: white;
 }
 
-
 .general-btn-2 {
   border: 2px solid;
   padding: 2% 4%;
@@ -61,12 +60,11 @@
 
 .general-btn-2:hover {
   background-color: white;
-
 }
 
-  // RADIO INPUTS******
-  .q-radio__label.q-anchor--skip {
-    font-family: 'CommutersSans-Regular' !important;
+// RADIO INPUTS******
+.q-radio__label.q-anchor--skip {
+  font-family: "CommutersSans-Regular" !important;
 }
 
 // ****LAYOUT*******************
@@ -90,6 +88,11 @@ span.block {
 .q-drawer-container + .q-header {
   display: none !important;
 }
+.q-drawer {
+  background: $info;
+  width: 100% !important;
+}
+
 
 .q-page-container {
   padding-top: unset !important;
@@ -170,8 +173,6 @@ p {
 
 .q-breadcrumbs__el {
   font-family: "Commuters-Sans-Light";
-
-
 }
 
 // STYLES CAROUSEL INDEX
@@ -483,15 +484,6 @@ p {
 
   // END CAROUSEL TESTIMONIAL 1
   // ***fine Media Query 680
-}
-
-.q-drawer {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.9363095580028886) 0%,
-    rgba(76, 69, 113, 1) 100%
-  );
 }
 
 // *****SCROLLBAR

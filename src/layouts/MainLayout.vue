@@ -9,7 +9,7 @@
         <div class="navbar-no-offset">
           <q-toolbar>
             <q-btn
-              class="mobile-only"
+              class="mobile-only btn-ham-mobile"
               dense
               flat
               round
@@ -37,10 +37,9 @@
             spaced
             style="margin-top: 2%"
             class="desktop-only"
-
           />
 
-          <q-toolbar class="navigation-toolbar desktop-only" >
+          <q-toolbar class="navigation-toolbar desktop-only">
             <q-tabs class="navigation-block wrap" indicator-color="primary">
               <q-route-tab
                 class="route-tab"
@@ -134,12 +133,9 @@
           </q-toolbar>
         </div>
 
-        <div class="navbar-offset"  :class="bodyClass">
-          <q-toolbar
-            class="navigation-toolbar desktop-only justify-around"
-
-          >
-                  <router-link to="/" class="wrapper-logo desktop-only">
+        <div class="navbar-offset" :class="bodyClass">
+          <q-toolbar class="navigation-toolbar desktop-only justify-around">
+            <router-link to="/" class="wrapper-logo desktop-only">
               <q-img
                 class="navbar-logo"
                 width="10vw"
@@ -202,80 +198,72 @@
     <q-drawer
       class="drawer"
       v-model="leftDrawerOpen"
-      side="left"
+      side="right"
       behavior="mobile"
       bordered
     >
       <q-list padding class="menu-list q-list-drawer">
-        <q-item clickable v-ripple to="/" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="home" color="white" />
-          </q-item-section>
+        <!-- <router-link to="/" class="wrapper-logo desktop-only">
+          <q-img
+            class="navbar-logo q-mt-md"
+            width="14vw"
+            src="~assets/luxoitalia_logo_white_2020.svg"
+          />
+        </router-link> -->
+        <div class="img-index-drawer-box flex justify-between items-center">
+          <q-img
+            class="navbar-logo"
+            width="60%"
+            src="~assets/luxoitalia_logo_white_2020.svg"
+          />
+          <q-icon name="close" color="white" size="8vw" />
+        </div>
 
-          <q-item-section class="text-white q-ml-md"> Home </q-item-section>
+        <q-item clickable v-ripple to="/">
+          <q-item-section class="text-white qitem-align"> Home </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/about" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
+        <q-item clickable v-ripple to="/about" class="qitem-align">
+          <q-item-section class="text-white qitem-align">
+            About Us
           </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> About Us </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/luxury-travel" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md">
+        <q-item clickable v-ripple to="/luxury-travel" class="qitem-align">
+          <q-item-section class="text-white qitem-align">
             Italy Luxury Travel
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/wine-club" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md">
+        <q-item clickable v-ripple to="/wine-club" class="qitem-align">
+          <q-item-section class="text-white qitem-align">
             Wine Club
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/testimonials" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md">
+        <q-item clickable v-ripple to="/testimonials" class="qitem-align">
+          <q-item-section class="text-white qitem-align">
             Testimonials
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/quiz" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> Quiz </q-item-section>
+        <q-item clickable v-ripple to="/quiz" class="qitem-align">
+          <q-item-section class="text-white qitem-align"> Quiz </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/blog" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
-          </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> Blog </q-item-section>
+        <q-item clickable v-ripple to="/blog" class="qitem-align">
+          <q-item-section class="text-white qitem-align"> Blog </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/contact-us" class="q-ml-md">
-          <q-item-section avatar q-ml-md>
-            <q-icon name="flight_takeoff" color="white" />
+        <q-item clickable v-ripple to="/contact-us" class="qitem-align">
+          <q-item-section class="text-white qitem-align">
+            Contact
           </q-item-section>
-
-          <q-item-section class="text-white q-ml-md"> Contact </q-item-section>
         </q-item>
+
+        <div class="btn-box-drawer flex flex-center">
+          <button class="btn-toolbar-new-drawer q-mt-md">START PLANNING</button>
+        </div>
       </q-list>
     </q-drawer>
 
@@ -421,7 +409,6 @@ export default {
     const route = useRoute();
     const thisRoute = ref(route.path);
 
-
     const leftDrawerOpen = ref(false);
     const $store = useStore();
 
@@ -431,20 +418,17 @@ export default {
       : (bodyClass.value = "");
 
     onUpdated(() => {
-
       thisRoute.value = route.path;
       thisRoute.value === "/quiz"
         ? (bodyClass.value = "blog-single-display-none")
         : (bodyClass.value = "");
-
-
     });
 
     return {
       leftDrawerOpen,
       bodyClass,
       thisRoute,
-       toggleLeftDrawer() {
+      toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
       navBarBg() {
@@ -547,11 +531,42 @@ header {
   cursor: pointer;
 }
 
+
+
 .navbar-offset {
   display: none;
 }
 
 // *********DRAWER BLOCK *******************
+
+.btn-ham-mobile {
+  position: relative;
+  left: 90%;
+}
+
+.qitem-align {
+  align-items: center !important;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.img-index-drawer-box {
+  border-bottom: 1px solid white;
+  padding: 0 3% 8% 3%;
+  margin-bottom: 6%;
+}
+
+.btn-toolbar-new-drawer {
+  border: none;
+  padding: 3% 6%;
+  background-color: white;
+  color: #4c4571;
+  font-family: "Commuters-Sans-Bold";
+  font-size: 13px;
+  cursor: pointer;
+}
 
 // *********FOOTER BLOCK *******************
 
@@ -630,8 +645,12 @@ header {
     transform: scale(0.85);
   }
 
-   .subtitle-h6-card-block {
+  .subtitle-h6-card-block {
     transform: scale(0.85);
+  }
+
+  .btn-toolbar-new {
+    display: none !important;
   }
 }
 </style>
