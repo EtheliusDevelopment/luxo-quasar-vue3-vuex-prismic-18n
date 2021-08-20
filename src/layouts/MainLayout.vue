@@ -700,9 +700,12 @@ header {
   .social-footer-content {
     width: 70vw !important;
     justify-content: center;
-}
-.footer-logo{
-  margin-right: 2% !important;
-}
+    margin-bottom: 10%;
+  }
+
+
+  .footer-logo {
+    margin-right: 2% !important;
+  }
 }
 </style>
