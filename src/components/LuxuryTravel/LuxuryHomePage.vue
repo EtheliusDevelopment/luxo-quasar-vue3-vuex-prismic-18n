@@ -142,6 +142,7 @@ export default {
   grid-auto-rows: 0.6fr;
   grid-gap: 2%;
   margin-bottom: 5% !important;
+  padding: 3%;
 }
 
 .img-luxury-loop {
