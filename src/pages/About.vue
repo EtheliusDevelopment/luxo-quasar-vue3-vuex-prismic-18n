@@ -35,24 +35,24 @@
     <div class="first-block">
       <div class="sub-section-first">
         <h2 class="text-primary text-center">Your Luxury Travel Designers</h2>
-        <p class="text-primary text-center">
+        <p class="text-center">
           We know and love every small village, corner, and place in our
           country, and we want to help you get to know it in the way that best
           reflects your tastes and preferences.
         </p>
-        <p class="text-primary text-center">
+        <p class="text-center">
           But before luxury travel designers we are above all travelers.
         </p>
-        <p class="text-primary text-center">
+        <p class="text-center">
           We love discovering new places, new foods, new cultures, learning how
           to get to know those who accompany us and enjoying the beauty of Italy
           together.
         </p>
-        <p class="text-primary text-center">
+        <p class="text-center">
           Precisely, this aspect defines the difference between what we offer
           you and what the classic luxury travel agencies offer.
         </p>
-        <p class="text-primary text-center">
+        <p class="text-center">
           We do not limit ourselves to organizing and booking a pre-established
           and undistinguished itinerary. Our objective is different; we want to
           offer you an exclusive, unique and inimitable luxury experience that
@@ -68,7 +68,7 @@
     <div class="second-block">
       <div class="sub-section-first bg-info">
         <div class="text-box-second-block">
-          <h2 class="text-primary title-h2">
+          <h2 class="text-primary title-h2 h2-second-block">
             Why Luxo Italia? A passion that has become a job
           </h2>
           <p class="body-p">
@@ -102,6 +102,7 @@
         src="~assets/paul_lewis.png"
         spinner-color="primary"
         spinner-size="82px"
+        height="530px"
       >
         <div class="figcaption figcaption-about">
           <div class="figcaption-body">
@@ -210,11 +211,13 @@
       </div>
 
       <q-img
-        class="img4"
-        img-class="img4-index"
+        class="img7"
+        img-class="img7-index"
         src="~assets/andrea_degasperi.png"
         spinner-color="primary"
         spinner-size="82px"
+        height="530px"
+
       >
         <div class="figcaption figcaption-about">
           <div class="figcaption-body">
@@ -592,6 +595,12 @@ hr {
   }
 
   // **********FIRST BLOCK**********
+
+  .first-block {
+    margin-bottom: 10% !important;
+    margin-top: 10% !important;
+  }
+
   .first-block .sub-section-first {
     display: flex;
     justify-content: center;
@@ -605,13 +614,23 @@ hr {
   }
 
   .second-block {
-    grid-template-columns: auto !important;
-    grid-template-rows: auto !important;
+    grid-template-columns: 100% !important;
+    grid-template-rows: auto auto !important;
   }
 
   .second-block .sub-section-first {
     grid-template-columns: auto !important;
     grid-template-rows: auto !important;
+    padding: 10% 5% !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .second-block .img1 {
+    display: block !important;
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    height: 530px !important;
   }
 
   .title-h2 {
@@ -621,9 +640,32 @@ hr {
   // ******THIRD BLOCK*******************
 
   .third-block {
-    grid-template-rows: auto auto auto auto !important;
-    margin: 0 9% 70% 9% !important;
+    grid-template-columns: 100% !important;
+    grid-template-rows: auto auto 530px auto 120vh !important;
+    margin: unset !important;
   }
+
+  .heading-third-block {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+}
+
+.third-block .img3 {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+}
+
+.third-block .sub-section-first{
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    border-radius: unset !important;
+}
+
+.third-block .img4{
+    grid-column: 1 !important;
+    grid-row: 5 !important;
+}
 
   // *******FOURTH BLOCK***********************
 
@@ -638,6 +680,21 @@ hr {
 
   .img-about-4-index {
     object-position: 40% 50% !important; //riportato in app.css
+  }
+
+  .h2-second-block {
+    text-align: center !important;
+    padding-right: unset !important;
+  }
+
+  .body-p {
+    text-align: center !important;
+    padding-right: unset !important;
+    margin-left: unset !important;
+  }
+
+  .text-box-second-block {
+    margin-left: unset !important;
   }
 }
 </style>
