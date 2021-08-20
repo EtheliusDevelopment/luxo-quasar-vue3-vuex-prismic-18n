@@ -911,7 +911,7 @@ p.text-center.title-card-six {
 
   .body-p {
     margin-left: 5%;
-    padding-right: 10%;
+    padding-right: 5%;
     text-align: center !important;
   }
 
@@ -919,6 +919,10 @@ p.text-center.title-card-six {
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+
+  .btn-fifth-block-x .btn-fifth-block {
+    margin-left: unset !important;
   }
 }
 </style>
