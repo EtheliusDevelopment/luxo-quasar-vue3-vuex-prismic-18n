@@ -723,7 +723,7 @@ h6.text-primary.subtitle-h6 {
   }
 
   .img1 {
-    height: 15% !important;
+    height: 35vh !important;
   }
 
   // *******THIRD BLOCK*****
