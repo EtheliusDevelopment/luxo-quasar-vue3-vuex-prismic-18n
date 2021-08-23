@@ -234,6 +234,7 @@
         src="~assets/index_luxo_small_village.png"
         spinner-color="primary"
         spinner-size="82px"
+        height="105vh"
       />
     </div>
 
@@ -292,7 +293,7 @@ export default {
 
   .fifth-block {
     margin: 0 3% 10% 3% !important;
-    grid-template-rows: minmax(10%, 85%) !important;
+    grid-template-rows: auto !important;
   }
 
   .first-block {
@@ -506,7 +507,7 @@ h2.text-primary {
 .sub-section-first-4 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   grid-column: 1;
   margin-left: 4%;
@@ -557,6 +558,12 @@ p.text-center.title-card-six {
 .seventh-block {
   padding: 0 5vw 5vw 5vw;
 }
+
+  .btn-fifth-block-x {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
 
 // **********CARD BLOCK**********
 
