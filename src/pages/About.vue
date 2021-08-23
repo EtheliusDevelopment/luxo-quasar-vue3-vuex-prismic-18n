@@ -114,15 +114,15 @@
 
             <q-separator color="white" inset />
 
-              <div
-              class="social-footer-content flex justify-evenly q-mt-md"
-              style="width: 35%"
+            <div
+              class="social-footer-content flex justify-evenly"
+              style="width: 20%"
             >
               <a href="https://www.facebook.com/luxoitalia/" target="_blank">
                 <q-img
                   img-class="img-footer-logo"
-                  width="2.5vw"
-                  class="footer-logo q-mr-md footer-logo-about"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/facebook.svg"
                 />
               </a>
@@ -130,8 +130,8 @@
               <a href="https://www.instagram.com/luxoitalia/" target="_blank">
                 <q-img
                   img-class="img-footer-logo"
-                  width="2.5vw"
-                  class="footer-logo q-mr-md footer-logo-about"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/instagram.svg"
                 />
               </a>
@@ -142,8 +142,8 @@
               >
                 <q-img
                   img-class="img-footer-logo"
-                  width="2.5vw"
-                  class="footer-logo q-mr-md footer-logo-about"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/linkedin.svg"
                 />
               </a>
@@ -214,7 +214,7 @@
       </div>
 
       <div class="btn-about flex flex-center" style="width: 100%">
-        <button class="general-btn-1" style="padding: 2% 4%">
+        <button class="general-btn-1 q-mt-xl" style="padding: 2% 4%">
           TALK WITH US
         </button>
       </div>
@@ -240,14 +240,14 @@
             <q-separator color="white" inset />
 
             <div
-              class="social-footer-content flex justify-evenly q-mt-md"
-              style="width: 35%"
+              class="social-footer-content flex justify-evenly"
+              style="width: 20%"
             >
               <a href="https://www.facebook.com/luxoitalia/" target="_blank">
                 <q-img
                   img-class="img-footer-logo"
-                  width="2.5vw"
-                  class="footer-logo q-mr-md footer-logo-about"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/facebook.svg"
                 />
               </a>
@@ -255,8 +255,8 @@
               <a href="https://www.instagram.com/luxoitalia/" target="_blank">
                 <q-img
                   img-class="img-footer-logo"
-                  width="2.5vw"
-                  class="footer-logo q-mr-md footer-logo-about"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/instagram.svg"
                 />
               </a>
@@ -267,8 +267,8 @@
               >
                 <q-img
                   img-class="img-footer-logo"
-                  width="2.5vw"
-                  class="footer-logo q-mr-md footer-logo-about"
+                  width="6vw"
+                  class="footer-logo q-mr-md"
                   src="~assets/linkedin.svg"
                 />
               </a>
@@ -644,7 +644,7 @@ hr {
   }
 
   .title-h2 {
-    padding: 0 5% 0 0 !important;
+    padding: unset !important;
   }
 
   // ******THIRD BLOCK*******************
@@ -691,9 +691,9 @@ hr {
     text-align: center !important;
   }
 
-  .footer-logo-about{
-    width: 6vw !important;
-  }
+  .general-btn-2.btn-fifth-block {
+    margin-left: unset !important;
+}
 
   // *******FOURTH BLOCK***********************
 

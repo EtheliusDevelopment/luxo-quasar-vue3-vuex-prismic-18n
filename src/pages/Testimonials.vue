@@ -15,7 +15,7 @@
         <div class="figcaption">
           <h6 class="text-white">THAT’S WHY WE LOVE</h6>
           <q-separator color="white" inset />
-          <h1 class="text-white text-center">Luxury Travel For Our Clients</h1>
+          <h1 class="text-white text-center">Our Clients</h1>
         </div>
       </q-img>
 
@@ -312,7 +312,7 @@ export default {
     // **********HEADER BLOCK**********
 
   .figcaption h1.text-white.text-center {
-        margin-bottom:0vh !important;
+        margin-bottom: 3vh !important;
   }
 
    .img1 {

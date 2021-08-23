@@ -143,6 +143,7 @@ export default {
   justify-content: center;
   align-items: flex-end;
   cursor: pointer;
+  background: linear-gradient(0deg, #000000, #0000 100%) !important;
 }
 
 // FIRST BLOCK************
@@ -161,7 +162,7 @@ export default {
 
 // Pagination ********
 
-.pagination-luxury-block{
+.pagination-luxury-block {
   margin-bottom: 5%;
 }
 

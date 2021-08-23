@@ -425,7 +425,7 @@ ul {
   }
 
   .h6-body-title {
-    transform: scale(0.9);
+
   }
 
   // FIRST BLOCK*****************
@@ -435,8 +435,6 @@ ul {
 }
 
 @media screen and (max-width: 680px) {
-
-
   // TYPO****************
   .title-component {
     transform: scale(0.85);
@@ -450,22 +448,20 @@ ul {
     height: 35vh !important;
   }
 
-
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 3vh;
   }
 
   .h6-body-title {
-    transform: scale(0.85);
+
   }
 
-    // HEADER BLOCK****************
+  // HEADER BLOCK****************
 
   .figcaption h1.text-white.text-center {
     margin-bottom: 3vh !important;
   }
-
 
   // FIRST BLOCK*****************
   .img-component {
@@ -488,6 +484,10 @@ ul {
 
   ul {
     color: #4c4571;
+  }
+
+  .par-body {
+    margin-top: 5%;
   }
 
   .btn-box-fourth-block {

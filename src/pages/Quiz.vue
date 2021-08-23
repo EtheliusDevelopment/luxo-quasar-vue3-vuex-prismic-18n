@@ -462,6 +462,11 @@ hr {
     height: 35vh !important;
   }
 
+   .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh;
+  }
+
   .h4-title-quiz {
     font-size: 20px;
     line-height: 25px;

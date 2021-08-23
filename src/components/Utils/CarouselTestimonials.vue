@@ -127,5 +127,15 @@ export default defineComponent({
 .body-carousel {
     line-height: 20px;
 }
+
+
+.carousel__slide--prev .figcaption {
+    background-color: #000000d1;
+}
+
+
+.carousel__slide--next .figcaption {
+    background-color: #000000d1;
+}
 }
 </style>
