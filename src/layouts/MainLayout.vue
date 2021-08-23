@@ -207,6 +207,9 @@
       v-model="leftDrawerOpen"
       side="right"
       behavior="mobile"
+      no-swipe-open
+      no-swipe-close
+      no-swipe-backdrop
       bordered
     >
       <q-list padding class="menu-list q-list-drawer">
@@ -353,18 +356,18 @@
         >
           <a href="https://www.facebook.com/luxoitalia/" target="_blank">
             <q-img
-              img-class="img-footer-logo"
-              width="9vw"
-              class="footer-logo"
+              img-class="img-footer-logo-social"
+              width="1.8vw"
+              class="footer-logo img-footer-logo-social"
               src="~assets/fb-foter.svg"
             />
           </a>
 
           <a href="https://www.instagram.com/luxoitalia/" target="_blank">
             <q-img
-              img-class="img-footer-logo"
-              width="9vw"
-              class="footer-logo"
+              img-class="img-footer-logo-social"
+              width="1.8vw"
+              class="footer-logo img-footer-logo-social"
               src="~assets/ig-foter.svg"
             />
           </a>
@@ -374,18 +377,18 @@
             target="_blank"
           >
             <q-img
-              img-class="img-footer-logo"
-              width="9vw"
-              class="footer-logo"
+              img-class="img-footer-logo-social"
+              width="1.8vw"
+              class="footer-logo img-footer-logo-social"
               src="~assets/in-foter.svg"
             />
           </a>
 
           <a href="https://twitter.com/luxo_italia" target="_blank">
             <q-img
-              img-class="img-footer-logo"
-              width="9vw"
-              class="footer-logo"
+              img-class="img-footer-logo-social"
+              width="1.8vw"
+              class="footer-logo img-footer-logo-social"
               src="~assets/tw-foter.svg"
             />
           </a>
@@ -698,14 +701,17 @@ header {
   }
 
   .social-footer-content {
-    width: 70vw !important;
-    justify-content: center;
+    width: 50vw !important;
     margin-bottom: 10%;
   }
 
-
   .footer-logo {
     margin-right: 2% !important;
+  }
+
+  .img-footer-logo-social {
+    width: 9vw !important;
+    margin-right: 1% !important;
   }
 }
 </style>
