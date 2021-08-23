@@ -234,22 +234,20 @@
         src="~assets/index_luxo_small_village.png"
         spinner-color="primary"
         spinner-size="82px"
-        height="105vh"
       />
     </div>
 
     <div class="img-block-last">
       <q-img
         src="~assets/luxo_img_1_index.jpg"
-        :ratio="16/9"
+        :ratio="16 / 9"
         spinner-color="primary"
         spinner-size="82px"
         height="530px"
       />
     </div>
 
-    <CarouselFacebook style="margin-bottom:10%"/>
-
+    <CarouselFacebook style="margin-bottom: 10%" />
   </q-page>
 </template>
 
@@ -292,12 +290,16 @@ export default {
   }
 
   .fifth-block {
-    margin: 0 3% 10% 3% !important;
-    grid-template-rows: auto !important;
+        grid-template-rows: minmax(10%, 100%);
+    margin: 0 3% 0% 3% !important;
   }
 
   .first-block {
     grid-template-rows: 80vh auto !important;
+  }
+
+  .img5 {
+    height: 90% !important;
   }
 }
 
@@ -495,8 +497,8 @@ h2.text-primary {
 .fifth-block {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: minmax(10%, 75%);
-  margin: 0 7% 10% 7%;
+  grid-template-rows: minmax(10%, 100%);
+  margin: 0 7% 5% 7%;
 }
 
 .btn-fifth-block {
@@ -559,11 +561,11 @@ p.text-center.title-card-six {
   padding: 0 5vw 5vw 5vw;
 }
 
-  .btn-fifth-block-x {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-  }
+.btn-fifth-block-x {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
 
 // **********CARD BLOCK**********
 
@@ -968,8 +970,7 @@ p.text-center.title-card-six {
   }
 
   .img-block-last {
-  display: block;
-}
-
+    display: block;
+  }
 }
 </style>
