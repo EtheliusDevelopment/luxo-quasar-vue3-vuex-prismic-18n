@@ -145,7 +145,7 @@
               color="info"
               class="hr-cardstep"
             />
-            <h3>INCLUDES FOOD PAIRING</h3>
+            <h3 class="includes-food">INCLUDES FOOD PAIRING</h3>
           </div>
           <div class="description-step">
             <h5>
