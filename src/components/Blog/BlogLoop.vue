@@ -251,8 +251,19 @@ h4.text-pink.q-ma-xl {
     text-align: center;
   }
   .p-blog-card {
-    transform: scale(0.85);
     padding: unset;
+  }
+
+  .btn-box {
+    margin-top: 3%;
+  }
+
+  .separator-block {
+    margin-bottom: 10%;
+  }
+
+  .head-navigation {
+    justify-content: space-around;
   }
 
   // *** LOOP BLOCK ****
@@ -260,6 +271,7 @@ h4.text-pink.q-ma-xl {
   .loop-block {
     display: grid;
     grid-template-columns: 100%;
+    grid-gap: 1%;
   }
 }
 </style>

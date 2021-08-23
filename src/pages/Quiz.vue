@@ -37,7 +37,6 @@
         <div class="sub-section-first">
           <!-- QUIZ WELCOME PAGE -->
           <div class="starter" v-if="starter">
-
             <h2 class="h2-title-quiz text-primary text-center">
               Discover which of our many experiences is right for you!
             </h2>
@@ -45,16 +44,16 @@
 
             <ul class="ul-title-quiz">
               <li class="li-title-quiz text-center">
-                1. Detailed and professionally designed itinerary that match your
-                traveler profile ( 250$ Value)
+                1. Detailed and professionally designed itinerary that match
+                your traveler profile ( 250$ Value)
               </li>
               <li class="li-title-quiz text-center">
                 2. Our guide: " The Ultimate List of Exclusive Things To Do In
                 Italy You Won't Find On Google"
               </li>
               <li class="li-title-quiz text-center">
-                3. Access to our Inner Circle and get practical advice on where to
-                go, when to go and what to see once in Italy!
+                3. Access to our Inner Circle and get practical advice on where
+                to go, when to go and what to see once in Italy!
               </li>
             </ul>
 
@@ -81,40 +80,40 @@
               <Step9 v-if="count == 8" :step="value" />
               <Step10 v-if="count == 9" :step="value" />
               <div class="button-group">
-                <q-btn
-                  outline
-                  class="q-px-xl q-py-md"
-                  label="Submit"
+                <button
                   type="submit"
-                  color="primary"
+                  class="general-btn-1"
+                  style="padding: 1% 2%"
                   v-if="count >= 9"
-                />
+                >
+                  SUBMIT
+                </button>
               </div>
             </q-form>
           </div>
           <div class="button-group" v-if="!starter">
-            <q-btn
+
+            <button
+              type="button"
               @click="prevPage"
-              outline
               v-if="count > 0 && count < 9"
-              class="q-px-xl q-py-md btn-1"
-              size="1.1vw"
-              label="Back"
+              class="general-btn-1"
+              style="padding: 1% 2%"
+            >
+              BACK
+            </button>
+
+            <button
               type="button"
-              color="primary"
-            />
-            <q-btn
               @click="nextPage"
-              outline
-              label="Forward"
-              class="q-px-xl q-py-md"
-              size="1.1vw"
-              type="button"
-              color="primary"
               v-if="count >= 0 && count < 9"
-            />
+              class="general-btn-1"
+              style="padding: 1% 2%"
+            >
+              FORWARD
+            </button>
           </div>
-          <div  style="height:25vh; width:100%"></div>
+          <div style="height: 25vh; width: 100%"></div>
         </div>
       </div>
 
@@ -251,9 +250,7 @@ export default {
           top: 700,
           behavior: "smooth",
         });
-
       },
-
 
       prevPage() {
         if (count.value === 1 && $store.state.quiz.step1 !== "") {
@@ -290,7 +287,7 @@ export default {
 
         count.value--;
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-          window.scrollTo(0, 350);
+          window.scrollTo(0, 250);
         } else {
           window.scrollTo(0, 700);
         }
@@ -318,7 +315,7 @@ export default {
         } else {
           count.value++;
           if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-            window.scrollTo(0, 350);
+            window.scrollTo(0, 250);
           } else {
             window.scrollTo(0, 700);
           }
@@ -372,27 +369,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 @media screen and (min-width: 1580px) {
-
-.h2-title-quiz {
-  padding: 0 15% !important;
+  .h2-title-quiz {
+    padding: 0 15% !important;
+  }
 }
-
-}
-
 
 // TYPO***************
 .h6-title-quiz {
-
 }
 .h2-title-quiz {
 }
 .h4-title-quiz {
 }
 .ul-title-quiz {
-  font-family: 'CommutersSans-Regular';
+  font-family: "CommutersSans-Regular";
   list-style: none;
 }
 .li-title-quiz {
@@ -400,17 +391,6 @@ export default {
 }
 
 // **********HEADER BLOCK**********
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .img1 {
-    height: 20% !important;
-  }
-}
 
 @media screen and (min-width: 1580px) {
   .figcaption {
@@ -468,14 +448,36 @@ hr {
 // **********FIRST BLOCK**********
 
 .sub-section-first {
-    margin-bottom: 10vh;
-}
-
-
-@media screen and (max-width: 990px) {
+  margin-bottom: 10vh;
 }
 
 @media screen and (max-width: 990px) {
+  .img1 {
+    height: 20% !important;
+  }
 }
+
+@media screen and (max-width: 680px) {
+  .img1 {
+    height: 35vh !important;
+  }
+
+  .h4-title-quiz {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .ul-title-quiz {
+    padding: unset;
+  }
+
+  .li-title-quiz {
+    margin-bottom: 5%;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
 // **********SECOND BLOCK**********
 </style>

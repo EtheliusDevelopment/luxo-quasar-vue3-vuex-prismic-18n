@@ -308,9 +308,17 @@ export default {
   }
 }
 @media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
+
+    // **********HEADER BLOCK**********
+
+  .figcaption h1.text-white.text-center {
+        margin-bottom:0vh !important;
   }
+
+   .img1 {
+    height: 35vh !important;
+  }
+
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 3vh;
@@ -329,5 +337,14 @@ export default {
     display: flex;
     flex-direction: column;
   }
+
+  .title-first-block {
+    padding: unset;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+
+
 }
 </style>

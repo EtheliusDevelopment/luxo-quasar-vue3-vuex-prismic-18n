@@ -246,7 +246,6 @@ h6.itinerary {
 
 // **********HEADER BLOCK**********
 
-
 .figcaption {
   width: 100%;
   height: 100%;
@@ -368,7 +367,6 @@ hr {
   // TYPO**************
 
   .p-body-testimonials {
-    transform: scale(0.9);
   }
 
   .title-block {
@@ -422,8 +420,9 @@ hr {
 }
 
 @media screen and (max-width: 680px) {
+  // TYPO**************
+
   .p-body-testimonials {
-    transform: scale(0.85);
   }
 
   .title-block {
@@ -431,28 +430,27 @@ hr {
   }
 
   .trip-journal {
-    transform: scale(0.85);
+    text-align: center;
   }
 
   .date-range {
-    transform: scale(0.85);
+    text-align: center;
   }
 
   .itinerary {
+    text-align: center;
+    padding-right: unset !important;
     transform: scale(0.85);
   }
   .p-location {
+    text-align: center;
     transform: scale(0.85);
   }
-
-  .itinerary {
-    transform: scale(0.85);
-}
 
   // HEADER BLOCK****************
 
   .img1 {
-    height: 15% !important;
+    height: 35vh !important;
   }
   .figcaption h1.text-white.text-center {
     margin-top: 0;
@@ -460,7 +458,7 @@ hr {
   }
   // **********FIRST BLOCK**********
   .first-block {
-    margin-bottom: 10%;
+    margin-bottom: unset;
   }
 
   .first-block .sub-section-first {
@@ -468,11 +466,9 @@ hr {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 2rem !important;
+    padding: 5% 10% !important;
   }
-  .img1 {
-    height: 15% !important;
-  }
+
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 3vh;
@@ -481,6 +477,9 @@ hr {
     padding: 3% 3%;
   }
 
+  .sub-section-first {
+    align-items: center;
+  }
   // *****SECOND BLOCK****
 
   .second-block {

@@ -181,7 +181,7 @@
       </div>
 
       <div class="sub-section-second q-pa-md">
-        <h6 class="text-primary h6-title-sub ">ANDREA DEGASPERI</h6>
+        <h6 class="text-primary h6-title-sub">ANDREA DEGASPERI</h6>
 
         <p class="text">
           I love traveling the world, it is my greatest passion. I take great
@@ -205,13 +205,16 @@
           we instill our passion and experience—100% Italian.
         </p>
 
-        <button class="general-btn-1 q-mt-xl desktop-only" style="padding: 2% 4%">
+        <button
+          class="general-btn-1 desktop-only"
+          style="padding: 2% 4%"
+        >
           TALK WITH US
         </button>
       </div>
 
-      <div class="btn-about flex flex-center" style="width:100%">
-          <button class="general-btn-1 q-mt-xl" style="padding: 2% 4%">
+      <div class="btn-about flex flex-center" style="width: 100%">
+        <button class="general-btn-1 q-mt-xl" style="padding: 2% 4%">
           TALK WITH US
         </button>
       </div>
@@ -226,7 +229,9 @@
       >
         <div class="figcaption figcaption-about">
           <div class="figcaption-body">
-            <h2 class="text-white figcaption-title text-center">Andrea Degasperi</h2>
+            <h2 class="text-white figcaption-title text-center">
+              Andrea Degasperi
+            </h2>
 
             <h6 class="text-white figcaption-subtitle">
               EMPATHETIC, VERSATILE WITH A COMPASSIONATE SOUL
@@ -284,17 +289,17 @@
 
       <div class="sub-section-first-3">
         <div class="text-sub-section-first-3">
-          <h2 class="text-primary title-h2">
+          <h2 class="text-primary text-center title-h2">
             A luxury trip that comes from getting to know each other
           </h2>
-          <p class="body-p">
+          <p class="body-p text-center">
             To make sure that your luxury itinerary in Italy is perfect, it is
             necessary for us to meet and get to know you, establishing a
             confidential relationship that allows us to personalize it and make
             it as congenial as possible to you. Our work starts with this
             initial and fundamental approach.
           </p>
-          <p class="body-p">
+          <p class="body-p text-center">
             It is no accident that our clients-travelers end up building a real
             friendship with us, often deciding to come back to us for new
             travels and new luxury experiences in Italy. An occurrence that we
@@ -720,11 +725,20 @@ hr {
   .social-footer-content {
     width: 40% !important;
     margin-top: 5% !important;
-}
+  }
 
-.figcaption-subtitle {
+  .figcaption-subtitle {
     text-align: center !important;
     margin-bottom: 5% !important;
-}
+  }
+
+  .text-sub-section-first-3 {
+    margin-left: unset !important;
+  }
+
+  .sub-section-first-3 {
+    display: block !important;
+    padding: 10% 5% !important;
+  }
 }
 </style>

@@ -707,6 +707,12 @@ h6.text-primary.subtitle-h6 {
 }
 
 @media screen and (max-width: 680px) {
+  // **********HEADER BLOCK**********
+
+  .figcaption h1.text-white.text-center {
+    margin-bottom: 3vh !important;
+  }
+
   // **********FIRST BLOCK**********
   .first-block .sub-section-first {
     display: flex;

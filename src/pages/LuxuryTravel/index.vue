@@ -193,6 +193,10 @@ hr {
   .img1 {
     height: 35vh !important;
   }
+  .figcaption h1.text-white.text-center {
+    margin-bottom: 3vh !important;
+  }
+
   // **********FIRST BLOCK**********
   .first-block .sub-section-first {
     display: flex;

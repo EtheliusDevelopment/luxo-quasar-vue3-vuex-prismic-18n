@@ -2,30 +2,22 @@
   <q-page class="overflow-hidden">
     <PreLoader />
 
-
-
     <TesimonialSingle />
-
   </q-page>
 </template>
 
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
-import TesimonialSingle from "../components/Testimonials/TestimonialSingle.vue"
+import TesimonialSingle from "../components/Testimonials/TestimonialSingle.vue";
 
 export default {
   components: {
     PreLoader,
     TesimonialSingle,
-     },
+  },
   setup() {
-
-
-
-    return {
-
-    };
+    return {};
   },
 };
 </script>
@@ -69,8 +61,6 @@ hr {
   margin: 2%;
 }
 
-
-
 @media screen and (max-width: 1300px) {
   .title-h2 {
     padding: 0 10% 0 0 !important;
@@ -106,14 +96,18 @@ hr {
 }
 
 @media screen and (max-width: 680px) {
+  // **********HEADER BLOCK**********
+
+  .figcaption h1.text-white.text-center {
+    margin-bottom: 3vh !important;
+  }
+
   .img1 {
-    height: 15% !important;
+    height: 35vh !important;
   }
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 3vh;
   }
-
-
 }
 </style>

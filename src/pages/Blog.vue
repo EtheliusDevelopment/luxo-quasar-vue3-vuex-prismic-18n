@@ -84,27 +84,6 @@ export default {
   }
 }
 
-@media screen and (max-width: 990px) {
-  .img1 {
-    height: 20% !important;
-  }
-
-  .figcaption h1.text-white.text-center {
-    margin-top: 0;
-    margin-bottom: 5vh !important;
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .img1 {
-    height: 15% !important;
-  }
-
-  .figcaption h1.text-white.text-center {
-    margin-top: 0;
-    margin-bottom: 3vh !important;
-  }
-}
 
 .figcaption {
   width: 100%;
@@ -120,6 +99,8 @@ export default {
     rgba(0, 0, 0, 0.9037990196078431) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+
+
 }
 
 .figcaption h6.text-white {
@@ -172,5 +153,32 @@ hr {
 
 .pagination-luxury-block {
     margin-top: 5%;
+}
+
+
+@media screen and (max-width: 990px) {
+  .img1 {
+    height: 20% !important;
+  }
+
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 5vh !important;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .img1 {
+    height: 35vh !important;
+  }
+
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh !important;
+  }
+
+  .headcaption {
+   padding: 5% 10% !important;
+}
 }
 </style>

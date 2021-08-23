@@ -112,7 +112,7 @@
             :class="active"
             class="span-header-component p-header-component"
             @click="clickMenu"
-            style="cursor: pointer; margin-right: 5%;"
+            style="cursor: pointer; margin-right: 5%"
           >
             At A Glance
           </p>
@@ -172,11 +172,12 @@
         </p>
 
         <div class="btn-box-fourth-block">
-
-          <button class="general-btn-2 btn-fifth-block" style="padding: 2% 4%; margin-right: 5%">
+          <button
+            class="general-btn-2 btn-fifth-block"
+            style="padding: 2% 4%; width: 80%; margin-bottom: 5%"
+          >
             BOOK NOW
           </button>
-
 
           <button class="general-btn-2 btn-fifth-block" style="padding: 2% 4%">
             CUSTOMIZE THIS TOUR
@@ -434,6 +435,8 @@ ul {
 }
 
 @media screen and (max-width: 680px) {
+
+
   // TYPO****************
   .title-component {
     transform: scale(0.85);
@@ -447,6 +450,7 @@ ul {
     height: 35vh !important;
   }
 
+
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 3vh;
@@ -456,14 +460,43 @@ ul {
     transform: scale(0.85);
   }
 
+    // HEADER BLOCK****************
+
+  .figcaption h1.text-white.text-center {
+    margin-bottom: 3vh !important;
+  }
+
+
   // FIRST BLOCK*****************
   .img-component {
-    transform: scale(0.6);
-    width: 6vw !important;
+    width: 20vw !important;
+    height: 10vh !important;
   }
 
   .first-block .sub-section-first {
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .component-box {
+    margin: 5% 0;
+  }
+
+  .header-component.flex.flex-center {
+    justify-content: space-evenly !important;
+  }
+
+  ul {
+    color: #4c4571;
+  }
+
+  .btn-box-fourth-block {
+    width: 100% !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fourth-block {
+    margin-top: 15%;
   }
 }
 </style>

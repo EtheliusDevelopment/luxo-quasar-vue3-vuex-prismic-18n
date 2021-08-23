@@ -13,7 +13,11 @@
           <div class="figcaption">
             <h4 class="title-carousel">{{ slide.testimonial_name }}</h4>
             <h5 class="body-carousel">{{ slide.payoff }}</h5>
-            <q-btn class="cta-carousel" label="DISCOVER MORE" :to="'/testimonials/'+ slide.slug" />
+            <q-btn
+              class="cta-carousel"
+              label="DISCOVER MORE"
+              :to="'/testimonials/' + slide.slug"
+            />
           </div>
         </q-img>
       </div>
@@ -104,5 +108,24 @@ export default defineComponent({
   line-height: 16px;
   letter-spacing: 0.5px;
   color: #d9c5a0;
+}
+
+@media screen and (max-width: 680px) {
+  .figcaption {
+    justify-content: space-evenly;
+  }
+
+
+.title-carousel{
+    margin: unset;
+    font-family: "Hatton-Medium";
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+.body-carousel {
+    line-height: 20px;
+}
 }
 </style>
