@@ -4,16 +4,6 @@
       <h2 class="text-primary text-center">Facebook Reviews</h2>
     </div>
 
-    <div class="facebook-buttons facebook-buttons-prev">
-      <img
-        class="prev-arrow"
-        src="~assets/freccia.svg"
-        alt=""
-        @click="count--"
-        style="width: 4vw; transform: rotate(180deg)"
-      />
-    </div>
-
     <div class="facebook-body">
       <div
         class="review-first flex div-review"
@@ -37,9 +27,9 @@
           <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
 
-        <hr color="#D9C5A0" />
+        <hr color="#D9C5A0" class="desktop-only"/>
 
-        <div class="facebook-slide flex">
+        <div class="facebook-slide flex desktop-only">
           <p class="text-center body-review">
             I just wanted to share my experience with my friends and family, to
             show them what is it - to be an Italian. And then I found the Luxo
@@ -74,14 +64,14 @@
             experience of Italy I wanted to share with my family!
           </p>
 
-          <p class="payoff text-center text-primary">Mario Rossi</p>
+          <p class="payoff text-center text-primary">Filippo de Sanctis</p>
 
           <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
 
-        <hr color="#D9C5A0" />
+        <hr color="#D9C5A0" class="desktop-only"/>
 
-        <div class="facebook-slide flex">
+        <div class="facebook-slide flex desktop-only">
           <p class="text-center body-review">
             I just wanted to share my experience with my friends and family, to
             show them what is it - to be an Italian. And then I found the Luxo
@@ -121,9 +111,9 @@
           <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
 
-        <hr color="#D9C5A0" />
+        <hr color="#D9C5A0" class="desktop-only"/>
 
-        <div class="facebook-slide flex">
+        <div class="facebook-slide flex desktop-only">
           <p class="text-center body-review">
             I just wanted to share my experience with my friends and family, to
             show them what is it - to be an Italian. And then I found the Luxo
@@ -142,7 +132,25 @@
       </div>
     </div>
 
-    <div class="facebook-buttons facebook-buttons-next">
+    <div
+      class="facebook-buttons"
+      style="
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 99999;
+        position: relative;
+        bottom: 40vh;
+      "
+    >
+      <img
+        class="prev-arrow"
+        src="~assets/freccia.svg"
+        alt=""
+        @click="count--"
+        style="width: 4vw; transform: rotate(180deg)"
+      />
+
       <img
         class="next-arrow"
         src="~assets/freccia.svg"
@@ -222,5 +230,16 @@ hr {
   position: relative;
   top: -30vh;
   left: 90%;
+}
+
+@media screen and (max-width: 680px) {
+
+  .next-arrow,.prev-arrow {
+    width: 12vw !important;
+}
+
+.facebook-buttons {
+    bottom: 55vh !important;
+}
 }
 </style>
