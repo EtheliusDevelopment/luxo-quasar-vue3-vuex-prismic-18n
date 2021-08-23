@@ -273,5 +273,10 @@ h4.text-pink.q-ma-xl {
     grid-template-columns: 100%;
     grid-gap: 1%;
   }
+
+  .li-item {
+    margin-right: 5%;
+    margin-top: 3%;
+  }
 }
 </style>
