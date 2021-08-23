@@ -10,29 +10,72 @@
       height="600px"
     >
       <div class="absolute-top figcaption">
-        <h2 class="text-primary title-header-block">
-          {{ articleTitle }}
-        </h2>
+        <div class="desktop-ficaption">
+          <h2 class="text-primary title-header-block">
+            {{ articleTitle }}
+          </h2>
 
-        <h6 class="text-primary h6-header-blog">27/02/2020</h6>
+          <h6 class="text-primary h6-header-blog">27/02/2020</h6>
 
-        <div class="tags-container flex">
-          <h6 class="text-white tags" v-for="(tag, index) in tags" :key="index">
-            {{ tag }}/
-          </h6>
-        </div>
+          <div class="tags-container flex">
+            <h6
+              class="text-white tags"
+              v-for="(tag, index) in tags"
+              :key="index"
+            >
+              {{ tag }}/
+            </h6>
+          </div>
 
-        <div class="tags-container btn-box flex">
-          <q-btn
-            color="white"
-            to="/blog"
-            flat
-            label="BACK TO THE BLOG"
-            class="btn-header-block"
-          />
+          <div class="tags-container btn-box flex">
+            <q-btn
+              color="white"
+              to="/blog"
+              flat
+              label="BACK TO THE BLOG"
+              class="btn-header-block"
+            />
+          </div>
         </div>
       </div>
     </q-img>
+
+    <div class="mobile-ficaption bg-info" style="display: none">
+      <h2
+        class="text-primary title-header-block text-center"
+        style="
+          font-size: 30px;
+          line-height: 38px;
+          margin-bottom: 5%;
+          margin-top: 10%;
+        "
+      >
+        {{ articleTitle }}
+      </h2>
+
+      <h6 class="text-primary h6-header-blog text-center">27/02/2020</h6>
+
+      <div class="tags-container flex">
+        <h6
+          class="text-white tags"
+          v-for="(tag, index) in tags"
+          :key="index"
+          style="font-size: 13px; line-height: 18px"
+        >
+          {{ tag }}/
+        </h6>
+      </div>
+
+      <div class="tags-container btn-box flex">
+        <q-btn
+          color="white"
+          to="/blog"
+          flat
+          label="BACK TO THE BLOG"
+          class="btn-header-block"
+        />
+      </div>
+    </div>
   </div>
 
   <div class="first-block">
@@ -51,7 +94,7 @@
       </h4>
 
       <p
-        class="p-blog-par text-primary"
+        class="p-blog-par text-center"
         v-for="(postPar, index) in post.paragraph_body"
         :key="index"
       >
@@ -232,11 +275,10 @@ div:has(.figcaption) {
     margin: 0 5% 10% 5%;
   }
 
-
   .btn-box {
     position: absolute;
     top: 80%;
-}
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -249,10 +291,43 @@ div:has(.figcaption) {
   // **********HEADER BLOCK**********
 
   .img1 {
-    height: 15% !important;
+    height: 35vh !important;
   }
-}
 
-.first-block {
+  .img1 {
+    display: block;
+  }
+
+  .desktop-ficaption {
+    display: none;
+  }
+
+  .mobile-ficaption {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .figcaption {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9037990196) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ) !important;
+  }
+
+  .tags-container {
+    justify-content: center !important;
+  }
+
+  .btn-box {
+    position: unset;
+    margin-bottom: 5%;
+  }
+
+  .blog-par {
+    margin: 10% 5% !important;
+  }
 }
 </style>

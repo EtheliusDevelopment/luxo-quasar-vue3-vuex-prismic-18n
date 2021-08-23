@@ -15,10 +15,8 @@
         <div class="figcaption">
           <h6 class="text-white">TALK WITH US</h6>
           <q-separator color="white" inset />
-          <h1 class="text-white text-center">
-            The Perfect Italian Journey For You.
-          </h1>
-         </div>
+          <h1 class="text-white text-center">Perfect Journey</h1>
+        </div>
       </q-img>
 
       <div class="breadcrumbs">
@@ -71,7 +69,7 @@
             Via Galla Placidia 12 - Milano, Italy
           </p>
           <p class="text-center p-inner-component">
-            Email : info@luxoitalia.com
+            info@luxoitalia.com
           </p>
         </div>
       </div>
@@ -213,7 +211,7 @@ span.text-info {
 }
 
 .form-component div {
-    font-family: 'Commuters-Sans-Bold' !important;
+  font-family: "Commuters-Sans-Bold" !important;
 }
 
 @media screen and (max-width: 990px) {
@@ -221,7 +219,12 @@ span.text-info {
 
 @media screen and (max-width: 680px) {
   .img1 {
-    height: 15% !important;
+    height: 35vh !important;
+  }
+
+  .figcaption h1.text-white.text-center {
+    margin-top: 0;
+    margin-bottom: 3vh;
   }
 
   .first-block {
@@ -235,16 +238,35 @@ span.text-info {
   }
 
   .contact-card-component {
-
     grid-row: 3;
   }
 
-  .form-component{
+  .form-component {
     grid-row: 2;
     margin-bottom: 10%;
   }
 
+ .first-block{
+   margin-bottom: 10%;
+ }
 
+  .process-text {
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
 
+  .contact-card-component {
+    margin-top: 10%;
+  }
+
+  .p-inner-component {
+    margin: unset;
+    padding-bottom: 20%;
+}
+
+.inner-component {
+    width: 90%;
+    height: 92%;
+}
 }
 </style>

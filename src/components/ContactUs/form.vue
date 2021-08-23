@@ -1,5 +1,4 @@
 <template>
-
   <q-form @submit="onSubmit" class="q-gutter-md" ref="contact_form">
     <q-input
       filled
@@ -126,7 +125,6 @@
       transition-show="jump-up"
       transition-hide="jump-up"
       use-chips
-
     />
 
     <q-input
@@ -143,14 +141,8 @@
 
     <q-toggle v-model="accept" label="I accept the license and terms" />
 
-    <div>
-      <q-btn
-        label="CONTACT US"
-        class="q-px-xl q-py-lg btn-form"
-        type="submit"
-        outline
-        text-color="primary"
-      />
+    <div class="flex flex-center">
+      <button class="general-btn-1" style="padding: 1% 2%">CONTACT US</button>
     </div>
   </q-form>
 </template>
@@ -314,6 +306,6 @@ export default {
 }
 
 div {
-    font-family: 'Commuters-Sans-Bold' !important;
+  font-family: "Commuters-Sans-Bold" !important;
 }
 </style>

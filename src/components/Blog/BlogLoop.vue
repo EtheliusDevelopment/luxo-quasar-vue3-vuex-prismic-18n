@@ -15,17 +15,17 @@
     </ul>
 
     <div class="navigation-mobile">
-      <q-chip outline @click="myLi" class="li-item active">ALL</q-chip>
-      <q-chip outline @click="myLi" class="li-item">sea</q-chip>
-      <q-chip outline @click="myLi" class="li-item">lake</q-chip>
-      <q-chip outline @click="myLi" class="li-item">montain</q-chip>
-      <q-chip outline @click="myLi" class="li-item">wine</q-chip>
-      <q-chip outline @click="myLi" class="li-item">islands</q-chip>
-      <q-chip outline @click="myLi" class="li-item">food</q-chip>
-      <q-chip outline @click="myLi" class="li-item">art</q-chip>
-      <q-chip outline @click="myLi" class="li-item">yatch</q-chip>
-      <q-chip outline @click="myLi" class="li-item">wedding</q-chip>
-      <q-chip outline @click="myLi" class="li-item">hotel</q-chip>
+      <q-chip outline @click="myLi" class="li-item active" color="primary">ALL</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">sea</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">lake</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">montain</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary" >wine</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">islands</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">food</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">art</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">yatch</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">wedding</q-chip>
+      <q-chip outline @click="myLi" class="li-item" color="primary">hotel</q-chip>
     </div>
   </div>
 
