@@ -516,6 +516,13 @@ export default defineComponent({
   margin: unset;
   margin-top: 5%;
 }
+
+
+  .h1-card-step-3 {
+    padding: 0 3% !important;
+  }
+
+
 .description-step h5 {
   font-family: "CommutersSans-Regular" !important;
   font-size: 17px !important;
@@ -531,6 +538,10 @@ export default defineComponent({
 
 .step-one .card-step {
   height: 110%;
+}
+
+.h1-card-step-3+.q-separator {
+    margin-right: 0% !important;
 }
 
 // **********FOURTH BLOCK**********
@@ -750,9 +761,6 @@ h6.text-primary.subtitle-h6 {
     margin-top: 3%;
   }
 
-  .h1-card-step-3 {
-    padding: 0 4% !important;
-  }
 
   .card-step {
     flex-direction: column;
