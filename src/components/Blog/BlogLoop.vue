@@ -13,6 +13,20 @@
       <li @click="myLi" class="li-item">wedding</li>
       <li @click="myLi" class="li-item">hotel</li>
     </ul>
+
+    <div class="navigation-mobile">
+      <q-chip outline @click="myLi" class="li-item active">ALL</q-chip>
+      <q-chip outline @click="myLi" class="li-item">sea</q-chip>
+      <q-chip outline @click="myLi" class="li-item">lake</q-chip>
+      <q-chip outline @click="myLi" class="li-item">montain</q-chip>
+      <q-chip outline @click="myLi" class="li-item">wine</q-chip>
+      <q-chip outline @click="myLi" class="li-item">islands</q-chip>
+      <q-chip outline @click="myLi" class="li-item">food</q-chip>
+      <q-chip outline @click="myLi" class="li-item">art</q-chip>
+      <q-chip outline @click="myLi" class="li-item">yatch</q-chip>
+      <q-chip outline @click="myLi" class="li-item">wedding</q-chip>
+      <q-chip outline @click="myLi" class="li-item">hotel</q-chip>
+    </div>
   </div>
 
   <q-separator spaced inset vertical color="primary" class="separator-block" />
@@ -264,6 +278,7 @@ h4.text-pink.q-ma-xl {
 
   .head-navigation {
     justify-content: space-around;
+    padding: unset;
   }
 
   // *** LOOP BLOCK ****
@@ -273,10 +288,19 @@ h4.text-pink.q-ma-xl {
     grid-template-columns: 100%;
     grid-gap: 1%;
   }
+  .head-navigation {
+    display: none;
+  }
+
+  .navigation-mobile{
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .li-item {
-    margin-right: 5%;
-    margin-top: 3%;
+    margin: 1.5% 2%;
+    font-family: 'CommutersSans-Regular';
   }
 }
 </style>
