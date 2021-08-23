@@ -246,6 +246,9 @@
         height="530px"
       />
     </div>
+
+    <CarouselFacebook style="margin-bottom:10%"/>
+
   </q-page>
 </template>
 
@@ -253,6 +256,8 @@
 import { ref } from "vue";
 import PreLoader from "src/components/PreLoader.vue";
 import Carouselindex from "src/components/Utils/CarouselIndex.vue";
+import CarouselFacebook from "src/components/Utils/CarouselFacebook.vue";
+
 import LuxuryHomePage from "src/components/LuxuryTravel/LuxuryHomePage.vue";
 
 export default {
@@ -260,6 +265,7 @@ export default {
     PreLoader,
     Carouselindex,
     LuxuryHomePage,
+    CarouselFacebook,
   },
 
   setup() {
