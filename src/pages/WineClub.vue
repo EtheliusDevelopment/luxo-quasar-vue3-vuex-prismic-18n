@@ -15,7 +15,7 @@
         <div class="figcaption">
           <h6 class="text-white">WINE CLUB</h6>
           <q-separator color="white" inset />
-          <h1 class="text-white text-center">Uncork. Taste. Enjoy.</h1>
+          <h1 class="text-white text-center h1-wine">Uncork. Taste. Enjoy.</h1>
         </div>
       </q-img>
 
@@ -68,7 +68,7 @@
       </h2>
 
       <div class="sub-section-first">
-        <div class="step-one">
+        <div class="step-one step-mobile">
           <div class="card-step">
             <h1 class="text-info h1-card-step">1</h1>
             <q-separator
@@ -100,7 +100,7 @@
           />
         </div>
 
-        <div class="step-two">
+        <div class="step-two step-mobile">
           <div class="card-step">
             <h1 class="text-info h1-card-step">2</h1>
             <q-separator
@@ -135,7 +135,7 @@
           />
         </div>
 
-        <div class="step-three">
+        <div class="step-three step-mobile">
           <div class="card-step">
             <h1 class="text-info h1-card-step">3</h1>
             <q-separator
@@ -713,6 +713,14 @@ h6.text-primary.subtitle-h6 {
     margin-bottom: 3vh !important;
   }
 
+  .h1-wine {
+    font-size: 30px;
+  }
+
+  .img1 {
+    height: 35vh !important;
+  }
+
   // **********FIRST BLOCK**********
   .first-block .sub-section-first {
     display: flex;
@@ -722,11 +730,33 @@ h6.text-primary.subtitle-h6 {
     padding: 0 2rem !important;
   }
 
-  .img1 {
-    height: 35vh !important;
+  .first-block {
+    margin-top: 4%;
+    margin-bottom: 16%;
   }
 
   // *******THIRD BLOCK*****
+
+  .title-third-block {
+    padding: unset !important;
+  }
+
+  .h1-card-step {
+    margin: unset;
+    padding: unset;
+    font-size: 60px;
+    margin-top: 3%;
+  }
+
+  .card-step {
+    flex-direction: column;
+    min-height: 20vh !important;
+    align-items: center;
+  }
+
+  .hr-cardstep {
+    display: none;
+  }
 
   .img-step {
     margin-bottom: 10%;
@@ -747,9 +777,16 @@ h6.text-primary.subtitle-h6 {
     grid-template-rows: auto !important;
   }
 
+  .step-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
   // ****FLUID TEXT TEST******
   .card-step h3 {
-    transform: scale(0.8);
+    margin: unset;
+    font-size: 18px !important;
+    text-align: center;
   }
   .h1-card-step {
     transform: scale(0.8);

@@ -140,7 +140,8 @@
         justify-content: space-between;
         z-index: 99999;
         position: relative;
-        bottom: 40vh;
+        bottom: 35vh;
+        padding: 0 2%;
       "
     >
       <img
@@ -187,7 +188,7 @@ export default {
 
 <style lang="scss" scoped>
 hr {
-  height: 50vh;
+  height: 40vh;
 }
 
 .facebook-reviews-global {
@@ -207,8 +208,7 @@ hr {
 
 .payoff-echo {
   font-size: 17px;
-  margin-bottom: 20%;
-}
+ }
 
 .body-review {
   font-family: "CommutersSans-Regular";
