@@ -248,7 +248,7 @@
           in your wine box.
         </p>
 
-        <button class="general-btn-1 btn-1" style="padding: 2% 4%">
+        <button class="general-btn-1 btn-1 btn-step" style="padding: 2% 4%">
           DISCOVER THE PLANS
         </button>
       </div>
@@ -752,6 +752,7 @@ h6.text-primary.subtitle-h6 {
     flex-direction: column;
     min-height: 20vh !important;
     align-items: center;
+    margin: unset !important;
   }
 
   .hr-cardstep {
@@ -780,6 +781,8 @@ h6.text-primary.subtitle-h6 {
   .step-mobile {
     display: flex !important;
     flex-direction: column !important;
+    margin: 0 5%;
+    align-items: center;
   }
 
   // ****FLUID TEXT TEST******
@@ -792,7 +795,10 @@ h6.text-primary.subtitle-h6 {
     transform: scale(0.8);
   }
   .description-step h5 {
+    font-size: 16px !important;
     transform: scale(0.8);
+    margin: 5% 0;
+    text-align: center;
   }
 
   .h6-wine-card {
@@ -800,6 +806,23 @@ h6.text-primary.subtitle-h6 {
   }
   .h4-wine-card {
     font-size: scale(0.8);
+  }
+
+  .btn-step {
+    width: 80%;
+    margin-left: unset !important;
+    align-self: center;
+  }
+
+  .payoff-echo {
+    font-size: 17px;
+    margin-bottom: 10%;
+  }
+  hr.q-separator {
+    height: 1px !important;
+    width: 80% !important;
+    align-self: center;
+    margin-bottom: 10%;
   }
 
   // **********FOURTH BLOCK**********
@@ -827,14 +850,25 @@ h6.text-primary.subtitle-h6 {
   }
 
   .sub-section-first-4 {
+    margin-right: unset !important;
     grid-column: 1;
     grid-row: 2;
+  }
+
+  .title-h2 {
+    padding: unset !important;
+    text-align: center;
   }
 
   // **********SIXTH BLOCK**********
   .sixth-block .sub-section-first {
     display: flex;
     flex-direction: column;
+  }
+
+  .body-p{
+    margin-left: unset !important;
+    text-align: center;
   }
 }
 </style>
