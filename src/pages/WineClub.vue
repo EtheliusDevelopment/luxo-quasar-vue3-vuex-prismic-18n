@@ -845,19 +845,26 @@ h6.text-primary.subtitle-h6 {
 
   // **********FIFTH BLOCK**********
   .fifth-block {
-    grid-template-columns: auto;
-    grid-template-rows: 25% auto;
+    grid-template-columns: 100% auto;
+    grid-template-rows: auto auto;
+    grid-gap: 0%;
+    margin: 0 0 10% 0;
+  }
+
+  .img-wine-block {
+    height: 530px;
   }
 
   .sub-section-first-4 {
     margin-right: unset !important;
     grid-column: 1;
     grid-row: 2;
+    padding: 0 5%;
   }
 
   .title-h2 {
     padding: unset !important;
-    text-align: center;
+    align-self: center;
   }
 
   // **********SIXTH BLOCK**********
@@ -866,9 +873,13 @@ h6.text-primary.subtitle-h6 {
     flex-direction: column;
   }
 
-  .body-p{
+  .body-p {
     margin-left: unset !important;
     text-align: center;
+  }
+
+  .description-step {
+    margin-left: unset !important;
   }
 }
 </style>
