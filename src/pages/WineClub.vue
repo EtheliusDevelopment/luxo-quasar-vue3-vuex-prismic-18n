@@ -465,7 +465,7 @@ export default defineComponent({
 .step-three {
   display: grid;
   grid-template-columns: 54% minmax(auto, 47%);
-  grid-template-rows: 10% 40% auto 10%;
+  grid-template-rows: 10% 40% auto 15%;
   grid-gap: 5%;
   margin-bottom: 10%;
   margin-right: 10%;
