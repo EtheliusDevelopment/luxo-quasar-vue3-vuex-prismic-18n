@@ -146,7 +146,7 @@
               <q-img
                 class="navbar-logo"
                 width="10vw"
-                src="https://www.luxoitalia.com/wp-content/themes/luxo-italia/assets/images/luxoitalia_logo_white_2020.svg"
+                src="~assets/luxoitalia_logo_white_2020-2.svg"
               />
             </router-link>
 
