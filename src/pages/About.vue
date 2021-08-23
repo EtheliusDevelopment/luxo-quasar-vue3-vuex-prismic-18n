@@ -289,17 +289,17 @@
 
       <div class="sub-section-first-3">
         <div class="text-sub-section-first-3">
-          <h2 class="text-primary text-center title-h2">
+          <h2 class="text-primary title-h2">
             A luxury trip that comes from getting to know each other
           </h2>
-          <p class="body-p text-center">
+          <p class="body-p ">
             To make sure that your luxury itinerary in Italy is perfect, it is
             necessary for us to meet and get to know you, establishing a
             confidential relationship that allows us to personalize it and make
             it as congenial as possible to you. Our work starts with this
             initial and fundamental approach.
           </p>
-          <p class="body-p text-center">
+          <p class="body-p ">
             It is no accident that our clients-travelers end up building a real
             friendship with us, often deciding to come back to us for new
             travels and new luxury experiences in Italy. An occurrence that we
@@ -594,6 +594,14 @@ hr {
   // TYPO***************
   .figcaption-title {
     transform: scale(0.85);
+  }
+
+  .body-p {
+    text-align: center !important;
+  }
+
+  .title-h2{
+     text-align: center !important;
   }
 
   .img1 {

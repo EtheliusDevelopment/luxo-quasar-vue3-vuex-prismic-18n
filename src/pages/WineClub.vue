@@ -478,6 +478,7 @@ export default defineComponent({
   grid-row: 2;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   border: 2px solid $info;
   margin-left: 6%;
 }
@@ -512,7 +513,8 @@ export default defineComponent({
   font-family: "Hatton-Medium";
   font-size: 140px;
   padding: 0 8%;
-  margin-top: 14%;
+  margin: unset;
+  margin-top: 5%;
 }
 .description-step h5 {
   font-family: "CommutersSans-Regular" !important;
