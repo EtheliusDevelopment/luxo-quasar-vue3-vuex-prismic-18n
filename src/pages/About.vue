@@ -6,7 +6,7 @@
       <q-img
         class="img1"
         img-class="img1-luxury"
-        src="~assets/about_us_luxo.png"
+        src="~assets/about_header.jpg"
         :ratio="16 / 9"
         spinner-color="primary"
         spinner-size="82px"
