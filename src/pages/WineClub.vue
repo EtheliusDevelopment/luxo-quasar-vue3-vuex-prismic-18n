@@ -137,7 +137,7 @@
 
         <div class="step-three step-mobile">
           <div class="card-step">
-            <h1 class="text-info h1-card-step">3</h1>
+            <h1 class="text-info h1-card-step h1-card-step-3">3</h1>
             <q-separator
               spaced
               inset
@@ -748,6 +748,10 @@ h6.text-primary.subtitle-h6 {
     padding: unset;
     font-size: 60px;
     margin-top: 3%;
+  }
+
+  .h1-card-step-3 {
+    padding: 0 4% !important;
   }
 
   .card-step {
