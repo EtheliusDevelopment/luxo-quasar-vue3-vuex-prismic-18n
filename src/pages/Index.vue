@@ -231,7 +231,7 @@
       <q-img
         class="img5"
         img-class="img5-index"
-        src="~assets/index_luxo_small_village.png"
+        src="~assets/index_luxo_small_village.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />

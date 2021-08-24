@@ -295,7 +295,7 @@
             more than a regular client.
           </p>
           <button
-            class="general-btn-2 btn-fifth-block q-mb-lg"
+            class="general-btn-2 btn-fifth-block q-mb-md"
             style="margin-left: 5%"
           >
             READ ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES
