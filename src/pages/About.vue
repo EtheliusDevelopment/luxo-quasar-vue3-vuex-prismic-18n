@@ -161,7 +161,7 @@
           of practicality and precision.
         </p>
 
-        <p class="">
+        <p class="text">
           This multicultural mix perfectly matched my eclectic spirit, leading
           me to an “exploratory” life. Even after my first trip to the USA
           (during my childhood), I realized I was destined to travel far and
@@ -170,7 +170,7 @@
           can offer.
         </p>
 
-        <p class="">
+        <p class="text">
           In addition, I became a restaurant expert and a fine wine connoisseur,
           two passions that I love to cultivate in my free time, as well as
           making the most use of them for my work. I like to design (and try)
@@ -181,23 +181,23 @@
       </div>
 
       <div class="sub-section-second q-pa-md">
-        <h6 class="text-primary">ANDREA DEGASPERI</h6>
+        <h6 class="text-primary h6-title-sub">ANDREA DEGASPERI</h6>
 
-        <p class="">
+        <p class="text">
           I love traveling the world, it is my greatest passion. I take great
           pride in my authentic Italic roots, which have made me, and could not
           be otherwise, a fan of the multi-faceted Italian cuisine and its
           high-quality wines.
         </p>
 
-        <p class="">
+        <p class="text">
           Before becoming a co-founder of Luxo Italia, I experienced several
           work experiences in the hospitality industry that, combined with my
           passion for travel, proved to be fundamental in leading me to start
           this adventure with Paul.
         </p>
 
-        <p class="">
+        <p class="text">
           Factors reinforced by my desire to work with and for people. The
           radical knowledge of the territory and the great empathy that I share
           with my partner and friend Paul allows us to design trips and
@@ -205,14 +205,14 @@
           we instill our passion and experience—100% Italian.
         </p>
 
-        <button class="general-btn-1 q-mt-xl" style="padding: 2% 4%">
+        <button class="general-btn-1 q-mt-xl desktop-only" style="padding: 2% 4%">
           TALK WITH US
         </button>
       </div>
 
       <q-img
         class="img4"
-        img-class="img4-index"
+        img-class="img-degasperi-index"
         src="~assets/andrea_degasperi.png"
         spinner-color="primary"
         spinner-size="82px"
@@ -264,6 +264,10 @@
           </div>
         </div>
       </q-img>
+
+        <button class="general-btn-1 q-mx-xl mobile-only btn-grid" style="padding: 2% 4%">
+          TALK WITH US
+        </button>
     </div>
 
     <div class="fourth-block">
@@ -647,7 +651,7 @@ hr {
 
   .third-block {
     grid-template-columns: 100% !important;
-    grid-template-rows: auto auto 530px auto auto auto !important;
+    grid-template-rows: auto auto 530px auto 530px auto !important;
     margin: unset !important;
   }
 
@@ -673,7 +677,8 @@ hr {
     grid-row: 5 !important;
   }
 
-  .btn-about {
+
+  .btn-grid {
     grid-column: 1 !important;
     grid-row: 6 !important;
   }
