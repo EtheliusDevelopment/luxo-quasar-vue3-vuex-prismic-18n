@@ -146,10 +146,10 @@
     >
       <img
         class="prev-arrow"
-        src="~assets/freccia.svg"
+        src="~assets/freccia_prev.svg"
         alt=""
         @click="count--"
-        style="width: 4vw; transform: rotate(180deg)"
+        style="width: 4vw;"
       />
 
       <img
@@ -188,11 +188,9 @@ export default {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 1580px) {
-
   .facebook-buttons {
     bottom: 25vh !important;
   }
-
 }
 
 hr {
@@ -238,6 +236,24 @@ hr {
   position: relative;
   top: -30vh;
   left: 90%;
+}
+
+.next-arrow {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.prev-arrow {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1) !important;
+  }
 }
 
 @media screen and (max-width: 680px) {

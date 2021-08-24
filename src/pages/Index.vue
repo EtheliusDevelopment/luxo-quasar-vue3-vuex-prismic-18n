@@ -185,10 +185,9 @@
     </div>
 
     <div class="video-block">
-      <q-video
-        :ratio="16 / 9"
-        src="https://player.vimeo.com/video/464780853?dnt=1&app_id=122963"
-      />
+      <a href="https://vimeo.com/464780853" target="_blank">
+        <img src="~assets/banner-video.jpg" alt="luxo_video" />
+      </a>
     </div>
 
     <div class="seventh-block">
@@ -288,7 +287,7 @@ export default {
   }
 
   .fourth-block {
-    grid-template-rows: 10vh 80vh 20vh !important;
+    grid-template-rows: 0.1fr 1fr 0.1fr !important;
   }
 
   .text-sub-section-first-3 {
@@ -298,8 +297,6 @@ export default {
   .first-block {
     grid-template-rows: 80vh auto !important;
   }
-
-
 }
 
 // ********HEADER BLOCK*********
@@ -445,7 +442,7 @@ h2.text-primary {
 .fourth-block {
   display: grid;
   grid-template-columns: 34% 10% 56%;
-  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-rows: 0.1fr 1fr 0.1fr !important;
   margin-bottom: 10%;
 }
 

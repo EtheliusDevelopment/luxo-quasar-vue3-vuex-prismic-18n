@@ -198,6 +198,26 @@
 
             <button class="btn-toolbar-new">START PLANNING</button>
           </q-toolbar>
+
+            <q-toolbar class="mobile-only">
+            <div class="mobile-navbar mobile-only q-mt-md flex flex-center">
+              <q-img
+                @click="toHome"
+                class="navbar-logo-home mobile-only"
+                width="50vw"
+                src="~assets/luxoitalia_logo_white_2020-2.svg"
+              />
+              <q-btn
+                class="mobile-only btn-ham-mobile"
+                dense
+                flat
+                round
+                icon="menu"
+                @click="toggleLeftDrawer"
+              />
+            </div>
+          </q-toolbar>
+
         </div>
       </div>
     </q-header>
@@ -213,7 +233,6 @@
       bordered
     >
       <q-list padding class="menu-list q-list-drawer">
-
         <div class="img-index-drawer-box flex justify-between items-center">
           <q-img
             @click="toHome"
