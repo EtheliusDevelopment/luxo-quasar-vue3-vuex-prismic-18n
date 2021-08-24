@@ -557,6 +557,7 @@ header {
 }
 
 .navbar-offset {
+  padding: 1% 0;
   display: none;
 }
 

@@ -275,8 +275,14 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK***********
-
 @media screen and (min-width: 1580px) {
+  .fifth-block {
+    grid-template-rows: 0.8fr !important;
+    margin: 0 3% 0% 3% !important;
+  }
+}
+
+@media screen and (max-width: 1580px) {
   .first-block {
     margin-bottom: 5%;
   }
@@ -289,17 +295,11 @@ export default {
     padding-top: 1% !important;
   }
 
-  .fifth-block {
-    grid-template-rows: 0.9fr !important;
-    margin: 0 3% 0% 3% !important;
-  }
-
   .first-block {
     grid-template-rows: 80vh auto !important;
   }
 
-  .img5 {
-  }
+
 }
 
 // ********HEADER BLOCK*********
