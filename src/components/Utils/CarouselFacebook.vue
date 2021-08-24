@@ -188,7 +188,7 @@ export default {
 
 <style lang="scss" scoped>
 hr {
-  height: 40vh;
+  height: 30vh;
 }
 
 .facebook-reviews-global {
