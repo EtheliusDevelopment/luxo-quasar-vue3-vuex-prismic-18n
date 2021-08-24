@@ -142,7 +142,7 @@
     <q-toggle v-model="accept" label="I accept the license and terms" />
 
     <div class="flex flex-center">
-      <button class="general-btn-1" style="padding: 1% 2%">CONTACT US</button>
+      <button class="general-btn-1 q-mt-lg">CONTACT US</button>
     </div>
   </q-form>
 </template>

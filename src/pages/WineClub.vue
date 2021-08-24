@@ -406,11 +406,13 @@ export default defineComponent({
   margin-bottom: 7vh;
 }
 
-.header-block hr {
-  height: 2px;
-  width: 20%;
-  margin: 2%;
+  .header-block hr {
+  height: 2px !important;
+  width: 20% !important;
+  margin: 2% !important;
 }
+
+
 // **********FIRST BLOCK**********
 
 .first-block .sub-section-first {
@@ -838,6 +840,12 @@ h6.text-primary.subtitle-h6 {
     align-self: center;
     margin-bottom: 10%;
   }
+
+  .header-block hr {
+  height: 2px !important;
+  width: 20% !important;
+  margin: 2% !important;
+}
 
   // **********FOURTH BLOCK**********
   .btn-wine-card {

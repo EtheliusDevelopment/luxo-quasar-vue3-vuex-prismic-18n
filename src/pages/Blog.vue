@@ -143,7 +143,7 @@ hr {
   display: flex;
   width: 100%;
   padding: 0 10%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 // ******SECOND BLOCK**************

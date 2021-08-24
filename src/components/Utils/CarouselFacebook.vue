@@ -138,7 +138,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        z-index: 99999;
+        z-index: 99;
         position: relative;
         bottom: 35vh;
         padding: 0 2%;

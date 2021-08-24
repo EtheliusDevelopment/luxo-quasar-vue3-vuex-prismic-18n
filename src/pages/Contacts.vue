@@ -34,7 +34,7 @@
 
     <div class="first-block">
       <div class="info-component">
-        <p class="p-info">
+        <p class="p-info text-center">
           No matter what your interests and passions, no matter what the season,
           we can bring your perfect trip to life. Simply tell us what you’re
           into, share with us the real reason for your trip, and we’ll bring
