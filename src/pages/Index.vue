@@ -276,7 +276,7 @@ export default {
 <style lang="scss" scoped>
 // **********HEADER BLOCK***********
 
-@media screen and (max-width: 1580px) {
+@media screen and (min-width: 1580px) {
   .first-block {
     margin-bottom: 5%;
   }
