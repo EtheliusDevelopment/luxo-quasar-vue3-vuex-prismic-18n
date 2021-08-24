@@ -101,30 +101,14 @@ export default defineComponent({
 </script>
 
 //
-<style lang="scss" scoped>
-// //************TYPO*****
-
-// //************HEADER BLOCK*****
-
-// //************FIRST BLOCK*****
-
-// //************SECOND BLOCK*****
-
-// @media screen and (max-width: 1100px) {
-//   //************TYPO*****
-
-//   //************HEADER BLOCK*****
-// }
-
-// @media screen and (max-width: 680px) {
-//   //************TYPO*****
-
-//   //************HEADER BLOCK*****
-// }
-//
-</style>
 
 <style lang="scss" scoped>
+@media screen and (min-width: 1580px) {
+  .header-block .figcaption {
+    padding-bottom: 3% !important;
+  }
+}
+
 // **********TYPO**********
 
 //**************HEADER BLOCK*****
@@ -136,6 +120,12 @@ export default defineComponent({
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.9037990196078431) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .header-block .figcaption h6.text-white {

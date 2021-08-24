@@ -213,19 +213,13 @@
       bordered
     >
       <q-list padding class="menu-list q-list-drawer">
-        <!-- <router-link to="/" class="wrapper-logo desktop-only">
-          <q-img
-            class="navbar-logo q-mt-md"
-            width="14vw"
-            src="~assets/luxoitalia_logo_white_2020.svg"
-          />
-        </router-link> -->
+
         <div class="img-index-drawer-box flex justify-between items-center">
           <q-img
             @click="toHome"
             class="navbar-logo"
             width="60%"
-            src="~assets/luxoitalia_logo_white_2020.svg"
+            src="~assets/luxoitalia_logo_white_2020-2.svg"
           />
 
           <q-icon
@@ -293,7 +287,7 @@
       <div class="card-block flex flex-center">
         <q-img
           class="footer-dialog"
-          src="~assets\venice-footer-box.png"
+          src="~assets\venice-footer-box.jpg"
           width="80%"
         >
           <div

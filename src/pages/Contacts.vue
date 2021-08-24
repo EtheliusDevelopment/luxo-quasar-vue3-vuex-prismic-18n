@@ -6,7 +6,7 @@
       <q-img
         class="img1"
         img-class="img1-luxury"
-        src="~assets/umbria_luxo.jpg"
+        src="~assets/contatti-luxoitalia.jpg"
         :ratio="16 / 9"
         spinner-color="primary"
         spinner-size="82px"
@@ -205,7 +205,7 @@ span.text-info {
 }
 
 .p-info {
-  font-family: "CommutersSans-Regular" !important;
+  font-family: "Commuters-Sans-Light" !important;
   font-size: 17px !important;
   line-height: 25px !important;
 }

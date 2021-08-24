@@ -71,7 +71,7 @@
       <q-img
         class="img2"
         img-class="img2-index"
-        src="~assets/luxo_img_1_index.jpg"
+        src="~assets/luxury-travel-rome-luxoitalia-3.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
@@ -79,7 +79,7 @@
       <q-img
         class="img3"
         img-class="img3-index"
-        src="~assets/fori_imperiali_roma_luxo.jpg"
+        src="~assets/luxury-travel-rome-luxoitalia-4.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
@@ -114,7 +114,7 @@
       <q-img
         class="img4"
         img-class="img4-index"
-        src="~assets/index_luxo_partners.png"
+        src="~assets/index_luxo_partners.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />
@@ -194,7 +194,7 @@
     <div class="seventh-block">
       <q-img
         img-class="col-md-2 test22"
-        src="~assets/main_sponsors_index.png"
+        src="~assets/main_sponsors_index.jpg"
         spinner-color="primary"
         spinner-size="82px"
       />

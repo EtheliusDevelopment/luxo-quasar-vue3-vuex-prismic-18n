@@ -6,7 +6,7 @@
       <q-img
         class="img1"
         img-class="img1-luxury"
-        src="~assets/bg-header-1.png"
+        src="~assets/Testimonials-luxoitalia-travel.jpg"
         :ratio="16 / 9"
         spinner-color="primary"
         spinner-size="82px"

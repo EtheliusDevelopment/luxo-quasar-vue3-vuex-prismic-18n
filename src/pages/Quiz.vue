@@ -7,7 +7,7 @@
         <q-img
           class="img1"
           img-class="img1-luxury"
-          src="~assets/umbria_luxo.jpg"
+          src="~assets/Header-quiz.jpg"
           :ratio="16 / 9"
           spinner-color="primary"
           spinner-size="82px"

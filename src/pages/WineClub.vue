@@ -343,7 +343,7 @@
       <q-img
         class="img7"
         img-class="img7-wine"
-        src="~assets/main_sponsors_index.png"
+        src="~assets/main_sponsors_index.jpg"
       />
     </div>
   </q-page>
