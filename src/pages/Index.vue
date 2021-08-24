@@ -290,7 +290,7 @@ export default {
   }
 
   .fifth-block {
-        grid-template-rows: minmax(10%, 100%);
+    grid-template-rows: 0.9fr !important;
     margin: 0 3% 0% 3% !important;
   }
 
@@ -299,7 +299,6 @@ export default {
   }
 
   .img5 {
-    height: 90% !important;
   }
 }
 
@@ -497,7 +496,7 @@ h2.text-primary {
 .fifth-block {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: minmax(10%, 100%);
+  grid-template-rows: 1fr;
   margin: 0 7% 5% 7%;
 }
 
