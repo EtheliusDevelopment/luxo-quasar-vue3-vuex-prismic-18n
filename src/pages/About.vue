@@ -295,7 +295,7 @@
             more than a regular client.
           </p>
           <button
-            class="general-btn-2 btn-fifth-block q-mt-md"
+            class="general-btn-2 btn-fifth-block q-mb-lg"
             style="margin-left: 5%"
           >
             READ ABOUT OUR CLIENTS’ TRAVEL EXPERIENCES
@@ -398,7 +398,7 @@ hr {
 .second-block {
   display: grid;
   grid-template-columns: 1.8fr 0.6fr 1fr;
-  grid-template-rows: 0.1fr 0.8fr 0.1fr;
+  grid-template-rows: 0.1fr 1fr 0.1fr;
   margin-bottom: 10%;
 }
 
@@ -470,7 +470,7 @@ hr {
 .fourth-block {
   display: grid;
   grid-template-columns: 34% 10% 56%;
-  grid-template-rows: 10vh 70vh 20vh;
+  grid-template-rows: .1fr 1fr .1fr;
   margin-bottom: 10%;
 }
 
