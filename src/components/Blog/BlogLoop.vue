@@ -14,18 +14,44 @@
       <li @click="myLi" class="li-item">hotel</li>
     </ul>
 
-    <div class="navigation-mobile">
-      <q-chip outline @click="myLi" class="li-item active" color="primary">ALL</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">sea</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">lake</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">montain</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary" >wine</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">islands</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">food</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">art</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">yatch</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">wedding</q-chip>
-      <q-chip outline @click="myLi" class="li-item" color="primary">hotel</q-chip>
+    <div class="navigation-mobile flex">
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="activeb li-item" color="primary">ALL</q-chip>
+      </div>
+
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">sea</q-chip>
+      </div>
+
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">lake</q-chip>
+      </div>
+
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">montain</q-chip>
+      </div>
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">wine</q-chip>
+      </div>
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">islands</q-chip>
+      </div>
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">food</q-chip>
+      </div>
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">art</q-chip>
+      </div>
+
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">yatch</q-chip>
+      </div>
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">wedding</q-chip>
+      </div>
+      <div class="chip-filter" @click="myLib">
+        <q-chip outline class="li-item" color="primary">hotel</q-chip>
+      </div>
     </div>
   </div>
 
@@ -110,6 +136,38 @@ export default {
 
       activeClass ? activeClass.classList.remove("active") : null;
       nodeValue.classList.add("active");
+
+      if (textValue === "ALL") {
+        const response = await this.$prismic.client.query(
+          this.$prismic.Predicates.at("document.type", "blog"),
+          { pageSize: 9 }
+        );
+        console.log(response.results);
+        this.dataResults = response.results;
+        this.max = response.total_pages;
+        this.current = response.page;
+        this.pageSize = response.results_per_page;
+      } else {
+        const response = await this.$prismic.client.query(
+          this.$prismic.Predicates.at("document.tags", [textValue]),
+          { pageSize: 9 }
+        );
+        console.log(response);
+        this.dataResults = response.results;
+        this.max = response.total_pages;
+        this.current = response.page;
+        this.pageSize = response.results_per_page;
+      }
+    },
+
+    async myLib(e) {
+      let textValue = e.path[0].textContent;
+      let nodeValue = e.path[1];
+      let activeClass = document.querySelector(".activeb");
+      console.log(activeClass);
+
+      activeClass ? activeClass.classList.remove("activeb") : null;
+      nodeValue.classList.add("activeb");
 
       if (textValue === "ALL") {
         const response = await this.$prismic.client.query(
@@ -222,6 +280,10 @@ h4.text-pink.q-ma-xl {
   color: $info !important;
 }
 
+.activeb {
+  color: $info !important;
+}
+
 // *** LOOP BLOCK ****
 
 .loop-block {
@@ -284,15 +346,18 @@ h4.text-pink.q-ma-xl {
   // *** LOOP BLOCK ****
 
   .loop-block {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-gap: 1%;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .blog-card {
+    margin-bottom: 10% !important;
   }
   .head-navigation {
     display: none;
   }
 
-  .navigation-mobile{
+  .navigation-mobile {
     display: flex !important;
     flex-wrap: wrap;
     justify-content: center;
@@ -300,7 +365,11 @@ h4.text-pink.q-ma-xl {
 
   .li-item {
     margin: 1.5% 2%;
-    font-family: 'CommutersSans-Regular';
+    font-family: "CommutersSans-Regular";
+  }
+
+  .chip-filter {
+    margin: 1px 2% !important;
   }
 }
 </style>
