@@ -27,7 +27,7 @@
           <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
 
-        <hr color="#D9C5A0" class="desktop-only"/>
+        <hr color="#D9C5A0" class="desktop-only" />
 
         <div class="facebook-slide flex desktop-only">
           <p class="text-center body-review">
@@ -69,7 +69,7 @@
           <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
 
-        <hr color="#D9C5A0" class="desktop-only"/>
+        <hr color="#D9C5A0" class="desktop-only" />
 
         <div class="facebook-slide flex desktop-only">
           <p class="text-center body-review">
@@ -111,7 +111,7 @@
           <p class="payoff-echo text-center text-info">Maureen, Florida</p>
         </div>
 
-        <hr color="#D9C5A0" class="desktop-only"/>
+        <hr color="#D9C5A0" class="desktop-only" />
 
         <div class="facebook-slide flex desktop-only">
           <p class="text-center body-review">
@@ -187,6 +187,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (min-width: 1580px) {
+
+  .facebook-buttons {
+    bottom: 25vh !important;
+  }
+
+}
+
 hr {
   height: 30vh;
 }
@@ -208,7 +216,7 @@ hr {
 
 .payoff-echo {
   font-size: 17px;
- }
+}
 
 .body-review {
   font-family: "CommutersSans-Regular";
@@ -233,13 +241,13 @@ hr {
 }
 
 @media screen and (max-width: 680px) {
-
-  .next-arrow,.prev-arrow {
+  .next-arrow,
+  .prev-arrow {
     width: 12vw !important;
-}
+  }
 
-.facebook-buttons {
+  .facebook-buttons {
     bottom: 55vh !important;
-}
+  }
 }
 </style>
