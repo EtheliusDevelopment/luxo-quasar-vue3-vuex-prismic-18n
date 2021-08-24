@@ -1,3 +1,4 @@
+
 <template>
   <q-page>
     <PreLoader />
@@ -6,7 +7,7 @@
       <q-img
         class="img1"
         img-class="img1-luxury"
-        src="~assets/about_header.jpg"
+        src="~assets/about_us_luxo.png"
         :ratio="16 / 9"
         spinner-color="primary"
         spinner-size="82px"
@@ -35,24 +36,24 @@
     <div class="first-block">
       <div class="sub-section-first">
         <h2 class="text-primary text-center">Your Luxury Travel Designers</h2>
-        <p class="text-center">
+        <p class="text-primary text-center">
           We know and love every small village, corner, and place in our
           country, and we want to help you get to know it in the way that best
           reflects your tastes and preferences.
         </p>
-        <p class="text-center">
+        <p class="text-primary text-center">
           But before luxury travel designers we are above all travelers.
         </p>
-        <p class="text-center">
+        <p class="text-primary text-center">
           We love discovering new places, new foods, new cultures, learning how
           to get to know those who accompany us and enjoying the beauty of Italy
           together.
         </p>
-        <p class="text-center">
+        <p class="text-primary text-center">
           Precisely, this aspect defines the difference between what we offer
           you and what the classic luxury travel agencies offer.
         </p>
-        <p class="text-center">
+        <p class="text-primary text-center">
           We do not limit ourselves to organizing and booking a pre-established
           and undistinguished itinerary. Our objective is different; we want to
           offer you an exclusive, unique and inimitable luxury experience that
@@ -68,7 +69,7 @@
     <div class="second-block">
       <div class="sub-section-first bg-info">
         <div class="text-box-second-block">
-          <h2 class="text-primary title-h2 h2-second-block">
+          <h2 class="text-primary title-h2">
             Why Luxo Italia? A passion that has become a job
           </h2>
           <p class="body-p">
@@ -93,8 +94,7 @@
       />
     </div>
 
-
-  <div class="third-block">
+    <div class="third-block">
       <h2 class="text-primary heading-third-block text-center">Who We Are</h2>
 
       <q-img
@@ -309,7 +309,6 @@
 <script>
 import PreLoader from "src/components/PreLoader.vue";
 import { ref } from "vue";
-
 export default {
   components: { PreLoader },
   setup() {
@@ -320,34 +319,27 @@ export default {
 
 <style lang="scss" scoped>
 // **********HEADER BLOCK**********
-
 // TYPO***************
 .figcaption-title {
   margin-bottom: 2%;
 }
-
 @media screen and (min-width: 1580px) {
   .figcaption {
     padding-bottom: 3% !important;
   }
-
   .second-block {
     grid-template-rows: 6vh 65vh 10vh !important;
   }
-
   .third-block {
     grid-template-rows: 18vh auto 25vh auto !important;
   }
-
   .fourth-block {
     grid-template-rows: 9vh 65vh 9vh !important;
   }
-
   .text-sub-section-first-3 {
     margin-top: 4% !important;
   }
 }
-
 .figcaption {
   width: 100%;
   height: 100%;
@@ -356,29 +348,19 @@ export default {
   align-items: center;
   flex-direction: column;
   padding-bottom: 6%;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.9037990196078431) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }
-
 .figcaption h6.text-white {
   margin: 1% 0 0 0;
 }
-
 .figcaption h1.text-white.text-center {
   margin-top: 0;
   margin-bottom: 7vh;
 }
-
 hr {
   height: 2px;
   width: 20%;
   margin: 2%;
 }
-
 // **********FIRST BLOCK**********
 .first-block .sub-section-first {
   display: flex;
@@ -387,21 +369,17 @@ hr {
   flex-direction: column;
   padding: 0 18rem;
 }
-
 .first-block {
   margin-bottom: 6%;
   margin-top: 4%;
 }
-
 // **********SECOND BLOCK**********
-
 .second-block {
   display: grid;
   grid-template-columns: 1.8fr 0.6fr 1fr;
-  grid-template-rows: 0.1fr 0.8fr 0.1fr;
+  grid-template-rows: .1fr .8fr .1fr;
   margin-bottom: 10%;
 }
-
 .second-block .sub-section-first {
   grid-column: 1/3;
   grid-row: 1/3;
@@ -409,29 +387,23 @@ hr {
   grid-template-columns: auto 30%;
   grid-template-rows: 10vh auto;
 }
-
 .second-block .img1 {
   grid-column: 2/4;
   grid-row: 2/4;
 }
-
 .text-box-second-block {
   grid-column: 1;
   grid-row: 2;
   margin-left: 14%;
 }
-
 .body-p {
   margin-left: 5%;
   padding-right: 18%;
 }
-
 .title-h2 {
   padding: 0 30% 0 0 !important;
 }
-
 // **********THIRD BLOCK**********
-
 .third-block {
   display: grid;
   grid-template-columns: 49% 49%;
@@ -439,13 +411,11 @@ hr {
   grid-gap: 2%;
   margin: 0 9% 20% 9%;
 }
-
 .heading-third-block {
   grid-column: 1/3;
   grid-row: 1;
   margin: 0;
 }
-
 .third-block .img3 {
   grid-column: 1;
   grid-row: 2/4;
@@ -464,29 +434,23 @@ hr {
   grid-column: 2;
   grid-row: 3/5;
 }
-
 // *******FOURTH BLOCK***********************
-
 .fourth-block {
   display: grid;
   grid-template-columns: 34% 10% 56%;
   grid-template-rows: 10vh 70vh 20vh;
   margin-bottom: 10%;
 }
-
 .body-btn {
   margin-left: 5%;
 }
-
 .text-sub-section-first-3 {
   margin-left: 5%;
 }
-
 .img4 {
   grid-column: 1/3;
   grid-row: 1/3;
 }
-
 .sub-section-first-3 {
   background-color: $info;
   grid-column: 2/4;
@@ -499,14 +463,8 @@ hr {
 }
 // ********HEADER BLOCK*****
 .figcaption-about {
-  background: rgb(0, 0, 0) !important;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 65%
-  ) !important;
+  background-color: rgb(0 0 0 / 12%) !important;
 }
-
 .figcaption-body {
   display: flex;
   flex-direction: column;
@@ -514,7 +472,6 @@ hr {
   align-items: center;
   margin-bottom: 10%;
 }
-
 .figcaption-subtitle {
   font-family: CommutersSans-Regular;
   font-size: 14px;
@@ -522,13 +479,11 @@ hr {
   letter-spacing: 1px;
   line-height: 16px;
 }
-
 .figcaption-title {
   font-family: Hatton-Medium;
   font-size: 40px;
   letter-spacing: 2px;
 }
-
 // .fade-enter-from {
 //   opacity: 0;
 // }
@@ -538,32 +493,26 @@ hr {
 // .fade-enter-active {
 //   transition: opacity 2s ease;
 // }
-
 @media screen and (max-width: 1300px) {
   .title-h2 {
     padding: 0 10% 0 0 !important;
   }
 }
-
 @media screen and (max-width: 1100px) {
   // TYPO***************
   .figcaption-title {
     transform: scale(0.9);
   }
-
   .img1 {
     height: 20% !important;
   }
-
   .img-about {
     height: 100% !important;
   }
-
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 5vh;
   }
-
   // **********FIRST BLOCK**********
   .first-block .sub-section-first {
     display: flex;
@@ -572,41 +521,23 @@ hr {
     flex-direction: column;
     padding: 0 10rem !important;
   }
-
   .title-h2 {
     padding: 0 10% 0 0 !important;
   }
 }
-
 @media screen and (max-width: 680px) {
   // TYPO***************
   .figcaption-title {
     transform: scale(0.85);
   }
-
-  .body-p {
-    text-align: center !important;
-  }
-
-  .title-h2 {
-    text-align: center !important;
-  }
-
   .img1 {
-    height: 35vh !important;
+    height: 15% !important;
   }
   .figcaption h1.text-white.text-center {
     margin-top: 0;
     margin-bottom: 3vh;
   }
-
   // **********FIRST BLOCK**********
-
-  .first-block {
-    margin-bottom: 10% !important;
-    margin-top: 10% !important;
-  }
-
   .first-block .sub-section-first {
     display: flex;
     justify-content: center;
@@ -614,135 +545,36 @@ hr {
     flex-direction: column;
     padding: 0 2rem !important;
   }
-
   .img-about {
     display: none !important;
   }
-
   .second-block {
-    grid-template-columns: 100% !important;
-    grid-template-rows: auto auto !important;
+    grid-template-columns: auto !important;
+    grid-template-rows: auto !important;
   }
-
   .second-block .sub-section-first {
     grid-template-columns: auto !important;
     grid-template-rows: auto !important;
-    padding: 10% 5% !important;
-    grid-column: 1 !important;
-    grid-row: 1 !important;
   }
-
-  .second-block .img1 {
-    display: block !important;
-    grid-column: 1 !important;
-    grid-row: 2 !important;
-    height: 530px !important;
-  }
-
   .title-h2 {
-    padding: unset !important;
+    padding: 0 5% 0 0 !important;
   }
-
   // ******THIRD BLOCK*******************
-
   .third-block {
-    grid-template-columns: 100% !important;
-    grid-template-rows: auto auto 530px auto auto auto !important;
-    margin: unset !important;
+    grid-template-rows: auto auto auto auto !important;
+    margin: 0 9% 70% 9% !important;
   }
-
-  .heading-third-block {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    margin: 0 !important;
-  }
-
-  .third-block .img3 {
-    grid-column: 1 !important;
-    grid-row: 3 !important;
-  }
-
-  .third-block .sub-section-first {
-    grid-column: 1 !important;
-    grid-row: 2 !important;
-    border-radius: unset !important;
-  }
-
-  .third-block .img4 {
-    grid-column: 1 !important;
-    grid-row: 5 !important;
-  }
-
-  .btn-about {
-    grid-column: 1 !important;
-    grid-row: 6 !important;
-  }
-
-  .h6-title-sub {
-    font-size: 14px !important;
-    text-align: center !important;
-  }
-
-  .text {
-    text-align: center !important;
-  }
-
-  .general-btn-2.btn-fifth-block {
-    margin-left: unset !important;
-  }
-
-  .footer-logo {
-    width: 6vw !important;
-  }
-
   // *******FOURTH BLOCK***********************
-
   .fourth-block {
     grid-template-columns: auto !important;
     grid-template-rows: auto !important;
-    margin-top: 50vh !important;
     margin-bottom: 30% !important;
   }
   .fourth-block .img4 {
     display: none !important;
   }
-
   .img-about-4-index {
     object-position: 40% 50% !important; //riportato in app.css
-  }
-
-  .h2-second-block {
-    text-align: center !important;
-    padding-right: unset !important;
-  }
-
-  .body-p {
-    text-align: center !important;
-    padding-right: unset !important;
-    margin-left: unset !important;
-  }
-
-  .text-box-second-block {
-    margin-left: unset !important;
-  }
-
-  .social-footer-content {
-    width: 40% !important;
-    margin-top: 5% !important;
-  }
-
-  .figcaption-subtitle {
-    text-align: center !important;
-    margin-bottom: 5% !important;
-  }
-
-  .text-sub-section-first-3 {
-    margin-left: unset !important;
-  }
-
-  .sub-section-first-3 {
-    display: block !important;
-    padding: 10% 5% !important;
   }
 }
 </style>
